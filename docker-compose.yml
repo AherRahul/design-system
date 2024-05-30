@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+  cuida:
+    container_name: main
+    image: sysvaleops/cuida:dev-1.0
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - 6006:6006

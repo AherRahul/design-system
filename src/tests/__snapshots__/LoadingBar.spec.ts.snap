@@ -1,0 +1,9 @@
+// Vitest Snapshot v1
+
+exports[`LoadingBar > renders correctly 1`] = `
+"<div data-v-cc77174b=\\"\\">
+  <div data-v-cc77174b=\\"\\" class=\\"loading-bar__container\\">
+    <div data-v-cc77174b=\\"\\" class=\\"loading-bar\\"></div>
+  </div>
+</div>"
+`;
