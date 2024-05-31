@@ -2,8 +2,8 @@ import Vue from 'vue';
 import { createApp } from 'vue';
 import './style.css';
 import App from './App.vue';
-import Cuida from "@sysvale/cuida";
+import RDS from "@sysvale/cuida";
 
 createApp(App)
-    .use(Cuida) // there
+    .use(RDS) // there
     .mount('#app')

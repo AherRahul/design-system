@@ -65,11 +65,11 @@ export default {
 				},
 				{
 					key: 'value',
-					label: 'Valor',
+					label: 'Value',
 				},
 				{
 					key: 'example',
-					label: 'Exemplo',
+					label: 'Example',
 				},
 			],
 			fontWeightVariables: [

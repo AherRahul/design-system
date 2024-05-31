@@ -230,7 +230,7 @@ export default {
 		*/
 		errorMessage: {
 			type: String,
-			default: 'Valor inválido',
+			default: 'Value inválido',
 		},
 		/**
 		* Especifica o estado do TextInput. As opções são 'default' e 'invalid'.

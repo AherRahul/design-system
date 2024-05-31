@@ -48,7 +48,7 @@
 						class="button-sample"
 						:style="dynamicStyle(data)"
 					>
-						Botão
+						Button
 					</cds-button>
 				</div>
 			</template>
@@ -80,12 +80,12 @@ export default {
 				},
 				{
 					key: 'value',
-					label: 'Características',
+					label: 'Characteristics',
 					tdClass: 'w-25',
 				},
 				{
 					key: 'sample',
-					label: 'Exemplo',
+					label: 'Example',
 					tdClass: 'w-50',
 				},
 			],
@@ -95,78 +95,78 @@ export default {
 					fontSize: 45,
 					fontWeight: 700,
 					letterSpacing: 0.15,
-					sample: 'Não entre em pânico',
+					sample: 'Do not panic',
 				},
 				{
 					name: 'heading-2',
 					fontSize: 33,
 					fontWeight: 700,
 					letterSpacing: 0.1,
-					sample: 'Não entre em pânico',
+					sample: 'Do not panic',
 				},
 				{
 					name: 'heading-3',
 					fontSize: 29,
 					fontWeight: 650,
 					letterSpacing: 0,
-					sample: 'Não entre em pânico',
+					sample: 'Do not panic',
 				},
 				{
 					name: 'subheading-1',
 					fontSize: 25,
 					fontWeight: 600,
 					letterSpacing: 0.15,
-					sample: 'Existe uma segunda teoria que diz que isso já aconteceu.',
+					sample: 'There is a second theory that says this has already happened.',
 				},
 				{
 					name: 'subheading-2',
 					fontSize: 21,
 					fontWeight: 600,
 					letterSpacing: 0,
-					sample: 'Existe uma segunda teoria que diz que isso já aconteceu.',
+					sample: 'There is a second theory that says this has already happened.',
 				},
 				{
 					name: 'subheading-3',
 					fontSize: 17,
 					fontWeight: 600,
 					letterSpacing: 0,
-					sample: 'Existe uma segunda teoria que diz que isso já aconteceu.',
+					sample: 'There is a second theory that says this has already happened.',
 				},
 				{
 					name: 'body-1',
 					fontSize: 17,
 					fontWeight: 430,
 					letterSpacing: 0,
-					sample: `Existe uma teoria que diz que, se um dia alguém descobrir exatamente para que serve o
-						Universo e por que ele está aqui, ele desaparecerá instantaneamente e será substituído por algo 
-						ainda mais estranho e inexplicável. Existe uma segunda teoria que diz que isso já aconteceu.`,
+					sample: `There is a theory that says that if one day someone discovers exactly what the
+					Universe and why it is here, it will disappear instantly and be replaced by something
+					even more strange and inexplicable. There is a second theory that says this has already happened.`,
 				},
 				{
 					name: 'body-2',
 					fontSize: 15,
 					fontWeight: 430,
 					letterSpacing: 0,
-					sample: `Existe uma teoria que diz que, se um dia alguém descobrir exatamente para que serve o
-						Universo e por que ele está aqui, ele desaparecerá instantaneamente e será substituído por algo 
-						ainda mais estranho e inexplicável. Existe uma segunda teoria que diz que isso já aconteceu.`,
+					sample: `There is a theory that says that if one day someone discovers exactly what the
+					Universe and why it is here, it will disappear instantly and be replaced by something
+					even more strange and inexplicable. There is a second theory that says this has already happened.`,
 				},
 				{
 					name: 'caption',
 					fontSize: 13.5,
 					fontWeight: 470,
 					letterSpacing: 0.1,
-					sample: `Existe uma teoria que diz que, se um dia alguém descobrir exatamente para que serve o
-						Universo e por que ele está aqui, ele desaparecerá instantaneamente e será substituído por algo 
-						ainda mais estranho e inexplicável. Existe uma segunda teoria que diz que isso já aconteceu.`,
+					sample: `There is a theory that says that if one day someone discovers exactly what the
+					Universe and why it is here, it will disappear instantly and be replaced by something
+					even more strange and inexplicable. There is a second theory that says this has already happened.`,
 				},
 				{
 					name: 'overline',
 					fontSize: 11.5,
 					fontWeight: 650,
 					letterSpacing: 0.15,
-					sample: `Existe uma teoria que diz que, se um dia alguém descobrir exatamente para que serve o
-						Universo e por que ele está aqui, ele desaparecerá instantaneamente e será substituído por algo 
-						ainda mais estranho e inexplicável. Existe uma segunda teoria que diz que isso já aconteceu.`,
+					sample: `There is a theory that says that if one day someone discovers exactly what the
+					Universe and why it is here, it will disappear instantly and be replaced by something
+					even more strange and inexplicable. There is a second theory that says this has already happened.`,
 				},
 				{
 					name: 'button-1',

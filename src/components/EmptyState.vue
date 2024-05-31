@@ -105,7 +105,7 @@ export default {
 			default: 'Finalizar',
 		},
 		/**
-		 * A variante do botão de ação do Empty State (segue as variantes do componente de botão do Cuida)
+		 * A variante do botão de ação do Empty State (segue as variantes do componente de botão do RDS)
 		 */
 		actionButtonVariant: {
 			type: String,

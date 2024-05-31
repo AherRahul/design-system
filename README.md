@@ -12,7 +12,7 @@
 
 ## Installing
 
-- Cuida can be installed with npm:
+- RDS can be installed with npm:
 
 ```bash
 npm i @sysvale/cuida;
@@ -20,18 +20,18 @@ npm i @sysvale/cuida;
 
 ## Using
 
-- To use Cuida, import the library into your entry point, it will probably be your main.js or app.js:
+- To use RDS, import the library into your entry point, it will probably be your main.js or app.js:
 
 ```js
-import Cuida from "@sysvale/cuida";
+import RDS from "@sysvale/cuida";
 ```
 
-- Import Cuida styles:
+- Import RDS styles:
 ```js
 import '@sysvale/cuida/dist/style.css';
 ```
 
-- And install Cuida:
+- And install RDS:
 
 ```js
 Vue.use(Care);

@@ -1,23 +1,23 @@
 import { Meta, Canvas, Story } from '@storybook/addon-docs';
 import FontWeight from '../../docs-components/FontWeight.vue';
 
-<Meta title="Fundação/Peso da Fonte" component={ FontWeight } />
+<Meta title="Foundation/Font Weight" component={ FontWeight } />
 
-# Peso da Fonte
+# Font Weight
 
-O peso da fonte é um token tipográfico que pode ser utilizado para alterar o valor padrão
-do peso da escala tipográfica e dar ênfase a determinado texto ou frase.
-Os pesos de fonte utilizados no Cuida são principalmente o Regular(430), o Semibold (600) e o Bold (800).
+Font weight is a typographic token that can be used to change the 
+default value of the typographic scale weight and add emphasis to 
+certain text or phrase. The font weights used in RDS are mainly 
+Regular (430), Semibold (600) and Bold (800).
 
 <hr />
 <br />
 
-## Recomendações
+## Recommendations
 
-- Para facilitar o escaneamento e trabalhar a hierarquia de conteúdo, recomendamos a utilização pontual de textos em negrito.
-- Recomendamos a utilização de texto semibold(600) em títulos de seção e botões, devendo ser evitado o uso em textos 
-no corpo das páginas.
-- Textos no corpo das páginas devem possuir, preferencialmente, peso de regular (430).
+- To facilitate scanning and work on the content hierarchy, we recommend the occasional use of bold text.
+- We recommend the use of semibold text (600) in section titles and buttons, and its use in texts in the body of pages should be avoided.
+- Texts in the body of the pages should preferably have a weight of regular (430).
 
 <br />
 
@@ -29,10 +29,10 @@ export const Template = (args) => ({
 	template:`<font-weight />`,
 });
 
-## Estilos Padrão
+## Default Styles
 
 <br />
 
-<Story name="Peso da Fonte">
+<Story name="Font Weight">
 	{ Template.bind({}) }
 </Story>

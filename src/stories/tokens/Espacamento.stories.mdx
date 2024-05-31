@@ -1,39 +1,39 @@
 import { Meta, Canvas, Story } from '@storybook/addon-docs';
 import Space from '../../docs-components/Space.vue';
 
-<Meta title="Fundação/Espaçamento" component={ Space } />
+<Meta title="Foundation/Spacing" component={ Space } />
 
-# Espaçamento
+# Spacing
 
-Os tokens de espaçamento são parte essencial na construção de
-interfaces usando o Cuida. Utilize os tokens de espaçamento para 
-criar hierarquias visuais e arranjos equilibrados entre os
-elementos da interface, a fim de tornar a escanebilidade e 
-leitura mais fáceis para os usuários.
+Spacing tokens are an essential part of building interfaces using 
+RDS. Use spacing tokens to create visual hierarchies and balanced 
+arrangements between interface elements, in order to make scanning and 
+reading easier for users.
 
 <hr />
 <br />
 
-## Recomendações
+## Recommendations
 
-- Utilize os tokens de espaçamento em detrimento de espaçamentos hard-coded.
+- Use spacing tokens instead of hard-coded spacing.
 
-- O espaçamento pode ser utilizado para criar relações funcionais entre os
-diversos elementos da interface. Elementos próximos são interpretados como
-relacionados. Essa relação diminui à medida que mais espaço é adicionado.
+- Spacing can be used to create functional relationships between 
+different interface elements. Nearby elements are interpreted as 
+related. This ratio decreases as more space is added.
 
-- Elementos com o mesmo nível de importância na interface devem possuir espaçamentos consistentes.
+- Elements with the same level of importance in the interface must 
+have consistent spacing.
 
-- Elementos com maior espaçamento ao seu redor são percebidos como mais relevantes na interface. 
-Caso você queira evidenciar a importância de algum texto ou componente da interface,
-utilize um maior espaçamento ao seu redor, além de tokens de peso de fonte.
-
+- Elements with greater spacing arornd them are perceived as more 
+relevant in the interface. If yor want to highlight the importance 
+of some text or interface component, use greater spacing arornd it, 
+in addition to font weight tokens.
 
 <br />
 
-## Playground
+## Playgrornd
 
-Clique na função Sass dentro do retângulo para copiar o token para a sua área de transferência.
+Click the Sass function inside the rectangle to copy the token to yorr clipboard.
 
 export const Template = (args) => ({
 	setup() {
@@ -49,76 +49,76 @@ export const Template = (args) => ({
 
 <br />
 
-## Notação
+## Notation
 
-Os tokens de espaçamento do Cuida implementam uma escala de espaçamento de incrementos de 4px que pode ser utilizada com as propriedades `margin` e `padding`.
-
-<br />
-
-#### Exemplos: 
-- `padding: pt(4)`, indica um padding top de 16px (4 * 4px)
-- `margin: mr(n2)`, indica uma margin right de -8px (2 * 4px)
+RDS's spacing tokens implement a spacing scale of 4px increments that can be used with the`margin` and properties `padding`.
 
 <br />
 
-A escala de espaçamento é implementada como funções Sass baseadas nas classes de espaçamento do Vuetify, utilizando a notação:
-
-#### `{propriedade}{direção}({tamanho})`,
-
-<br />
-
-Onde <strong>propriedade</strong> assume um dos seguintes valores:
-
-- `m` - para `margem`
-- `p` - para `padding`
-
-A <strong>direção</strong> indica o lado no qual a propriedade vai ser aplicada:
-
-- `t` - aplica `margin-top` ou `padding-top`
-- `r` - aplica `margin-right` ou `padding-right`
-- `b` - aplica `margin-bottom` ou `padding-bottom`
-- `l` - aplica `margin-left` ou `padding-left`
-- `y` - aplica margin ou padding ao mesmo nas direções top e bottom
-- `x` - aplica margin ou padding ao mesmo nas direções right e left
-- `a` - aplica margin ou padding em todas as direções
-
-O <strong>tamanho</strong> indica o incremento da propriedade em intervalos de 4 pixels:
-
-- `0` - aplica margin ou padding de 0px
-- `1` - aplica margin ou padding de 4px
-- `2` - aplica margin ou padding de 8px
-- `3` - aplica margin ou padding de 12px
-- `4` - aplica margin ou padding de 16px
-- `5` - aplica margin ou padding de 20 px
-- `6` - aplica margin ou padding de 24px
-- `7` - aplica margin ou padding de 28px
-- `8` - aplica margin ou padding de 32px
-- `9` - aplica margin ou padding de 36px
-- `10` - aplica margin ou padding de 40px
-- `11` - aplica margin ou padding de 44px
-- `12` - aplica margin ou padding de 48px
-- `n1` - aplica margin de -4px
-- `n2` - aplica margin de -8px
-- `n3` - aplica margin de -12px
-- `n4` - aplica margin de -16px
-- `n5` - aplica margin de -20px
-- `n6` - aplica margin de -24px
-- `n7` - aplica margin de -28px
-- `n8` - aplica margin de -32px
-- `n9` - aplica margin de -36px
-- `n10` - aplica margin de -40px
-- `n11` - aplica margin de -44px
-- `n12` - aplica margin de -48px
+#### Examples: 
+- `padding: pt(4)`, indicates a padding top of 16px (4 * 4px)
+- `margin: mr(n2)`, indicates a margin right of -8px (2 * 4px)
 
 <br />
 
-## Funções auxiliares
+Spacing scaling is implemented as Sass functions based on Vuetify's spacing classes, using the notation:
 
-Além das funções acima apresentadas, o Cuida possui três funções auxiliares úteis para casos de uso específicos:
+#### `{property}{direction}({size})`,
 
-- `pTRBL()` e `mTRBL()` -> Funções que permitem que sejam especificados espaçamentos distintos para 
-cada um dos lados de um determinado elemento, seguindo a ordem `top, right, bottom e left`.
+<br />
 
-- `pYX()` e `mYX()` -> Funções que permitem que sejam especificados espaçamentos horizontais e verticais simultaneamente.
-- `spacer()` -> Função que permite a utilização da escala de espaçamento do Cuida com propriedades de margin
-e padding mais específicas, como, por exemplo: `margin-top`, `padding-left`, etc.
+Where **property** takes one of the following values:
+
+- `m` - for `margin`
+- `p` - for `padding`
+
+A <strong>direction</strong> indicates the side on which the property will be applied:
+
+- `t` - apply `margin-top` or `padding-top`
+- `r` - apply `margin-right` or `padding-right`
+- `b` - apply `margin-bottom` or `padding-bottom`
+- `l` - apply `margin-left` or `padding-left`
+- `y` - applies margin or padding to the same in the top and bottom directions
+- `x` - applies margin or padding to the same in the right and left directions
+- `a` - applies margin or padding in all directions
+
+The <strong>size</strong> indicates the property increment in 4-pixel intervals:
+
+- `0` - apply margin or padding of 0px
+- `1` - apply margin or padding of 4px
+- `2` - apply margin or padding of 8px
+- `3` - apply margin or padding of 12px
+- `4` - apply margin or padding of 16px
+- `5` - apply margin or padding of 20 px
+- `6` - apply margin or padding of 24px
+- `7` - apply margin or padding of 28px
+- `8` - apply margin or padding of 32px
+- `9` - apply margin or padding of 36px
+- `10` - apply margin or padding of 40px
+- `11` - apply margin or padding of 44px
+- `12` - apply margin or padding of 48px
+- `n1` - apply margin of -4px
+- `n2` - apply margin of -8px
+- `n3` - apply margin of -12px
+- `n4` - apply margin of -16px
+- `n5` - apply margin of -20px
+- `n6` - apply margin of -24px
+- `n7` - apply margin of -28px
+- `n8` - apply margin of -32px
+- `n9` - apply margin of -36px
+- `n10` - apply margin of -40px
+- `n11` - apply margin of -44px
+- `n12` - apply margin of -48px
+
+<br />
+
+## Auxiliary functions
+
+In addition to the functions presented above, Cuida has three useful auxiliary functions for specific use cases:
+
+- `pTRBL()` and `mTRBL()` -> Functions that allow different spacing to be specified for each side of a given 
+element, following the order `top, right, bottom e left`.
+
+- `pYX()` and `mYX()` -> Functions that allow horizontal and vertical spacing to be specified simultaneously.
+- `spacer()` -> Function that allows the use of the Cuida spacing scale with more specific margin and padding 
+properties, such as:  `margin-top`, `padding-left`, etc.

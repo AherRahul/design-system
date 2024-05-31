@@ -174,7 +174,7 @@ export default {
 		 */
 		errorMessage: {
 			type: String,
-			default: 'Valor inválido',
+			default: 'Value inválido',
 		},
 		/**
 		 * Especifica se a largura do TextInput deve ser fluida.
@@ -186,7 +186,7 @@ export default {
 		},
 		/**
 		 * Especifica a máscara a ser aplicada ao TextInput.
-		 * Exemplo: "(##) #####-####"
+		 * Example: "(##) #####-####"
 		 */
 		mask: {
 			type: [String, Array],

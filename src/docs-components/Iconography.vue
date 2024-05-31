@@ -1,12 +1,12 @@
 <template>
 	<span>
-		<div class="source-code__title">Lista de ícones:</div>
+		<div class="source-code__title">Icon list:</div>
 
 		<cds-search-input
 			v-model="typedIcon"
 			fluid
 			class="icon__search-input"
-			placeholder="Pesquise pelo nome do ícone"
+			placeholder="Search icon by name"
 		/>
 
 		<copy-token :target="target" :value="value" />

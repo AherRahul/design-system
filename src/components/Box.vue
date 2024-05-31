@@ -50,7 +50,7 @@ export default {
 			default: false,
 		},
 		/**
-		* O valor setado é sempre multiplicado por 4, assim como nos tokens scss do Cuida.
+		* O valor setado é sempre multiplicado por 4, assim como nos tokens scss do RDS.
 		* O valor mínimo aceito é 4 e o máximo aceito é 12.
 		*/
 		padding: {

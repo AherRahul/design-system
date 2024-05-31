@@ -154,7 +154,7 @@ export default {
 		 */
 		errorMessage: {
 			type: String,
-			default: 'Valor inválido',
+			default: 'Value inválido',
 		},
 		/**
 		 * Especifica se a largura do DateInput deve ser fluida.

@@ -178,7 +178,7 @@ export default {
 		 */
 		errorMessage: {
 			type: String,
-			default: 'Valor inválido',
+			default: 'Value inválido',
 		},
 		/**
 		 * Indica se vai ser possível fazer buscas no select.

@@ -185,7 +185,7 @@ export default {
 	}
 
 	&__icon {
-		//Valor fixo utilizado apenas para ajuste do posicionamento do ícone
+		//Value fixo utilizado apenas para ajuste do posicionamento do ícone
 		margin-top: 2px;
 
 		&--info {

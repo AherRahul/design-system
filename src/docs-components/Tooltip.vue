@@ -4,7 +4,7 @@
 		class="tooltip__container"
 		:class="visibilityController ? 'tooltip__container--active' : 'tooltip__container--inactive'"
 	>
-		<!-- @slot Slot usado para especificar o texto que receberá o highlight. -->
+		<!-- @slot Slot used to specify the text that will receive the highlight. -->
 		<slot />
 	</span>
 </template>
@@ -13,14 +13,14 @@
 export default {
 	props: {
 		/**
-		 * Controla a visibilidade do componente.
+		 * Controls component visibility.
 		 */
 		show: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Indica o elemento no DOM associado ao tooltip. Ele deve existir para que o tooltip seja mostrado.
+		 * Indicates the element in the DOM associated with the tooltip. It must exist for the tooltip to be shown.
 		 */
 		target: {
 			type: String,

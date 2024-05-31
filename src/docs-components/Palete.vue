@@ -84,7 +84,7 @@
 
 		<div>
 			<h5 class="gradient-container__title">
-				Gradiente
+				Gradient
 			</h5>
 			<div
 				id="linear-gradient($bg-gradient)"

@@ -1,29 +1,30 @@
 import { Meta, Canvas, Story } from '@storybook/addon-docs';
 import Elevation from '../../docs-components/Elevation.vue';
 
-<Meta title="Fundação/Elevação" component={ Elevation } />
+<Meta title="Foundation/Elevation" component={ Elevation } />
 
-# Elevação
+# Elevation
 
-Os tokens de elevação são utilizados para indicar o posicionamento dos diversos
-elementos da interface no eixo Z, dividindo os componentes em camadas. Por padrão
-todos os componentes estão dispostos na mesma camada.
+Elevation tokens are used to indicate the positioning of the various 
+interface elements on the Z axis, dividing the components into layers. 
+By default, all components are arranged on the same layer.
 
 <hr />
 <br />
 
-## Recomendações
+## Recommendations
 
-- Os tokens de elevação foram criados imaginando o seu uso em componentes de referência (backdrop, toolbar, modal, etc.).
-Evite utilizar os tokens em "classes de componente" muito distintas daquelas pras quais foram projetados.
+- Elevation tokens were created by imagining their use in reference 
+components (backdrop, toolbar, modal, etc.). Avoid using tokens in 
+"component classes" that are very different from those for which they were designed.
 
-## Observações
-- Ao passar o mouse sobre a ilustração de exemplo na tabela, será mostrada a comparação dos tokens e seus níveis de elevação.
+## Comments
+- Hovering over the example illustration in the table will show the comparison of tokens and their elevation levels.
 
 <br />
 
 ## Tokens
-Os tokens de elevação são variáveis scss e estão descritos abaixo.
+Elevation tokens are scss variables and are described below.
 <br />
 
 export const Template = (args) => ({

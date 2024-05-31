@@ -10,7 +10,7 @@
 				for="spacing_type"
 				class="playground__field-label"
 			>
-				Espaçamento:
+				Spacing:
 			</label>
 			<br>
 
@@ -40,7 +40,7 @@
 				for="direction"
 				class="playground__field-label"
 			>
-				Direção:
+				Direction:
 			</label>
 			<br>
 			<select
@@ -76,7 +76,7 @@
 				for="size"
 				class="playground__field-label"
 			>
-				Tamanho:
+				Size:
 			</label>
 			<br>
 			<select

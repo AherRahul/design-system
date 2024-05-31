@@ -183,7 +183,7 @@ export default {
 			default: 'Cancelar',
 		},
 		/**
-		 * Define a variante do botão de ação do Dialog Modal (segue as variantes do componente de botão do Cuida)
+		 * Define a variante do botão de ação do Dialog Modal (segue as variantes do componente de botão do RDS)
 		 */
 		actionButtonVariant: {
 			type: String,

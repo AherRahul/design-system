@@ -168,7 +168,7 @@ export default {
 		 */
 		errorMessage: {
 			type: String,
-			default: 'Valor inválido',
+			default: 'Value inválido',
 		},
 	},
 

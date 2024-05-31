@@ -1,35 +1,33 @@
 import { Meta, Canvas, Story } from '@storybook/addon-docs';
 import Border from '../../docs-components/BorderBuilder.vue';
 
-<Meta title="Fundação/Bordas" component={ Border } />
+<Meta title="Foundation/Edges" component={ Border } />
 
-# Bordas
+# Edges
 
-Os tokens de border-radius são utilizados para arredondar as bordas dos cantos de componentes 
-da interface, tornando-os mais sutis, amigáveis e orgânicos. No Cuida, prezamos por bordas um 
-tanto arredondadas, que crescem de acordo com o tamanho do componente.
+Border-radius tokens are used to round the corners of interface components, 
+making them more subtle, friendly and organic. At Cuida, we value somewhat 
+rounded edges, which grow according to the size of the component.
 
 <hr />
 <br />
 
-## Recomendações
+## Recommendations
 
--  Não recomendamos a utilização de componentes com border-radius igual a 0,
- uma vez que vão contra a linguagem visual que estamos construindo.
+- We do not recommend using components with border-radius equal to 0, as they 
+go against the visual language we are building.
 
--  Não recomendamos utilizar bordas muito arredondadas em elementos
- pequenos. O objetivo é ter bordas mais orgânicas, e não elementos arredondados.
+- We do not recommend using very rounded edges on small elements. The goal is 
+to have more organic edges, not rounded elements.
 
-- Recomendamos que os elementos possuam border-radius uniformes, por isso nossos 
-tokens não preveem cenários nos quais um elemento possui border-radius
- diferentes para cada um de seus cantos. Caso percebamos essa necessidade,
-  trabalharemos nisso no futuro.
-
+- We recommend that elements have uniform border-radius, so our tokens do not 
+predict scenarios in which an element has different border-radius for each of 
+its corners. If we see this need, we will work on it in the future.
 
 <br />
 
 ## Tokens
-Os tokens de border-radius são variáveis scss e estão descritos abaixo.
+Border-radius tokens are scss variables and are described below.
 <br />
 
 export const Template = (args) => ({

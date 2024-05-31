@@ -1,6 +1,6 @@
 # Guia de contribuição
 
-Primeiramente, obrigado pelo tempo e iniciativa em contribuir com o Cuida! ❤️
+Primeiramente, obrigado pelo tempo e iniciativa em contribuir com o RDS! ❤️
 
 Todos os tipos de contribuição são encorajados e bem-vindos. Esse guia tem como objetivo apresentar as formas como
 você pode colaborar, além de trazer algumas diretrizes e recomendações. Por favor, assegure-se de ler as seções do índice relacionadas à sua contribuição antes de abrir algum PR ou issue, isso vai tornar o processo de avaliação e discussão mais ágil e garantir que todos estarão na mesma página.
@@ -22,23 +22,23 @@ você pode colaborar, além de trazer algumas diretrizes e recomendações. Por 
   
 ## Quando um componente vai para o Design System?
 
-Caso você esteja com dúvida se o componente que você está desenvolvendo deve ou não ir para o Cuida, aqui vão algumas perguntas que recomendamos que você e seu time façam antes de submeter pull requests ou feature requests:
+Caso você esteja com dúvida se o componente que você está desenvolvendo deve ou não ir para o RDS, aqui vão algumas perguntas que recomendamos que você e seu time façam antes de submeter pull requests ou feature requests:
 
 ### 1. O componente que estou propondo é aplicável apenas no projeto no qual trabalho ou em algum outro?
 
-O Design System é um produto que serve a outros produtos e hospeda um conjunto de componentes, tokens e diretrizes aplicáveis a esses produtos e não a apenas um deles. Caso o componente que você está desenvolvendo ou deseja solicitar desenvolvimento seja muito específico, recomendamos o seguinte: preferivelmente, verifique se ele não pode ser substituído por algum dos componentes já implementados no Cuida, se não for esse o caso, o escopo dele deve ser local, devendo ser implementado no contexto do seu projeto.
+O Design System é um produto que serve a outros produtos e hospeda um conjunto de componentes, tokens e diretrizes aplicáveis a esses produtos e não a apenas um deles. Caso o componente que você está desenvolvendo ou deseja solicitar desenvolvimento seja muito específico, recomendamos o seguinte: preferivelmente, verifique se ele não pode ser substituído por algum dos componentes já implementados no RDS, se não for esse o caso, o escopo dele deve ser local, devendo ser implementado no contexto do seu projeto.
 
 De acordo com o segundo princípio de design systems, de Nathan Curtis:
 
 > Inclua o que é compartilhado, omita o que não é. (_Include what’s shared, omit what’s not._)
 
-Caso o componente em questão tenha uma aplicabilidade geral e você não o encontre no nosso DS, pode ser que ele seja uma ótima adição ao Cuida 😃
+Caso o componente em questão tenha uma aplicabilidade geral e você não o encontre no nosso DS, pode ser que ele seja uma ótima adição ao RDS 😃
 
 <br>
 
-### 2. O componente que estou propondo está em consistência com a linguagem de design e princípios do Cuida?
+### 2. O componente que estou propondo está em consistência com a linguagem de design e Principles do RDS?
 
-Toda contribuição ao Cuida deve ser normalizada aos padrões do design system, isto é, deve ser implementada a partir dos tokens do Cuida, suas diretrizes e convenções. Caso você proponha um componente que não siga esses guidelines, ele tem poucas chances de ser aceito. Se ainda assim você julga ser uma contribuição relevante, recomendamos levar essa discussão a uma reunião de planejamento do design system ou entrar em contato com outros designers e desenvolvedores mais experientes no projeto, eles vão te ajudar a normalizar o componente ou até recomendar que você sugira um novo token ou modificação de alguma das guidelines do DS.
+Toda contribuição ao RDS deve ser normalizada aos padrões do design system, isto é, deve ser implementada a partir dos tokens do RDS, suas diretrizes e convenções. Caso você proponha um componente que não siga esses guidelines, ele tem poucas chances de ser aceito. Se ainda assim você julga ser uma contribuição relevante, recomendamos levar essa discussão a uma reunião de planejamento do design system ou entrar em contato com outros designers e desenvolvedores mais experientes no projeto, eles vão te ajudar a normalizar o componente ou até recomendar que você sugira um novo token ou modificação de alguma das guidelines do DS.
 
 <br>
 
@@ -65,7 +65,7 @@ No nosso processo de trabalho, existem 3 fluxos de contribuição e cada um dele
 
 ## Solicitando uma feature
 
-A solicitação de features no Cuida pode envolver a criação / melhoria de componentes e de tokens, melhorias de CI/CD ou aprimoramento da nossa documentação com foco nos testes de UI. Para solicitar componentes, temos algumas recomendações que estão listadas abaixo. Caso deseje solicitar features relacionadas às outras categorias mencionadas, basta criar uma issue. 😊
+A solicitação de features no RDS pode envolver a criação / melhoria de componentes e de tokens, melhorias de CI/CD ou aprimoramento da nossa documentação com foco nos testes de UI. Para solicitar componentes, temos algumas recomendações que estão listadas abaixo. Caso deseje solicitar features relacionadas às outras categorias mencionadas, basta criar uma issue. 😊
 
 #### Antes de solicitar um componente
 
@@ -81,7 +81,7 @@ Tendo checado os passos do tópico anterior, para realizar um component request 
 
 -   Discorra sobre a necessidade do componente;
 -   Informe em que cenário o componente pode ser utilizado;
--   Indique se existem recursos no Cuida que são semelhantes, mas que não resolvem o problema;
+-   Indique se existem recursos no RDS que são semelhantes, mas que não resolvem o problema;
 -   Apresente exemplos de componentes semelhantes presentes em outros Design Systems (prints e gifs podem ser muito úteis aqui);
 
 ## Reportando um bug
@@ -90,7 +90,7 @@ Tendo checado os passos do tópico anterior, para realizar um component request 
 
 Antes de abrir uma issue reportando um bug é importante assegurar-se de que o erro que está acontecendo com você pode ser reproduzido por outras pessoas e que você tem em mãos informações suficientes para que elas possam te ajudar. Para tanto, pedimos que você cheque o seguinte:
 
--   Certifique-se de estar usando a última versão do Cuida;
+-   Certifique-se de estar usando a última versão do RDS;
 -   Verifique se o problema que está acontecendo não é um erro no seu ambiente de desenvolvimento;
 -   Procure na [lista de issues](https://github.com/Sysvale/cuida/issues) se já não há um bug report semelhante ou igual ao seu;
 
@@ -101,7 +101,7 @@ Tendo checado os passos do tópico anterior, para reportar um bug utilize o [tem
 -   Resumo do problema (prints e gifs podem ser muito úteis);
 -   Os passos para reproduzir o problema;
 -   Comportamento atual e o comportamento esperado;
--   Versão do Cuida;
+-   Versão do RDS;
 -   Versão das principais dependências relacionadas ao problema;
 -   Navegador utilizado;
 -   Versão do navegador;
@@ -110,7 +110,7 @@ Tendo checado os passos do tópico anterior, para reportar um bug utilize o [tem
 
 ## Ajudando com a documentação
 
-Contribuições em documentação no Cuida podem ser classificadas em duas categorias:
+Contribuições em documentação no RDS podem ser classificadas em duas categorias:
 
 -   Documentação de componentes;
 -   Documentação do projeto;
@@ -143,7 +143,7 @@ Utilizamos três tipos de branch temporários. Eles ajudam a categorizar o tipo 
 
 Os branchs temporários, têm nomes em kebab-case, têm um tempo limite de existência e, uma vez merjados ou fechados, devem ser excluídos.
 
-#### Exemplo de fluxo de trabalho
+#### Example de fluxo de trabalho
 
 -   Atualize sua versão local da `main`;
 -   A partir da main, crie um branch seguindo as convenções de nomenclatura mencionadas acima;
@@ -251,7 +251,7 @@ Para padronizar a escrita de comentários no projeto e permitir o uso de extens�
 -   `FIXME`: utilizado para indicar que determinado trecho de código funciona, mas que poderia ser melhorado.
 -   `TODO`: utilizado para indicar que código adicional precisa ser escrito ou melhorias podem ser feitas.
 
-Exemplo de uso:
+Example de uso:
 
 ![image](https://user-images.githubusercontent.com/20057968/186924215-ea16bf62-c791-43d0-af66-5fab45cfa19d.png)
 
@@ -296,12 +296,12 @@ src
 -   **build:** o diretório build guarda o `rollup.config.js`. Esse arquivo é um module bundler responsável pela criação dos arquivos necessários para publicação do pacote node e é chamado com o comando `npm run build`.
 -   **dist:** repositório que armazena os arquivos compilados pelo `rollup.config.js` para distribuição.
 -   **src:** armazena diversos subdiretórios com os arquivos dos componentes do Design System, além de tokens, arquivos de documentação e testes.
-    -   **sass:** nesse subdiretório estão definidos os tokens do Cuida em arquivos `.scss`. Esses arquivos são importados no arquivo `app.scss` contido nessa pasta.
+    -   **sass:** nesse subdiretório estão definidos os tokens do RDS em arquivos `.scss`. Esses arquivos são importados no arquivo `app.scss` contido nessa pasta.
     -   **components:** aqui ficam contidos os arquivos `.vue` que definem os componentes. Novos componentes devem ser exportados no arquivo `index.js`, presente nesse subdiretório para que possam ser efetivamente utilizados na aplicação. Além disso, cada novo arquivo `.vue` adicionado nesse diretório deve ter um arquivo `.stories.mdx` correspondente no diretório **stories** para que seja criada e exibida sua documentação no Storybook.
     -   **docs-components:** armazena os componentes vue criados para auxílio da documentação no Storybook e que não devem ser exportados como componentes do Design System. Novos componentes devem ser exportados no arquivo `index.js`, presente nesse subdiretório, para que possam ser efetivamente utilizados na aplicação.
     -   **stories:** nesse subdiretório estão contido os arquivos `.stories.mdx` responsáveis por criar a documentação dos componentes e por exibi-los no storybook. Possui dois subdiretórios, a pasta **components** guarda os `.mdx` com a documentação dos componentes e a pasta **tokens** guarda os `.mdx` com a documentação dos tokens.
-    -   **entry.js**: arquivo utilizado no `rollup.config.js` como input do processo de building. Nesse arquivo são importadas e configuradas algumas das dependências do projeto que vão ser exportadas dentro do pacote do Cuida. Nesse arquivo também é adicionado o prefixo **_cds-_** necessário para utilizar os componentes do Cuida em outras aplicações, ou seja, se no contexto do Cuida você usa o componente **badge** utilizando `<badge>`, numa aplicação externa que usa o Cuida para chamar esse componente você vai utilizar a sintaxe `<cds-badge>`.
--   **tests:** diretório que armazena os testes de snapshot e testes unitários dos componentes do Cuida.
+    -   **entry.js**: arquivo utilizado no `rollup.config.js` como input do processo de building. Nesse arquivo são importadas e configuradas algumas das dependências do projeto que vão ser exportadas dentro do pacote do RDS. Nesse arquivo também é adicionado o prefixo **_cds-_** necessário para utilizar os componentes do RDS em outras aplicações, ou seja, se no contexto do RDS você usa o componente **badge** utilizando `<badge>`, numa aplicação externa que usa o RDS para chamar esse componente você vai utilizar a sintaxe `<cds-badge>`.
+-   **tests:** diretório que armazena os testes de snapshot e testes unitários dos componentes do RDS.
 
 <br>
 <br>
@@ -315,7 +315,7 @@ No projeto utilizamos alguns workflows do Github Actions no nosso fluxo de CI/CD
 -   **Labeler 🏷️:** workflow utilizado para automatizar a criação de labels nos pull requests. A depender as modificações propostas nos PRs, podem ser adicionadas as labels `🧱 Componente` , `🐛 Bug`, `📃 Documentação`, `🛠️ Build` e `🧩 Token`.
 -   **Tester ⚗️:** workflow que executa a suite de testes do projeto.
 -   **Prettier 🪄:** workflow que utiliza o [Prettier](https://prettier.io/) para estilizar os arquivos automaticamente de acordo com as convenções de estilo de código do projeto. A cada push, caso haja erro de estilo, um commit é automaticamente criado com correções.
--   **Deployer 🚀:** quando um PR é merjado na main esse workflow é disparado. Ele instala as dependências, builda o projeto e aciona o deploy para a github page que hospeda a [documentação do Cuida](https://main--6168a1779cac8c003ab99c2d.chromatic.com/).
+-   **Deployer 🚀:** quando um PR é merjado na main esse workflow é disparado. Ele instala as dependências, builda o projeto e aciona o deploy para a github page que hospeda a [documentação do RDS](https://main--6168a1779cac8c003ab99c2d.chromatic.com/).
 -   **Deployer V2 🚀:** quando um PR é merjado no branch v2.70-legacy esse workflow é disparado. Ele instala as dependências, builda o projeto e aciona o deploy para a github page que hospeda a [documentação do CuidaV2](https://sysvale.github.io/cuida/?path=/docs/funda%C3%A7%C3%A3o-princ%C3%ADpios--page).
 -   **Publisher 📦:** workflow responsável por publicar o pacote NPM. É disparado quando um PR é merjado na main.
 -   **Releaser ✔️:** workflow utilizado para criar tags automáticas do projeto a depender da versão da aplicação e na sequência criar as releases.
@@ -328,10 +328,10 @@ Quando um pull request é aprovado e merjado, automaticamente, através dos work
 
 ## Como testar um recurso que ainda não foi publicado?
 
-Muitas vezes não é possível simular o comportamento de um componente dentro do Storybook tal qual nos projetos em que eles serão usados. Para esse caso uma alternativa para testar um recurso ou componente que ainda esteja em desenvolvimento no Cuida é possível instalar o pacote a partir de um branch do github.
+Muitas vezes não é possível simular o comportamento de um componente dentro do Storybook tal qual nos projetos em que eles serão usados. Para esse caso uma alternativa para testar um recurso ou componente que ainda esteja em desenvolvimento no RDS é possível instalar o pacote a partir de um branch do github.
 
 -   Primeiro você deve executar o `npm run build` para gerar a compilação do pacote;
 -   Em seguida você deve enviar o diretório `/dist` para o branch em desenvolvimento, para tal você deve comentar o `/dist` no arquivo `.gitignore`, commitar as alterações e fazer o push;
--   Feito isso você pode instalar o pacote no seu projeto alterando a versão do Cuida no `package.json` para `"@sysvale/cuida": "https://github.com/Sysvale/cuida/tarball/<branch-name>",` e rodando o `npm i`, onde `<branch-name>` é o nome do branch em desenvolvimento no Cuida;
+-   Feito isso você pode instalar o pacote no seu projeto alterando a versão do RDS no `package.json` para `"@sysvale/cuida": "https://github.com/Sysvale/cuida/tarball/<branch-name>",` e rodando o `npm i`, onde `<branch-name>` é o nome do branch em desenvolvimento no RDS;
 
 **Obs.:** Sempre que fizer uma alteração no branch você deve enviar uma versão atualizada da `/dist` para o github e rodar o `npm i` no projeto de interesse.
