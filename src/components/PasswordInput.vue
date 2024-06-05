@@ -79,56 +79,56 @@ export default {
 
 	props: {
 		/**
-		* Prop utilizada como v-model.
+		* Prop used as v-model.
 		*/
 		modelValue: {
 			type: String,
 			default: '',
 		},
 		/**
-		 * Especifica a label do input.
+		 * Specifies the input label.
 		 */
 		label: {
 			type: String,
 			default: 'Label',
 		},
 		/**
-		 * Desabilita o input.
+		 * Disables the input.
 		 */
 		disabled: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Especifica o estado do PasswordInput. As opções são 'default', 'valid' e 'invalid'.
+		 * Specifies the state of the PasswordInput. The options are 'default', 'valid' and 'invalid'.
 		 */
 		state: {
 			type: String,
 			default: 'default',
 		},
 		/**
-		 * Exibe asterisco de campo obrigatório (obs.: não faz a validação).
+		 * Displays asterisk for mandatory field (note: does not validate).
 		 */
 		required: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Especifica o placeholder do input.
+		 * Specifies the input placeholder.
 		 */
 		placeholder: {
 			type: String,
 			default: 'Enter information here',
 		},
 		/**
-		 * Especifica a mensagem de erro, que será exibida caso o estado seja inválido.
+		 * Specifies the error message, which will be displayed if the state is invalid.
 		 */
 		errorMessage: {
 			type: String,
-			default: 'Value inválido',
+			default: 'Invalid value',
 		},
 		/**
-		 * Especifica se a largura do PasswordInput deve ser fluida.
+		 * Specifies whether the width of the PasswordInput should be fluid.
 		 */
 		fluid: {
 			type: Boolean,
@@ -136,14 +136,14 @@ export default {
 			required: false,
 		},
 		/**
-		 * Define exibição e texto do tooltip do input
+		 * Defines input tooltip display and text
 		 */
 		tooltip: {
 			type: String,
 			default: null,
 		},
 		/**
-		 * Especifica ícone do tooltip do TextInput.
+		 * Specifies TextInput tooltip icon.
 		 */
 		tooltipIcon: {
 			type: String,
@@ -165,7 +165,7 @@ export default {
 		},
 
 		customTextPasswordInput() {
-			return this.showPassword ? 'Ocultar' : 'Mostrar';
+			return this.showPassword ? 'Hide' : 'Show';
 		},
 
 		disableTextPasswordInput() {

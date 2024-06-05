@@ -18,7 +18,7 @@ import { Chart, registerables } from 'chart.js';
 import sassColorVariables from '../assets/sass/colors.module.scss';
 import paleteBuilder from '../utils/methods/paleteBuilder.js';
 
-// Registrar o elemento "point" no registro (Torna-se necessário para marcações de ponto)
+// Register the "point" element in the registry (It becomes necessary for point markings)
 Chart.register(...registerables);
 
 export default {
@@ -29,10 +29,10 @@ export default {
 
 	props: {
 		/**
-		 * Define o conjunto de dados a serem mostrados no gráfico.
-		 * O objeto deve conter o parâmetro `name` (para identificar o conjunto de dados)
-		 * e `datasets`, array de objetos que apresentará `label` (indicar o rótulo do dado) e
-		 * `data` (array com os valores númericos).
+		 * Defines the set of data to be shown in the chart.
+		 * The object must contain the `name` parameter (to identify the dataset)
+		 * and `datasets`, array of objects that will present `label` (indicate the label of the data) and
+		 * `data` (array with numeric values).
 		 */
 		data: {
 			type: Object,
@@ -47,25 +47,25 @@ export default {
 			})
 		},
 		/**
-		* Define os intervalos máximo e mínimo sugeridos para o eixo X.
-		* Caso os valores do dataset ultrapassem os intervalos sugeridos, 
-		* estes serão desconsiderados, prevalencendo o dataset.
+		* Sets the maximum and minimum suggested ranges for the X axis.
+		* If the dataset values ​​exceed the suggested ranges, 
+		* these will be disregarded, with the dataset prevailing.
 		*/
 		xAxisRange: {
 			type: Array,
 			default: () => [0, 100],
 		},
 		/**
-		* Define os intervalos máximo e mínimo sugeridos para o eixo Y.
-		* Caso os valores do dataset ultrapassem os intervalos sugeridos, 
-		* estes serão desconsiderados, prevalencendo o dataset.
+		* Sets the suggested maximum and minimum ranges for the Y axis.
+		* If the dataset values ​​exceed the suggested ranges, 
+		* these will be disregarded, with the dataset prevailing.
 		*/
 		yAxisRange: {
 			type: Array,
 			default: () => [0, 100],
 		},
 		/**
-		 * Personaliza a paleta de cores do gráfico. São 11 variantes implementadas:
+		 * Customizes the chart's color palette. There are 11 variants implemented:
 		 * `green`, `teal`, `turquoise`, `blue`, `indigo`, `violet`, `pink`, `red`, `orange`, `amber`, `gray`, `dark`.
 		 */
 		variant: {
@@ -77,7 +77,7 @@ export default {
 			}
 		},
 		/**
-		 * Defina as labels do gráfico
+		 * Define the chart labels
 		 */
 		labels: {
 			type: Array,
@@ -85,9 +85,9 @@ export default {
 			default: () => [],
 		},
 		/**
-		 * Defina o texto a ser exibido para a legenda. Quando definido como verdadeiro
-		 * (true), espera-se que exiba o nome do data. Quando definido
-		 * como falso (false), será definido o nome do dataset
+		 * Set the text to be displayed for the caption. When set to true
+		 * (true), expected to display the name of the data. When set
+		 * as false, the name of the dataset will be defined
 		*/
 		showLabelName: {
 			type: Boolean,
@@ -95,30 +95,30 @@ export default {
 			default: true,
 		},
 		/**
-		 * Defina se deve ser aplicado preenchimento ao gráfico.
+		 * Define whether to apply fill to the chart.
 		*/
 		fill: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Defina se deve transformar o gráfico de linhas sólidas em linhas tracejadas.
+		 * Define whether to transform the graph from solid lines to dashed lines.
 		*/
 		isDashed: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Defina efeito de linha tracejada. Especificamente, o valor [a, b] define o padrão
-		 * de traços da linha, onde `a` representa o comprimento de cada traço sólido e `b`
-		 * representa o comprimento de cada espaço entre os traços.
+		 * Set dashed line effect. Specifically, the value [a, b] defines the pattern
+		 * of line strokes, where `a` represents the length of each solid stroke and `b`
+		 * represents the length of each space between the dashes.
 		 */
 		borderDash: {
 			type: Array,
 			default: () => [],
 		},
 		/**
-		 * Defina o nível de suavização das linhas do gráfico.
+		 * Set the smoothing level for the graph lines.
 		 */
 		smoothing: {
 			type: Number,
@@ -132,7 +132,7 @@ export default {
 			localChartData: {},
 			localLabels: [],
 			palletColors: [],
-			deleteFirstTwoColors: false, //NOTE: Responsável por garantir que as cores gray e dark da paleta não serão removidos os dois primeiros elementos
+			deleteFirstTwoColors: false, //NOTE: Responsible for ensuring that the gray and dark colors of the palette do not remove the first two elements
 			chartOptions: {
 				interaction: {
 					intersect: false,
@@ -157,7 +157,7 @@ export default {
 				},
 				tension: this.smoothing,
 				responsive: true,
-				maintainAspectRatio: false, // NOTE: Caso true manterá aspecto de proporção original, caso false, será dimensionado para preencher completamente o contêiner (Isso pode fazer com que o gráfico pareça distorcido se o container tiver proporção de aspecto diferente do gráfico original)
+				maintainAspectRatio: false, // NOTE: If true it will maintain the original aspect ratio, if false it will be scaled to completely fill the container (This may cause the graphic to appear distorted if the container has a different aspect ratio than the original graphic)
 				pieceLabel: {
 					mode: 'percentage',
 					precision: 1
@@ -227,7 +227,7 @@ export default {
 			this.removeFirstTwoElements();
 		},
 
-		// NOTE: Função responsável por remover os dois primeiros elementos da paleta para quando não é gray ou Dark Neutrals
+		// NOTE: Function responsible for removing the first two elements from the palette when it is not gray or Dark Neutrals
 		removeFirstTwoElements() {
 			for (let i = 0; i < this.palletColors.length; i++) {
 				const color = this.palletColors[i];
@@ -240,7 +240,7 @@ export default {
 			}
 		},
 
-		// NOTE: Adiciona campo dataset.name com o nome do objeto respectivo
+		// NOTE: Add dataset.name field with the name of the respective object
 		addDataSetNames() {
 			this.data.forEach(item => {
 				item.datasets.forEach(dataset => {
@@ -249,7 +249,7 @@ export default {
 			});
 		},
 
-		// NOTE: Função que recebe uma matriz de dados dos gráfico.
+		// NOTE: Function that receives an array of graph data.
 		mergeChartDataNoSelect(data) {
 			// data.labels = this.localLabels;
 			const mergedData = { labels: this.localLabels, datasets: [] };
@@ -271,8 +271,8 @@ export default {
 			this.localChartData = mergedData;
 		},
 
-		// NOTE: Função responsável por buscar a cor na paleta
-		// Para definição da opacidade é aplicado hexadecimal (80 = 50%)
+		// NOTE: Function responsible for searching the color in the palette
+		// To define opacity, hexadecimal is applied (80 = 50%)
 		generateBackgroundColor() {
 			const variantLowercase = this.variant.toLowerCase();
 			const palletColor = this.palletColors.find(color => color.variantName.toLowerCase().includes(variantLowercase));
@@ -287,8 +287,8 @@ export default {
 		},
 
 
-		// NOTE: Função responsável por setar backgroundColor
-		// Ocorre essa verificação para garantir que o mesmo conjunto de dados para mais de um item selecionado tenha a mesma cor
+		// NOTE: Function responsible for setting backgroundColor
+		// This check occurs to ensure that the same set of data for more than one selected item has the same color
 		setColors(datasets, backgroundColor) {
 			const colors = {};
 

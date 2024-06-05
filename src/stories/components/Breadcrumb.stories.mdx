@@ -34,24 +34,24 @@ export const Template = (args) => ({
 
 # Breadcrumb
 
-### Breadcrumbs são utilizados para indicar ao usuário o caminho percorrido entre as páginas de uma aplicação até se checar na página atual.
+### Breadcrumbs are used to indicate to the user the path taken between the pages of an application until reaching the current page.
 ---
 <br />
 
 ## When to use:
-- Quando houver dois ou mais níveis na hierarquia de páginas;
-- Quando você precisar indicar ao usuário em que página ele está e como ele pode refazer os passos que o levaram à página atual;
+- When there are two or more levels in the page hierarchy;
+- When you need to tell the user which page they are on and how they can retrace the steps that took them to the current page;
 
 <br />
 
 ## When not to use:
-- Em casos nos quais só houver uma página na estrutura de navegação.
+- In cases where there is only one page in the navigation structure.
 
 <br />
 
-## Obs.:
-- Idealmente Breadcrumbs devem ser usados com <b>três</b> ou mais níveis de hierarquia. Entretanto, o Breadcrumb do
-RDS pode ser usado com <b>dois</b> níveis pois nesse cenário ele se comporta como um botão de retorno para a página anterior.
+## Note:
+- Ideally Breadcrumbs should be used with <b>three</b> or more hierarchy levels. However, the Breadcrumb of
+RDS can be used with <b>two</b> levels because in this scenario it behaves like a return button to the previous page.
 
 <br />
 
@@ -59,21 +59,21 @@ RDS pode ser usado com <b>dois</b> níveis pois nesse cenário ele se comporta c
 
 export const items = [
 	{
-		label: 'Relatórios',
+		label: 'Reports',
 		route: {
 			path: '/reports',
 			name: 'reports'
 		},
 	},
 	{
-		label: 'Relatórios individualizados',
+		label: 'Individualized reports',
 		route: {
 			path: '/individualized-reports',
 			name: 'individualized'
 		},
 	},
 	{
-		label: 'Relatório de usuários',
+		label: 'User Report',
 		route: {
 			path: '/users-reports',
 			name: 'users'
@@ -83,14 +83,14 @@ export const items = [
 
 export const items2 = [
 	{
-		label: 'Relatórios',
+		label: 'Reports',
 		route: {
 			path: '/reports',
 			name: 'reports'
 		},
 	},
 	{
-		label: 'Relatórios individualizados',
+		label: 'Individualized reports',
 		route: {
 			path: '/individualized-reports',
 			name: 'individualized'
@@ -100,7 +100,7 @@ export const items2 = [
 
 <br />
 
-##### Breadcrumb de 3 ou mais níveis:
+##### Breadcrumb of 3 or more levels:
 
 <Canvas>
 	<Story
@@ -117,7 +117,7 @@ export const items2 = [
 
 <br />
 
-##### Breadcrumb de 2 níveis:
+##### 2-level breadcrumb:
 
 <Canvas>
 	<Story

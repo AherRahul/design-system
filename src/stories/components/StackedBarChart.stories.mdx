@@ -68,28 +68,29 @@ export const Template = (args) => ({
 
 # StackedBarChart
 
-### Um componente de gráfico reutilizável para exibir dados visualmente.
+### A reusable chart component to display data visually.
 ---
 <br />
 
 ## When to use:
-- Exibir dados em formatos visuais;
-- Comparação de dados como um todo;
-- Tendências ao longo do tempo.
+- Display data in visual formats;
+- Comparison of data as a whole;
+- Trends over time.
 
 <br />
 
 ## When not to use:
-- Para informações simples que podem ser exibidas em um formato tabular ou em texto;
-- Comparação absoluta;
-- Muitas categorias.
+- For simple information that can be displayed in a tabular or text format;
+- Absolute comparison;
+- Many categories.
 
 ## Preview
 
-### __Stacked bar monocromática__
+### __Stacked monochrome bar__
 
-Quando a prop `variant` é especificada e não há propriedade de cor indicada no objeto de configuração,
-o gráfico é gerado no modo monocromático, com as shades de variant mudando para cada dataset. 
+When the `variant` prop is specified and there is no color property indicated in the configuration object,
+the graph is generated in monochrome mode, with the variant shades changing for each dataset.
+
 
 <br />
 
@@ -97,32 +98,32 @@ o gráfico é gerado no modo monocromático, com as shades de variant mudando pa
 	<Story
 		name="StackedBarChart"
 		args={{
-			labels: ['Janeiro','Fevereiro','Março', 'Abril', 'Maio'],
+			labels: ['January', 'February', 'March', 'April', 'May'],
 			variant: 'green',
 			data: [
 				{
-					name: 'Ecocardiograma',
+					name: 'Echocardiogram',
 					datasets: [
 						{
-							label: 'Realizado',
+							label: 'Accomplished',
 							data: [50, 50, 50, 50, 50],
 						},
 					]
 				},
 				{
-					name: 'Raio-X',
+					name: 'X-Ray',
 					datasets: [
 						{
-							label: 'Não realizado',
+							label: 'Unrealized',
 							data: [49, 84, 120, 78, 130],
 						}
 					]
 				},
 				{
-					name: 'Tomografia',
+					name: 'Tomography',
 					datasets: [
 						{
-							label: 'Não realizado',
+							label: 'Unrealized',
 							data: [38, 84, 120, 90, 45],
 						}
 					]
@@ -137,12 +138,12 @@ o gráfico é gerado no modo monocromático, com as shades de variant mudando pa
 
 <ArgsTable story="StackedBarChart" />
 
-### __Stacked bar com múltiplas cores__
+### __Stacked bar with multiple colors__
 
-Para gerar gráficos com múltiplas cores, basta enviar em cada `dataset` a propriedade `variant`.
-Os shades vão escurecendo a cada dataset até chegar ao 700, quando então voltam a decrescer até o shade 50, quando o ciclo se repete.
+To generate graphs with multiple colors, simply send the `variant` property in each `dataset`.
+The shades get darker with each dataset until reaching 700, when they then decrease again until shade 50, when the cycle is repeated.
 
-⚠️ Ao especificar variantes através do objeto de configuração, a variant por prop vai ser sobrescrita
+⚠️ When specifying variants via the configuration object, the variant by prop will be overwritten
 
 
 <br />
@@ -178,10 +179,10 @@ Os shades vão escurecendo a cada dataset até chegar ao 700, quando então volt
 					]
 				},
 				{
-					'name': 'Desenvolvedores',
+					'name': 'Developers',
 					'datasets': [
 						{
-							'label': 'Desenvolvedores',
+							'label': 'Developers',
 							'data': [
 								79,
 								14,

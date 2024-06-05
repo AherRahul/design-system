@@ -51,21 +51,21 @@ export default {
 
 	props: {
 		/**
-		* O título das páginas nas quais o PageHeader será utilizado.
+		* The title of the pages on which the PageHeader will be used.
 		*/
 		title: {
 			type: String,
 			required: true,
 		},
 		/**
-		* O subtítulo das páginas nas quais o PageHeader será utilizado.
+		* The subtitle of the pages on which the PageHeader will be used.
 		*/
 		subtitle: {
 			type: String,
 			default: null,
 		},
 		/**
-		* Quando ativa, define a largura do PageHeader como 50% do container.
+		* When active, sets the PageHeader width to 50% of the container.
 		*/
 		compact: {
 			type: Boolean,

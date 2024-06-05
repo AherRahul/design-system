@@ -128,56 +128,56 @@ export default {
 
 	props: {
 		/**
-		* Prop utilizada como v-model.
+		* Prop used as v-model.
 		*/
 		modelValue: {
 			type: String,
 			default: '',
 		},
 		/**
-		 * Especifica a label do input.
+		 * Specifies the input label.
 		 */
 		label: {
 			type: String,
 			default: 'Label',
 		},
 		/**
-		 * Desabilita o input.
+		 * Disables input.
 		 */
 		disabled: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Especifica o estado do TextInput. As opções são 'default', 'valid', 'loading' e 'invalid'.
+		 * Specifies the state of the TextInput. The options are 'default', 'valid', 'loading' and 'invalid'.
 		 */
 		state: {
 			type: String,
 			default: 'default',
 		},
 		/**
-		 * Exibe asterisco de obrigatório (obs.: não faz a validação)
+		 * Displays mandatory asterisk (note: does not validate)
 		 */
 		required: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Especifica o placeholder do input
+		 * Specifies the input placeholder
 		 */
 		placeholder: {
 			type: String,
 			default: 'Enter information here',
 		},
 		/**
-		 * Especifica a mensagem de erro, que será exibida caso o estado seja inválido
+		 * Specifies the error message, which will be displayed if the status is invalid
 		 */
 		errorMessage: {
 			type: String,
-			default: 'Value inválido',
+			default: 'Invalid value',
 		},
 		/**
-		 * Especifica se a largura do TextInput deve ser fluida.
+		 * Specifies whether the TextInput width should be fluid.
 		 */
 		fluid: {
 			type: Boolean,
@@ -185,7 +185,7 @@ export default {
 			required: false,
 		},
 		/**
-		 * Especifica a máscara a ser aplicada ao TextInput.
+		 * Specifies the mask to be applied to the TextInput.
 		 * Example: "(##) #####-####"
 		 */
 		mask: {
@@ -193,35 +193,35 @@ export default {
 			default: null,
 		},
 		/**
-		 * Define exibição e texto do tooltip do input
+		 * Defines input tooltip display and text
 		 */
 		tooltip: {
 			type: String,
 			default: null,
 		},
 		/**
-		 * Especifica ícone do tooltip do TextInput.
+		 * Specifies TextInput tooltip icon.
 		 */
 		tooltipIcon: {
 			type: String,
 			default: 'info-outline',
 		},
 		/**
-		 * Define texto do link do input (localizado à direita da label).
+		 * Defines input link text (located to the right of the label).
 		 */
 		linkText: {
 			type: String,
 			default: null,
 		},
 		/**
-		 * Define a url a ser acessada no clique do link (no caso do link ser exibido).
+		 * Defines the url to be accessed when clicking the link (if the link is displayed).
 		 */
 		linkUrl: {
 			type: String,
 			default: 'https://cuida.framer.wiki/',
 		},
 		/**
-		 * Define a utilização de lazy para debouncer.
+		 * Defines the use of lazy for debouncer.
 		 */
 		lazy: {
 			type: Boolean,
@@ -308,7 +308,7 @@ export default {
 
 		internalValue(value) {
 			/**
-			 * Evento utilizado para implementar o v-model.
+			 * Event used to implement the v-model.
 			 * @event input
 			 * @type {Event}
 			 */
@@ -323,7 +323,7 @@ export default {
 
 	methods: {
 		/**
-		 * Permite que o evento seja emitido apenas quando não houver digitação por 1 segundo.
+		 * Allows the event to be emitted only when there is no typing for 1 second.
 		 */
 		emitLazy(value) {
 			clearTimeout(this.timeout);

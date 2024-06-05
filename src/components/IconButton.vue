@@ -36,7 +36,7 @@ export default {
 
 	props: {
 		/**
-		 * Especifica o tamanho do botão. São 3 tamanhos implementados: 'sm', 'md', 'lg'.
+		 * Specifies the size of the button. There are 3 sizes implemented: 'sm', 'md', 'lg'.
 		 */
 		size: {
 			type: String,
@@ -46,43 +46,43 @@ export default {
 			},
 		},
 		/**
-		* Especifica o `name` do ícone do cuida icons a ser apresentado no corpo do botão.
+		* Specifies the `name` of the cura icons icon to be displayed in the button body.
 		*/
 		icon: {
 			type: String,
 			default: 'create-outline',
 		},
 		/**
-		 * Controla a disponibilidade do botão.
+		 * Controls button availability.
 		 */
 		disabled: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		* Texto a ser exibido como tooltip com o hover do botão.
+		* Text to be displayed as a tooltip when the button is hovered.
 		*/
 		tooltipText: {
 			type: String,
 			default: null,
 		},
 		/**
-		* Quando ativo, faz com que, após iteração do usuário, o ícone do botão seja temporariamente alterado.
+		* When active, it causes the button icon to temporarily change after user iteration.
 		*/
 		feedbackOnClick: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		* Ícone mostrado após clique do usuário.
+		* Icon shown after user click.
 		*/
 		feedbackIcon: {
 			type: String,
 			default: 'check-outline',
 		},
 		/**
-		* A variante de cor. São 9 variantes implementadas: 'green', 'teal',
-		* 'blue', 'indigo', 'violet', 'pink', 'red', 'orange', 'amber', 'gray' e 'dark'.
+		* The color variant. There are 9 variants implemented: 'green', 'teal',
+		* 'blue', 'indigo', 'violet', 'pink', 'red', 'orange', 'amber', 'gray' and 'dark'.
 		*/
 		variant: {
 			type: String,
@@ -147,7 +147,7 @@ export default {
 			}
 
 			/**
-			* Evento que indica que o botão foi clicado
+			* Event that indicates that the button was clicked
 			* @event cds-click
 			* @type {Event}
 			*/
@@ -201,7 +201,7 @@ export default {
 		outline: 1px solid transparent !important;
 		color: $n-300 !important;
 		background-color: $n-20 !important;
-		cursor: default !important;
+		cursor: not-allowed !important;
 
 		&:hover {
 			outline: 1px solid transparent !important;

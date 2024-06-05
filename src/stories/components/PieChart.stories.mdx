@@ -59,25 +59,25 @@ export const Template = (args) => ({
 
 # PieChart
 
-### Um componente de gráfico reutilizável para exibir dados visualmente.
+### A reusable chart component to display data visually.
 ---
 
-⚠️ Esse componente vai ser substituído pelo DonutChart nas próximas versões do RDS
+⚠️ This component will be replaced by DonutChart in the next versions of RDS
 
 <br />
 
 ## When to use:
-- Exibir dados em formatos visuais;
-- Visualizar tendências, proporções ou comparações em dados;
-- Exibir proporções ou partes de um todo, onde cada fatia representa uma parcela do total;
-- Funciona bem com categorias mutuamente exclusivas;
+- Display data in visual formats
+- View trends, proportions or comparisons in data
+- Display proportions or parts of a whole, where each slice represents a portion of the total
+- Works well with mutually exclusive categories
 
 <br />
 
 ## When not to use:
-- Para informações simples que podem ser exibidas em um formato tabular ou em texto;
-- Quando os dados apresentarem muitas categorias ou subcategorias;
-- Não é apropriado para dados contínuos ou dados temporais.
+- For simple information that can be displayed in a tabular or text format
+- When the data presents many categories or subcategories
+- Not suitable for continuous data or temporal data.
 
 ## Preview
 
@@ -85,15 +85,15 @@ export const Template = (args) => ({
 	<Story
 		name="PieChart"
 		args={{
-			labels: ['Janeiro','Fevereiro','Março', 'Abril', 'Maio'],
+			labels: ['January', 'February', 'March', 'April', 'May'],
 			colors: ['teal', 'violet', 'amber', 'blue', 'red'],
 			variant: 'green',
 			data: [
 				{
-					name: 'Ecocardiograma',
+					name: 'Echocardiogram',
 					datasets: [
 						{
-							label: 'Exames realizados',
+							label: 'Exams carried out',
 							data: [120, 220, 180, 320, 150],
 						},
 					]

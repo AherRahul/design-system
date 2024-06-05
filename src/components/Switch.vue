@@ -35,7 +35,7 @@
 export default {
 	props: {
 		/**
-		* Prop utilizada como v-model. Controla a o estado do ToggleSwitch.
+		* Prop used as v-model. Controls the state of the ToggleSwitch.
 		*/
 		modelValue: {
 			type: Boolean,
@@ -43,36 +43,36 @@ export default {
 			required: true,
 		},
 		/**
-		* Torna o ToggleSwitch pequeno.
+		* Makes ToggleSwitch small.
 		*/
 		small: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		* A variante da Checkbox. São 10 variantes: 'teal', 'green', 'blue',
-		* 'indigo', 'violet', 'pink', 'red', 'orange', 'amber' e 'dark'.
+		* The Checkbox variant. There are 10 variants: 'teal', 'green', 'blue',
+		* 'indigo', 'violet', 'pink', 'red', 'orange', 'amber' and 'dark'.
 		*/
 		variant: {
 			type: String,
 			default: 'green',
 		},
 		/**
-		* Torna o ToggleSwitch grande.
+		* Makes ToggleSwitch big.
 		*/
 		large: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Controla a disponibilidade do ToggleSwitch
+		 * Controls ToggleSwitch availability
 		 */
 		disabled: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Controla o focus do ToggleSwitch
+		 * Controls ToggleSwitch focus
 		 */
 		focused: {
 			type: Boolean,
@@ -111,7 +111,7 @@ export default {
 	methods: {
 		handleClick() {
 			/**
-			 * Evento utilizado para implementar o v-model.
+			* Event used to implement the v-model.
 			* @event input
 			* @type {Event}
 				*/

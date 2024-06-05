@@ -131,64 +131,64 @@ export default {
 
 	props: {
 		/**
-		* Prop utilizada como v-model.
+		* Prop used as v-model.
 		*/
 		modelValue: {
 			type: [Number, String],
 			default: 0,
 		},
 		/**
-		* Prop utilizada como v-model para valores sem máscara
-		* de dinheiro.
+		* Prop used as v-model for unmasked values
+		* Of money.
 		*/
 		unmaskedValue: {
 			type: [Number, String],
 			default: 0,
 		},
 		/**
-		 * Especifica a label do input.
+		 * Specifies the input label.
 		 */
 		label: {
 			type: String,
 			default: 'Label',
 		},
 		/**
-		 * Desabilita o input.
+		 * Disables the input.
 		 */
 		disabled: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Especifica o estado do TextInput. As opções são 'default', 'valid', 'loading' e 'invalid'.
+		 * Specifies the state of the TextInput. The options are 'default', 'valid', 'loading' and 'invalid'.
 		 */
 		state: {
 			type: String,
 			default: 'default',
 		},
 		/**
-		 * Exibe asterisco de obrigatório (obs.: não faz a validação)
+		 * Displays mandatory asterisk (note: does not validate)
 		 */
 		required: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Especifica o placeholder do input
+		 * Specifies the input placeholder
 		 */
 		placeholder: {
 			type: String,
 			default: 'Enter information here',
 		},
 		/**
-		 * Especifica a mensagem de erro, que será exibida caso o estado seja inválido
+		 * Specifies the error message, which will be displayed if the state is invalid
 		 */
 		errorMessage: {
 			type: String,
 			default: 'Value inválido',
 		},
 		/**
-		 * Especifica se a largura do TextInput deve ser fluida.
+		 * Specifies whether the width of the TextInput should be fluid.
 		 */
 		fluid: {
 			type: Boolean,
@@ -196,45 +196,45 @@ export default {
 			required: false,
 		},
 		/**
-		 * Define exibição e texto do tooltip do input
+		 * Defines input tooltip display and text
 		 */
 		tooltip: {
 			type: String,
 			default: null,
 		},
 		/**
-		 * Especifica ícone do tooltip do TextInput.
+		 * Specifies TextInput tooltip icon.
 		 */
 		tooltipIcon: {
 			type: String,
 			default: 'info-outline',
 		},
 		/**
-		 * Indica se o input vai funcionar com a máscara de dinheiro.
-		 * A máscara utiliza `R$` como prefixo,` , ` como separador de decimais
-		 * e tem precisão de 2 dígitos.
+		 *Indicates whether the input will work with the money mask.
+		 * The mask uses `R$` as prefix, ` , ` as decimal separator
+		 * and has 2-digit precision.
 		 * 
 		 * 
-		 * Ao utilizar essa prop o `update:modelValue` vai deixar de emitir
-		 * `Number`e vai passar a emitir uma `String` contendo a máscara.
+		 * When using this prop, `update:modelValue` will stop emitting
+		 * `Number`e will now emit a `String` containing the mask.
 		 * 
 		 * 
-		 * Para receber o valor sem máscara, utilize a prop `unmaskedValue`
-		 * com v-model: `v-model:unmaskedValue="nome da propriedade a ser atualizada"`
+		 * To receive the unmasked value, use the `unmaskedValue` prop
+		 * with v-model: `v-model:unmaskedValue="name of property to be updated"`
 		 */
 		money: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Define exibição e texto do link do input (localizado à direita da label).
+		 * Defines display and text of the input link (located to the right of the label).
 		 */
 		linkText: {
 			type: String,
 			default: null,
 		},
 		/**
-		 * Define a url a ser acessada no clique do link (no caso do link ser exibido).
+		 * Defines the url to be accessed when clicking the link (if the link is displayed).
 		 */
 		linkUrl: {
 			type: String,
@@ -331,8 +331,8 @@ export default {
 				sanitizedInput = sanitizedInput.replaceAll(',', '');
 
 				/**
-				 * Evento utilizado para implementar o v-model para atualização
-				 * de valores sem máscara de dinheiro.
+				 * Event used to deploy the v-model for update
+				 * of values ​​without money mask.
 				 * @event update:unmaskedValue
 				 * @type {Event}
 				 */
@@ -344,7 +344,7 @@ export default {
 				this.$emit('update:modelValue', +stringifiedInput);
 
 				/**
-				 * Evento utilizado para implementar o v-model padrão do componente.
+				 * Event used to implement the component's default v-model.
 				 * @event update:modelValue
 				 * @type {Event}
 				 */

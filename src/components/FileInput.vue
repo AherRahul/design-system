@@ -49,7 +49,7 @@
 					}"
 				>
 					<div v-if="!isOnDragEnterState">
-						Arraste o arquivo aqui ou
+						Drag the file here or
 						<a
 							href="javascript:void(0)"
 							class="file-input__search-link"
@@ -57,12 +57,12 @@
 								'file-input__search-link--disabled': disabled === true,
 							}"
 						>
-							pesquise no seu dispositivo
+							search on your device
 						</a>
 					</div>
 
 					<div v-else>
-						Solte aqui o seu arquivo
+						Drop your file here
 					</div>
 				</div>
 			</div>
@@ -114,7 +114,7 @@
 						</div>
 					</div>
 					<div v-else>
-						Solte aqui o seu arquivo
+						Drop your file here
 					</div>
 				</div>
 			</div>
@@ -140,14 +140,14 @@ export default {
 
 	props: {
 		/**
-		 * O conteúdo do arquivo upado.
+		 * The content of the uploaded file.
 		 */
 		modelValue: {
 			default: null,
 			required: true,
 		},
 		/**
-		 * Lista com extensões de arquivos (separadas por vírgula) as quais o usuário pode selecionar.
+		 * List of file extensions (separated by commas) that the user can select.
 		 * Ex.: jpg,png
 		 */
 		allowedExtensions: {
@@ -155,28 +155,28 @@ export default {
 			default: null,
 		},
 		/**
-		 * Define o tamanho do input [lg, md, sm]
+		 * Defines the input size [lg, md, sm]
 		 */
 		size: {
 			type: String,
 			default: 'md',
 		},
 		/**
-		 * Especifica o estado do Select. As opções são 'default', 'valid', 'loading' e 'invalid'.
+		 * Specifies the state of the Select. The options are 'default', 'valid', 'loading' and 'invalid'.
 		 */
 		state: {
 			type: String,
 			default: 'default',
 		},
 		/**
-		 * Especifica a mensagem de erro, que será exibida caso o estado seja inválido
+		 * Specifies the error message, which will be displayed if the status is invalid
 		 */
 		errorMessage: {
 			type: String,
 			default: 'Value inválido',
 		},
 		/**
-		 * Controla a disponibilidade do Select.
+		 * Controls Select availability.
 		 */
 		disabled: {
 			type: Boolean,
@@ -242,7 +242,7 @@ export default {
 	watch: {
 		file(newValue) {
 			/**
-				* Evento utilizado para implementar o v-model.
+				* Event used to implement the v-model.
 				* @event input
 				* @type {Event}
 			*/

@@ -56,7 +56,7 @@ export const Template = (args) => ({
 			</div>
 			<div>
 				<div style="height: 52px; width: 52px; border-radius: 8px" :style="{background: color}"/>
-				<i style="margin-top: 1px; font-size: 12.5px; color: #3b4754">⚠️ Div usada como demo. Não faz parte do ColorPicker.</i>
+				<i style="margin-top: 1px; font-size: 12.5px; color: #3b4754">⚠️ Div used as demo. Not part of ColorPicker.</i>
 			</div>
 		</div>`,
 	methods: {
@@ -71,21 +71,21 @@ export const Template = (args) => ({
 
 # ColorPicker
 
-### ColorPickers permitem aos usuários escolherem cores de modo visual.
+### ColorPickers allow users to pick colors visually.
 ---
 <br />
 
 ## When to use:
-- Use o ColorPicker em cenários em que o usuário precisa escolher uma cor dentre um conjunto de cores disponíveis.
-- Use o ColorPicker em conjunto com inputs caso queira que o usuário visualize o valor HEX da cor escolhida.
-- Em caso de poucas opções de cor dê preferência ao ColorPicker no modo `inline`.
+- Use ColorPicker in scenarios where the user needs to choose a color from a set of available colors.
+- Use ColorPicker in conjunction with inputs if you want the user to view the HEX value of the chosen color.
+- If there are few color options, choose ColorPicker in mode  `inline`.
 
 <br />
 
 ## Obs:
-- O ColorPicker não permite ao usuário escolher qualquer cor, apenas cores disponíveis no RDS.
-- O modo como você estrutura o array (matriz) da prop swatch importa na renderização do componente. Ex.: se você tiver 3 linhas na matriz o ColorPicker renderizará 3 linhas de cores.
-- O ColorPicker emite a cor selecionada como uma string contendo o HEX da cor.
+- ColorPicker does not allow the user to choose any color, only colors available in Cuida.
+- The way you structure the swatch prop array matters when rendering the component. Ex.: if you have 3 lines in the matrix, the ColorPicker will render 3 lines of colors.
+- ColorPicker outputs the selected color as a string containing the color's HEX.
 
 <br />
 

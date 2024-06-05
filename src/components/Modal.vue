@@ -13,7 +13,7 @@
 			<header
 				v-if="!noHeader"
 			>
-				<!-- @slot Slot usado para utilização de header customizado. -->
+				<!-- @slot Slot used to use custom headers. -->
 				<slot name="header">
 					<div class="cds-modal__header">
 						<h3>{{ title }}</h3>
@@ -33,7 +33,7 @@
 				</slot>
 			</header>
 
-			<!-- @slot Slot usado para inserção de conteúdo dentro do Modal. -->
+			<!-- @slot Slot used to insert content into the Modal. -->
 			<section>
 				<cds-scrollable
 					v-if="scrollable"
@@ -53,7 +53,7 @@
 				v-if="!noFooter"
 				class="cds-modal__footer"
 			>
-				<!-- @slot Slot usado para inserção de footer customizado. -->
+				<!-- @slot Slot used to insert custom footers. -->
 				<slot name="footer">
 					<cds-button
 						v-if="!noCancelButton"
@@ -106,7 +106,7 @@ export default {
 	},
 	props: {
 		/**
-		 *  Controla a exibição do modal.
+		 *  Controls the display of the modal.
 		 */
 		modelValue: {
 			type: Boolean,
@@ -114,91 +114,91 @@ export default {
 			required: true,
 		},
 		/**
-		 * Define o título do modal exibido no header
+		 * Defines the title of the modal displayed in the header
 		 */
 		title: {
 			type: String,
-			default: 'Título',
+			default: 'Title',
 		},
 		/**
-		 * Especifica o tamanho do modal. São 3 tamanhos implementados: 'sm', 'md', 'lg' e 'xl'.
+		 * Specifies the size of the modal. There are 3 sizes implemented: 'sm', 'md', 'lg' and 'xl'.
 		 */
 		size: {
 			type: String,
 			default: 'md',
 		},
 		/**
-		 * Define o estado do botão de ação do modal.
+		 * Sets the state of the modal action button.
 		 */
 		disableOkButton: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Define o estado do botão de cancelar do modal.
+		 * Defines the state of the modal's cancel button.
 		 */
 		disableCancelButton: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 *  Controla a ação de fechar o modal ao clicar fora.
+		 * Controls the action of closing the modal when clicking outside.
 		 */
 		noCloseOnBackdrop: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 *  Controla a ação de fechar o modal ao clicar no botão de ação.
+		 * Controls the action of closing the modal when clicking the action button.
 		 */
 		noCloseOkButton: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 *  Controla a exibição do botão de fechar do modal.
+		 * Controls the display of the modal's close button.
 		 */
 		noCloseButton: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 *  Controla a exibição do botão de cancelar do modal.
+		 * Controls the display of the modal's cancel button.
 		 */
 		noCancelButton: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 *  Controla a exibição do rodapé (footer) do modal.
+		 * Controls the display of the modal footer.
 		 */
 		noFooter: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 *  Controla a exibição do cabeçalho (header) do modal.
+		 * Controls the display of the modal header.
 		 */
 		noHeader: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 *  Define texto do botão de ação do modal
+		 * Defines modal action button text
 		 */
 		okButtonText: {
 			type: String,
-			default: 'Confirmar',
+			default: 'Confirm',
 		},
 		/**
-		 *  Define texto do botão de cancelar do modal
+		 * Defines text for the modal cancel button
 		 */
 		cancelButtonText: {
 			type: String,
-			default: 'Cancelar',
+			default: 'Cancel',
 		},
 		/**
-		 * Define a variante do botão de ação do Modal (segue as variantes do componente de botão do RDS)
+		 * Sets the Modal action button variant (follows RDS button component variants)
 		 */
 		actionButtonVariant: {
 			type: String,
@@ -206,7 +206,7 @@ export default {
 			validator: (value) => predefinedColors.includes(value),
 		},
 		/**
-		 * Define se o conteúdo do modal precisa ser "scrollado" e adiciona um scroll vertical quando a altura máxima é atingida
+		 * Defines whether the modal content needs to be "scrolled" and adds a vertical scroll when the maximum height is reached
 		 */
 		scrollable: {
 			type: Boolean,
@@ -223,7 +223,7 @@ export default {
 
 	computed: {
 		maxBodyHeight() {
-			// 90% da largura subtraído o padding vertical (32 * 2) e subtraído o footer (68) e o header (64)
+			// 90% of the width minus the vertical padding (32 * 2) and minus the footer (68) and header (64)
 			return `${ window.innerHeight * 0.9 - 32 * 2 - 68 - 64 }px`;
 		},
 	},
@@ -242,7 +242,7 @@ export default {
 
 		closeHandle() {
 			/**
-			 * Evento que indica se o modal foi escondido.
+			 * Event that indicates whether the modal was hidden.
 			 * @event close
 			 * @type {Event}
 			*/
@@ -253,7 +253,7 @@ export default {
 
 		okHandle() {
 			/**
-			 * Evento que indica se o botão de ação do modal foi clicado.
+			 * Event that indicates whether the modal action button was clicked.
 			* @event ok
 			* @type {Event}
 			*/

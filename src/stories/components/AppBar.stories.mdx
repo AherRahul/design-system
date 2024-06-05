@@ -20,7 +20,7 @@ import Icon from '../../components/Icon.vue';
 	:help="true"
 	:settings="true"
 	userName="Rafael Dias"
-	userDescription="Administrador"
+	userDescription="Administrator"
 	@settings-click="logClick"
 	@help-click="logClick"
 	@avatar-click="logClick"
@@ -35,12 +35,12 @@ import Icon from '../../components/Icon.vue';
 				name="calendar-outline"
 			/>
 			<p class="app-name">
-				Central de marcação
+				Appointment center
 			</p>
 		</div>
 	</template>
 	<template #dropdown-content>
-			Conteúdo do dropdown
+			Dropdown content
 	</template>
 </cds-app-bar>`
 			},
@@ -71,12 +71,12 @@ export const Template = (args) => ({
 						name="calendar-outline"
 					/>
 					<p class="app-name">
-						Central de marcação
+						Appointment center
 					</p>
 				</div>
 			</template>
             <template #dropdown-content>
-				Conteúdo do dropdown
+				Dropdown content
 			</template>
 		</cds-app-bar>
 	`,
@@ -90,7 +90,7 @@ export const Template = (args) => ({
 
 # AppBar
 
-### AppBars são componentes de navegação horizontal para produtos Sysvale e Cidade saudável.
+### AppBars are horizontal navigation components for Sysvale and Healthy City products.
 ---
 
 <br />
@@ -107,7 +107,7 @@ export const Template = (args) => ({
 			hideHelp: true,
 			hideSettings: true,
 			userName: 'Rafael Dias',
-			userDescription: 'Administrador'
+			userDescription: 'Administrator'
 		}}
 	>
 		{ Template.bind({}) }

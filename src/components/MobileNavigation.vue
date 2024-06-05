@@ -6,7 +6,7 @@
 		<div :class="`variant-resolver--${variant}`">
 			<div class="mobile-navigation__header">
 				<div class="mobile-navigation__logo">
-					<!-- @slot Slot para renderização do logo principal.-->
+					<!-- @slot Slot for rendering the main logo.-->
 					<slot name="main-logo">
 						<img :src="mainLogo">
 					</slot>
@@ -34,7 +34,7 @@
 			>
 				<div class="mobile-navigation__sidebar-header">
 					<div class="mobile-navigation__sidebar-logo">
-						<!-- @slot Slot para renderização do logo da sidebar.-->
+						<!-- @slot Sidebar logo rendering slot.-->
 						<slot name="sidebar-logo">
 							<img :src="sidebarLogo">
 						</slot>
@@ -115,53 +115,53 @@ import CdsAvatar from './Avatar.vue';
 
 const props = defineProps({
 	/**
-	 * A variante de cor. São 10 variantes implementadas: 'green', 'teal',
-	 * 'blue', 'indigo', 'violet', 'pink', 'red', 'orange','amber' e 'white'.
-	 * A variante só terá efeito quando a SideBar estiver no modo light.
+	 * The color variant. There are 10 variants implemented: 'green', 'teal',
+	 * 'blue', 'indigo', 'violet', 'pink', 'red', 'orange', 'amber' and 'white'.
+	 * The variant will only take effect when the SideBar is in light mode.
 	 */
 	variant: {
 		type: String,
 		default: 'green',
 	},
 	/**
-	 * Ativa o modo light da navegação.
+	 * Activates navigation light mode.
 	*/
 	light: {
 		type: Boolean,
 		default: false,
 	},
 	/**
-	 * Define a logo que vai aparecer no container principal da navegação
+	 * Defines the logo that will appear in the main navigation container
 	*/
 	mainLogo: {
 		type: String,
 		default: '',
 	},
 	/**
-	 * Define a logo que vai aparecer na barra lateral da navegação
+	 * Defines the logo that will appear in the navigation sidebar
 	*/
 	sidebarLogo: {
 		type: String,
 		default: '',
 	},
 	/**
-	 * Define a lista dos itens da navegação a serem
-	 * mostrados. Os itens da lista devem ser
-	 * objetos com path ou route, e com uma label.
+	 * Defines the list of navigation items to be
+	 * shown. The list items must be
+	 * objects with path or route, and with a label.
 	 */
 	items: {
 		type: Array,
 		default: () => [],
 	},
 	/**
-	* O item ativo da navegação.
+	* The active navigation item.
 	*/
 	activeItem: {
 		type: Object,
 		default: () => {},
 	},
 	/**
-	 * Define as informações referentes ao usuário. O objeto deve seguir a assinatura:
+	 * Defines information relating to the user. The object must follow the signature:
 	 * { name: String, role: String, picture: String }
 	*/
 	user: {
@@ -172,19 +172,19 @@ const props = defineProps({
 
 const emit = defineEmits([
 	/**
-	 * Evento emitido quando o botão de logout é clicado
+	 * Event emitted when logout button is clicked
 	* @event logout
 	* @type {Event}
 	*/
 	'logout',
 	/**
-	 * Evento emitido quando um dos itens da navegação é clicado
+	 * Event emitted when one of the navigation items is clicked
 	* @event item-click
 	* @type {Event}
 	*/
 	'item-click',
 	/**
-	 * Evento emitido quando o clique é feito nas informações do usuário
+	 * Event emitted when click is made on user information
 	* @event profile-click
 	* @type {Event}
 	*/

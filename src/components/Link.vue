@@ -13,7 +13,7 @@
 			:href="href"
 			:target="newTab ? '_blank' : false"
 		>
-			<!-- @slot Slot padrão para renderização de conteúdo customizado do texto do link. -->
+			<!-- @slot Default slot for rendering custom link text content. -->
 			<slot class="link__text">
 				{{ text }}
 			</slot>
@@ -25,35 +25,35 @@
 export default {
 	props: {
 		/**
-		*	URL de redirecionamento.
+		* Redirect URL.
 		*/
 		href: {
 			type: String,
 			required: true,
 		},
 		/**
-		*   Prop utilizada para o redirecionamento do link ser a partir de uma nova aba.
+		* Prop used to redirect the link from a new tab.
 		*/
 		newTab: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		*	Texto utilizado no endereço da URL para o usuário.
+		* Text used in the URL address for the user.
 		*/
 		text: {
 			type: String,
 			required: true,
 		},
 		/**
-		*	Texto utilizado no endereço da URL para o usuário.
+		* Text used in the URL address for the user.
 		*/
 		size: {
 			type: String,
 			default: 'md',
 		},
 		/**
-		*	Texto utilizado no endereço da URL para o usuário.
+		* Text used in the URL address for the user.
 		*/
 		bold: {
 			type: Boolean,

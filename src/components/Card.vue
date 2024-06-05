@@ -7,7 +7,7 @@
 	>
 		<div class="card__extra-container">
 			<div class="card__extra">
-				<!-- @slot Slot para incluir conteúdo adicional no canto superior direito do card.-->
+				<!-- @slot Slot to include additional content in the upper right corner of the card.-->
 				<slot name="extra" />
 			</div>
 		</div>
@@ -16,7 +16,7 @@
 			<div
 				v-if="hasSlot($slots, 'image')"
 			>
-				<!-- @slot Slot utilizado para incluir imagens no Card.-->
+				<!-- @slot Slot used to include images on the Card.-->
 				<slot name="image" />
 			</div>
 	
@@ -36,7 +36,7 @@
 				v-else-if="hasSlot($slots, 'icon')"
 				class="card__icon"
 			>
-				<!-- @slot Slot utilizado para incluir ícones no Card.-->
+				<!-- @slot SSlot used to include icons on the Card.-->
 				<slot name="icon" />
 			</div>
 
@@ -47,7 +47,7 @@
 					v-if="hasSlot($slots, 'header')"
 					class="card__header"
 				>
-					<!-- @slot Slot para conteúdo customizado do Header.-->
+					<!-- @slot Slot for custom Header content.-->
 					<slot name="header" />
 				</div>
 
@@ -59,7 +59,7 @@
 					v-if="hasSlot($slots, 'body')"
 					class="card__body"
 				>
-					<!-- @slot Slot para conteúdo customizado do Body.-->
+					<!-- @slot Slot for custom Body content.-->
 					<slot name="body" />
 				</div>
 
@@ -71,7 +71,7 @@
 					v-if="hasSlot($slots, 'footer')"
 					class="card__footer"
 				>
-					<!-- @slot Slot para conteúdo customizado do Footer.-->
+					<!-- @slot Footer custom content slot.-->
 					<slot name="footer" />
 				</div>
 			</div>
@@ -93,63 +93,63 @@ export default {
 
 	props: {
 		/**
-		* Especifica o título do card. Quando conteúdo é enviado para o slot `Header` o conteúdo dessa prop não é exibido.
+		* Specifies the card title. When content is sent to the `Header` slot the content of this prop is not displayed.
 		*/
 		title: {
 			type: String,
 			default: '',
 		},
 		/**
-		* Especifica texto do Card. Quando conteúdo é enviado para o slot `Body` o conteúdo dessa prop não é exibido.
+		* Specifies Card text. When content is sent to the `Body` slot the content of this prop is not displayed.
 		*/
 		content: {
 			type: String,
 			default: '',
 		},
 		/**
-		* Caminho da imagem que vai ser renderizada. Quando conteúdo é enviado para o slot `Image` o conteúdo dessa prop não é exibido.
+		* Path of the image that will be rendered. When content is sent to the `Image` slot the content of this prop is not displayed.
 		*/
 		imageSrc: {
 			type: String,
 			default: '',
 		},
 		/**
-		* Descrição em texto da imagem.
+		* Text description of the image.
 		*/
 		imageAlt: {
 			type: String,
-			default: 'imagem do card',
+			default: 'card image',
 		},
 		/**
-		* Largura da imagem do card.
+		* Width of the card image.
 		*/
 		imageWidth: {
 			type: [String, Number],
 			default: 300,
 		},
 		/**
-		* Altura da imagem do card.
+		* Height of the card image.
 		*/
 		imageHeight: {
 			type: [String, Number],
 			default: 180,
 		},
 		/**
-		* Largura do conteúdo do card.
+		* Width of card content.
 		*/
 		bodyWidth: {
 			type: [String, Number],
 			default: 300,
 		},
 		/**
-		* Torna o alinhamento do Card horizontal.
+		* Makes the Card alignment horizontal.
 		*/
 		horizontal: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		* Ativa ou desativa o clique no componente
+		* Enables or disables clicking on the component
 		*/
 		clickable: {
 			type: Boolean,
@@ -173,7 +173,7 @@ export default {
 		handleClick() {
 			if (this.clickable) {
 				/**
-				* Evento que indica se o card foi clicado.
+				* Event that indicates whether the card was clicked.
 				* @event cardClick
 				* @type {Event}
 				*/

@@ -73,31 +73,31 @@
 export default {
 	props: {
 		/**
-		 * Define o valor indicador de progresso do GaugeChart.
-		 * O valor deve ser entre 0 e 100.
+		 * Sets the progress indicator value of the GaugeChart.
+		 * The value must be between 0 and 100.
 		 */
 		value: {
-			type: Number,
+			type:Number,
 			default: 0,
 			validator: (value) => value >= 0 && value <= 100,
 		},
 		/**
-		 * A variante de cor. São 9 variantes implementadas: 'green', 'teal', 'turquoise',
-		 * 'blue', 'indigo', 'violet', 'pink', 'red', 'orange' e 'amber'.
+		 * The color variant. There are 9 variants implemented: 'green', 'teal', 'turquoise',
+		 * 'blue', 'indigo', 'violet', 'pink', 'red', 'orange' and 'amber'.
 		 */
 		variant: {
 			type: String,
 			default: 'green',
 		},
 		/**
-		 * Tamanho, em pixels, do componente na tela.
+		 * Size, in pixels, of the component on the screen.
 		 */
 		size: {
-			type: Number,
+			type:Number,
 			default: 300,
 		},
 		/**
-		 * Legenda do indicador de progresso.
+		 * Progress indicator legend.
 		 */
 		subtitle: {
 			type: String,

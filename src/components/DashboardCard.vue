@@ -44,7 +44,7 @@
 			class="dashboard-card__action"
 			@click="$emit('action-button-click')"
 		>
-			<!-- @slot Slot para renderização customizada do conteúdo das actions. Sobrescreve a prop `showAction`.
+			<!-- @slot Slot for customized rendering of action content. Overrides the `showAction` prop.
 			-->
 			<slot name="action-slot">
 				<div v-if="showAction">
@@ -59,7 +59,7 @@
 export default {
 	props: {
 		/**
-		 * O título do alert. O título também pode ser usado com o slot.
+		 * The title of the alert. The title can also be used with the slot.
 		 */
 		title: {
 			type: String,
@@ -67,8 +67,8 @@ export default {
 			required: false,
 		},
 		/**
-		 * Texto que será exibido abaixo do título. Utilizado para melhor
-		 * descrever a informação exibida no dashboard-card.
+		 * Text that will be displayed below the title. Used for better
+		 * describe the information displayed on the dashboard-card.
 		 */
 		description: {
 			type: String,
@@ -76,7 +76,7 @@ export default {
 			required: false,
 		},
 		/**
-		 * Prop que exibe o botão de ação do dashboard-card.
+		 * Prop that displays the dashboard-card action button.
 		 */
 		showAction: {
 			type: Boolean,
@@ -84,7 +84,7 @@ export default {
 			required: false,
 		},
 		/**
-		 * Prop que indica o texto do botão de ação do dashboard-card.
+		 * Prop that indicates the text of the dashboard-card action button.
 		 */
 		action: {
 			type: String,
@@ -92,7 +92,7 @@ export default {
 			required: false,
 		},
 		/**
-		 * Prop que indica se o componente deverá ocupar 100% do espaço disponível.
+		 * Prop that indicates whether the component should occupy 100% of the available space.
 		 */
 		fluid: {
 			type: Boolean,

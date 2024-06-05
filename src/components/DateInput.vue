@@ -4,7 +4,7 @@
 			<span
 				v-if="hasSlots"
 			>
-				<!-- @slot Slot para renderização customizada da label. -->
+				<!-- @slot Slot for custom label rendering. -->
 				<slot name="label" />
 			</span>
 
@@ -33,7 +33,7 @@
 		<v-date-picker
 			id="cds-date-input"
 			v-model="internalDate"
-			locale="pt-BR"
+			locale="en-us"
 			:min-date="minDate ? new Date(minDate) : null"
 			:max-date="maxDate ? new Date(maxDate) : null"
 			:attributes="showTodayDot ? attributes: {}"
@@ -106,8 +106,8 @@ export default {
 
 	props: {
 		/**
-		* Prop utilizada como v-model. Deve ser uma string no formato `yyyy-MM-dd`
-		* ou um objeto com as propriedades `start` e `end`, no mesmo formato.
+		* Prop used as v-model. Must be a string in the format `yyyy-MM-dd`
+		* or an object with the `start` and `end` properties, in the same format.
 		*/
 		modelValue: {
 			type: [String, Object],
@@ -115,56 +115,56 @@ export default {
 			validator: (value) => value === '' || typeof value === 'object' || dateStringValidator(value),
 		},
 		/**
-		 * Especifica a label do input.
+		 * Specifies the input label.
 		 */
 		label: {
 			type: String,
 			default: 'Date',
 		},
 		/**
-		 * Desabilita o input.
+		 * Disables the input.
 		 */
 		disabled: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Especifica o estado do DateInput. As opções são 'default', 'valid' e 'invalid'.
+		 * Specifies the state of the DateInput. The options are 'default', 'valid' and 'invalid'.
 		 */
 		state: {
 			type: String,
 			default: 'default',
 		},
 		/**
-		 * Controla o modo do input.
+		 * Controls the input mode.
 		 */
 		range: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Exibe asterisco de obrigatório (obs.: não faz a validação)
+		 * Displays mandatory asterisk (note: does not validate)
 		 */
 		required: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Especifica a mensagem de erro, que será exibida caso o estado seja inválido
+		 * Specifies the error message, which will be displayed if the status is invalid
 		 */
 		errorMessage: {
 			type: String,
-			default: 'Value inválido',
+			default: 'Invalid value',
 		},
 		/**
-		 * Especifica se a largura do DateInput deve ser fluida.
+		 * Specifies whether the width of the DateInput should be fluid.
 		 */
 		fluid: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * A data mínima selecionável no DateInput. Deve ser uma string no formato `yyyy-MM-dd`.
+		 * The minimum selectable date in the DateInput. It must be a string in the format `yyyy-MM-dd`.
 		 */
 		minDate: {
 			type: String,
@@ -172,7 +172,7 @@ export default {
 			validator: (value) => value === '' || dateStringValidator(value),
 		},
 		/**
-		 * A data máxima selecionável no DateInput. Deve ser uma string no formato `yyyy-MM-dd`.
+		 * The maximum selectable date in the DateInput. It must be a string in the format `yyyy-MM-dd`.
 		 */
 		maxDate: {
 			type: String,
@@ -180,14 +180,14 @@ export default {
 			validator: (value) => value === '' || dateStringValidator(value),
 		},
 		/**
-		 * Texto placeholder para o DateInput.
+		 * Placeholder text for the DateInput.
 		 */
 		placeholder: {
 			type: String,
-			default: 'Selecione uma data',
+			default: 'Select a date',
 		},
 		/**
-		 * Controla a marcação do dia atual no calendário.
+		 * Controls the marking of the current day on the calendar.
 		 */
 		showTodayDot: {
 			type: Boolean,
@@ -278,7 +278,7 @@ export default {
 				return;
 			}
 			/**
-			* Evento emitido quando uma data é selecionada. Utilizado para implementar o v-model.
+			* Event emitted when a date is selected. Used to implement the v-model.
 			* @event update:modelValue
 			* @type {Event}
 			*/

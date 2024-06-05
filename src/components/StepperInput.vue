@@ -107,42 +107,42 @@ export default {
 
 	props: {
 		/**
-		* Prop utilizada como v-model. Controla a visibilidade do popover .
+		* Prop used as v-model. Controls the visibility of the popover.
 		*/
 		modelValue: {
 			type: [Number, String],
 			default: 0,
 		},
 		/**
-		 * Especifica o maior valor que o StepperInput deve aceitar.
+		 * Specifies the largest value that StepperInput should accept.
 		 */
 		max: {
 			type: [Number, String],
 			default: Number.MAX_SAFE_INTEGER,
 		},
 		/**
-		 * Especifica o menor valor que o StepperInput deve aceitar.
+		 * Specifies the smallest value that StepperInput should accept.
 		 */
 		min: {
 			type: [Number, String],
 			default: Number.MIN_SAFE_INTEGER,
 		},
 		/**
-		 * Especifica a label do input.
+		 * Specifies the input label.
 		 */
 		label: {
 			type: String,
 			default: 'Label',
 		},
 		/**
-		 * Exibe asterisco de obrigatório (obs.: não faz a validação)
+		 * Displays mandatory asterisk (note: does not validate)
 		 */
 		required: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Define a largura do Select. As opções são 'thin', 'default' e 'wide'.
+		 * Defines the width of the Select. The options are 'thin', 'default' and 'wide'.
 		 */
 		width: {
 			type: String,
@@ -150,25 +150,25 @@ export default {
 			required: false,
 		},
 		/**
-		 * Desabilita o input.
+		 * Disables input.
 		 */
 		disabled: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Especifica o estado do StepperInput. As opções são 'default', 'valid' e 'invalid'.
+		 * Specifies the state of StepperInput. The options are 'default', 'valid' and 'invalid'.
 		 */
 		state: {
 			type: String,
 			default: 'default',
 		},
 		/**
-		 * Especifica a mensagem de erro, que será exibida caso o estado seja inválido
+		 * Specifies the error message, which will be displayed if the status is invalid
 		 */
 		errorMessage: {
 			type: String,
-			default: 'Value inválido',
+			default: 'Invalid value',
 		},
 	},
 
@@ -233,18 +233,18 @@ export default {
 
 			if (value < this.min) {
 				/**
-				* Evento que indica que o valor informado está fora do intervalo aceito.
+				* Event that indicates that the reported value is outside the accepted range.
 				* @event invalid number
 				* @type {Event}
 				*/
 				this.internalValue = this.min;
-				this.$emit('invalid-number', `'O campo não pode ser menor que ${parseInt(this.min, 10)}.'`);
+				this.$emit('invalid-number', `'The field cannot be less than ${parseInt(this.min, 10)}.'`);
 			} else if (value > this.max) {
 				this.internalValue = this.max;
-				this.$emit('invalid-number', `'O campo não pode ser maior que ${parseInt(this.max, 10)}.'`);
+				this.$emit('invalid-number', `'The field cannot be greater than ${parseInt(this.max, 10)}.'`);
 			} else {
 				/**
-				* Evento utilizado para implementar o v-model.
+				* Event used to implement the v-model.
 				* @event input
 				* @type {Event}
 				*/

@@ -11,7 +11,7 @@
 				<span class="panel-card__subtitle">{{ subtitle }}</span>
 			</div>
 			<div>
-				<!-- @slot Slot usado para inserção de elemento à direita no header. -->
+				<!-- @slot Slot used to insert an element to the right in the header. -->
 				<slot name="panel-actions" />
 			</div>
 		</div>
@@ -19,7 +19,7 @@
 		<cds-divider dimmed />
 
 		<div :class="contentClass">
-			<!-- @slot Slot usado para inserção de conteúdo customizado. -->
+			<!-- @slot Slot used to insert customized content. -->
 			<slot />
 		</div>
 	</cds-box>
@@ -37,23 +37,23 @@ export default {
 
 	props: {
 		/**
-		 * Título do card.
+		 * Card title.
 		 */
 		title: {
 			type: String,
-			default: 'Título',
+			default: 'Title',
 			required: true,
 		},
 		/**
-		 * Subtítulo do card.
+		 * Card subtitle.
 		 */
 		subtitle: {
 			type: String,
-			default: 'Subtítulo',
+			default: 'Subtitle',
 			required: true,
 		},
 		/**
-		 * Remove o padding padrão do corpo do card.
+		 * Removes the default padding from the card body.
 		 */
 		noContentPadding: {
 			type: Boolean,

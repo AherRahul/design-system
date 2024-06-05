@@ -4,18 +4,18 @@ import { Source, Meta, Story } from '@storybook/addon-docs';
 
 # PaleteResolver()
 
-Mixin sass utilizado para criar classes com as cores da paleta do Design Dystem.
+Mixin sass used to create classes with colors from the Design Dystem palette.
 
 <hr />
 <br />
 
-O PaleteResolver, de modo semelhante ao VariantResolver implementa um loop por entre os tokens de cor do RDS,
-mas enquanto o VariantResolver percorre a paleta retornando shades específicos, o PaleteResolver percorre as cores
-da paleta retornando todos os tokens shades disponíveis, disponibilizando uma única variável chamada `$color`.
+PaleteResolver, similar to VariantResolver, implements a loop through RDS color tokens,
+but while VariantResolver cycles through the palette returning specific shades, PaleteResolver cycles through colors
+from the palette returning all available shade tokens, providing a single variable called `$color`.
 
 <br />
 
-#### Example
+#### Examples
 
 <Story name="PaleteResolver">
 </Story>
@@ -26,7 +26,7 @@ da paleta retornando todos os tokens shades disponíveis, disponibilizando uma �
 	code={/*css*/ `
 .color-picker {
 	&__swatch {
-		@include paleteResolver using ($color) {
+		@include paletteResolver using ($color) {
 			background-color: $color;
 			transition: $interaction;
 		}
@@ -35,7 +35,7 @@ da paleta retornando todos os tokens shades disponíveis, disponibilizando uma �
 `}
 />
 
-O código acima sem o seria o mesmo mesmo que:
+The code above without would be the same as:
 
 <Source
 	language='css'

@@ -2,7 +2,7 @@
 <template>
 	<span class="cds-radio__container">
 		<!--
-			Evento emitido quando o Radio muda seu estado.
+			Event emitted when Radio changes its state.
 			@event change
 			@type {Event}
 		-->
@@ -22,7 +22,7 @@
 			class="cds-radio__label"
 			:for="`${uniqueId}-${value}`"
 		>
-			<!-- @slot Slot padrão para renderização de conteúdo customizado da label -->
+			<!-- @slot Standard slot for rendering custom label content -->
 			<slot>
 				<span
 					class="cds-radio__label-text"
@@ -39,37 +39,37 @@
 export default {
 	props: {
 		/**
-		 * A prop usada como v-model para monitorar a seleção do Radio
+		 * The prop used as a v-model to monitor Radio selection
 		*/
 		modelValue: {
 			default: null,
 			required: true,
 		},
 		/**
-		 * A prop usada como valor associado ao Radio. O que será atribuído
-		 * v-model quando essa opção for selecionado
+		 * The prop used as the value associated with Radio. What will be assigned
+		 * v-model when this option is selected
 		*/
 		value: {
 			default: null,
 			required: true,
 		},
 		/**
-		* A variante da Checkbox. São 10 variantes: 'teal', 'green', 'blue',
-		* 'indigo', 'violet', 'pink', 'red', 'orange', 'amber' e 'dark'.
+		* The Checkbox variant. There are 10 variants: 'teal', 'green', 'blue',
+		* 'indigo', 'violet', 'pink', 'red', 'orange', 'amber' and 'dark'.
 		*/
 		variant: {
 			type: String,
 			default: 'green',
 		},
 		/**
-		 * Define a label do input, o conteúdo que é exibido para descrever o Radio
+		 * Defines the input label, the content that is displayed to describe the Radio
 		 */
 		label: {
 			type: String,
 			default: 'radio content',
 		},
 		/**
-		 * Controla o status do Radio
+		 * Control Radio status
 		 */
 		disabled: {
 			type: Boolean,

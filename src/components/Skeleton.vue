@@ -9,7 +9,7 @@
 export default {
 	props: {
 		/**
-         * Largura do skeleton
+         * skeleton width
          */
 		width: {
 			type: String,
@@ -17,7 +17,7 @@ export default {
 		},
 
 		/**
-         * Altura do skeleton
+         * Skeleton height
          */
 		height: {
 			type: String,
@@ -25,7 +25,7 @@ export default {
 		},
 
 		/**
-		 *  Ajusta de acordo com o componente pai. Não se aplica ao shape 'circle'
+		 * Adjusts according to the parent component. Does not apply to the 'circle' shape
 		 */
 		fluid: {
 			type: Boolean,
@@ -33,7 +33,7 @@ export default {
 		},
 
 		/**
-		 * Indica o shape do elemento. São duas opções: circle, square
+		 * Indicates the shape of the element. There are two options: circle, square
 		 */
 		shape: {
 			type: String,

@@ -34,7 +34,7 @@ import TimeInput from '../../components/TimeInput.vue';
 				format:true,
 				code: /*html*/ `
 <cds-time-input
-	label="Horário"
+	label="Time"
 />`
 			},
 		}
@@ -63,17 +63,17 @@ export const Template = (args) => ({
 
 # TimeInput
 
-### TimeInputs são componentes utilizados para inserir horários específicos no formato simples: hora e minutos.
+### TimeInputs are components used to enter specific times in the simple format: hours and minutes.
 ---
 <br />
 
 ## When to use:
-- For necessário definir horários de eventos, agendamentos, alarmes e etc…
+- It is necessary to define event times, schedules, alarms, etc…
 
 <br />
 
 ## When not to use:
-- For necessário mostrar opções disponíveis de horários para seleção.
+- It is necessary to show available time options for selection.
 
 <br />
 
@@ -84,7 +84,7 @@ export const Template = (args) => ({
 		name="TimeInput"
 		
 		args={{
-			label: "Horário",
+			label: "Time",
 		}}
 	>
 		{ Template.bind({}) }

@@ -48,7 +48,7 @@
 export default {
 	props: {
 		/**
-		 * A prop usada como v-model para monitorar a seleção do RadioButton
+		 * The prop used as v-model to monitor RadioButton selection
 		*/
 		modelValue: {
 			type: [String, null],
@@ -56,7 +56,7 @@ export default {
 			required: true,
 		},
 		/**
-		 * O número de radio buttons a ser renderizado no grupo
+		 * The number of radio buttons to be rendered in the group
 		 */
 		options: {
 			type: Array,
@@ -64,7 +64,7 @@ export default {
 			required: true,
 		},
 		/**
-		 * Controla o status do grupo de radio buttons
+		 * Controls the status of the radio button group
 		 */
 		disabled: {
 			type: Boolean,
@@ -72,7 +72,7 @@ export default {
 			required: false,
 		},
 		/**
-		 * Quando verdadeira, faz com que os radio buttons sejam renderizados um ao lado do outro
+		 * When true, causes the radio buttons to be rendered next to each other
 		 */
 		inline: {
 			type: Boolean,
@@ -81,7 +81,7 @@ export default {
 			required: false,
 		},
 		/**
-		 * Quando verdadeiro, faz com que o button se adapte a expansão, podendo agora, adicionar uma descrição
+		 * When true, it makes the button adapt to the expansion, and you can now add a description
 		 */
 		allowsExpand: {
 			type: Boolean,

@@ -140,13 +140,13 @@
 			<template
 				#noResult
 			>
-				Nenhum resultado encontrado para: "<strong>{{ queryString }} </strong>"
+				No results found for: "<strong>{{ queryString }} </strong>"
 			</template>
 
 			<template
 				#noOptions
 			>
-				Não há nenhuma opção para ser exibida.
+				There are no options to be displayed.
 			</template>
 		</multiselect>
 
@@ -183,71 +183,71 @@ export default {
 
 	props: {
 		/**
-		* Guarda o valor selecionado do multiselect.
+		* Saves the selected value from multiselect.
 		*/
 		modelValue: {
 			type: Array,
 			required: true,
 		},
 		/**
-		* Especifica a label do input.
+		* Specifies the input label.
 		*/
 		label: {
 			type: String,
 			default: 'text',
 		},
 		/**
-		* A variante da Checkbox. São 10 variantes: 'turquoise', 'green', 'blue',
-		* 'indigo', 'violet', 'pink', 'red', 'orange', 'amber' e 'dark'.
+		* The Checkbox variant. There are 10 variants: 'turquoise', 'green', 'blue',
+		* 'indigo', 'violet', 'pink', 'red', 'orange', 'amber' and 'dark'.
 		*/
 		variant: {
 			type: String,
 			default: 'green',
 		},
 		/**
-		* Utilizada para comparar objetos. Seu valor deve ser único.
+		* Used to compare objects. Its value must be unique.
 		*/
 		trackBy: {
 			type: String,
 			default: 'value',
 		},
 		/**
-		* Exibe asterisco indicativo de obrigatoriedade (obs.: não faz a validação)
+		* Displays asterisk indicating mandatory (note: does not validate)
 		*/
 		required: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		* Desabilita o Multiselect.
+		* Disables Multiselect.
 		*/
 		disabled: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		* Especifica a mensagem de erro, que será exibida caso o estado seja inválido
+		* Specifies the error message, which will be displayed if the status is invalid
 		*/
 		errorMessage: {
 			type: String,
-			default: 'Value inválido',
+			default: 'Invalid value',
 		},
 		/**
-		* Especifica o estado do TextInput. As opções são 'default' e 'invalid'.
+		* Specifies the state of the TextInput. The options are 'default' and 'invalid'.
 		*/
 		state: {
 			type: String,
 			default: 'default',
 		},
 		/**
-		* Lista de opções do Multiselect.
+		* Multiselect options list.
 		*/
 		options: {
 			type: Array,
 			required: true,
 		},
 		/**
-		* Indica o nome da chave do objeto a ser considerada na renderização das opções do select.
+		* Indicates the name of the object key to be considered when rendering the select options.
 		*/
 		optionsField: {
 			type: String,
@@ -255,7 +255,7 @@ export default {
 			required: false,
 		},
 		/**
-		* Permite ocultar o botão "selecionar todos"
+		* Allows you to hide the "select all" button
 		*/
 		hideSelectAll: {
 			type: Boolean,
@@ -291,16 +291,16 @@ export default {
 				if (qty === 1) {
 					return this.selectedValue[0][this.optionsField];
 				}
-				return `${qty} opções selecionadas`;
+				return `${qty} selected options`;
 			};
 		},
 
 		selectAllFancyMessage() {
 			if (!this.hasSelectedValues) {
-				return 'Selecionar todos';
+				return 'Select all';
 			}
 
-			return 'Desfazer seleção';
+			return 'Undo selection';
 		},
 
 		hasSelectedValues() {
@@ -316,7 +316,7 @@ export default {
 				return this.$attrs.placeholder;
 			}
 
-			return 'Selecione uma ou mais opções';
+			return 'Select one or more options';
 		},
 
 		isGroupMode() {
@@ -339,14 +339,14 @@ export default {
 			cleanedValues.forEach((val) => delete val.isSelected);
 			this.indeterminate = values.length > 0 && values.length < this.options.length;
 			/**
-			 * Evento utilizado para implementar o v-model.
+			 * Event used to implement the v-model.
 			* @event input
 			* @type {Event}
 			*/
 			this.$emit('input', cleanedValues);
 
 			/**
-			* Evento que indica que o valor do Multiselect foi alterado
+			* Event indicating that the Multiselect value has changed
 			* @event update:modelValue
 			* @type {Event}
 			*/
@@ -384,7 +384,7 @@ export default {
 		unselectItem(option) {
 			this.handleSelectItem(option);
 			/**
-			 * Evento disparado quando um item é deselecionado.
+			 * Event triggered when an item is deselected.
 			* @event remove
 			* @type {Event}
 				*/
@@ -394,7 +394,7 @@ export default {
 		selectItem(option) {
 			this.handleSelectItem(option);
 			/**
-			 * Evento disparado quando um item é selecionado.
+			 * Event fired when an item is selected.
 			* @event select
 			* @type {Event}
 				*/
@@ -464,7 +464,7 @@ export default {
 			this.updateRenderOptions();
 			this.setContentWrapperScrollToTop();
 			/**
-			 * Evento disparado quando o select é fechado.
+			 * Event fired when the select is closed.
 			* @event close
 			* @type {Event}
 				*/
@@ -504,11 +504,11 @@ export default {
 
 			this.internalOptions = [
 				{
-					$status: 'Selecionados',
+					$status: 'Selected',
 					options: [],
 				},
 				{
-					$status: 'Não selecionados',
+					$status: 'Not selected',
 					options: [],
 				},
 			];

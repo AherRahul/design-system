@@ -66,26 +66,26 @@ export const Template = (args) => ({
 
 # Multiselect
 
-### Multiselects são componentes que permitem ao usuário selecionar múltiplas opções divididas em categorias.
+### Multiselects are components that allow the user to select multiple options divided into categories.
 ---
 <br />
 
 ## When to use:
-- Houver a possibilidade de selecionar múltipos itens em um select.
-- Se deseja classificar os itens do select em categorias.
+- There is the possibility of selecting multiple items in a select.
+- If you want to classify select items into categories.
 
 <br />
 
 ## When not to use:
-- Os itens do select não puderem ser classificados em categorias.
-- Houver necessidade de detalhar no input as opções selecionadas, já que mostramos como resumo apenas quantas e não quais foram as opções escolhidas.
+- Select items cannot be classified into categories.
+- There is a need to detail the selected options in the input, as we show as a summary only how many and not which options were chosen.
 
 <br />
 
 ## Comments:
-- O Multiselect do RDS é um wrapper do <a href="https://vue-multiselect.js.org/">Vue Multiselect</a>
-com a sua adequação aos nossos Principles e recomendações. Para informações detalhadas sobre o componente, recomendamos
-leitura da documentação.
+- RDS Multiselect is a wrapper around <a href="https://vue-multiselect.js.org/">Vue Multiselect</a>
+with its compliance with our Principles and recommendations. For detailed information about the component, we recommend
+reading the documentation.
 
 <br />
 
@@ -107,7 +107,7 @@ export const options = [
 		name="Multiselect"
 		args={{
 			options,
-			label: 'Séries',
+			label: 'Series',
 			optionsField: 'title',
 			trackBy: 'title',
 			variant: 'green',

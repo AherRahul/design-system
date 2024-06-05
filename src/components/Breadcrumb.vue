@@ -75,9 +75,9 @@ export default {
 	},
 	props: {
 		/**
-		 * Define a lista dos itens do Breadcrumb a serem
-		 * mostrados. Os itens da lista devem ser
-		 * objetos com path ou route, e com uma label.
+		 * Defines the list of Breadcrumb items to be
+		 * shown. The list items must be
+		 * objects with path or route, and with a label.
 		 */
 		items: {
 			type: Array,

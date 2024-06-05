@@ -13,7 +13,7 @@
 			@click.stop
 		>
 			<header>
-				<!-- @slot Slot usado para utilização de header customizado. -->
+				<!-- @slot Slot used to use custom headers. -->
 				<slot name="header">
 					<div class="side-sheet__header">
 						<h3>{{ title }}</h3>
@@ -36,7 +36,7 @@
 				</slot>
 			</header>
 
-			<!-- @slot Slot usado para mostrar o conteúdo dentro do componente. -->
+			<!-- @slot Slot used to display content within the component. -->
 			<slot />
 		</cds-box>
 	</div>
@@ -58,14 +58,14 @@ export default {
 	},
 	props: {
 		/**
-		* Define o título do SideSheet.
+		* Sets the title of the SideSheet.
 		*/
 		title: {
 			type: String,
 			default: null,
 		},
 		/**
-		* Prop utilizada como v-model. Controla a visilidade do SideSheet.
+		* Prop used as v-model. Controls the visibility of the SideSheet.
 		*/
 		modelValue: {
 			type: Boolean,
@@ -73,28 +73,28 @@ export default {
 			required: true,
 		},
 		/**
-		* Indica se vai ser usado overlay junto ao SideSheet.
+		* Indicates whether an overlay will be used next to the SideSheet.
 		*/
 		withOverlay: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		* Especifica o tamanho do SideSheet. São 4 tamanhos implementados: 'sm', 'md', 'lg', 'xl'.
+		* Specifies the size of the SideSheet. There are 4 sizes implemented: 'sm', 'md', 'lg', 'xl'.
 		*/
 		size: {
 			type: String,
 			default: 'md',
 		},
 		/**
-		* Define se o SideSheet vai ser fechado com o click no backdrop.
+		* Defines whether the SideSheet will be closed when clicking on the backdrop.
 		*/
 		noCloseOnBackdrop: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		* Define se o SideSheet vai ser fechado quando o usuário pressionar 'ESC'.
+		* Defines whether the SideSheet will be closed when the user presses 'ESC'.
 		*/
 		noCloseOnEsc: {
 			type: Boolean,
@@ -160,7 +160,7 @@ export default {
 		shouldCloseOnBackdrop() {
 			if (!this.noCloseOnBackdrop) {
 				/**
-				* Evento utilizado para implementar o v-model.
+				* Event used to implement the v-model.
 				* @event update:modelValue
 				* @type {Event}
 				*/

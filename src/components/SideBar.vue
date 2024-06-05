@@ -204,18 +204,18 @@ export default {
 
 	props: {
 		/**
-		 * A variante de cor. São 10 variantes implementadas: 'green', 'teal',
-		 * 'blue', 'indigo', 'violet', 'pink', 'red', 'orange','amber' e 'white'.
-		 * A variante só terá efeito quando a SideBar estiver no modo light.
+		 * The color variant. There are 10 variants implemented: 'green', 'teal',
+		 * 'blue', 'indigo', 'violet', 'pink', 'red', 'orange', 'amber' and 'white'.
+		 * The variant will only take effect when the SideBar is in light mode.
 		 */
 		variant: {
 			type: String,
 			default: 'green',
 		},
 		/**
-		 * Define a lista dos itens do SideBar a serem
-		 * mostrados. Os itens da lista devem ser
-		 * objetos com path ou route, e com uma label
+		 * Defines the list of SideBar items to be
+		 * shown. The list items must be
+		 * objects with path or route, and with a label
 		 */
 		items: {
 			type: Array,
@@ -232,7 +232,7 @@ export default {
 			},
 		},
 		/**
-		* O item ativo da SideBar
+		* The active SideBar item
 		*/
 		activeItem: {
 			type: Object,
@@ -240,56 +240,56 @@ export default {
 			required: true,
 		},
 		/**
-		* Controla exibição do botão "sair" no footer da sidebar
+		* Controls display of the "exit" button in the sidebar footer
 		*/
 		showLogout: {
 			type: Boolean,
 			default: true,
 		},
 		/**
-		* Name do usuário logado. Essa informação é colocada ao lado do Avatar
+		* Name of the logged in user. This information is placed next to the Avatar
 		*/
 		userName: {
 			type: String,
 			default: '',
 		},
 		/**
-		* Perfil do usuário logado. Essa informação é colocada ao lado do Avatar
+		* Logged in user profile. This information is placed next to the Avatar
 		*/
 		userRole: {
 			type: String,
 			default: '',
 		},
 		/**
-		* Imagem do usuário logado. Informação é usada para montar o Avatar
+		* Image of the logged in user. Information is used to assemble the Avatar
 		*/
 		userPicture: {
 			type: String,
 			default: null,
 		},
 		/**
-		 * Permite que a sidebar seja colapsada em uma versão mínima
+		 * Allows the sidebar to be collapsed into a minimal version
 		*/
 		collapsible: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Imagem do logo que será renderizada
+		 * Image of the logo that will be rendered
 		*/
 		logoImage: {
 			type: String,
 			default: null,
 		},
 		/**
-		 * Imagem do logo que será renderizada quando a sidebar estiver colapsada
+		 * Logo image that will be rendered when the sidebar is collapsed
 		*/
 		collapsedLogoImage: {
 			type: String,
 			default: null,
 		},
 		/**
-		 * Ativa o modo light da sidebar
+		 * Activates sidebar light mode
 		*/
 		light: {
 			type: Boolean,
@@ -367,7 +367,7 @@ export default {
 			}
 
 			/**
-			 * Evento emitido quando um dos itens da SideBar é clicado
+			 * Event emitted when one of the SideBar items is clicked
 			* @event sidebar-click
 			* @type {Event}
 			*/

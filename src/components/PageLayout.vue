@@ -24,7 +24,7 @@
 			/>
 
 			<page-container class="page-layout__container">
-				<!-- @slot Slot usado para inserção de conteúdo do PageLayout. -->
+				<!-- @slot Slot used for inserting PageLayout content. -->
 				<slot />
 			</page-container>
 		</div>
@@ -39,23 +39,23 @@ import PageContainer from './PageContainer.vue';
 
 defineProps({
 	/**
-	 * A variante de cor. São 10 variantes implementadas: 'green', 'teal',
-	 * 'blue', 'indigo', 'violet', 'pink', 'red', 'orange','amber' e 'white'.
-	 * A variante só terá efeito quando o PageLayout estiver no modo light.
+	 * The color variant. There are 10 variants implemented: 'green', 'teal',
+	 * 'blue', 'indigo', 'violet', 'pink', 'red', 'orange', 'amber' and 'white'.
+	 * The variant will only take effect when the PageLayout is in light mode.
 	 */
 	variant: {
 		type: String,
 		default: 'green',
 	},
 	/**
-	 * Ativa o modo light do PageLayout.
+	 * Activates PageLayout light mode.
 	*/
 	light: {
 		type: Boolean,
 		default: false,
 	},
 	/**
-	 * Define as informações referentes ao usuário. O objeto deve seguir a assinatura:
+	 * Defines information relating to the user. The object must follow the signature:
 	 * { name: String, role: String, picture: String }
 	*/
 	user: {
@@ -63,39 +63,39 @@ defineProps({
 		default: () => {},
 	},
 	/**
-	 * Define se a sidebar pode ser colapsada.
+	 * Defines whether the sidebar can be collapsed.
 	*/
 	collapsibleSideBar: {
 		type: Boolean,
 		default: false,
 	},
 	/**
-	 * Define os itens da da barra lateral de navegação.
+	 * Defines navigation sidebar items.
 	 */
 	sideBarItems: {
 		type: Array,
 		default: () => [],
 	},
 	/**
-	 * Define os itens da da barra de navegação secundária.
+	 * Defines the items in the secondary navigation bar.
 	 */
 	navigationItems: {
 		type: Array,
 		default: () => [],
 	},
-	/** Define as logos da barra lateral de navegação, collapsible é a logo
-	 *  que aparecerá quando a sidebar estiver colapsada.
+	/** Defines the navigation sidebar logos, collapsible is the logo
+	 * that will appear when the sidebar is collapsed.
 	 */
 	logos: {
 		type: Object,
 		default: () => {},
 	},
-	/** Define o item ativo da sideBar */
+	/** Defines the active sideBar item */
 	sideBarActiveItem: {
 		type: Object,
 		default: () => {},
 	},
-	/** Define o item ativo da navegação secundária */
+	/** Sets the active secondary navigation item */
 	navigationActiveItem: {
 		type: Object,
 		default: () => {},
@@ -105,21 +105,21 @@ defineProps({
 
 const emit = defineEmits([
 	/**
-	* Evento emitido quando um dos itens da SideBar é clicado
+	* Event emitted when one of the SideBar items is clicked
 	* @event sidebar-item-click
 	* @type {Event}
 	*/
 	'sidebar-item-click',
 
 	/**
-	* Evento emitido quando o icone de logout da SideBar é clicado
+	* Event emitted when the SideBar logout icon is clicked
 	* @event sidebar-logout
 	* @type {Event}
 	*/
 	'sidebar-logout',
 
 	/**
-	* Evento emitido quando o icone da SecondaryNavbar é clicado
+	* Event emitted when the SecondaryNavbar icon is clicked
 	* @event navigation-item-click
 	* @type {Event}
 	*/

@@ -33,7 +33,7 @@ export default {
 			default: 4
 		},
 		/**
-		 * Especifica o estado do TextInput. As opções são 'default', 'valid' e 'invalid'.
+		 * Specifies the state of the TextInput. The options are 'default', 'valid' and 'invalid'.
 		 */
 		state: {
 			type: String,

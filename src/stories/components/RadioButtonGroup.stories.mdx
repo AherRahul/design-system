@@ -35,42 +35,41 @@ export const Template = (args) => ({
 
 # RadioButtonGroup
 
-### RadioButtonsGroup são radio buttons customizados para facilitar a seleção e feedback.
+### RadioButtonsGroup are custom radio buttons for easy selection and feedback.
 ---
 <br />
 
 ## When to use:
-- As opções que o componente busca prover são mutuamente exclusivas.
-- For necessário utilizar um ```<input type="radio"``` />.
+- The options that the component seeks to provide are mutually exclusive.
+- It is necessary to use a ```<input type="radio"``` />.
 
 <br />
 
 ## When not to use:
-- Duas ou mais opções puderem ser selecionadas ao mesmo tempo.
-- Houver 4 ou mais opções. Prefira Dropdowns nesses casos.
+- Two or more options can be selected at the same time.
+- There are 4 or more options. Prefer Dropdowns in these cases.
 
-## Obs.:
-- Você pode disabilitar cada um dos radio buttons passando a propriedade ```disable: true```, no respectivo objeto
-no array de opções. Caso você queira disabilitar todo o grupo, você pode setar a prop ```disabled``` como true no componente.
+## Note:
+- You can disable each of the radio buttons by passing the ```disable: true``` property in the respective object
+in the options array. If you want to disable the entire group, you can set the ```disabled``` prop to true in the component.
 
 <br />
 
 ## Preview
-
 export const value = '';
 export const options = [
 	{
-		text: 'Opção desabilitada',
+		text: 'Option disabled',
 		value: 'value1',
 		disabled: true,
 	},
 	{
-		text: 'Opção habilitada 1',
-		body: 'Adicione um texto descritivo/explicativo referente a essa opção',
+		text: 'Option enabled 1',
+		body: 'Add descriptive/explanatory text for this option',
 		value: 'value2',
 	},
 	{
-		text: 'Opção habilitada 2',
+		text: 'Option enabled 2',
 		value: 'value3',
 	},
 ];

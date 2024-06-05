@@ -7,7 +7,7 @@
 			<span
 				:class="internalValue ? 'collapsible-container__chevron--opened' : 'collapsible-container__chevron--closed'"
 			/>
-			<!-- @slot Slot para renderização do conteúdo do header/title customizado do item
+			<!-- @slot Slot for rendering the item's custom header/title content
 			-->
 			<slot name="title">
 				<span
@@ -21,8 +21,8 @@
 			v-if="internalValue"
 			class="collapsible-container__content"
 		>
-			<!-- @slot Slot para renderização conteúdo do container
-				quando o componente está expandido
+			<!-- @slot Slot for rendering container content
+				when the component is expanded
 			-->
 			<slot />
 		</div>
@@ -33,8 +33,8 @@
 export default {
 	props: {
 		/**
-		 * Representa o estado do componente. Quando 'false' o conteúdo não é mostrado
-		 * e quando 'true' o conteúdo do container é exibido.
+		 * Represents the state of the component. When 'false' the content is not shown
+		 * and when 'true' the contents of the container are displayed.
 		 */
 		modelValue: {
 			type: Boolean,
@@ -42,7 +42,7 @@ export default {
 			required: true,
 		},
 		/**
-		 * Título do item a ser expandido
+		 * Title of the item to be expanded
 		 */
 		title: {
 			type: String,
@@ -59,7 +59,7 @@ export default {
 	watch: {
 		internalValue(newValue) {
 			/**
-			* Evento emitido quando o conteúdo do item é exibido ('true') ou ocultado ('false').
+			* Event emitted when item content is displayed ('true') or hidden ('false').
 			* @event expanded
 			* @type {Event}
 			*/

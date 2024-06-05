@@ -54,21 +54,21 @@ export const Template = (args) => ({
 			<template #logo>
 				<img
 					v-if="!args.light"
-					src="https://framerusercontent.com/images/Xdjpf9nazmZOoS2SUnbbkwsaFk.png"
+					src="https://rahulaher.netlify.app/img/logo/word-white-colored.svg"
 				>
 				<img
 					v-else
-					src="https://framerusercontent.com/images/cF8DHaPnyhgullDGcpLnyXwGUp4.png"
+					src="https://rahulaher.netlify.app/img/logo/word-black-colored.svg"
 				>
 			</template>
 			<template #collapsed-logo>
 				<img
 					v-if="!args.light"
-					src="https://i.imgur.com/iNqZGnr.png"
+					src="https://rahulaher.netlify.app/img/logo/glyph-white-colored.svg"
 				>
 				<img
 					v-else
-					src="https://i.imgur.com/aNrsz0h.png"
+					src="https://rahulaher.netlify.app/img/logo/glyph-black-colored.svg"
 				>
 			</template>
 		</cds-side-bar>`,
@@ -84,19 +84,19 @@ export const Template = (args) => ({
 
 # SideBar
 
-### SideBars são componentes utilizados para criar soluções de navegação e menus.
+### SideBars are components used to create navigation solutions and menus.
 ---
 <br />
 
-## Recomendamos o uso de NavBars quando:
-- For necessário separar o conteúdo por páginas e navergar por elas.
-- Não for o caso de utilizar soluções como tabs, sidebars, cards ou links como navegação.
+## We recommend using NavBars when:
+- It is necessary to separate the content by pages and navigate through them.
+- It is not the case to use solutions such as tabs, sidebars, cards or links as navigation.
 
 <br />
 
-## Não recomendamos o uso de NavBars quando:
-- Houver muitos itens a serem mostrados no menu.
-- For necessário mostrar os links verticalmente.
+## We do not recommend using NavBars when:
+- There are too many items to be shown in the menu.
+- It is necessary to show the links vertically.
 
 <br />
 
@@ -113,7 +113,7 @@ export const items = [
 		},
 	},
 	{
-		label: 'Atendimento',
+		label: 'Service',
 		icon: 'clipboard-text-outline',
 		type: 'route',
 		route: {
@@ -126,10 +126,10 @@ export const items = [
 		icon: 'link-outline',
 		items: [
 			{
-				label: 'Painel (Tv)',
+				label: 'Panel (Tv)',
 				route: {
 					path: 'https://www.google.com',
-					name: 'painel-tv',
+					name: 'panel-tv',
 				},
 				type: 'external',
 			},
@@ -144,21 +144,21 @@ export const items = [
 		]
 	},
 	{
-		label: 'Relatórios',
+		label: 'Reports',
 		icon: 'printer-outline',
 		type: 'route',
 		route: {
 			path: '/reports',
-			name: 'pagina2'
+			name: 'page2'
 		},
 	},
 	{
-		label: 'Configurações',
+		label: 'Settings',
 		icon: 'settings-outline',
 		type: 'route',
 		items: [
 			{
-				label: 'Painel (Tv)',
+				label: 'Panel (Tv)',
 				route: {
 					path: '/tv',
 					name: 'tv'
@@ -172,30 +172,30 @@ export const items = [
 				},
 			},
 			{
-				label: 'Serviços',
+				label: 'Services',
 				route: {
 					path: '/services',
-					name: 'serviços',
+					name: 'services',
 				},
 			},
 			{
-				label: 'Categorias',
+				label: 'Categories',
 				route: {
 					path: '/categories',
-					name: 'categorias',
+					name: 'categories',
 				}
 			},
 			{
-				label: 'Prioridades',
+				label: 'Priorities',
 				route: {
 					path: '/priorities',
-					name: 'prioridades',
+					name: 'priorities',
 				},
 			},
 		]
 	},
 	{
-		label: 'Suporte',
+		label: 'Support',
 		icon: 'lifebuoy-outline',
 		type: 'link',
 		route: {
@@ -213,11 +213,11 @@ export const items = [
 			items: items,
 			activeItem: items[4],
 			userName: 'Joana Mendes',
-			userRole: 'Administradora',
+			userRole: 'Administrator',
 			userPicture: 'https://this-person-does-not-exist.com/img/avatar-gen83fa18cdcd216e7220794a23e76fe0dc.jpg',
 			collapsible: true,
-			logoImage: 'https://framerusercontent.com/images/Xdjpf9nazmZOoS2SUnbbkwsaFk.png',
-			collapsedLogoImage: 'https://i.imgur.com/iNqZGnr.png',
+			logoImage: 'https://rahulaher.netlify.app/img/logo/word-black-colored.svg',
+			collapsedLogoImage: 'https://rahulaher.netlify.app/img/logo/glyph-black-colored.svg',
 			light: false,
 		}}
 	>

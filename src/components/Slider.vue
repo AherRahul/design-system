@@ -36,11 +36,11 @@
 			</div>
 		</template>
 		<template #tooltip="tooltip">
-			<!-- @slot Scoped slot para renderização customizada dos tooltips.
-				A propriedade 'tooltip', que pode ser acessada através do slot,
-				contém pos (posição do componente em %), index (o índice do slider),
-				value (o valor do slider), focus (se o slider está no estado de focus ou não),
-				disabled (se o slider está disabilitado ou não)
+			<!-- @slot Scoped slot for custom rendering of tooltips.
+				The 'tooltip' property, which can be accessed through the slot,
+				contains pos (component position in %), index (the slider index),
+				value (the value of the slider), focus (whether the slider is in the focus state or not),
+				disabled (whether the slider is disabled or not)
 			-->
 			<slot
 				name="tooltip"
@@ -60,23 +60,23 @@ export default {
 
 	props: {
 		/**
-		* O valor mínimo do slider.
+		* The minimum value of the slider.
 		*/
 		min: {
-			type: Number,
+			type:Number,
 			default: 0,
 			required: true,
 		},
 		/**
-			* O valor máximo do slider.
+			* The maximum value of the slider.
 		*/
 		max: {
-			type: Number,
+			type:Number,
 			default: 100,
 			required: true,
 		},
 		/**
-			* Prop utilizada como v-model. Retorna as posições selecionadas no slider.
+			* Prop used as v-model. Returns the selected positions in the slider.
 		*/
 		modelValue: {
 			type: Array,
@@ -84,8 +84,8 @@ export default {
 			required: true,
 		},
 		/**
-		 * A variante de cor. São 10 variantes implementadas: 'green', 'teal',
-		 * 'blue', 'indigo', 'violet', 'pink', 'red', 'orange','amber' e 'white'.
+		 * The color variant. There are 10 variants implemented: 'green', 'teal',
+		 * 'blue', 'indigo', 'violet', 'pink', 'red', 'orange', 'amber' and 'white'.
 		 */
 		variant: {
 			type: String,

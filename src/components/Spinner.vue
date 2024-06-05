@@ -7,7 +7,7 @@
 export default {
 	props: {
 		/**
-		*	Propriedade referente ao tamanho do componente ('sm', 'md' ou 'lg')
+		*	Property referring to the component size ('sm', 'md' or 'lg')
 		*
 		*/
 		size: {
@@ -15,8 +15,8 @@ export default {
 			default: 'md',
 		},
 		/**
-		*	Variante de cor do componente ('turquoise', 'green', 'blue',
-			'indigo', 'violet', 'pink', 'red', 'orange', 'amber')
+		* 	Component color variant ('turquoise', 'green', 'blue',
+		* 	'indigo', 'violet', 'pink', 'red', 'orange', 'amber')
 		*
 		*/
 		variant: {

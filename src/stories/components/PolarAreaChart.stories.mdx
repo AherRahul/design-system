@@ -60,20 +60,20 @@ export const Template = (args) => ({
 
 # PolarAreaChart
 
-### Um componente de gráfico reutilizável para exibir dados visualmente.
+### A reusable chart component to display data visually.
 ---
 <br />
 
 ## When to use:
-- Exibir dados em formatos visuais;
-- Visualizar tendências ao longo de variáveis contínuas, como direções ou graus.
+- Display data in visual formats;
+- View trends along continuous variables such as directions or degrees.
 
 <br />
 
 ## When not to use:
-- Para informações simples que podem ser exibidas em um formato tabular ou em texto;
-- Quando os dados apresentarem ênfase na comparação númerica de quantidades;
-- Não recomendado para representar séries temporais ou dados discretos.
+- For simple information that can be displayed in a tabular or text format;
+- When the data emphasizes the numerical comparison of quantities;
+- Not recommended for representing time series or discrete data.
 
 ## Preview
 
@@ -81,15 +81,15 @@ export const Template = (args) => ({
 	<Story
 		name="PolarAreaChart"
 		args={{
-			labels: ['Janeiro','Fevereiro','Março', 'Abril', 'Maio'],
+			labels: ['January', 'February', 'March', 'April', 'May'],
 			variant: 'green',
 			isVisiblePointNames: true,
 			data: [
 				{
-					name: 'Ecocardiograma',
+					name: 'Echocardiogram',
 					datasets: [
 						{
-							label: 'Exames realizados',
+							label: 'Exams carried out',
 							data: [120, 220, 180, 320, 150],
 						},
 					]

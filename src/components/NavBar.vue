@@ -39,9 +39,9 @@ import { colorOptions, colorHexCode } from '../utils/constants/colors';
 export default {
 	props: {
 		/**
-		 * Define a lista dos itens do NavBar a serem
-		 * mostrados. Os itens da lista devem ser
-		 * objetos com path ou route, e com uma label
+		 * Defines the list of NavBar items to be
+		 * shown. The list items must be
+		 * objects with path or route, and with a label
 		 */
 		items: {
 			type: Array,
@@ -58,7 +58,7 @@ export default {
 			},
 		},
 		/**
-		 * O item ativo da NavBar
+		 * The active NavBar item
 		 */
 		activeItem: {
 			type: Object,
@@ -66,9 +66,9 @@ export default {
 			required: true,
 		},
 		/**
-		 * Cor da borda que indica o item ativo na NavBar.
-		 * Existem algumas cores predefinidas seguindo os guias do RDS, são elas:
-		 * `turquoise`, `green`, `blue`, `violet`, `pink`, `red`, `orange`, `amber` e `gray`.
+		 * Border color indicating the active item in the NavBar.
+		 * There are some predefined colors following the RDS guides, they are:
+		 * `turquoise`, `green`, `blue`, `violet`, `pink`, `red`, `orange`, `amber` and `gray`.
 		 */
 		variant: {
 			type: String,
@@ -110,7 +110,7 @@ export default {
 		handleClick(event, item) {
 			this.internalActiveItem = item;
 			/**
-			 * Evento emitido quando um dos itens da NavBar é clicado
+			 * Event emitted when one of the NavBar items is clicked
 			* @event navbar-click
 			* @type {Event}
 			*/

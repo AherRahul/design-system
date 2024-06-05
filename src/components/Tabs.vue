@@ -54,9 +54,9 @@
 				class="content__pane"
 				:class="isActive(tab) ? 'content__pane--active' : 'content__pane--inactive'"
 			>
-				<!-- @slot Slot para renderização customizada do conteúdo das abas
-					os slots são nomeados de acordo com os `name` das tabs, cada slot
-					nomeado é exibido de acordo com a aba ativa correspondente
+				<!-- @slot Slot for custom rendering of tab content
+					slots are named according to the `name` of the tabs, each slot
+					named is displayed according to the corresponding active tab
 				-->
 				<slot
 					:name="getSlotName(tab)"
@@ -80,9 +80,9 @@ export default {
 
 	props: {
 		/**
-		 * Define a lista dos itens da InnerTabs a serem mostrados.
-		 * Os itens da lista devem ser objetos com `name` (para identificar o slot)
-		 * e `title` (título da aba)
+		 * Defines the list of InnerTabs items to be shown.
+		 * List items must be objects with `name` (to identify the slot)
+		 * and `title` (tab title)
 		 */
 		tabs: {
 			type: Array,
@@ -96,7 +96,7 @@ export default {
 			},
 		},
 		/**
-		 * O item ativo dentre as abas
+		 *The active item among the tabs
 		 */
 		activeTab: {
 			type: Object,
@@ -104,9 +104,9 @@ export default {
 			required: true,
 		},
 		/**
-		 * Cor da borda que indica o item ativo.
-		 * Existem algumas cores predefinidas seguindo os guias do RDS, são elas:
-		 * `turquoise`, `green`, `blue`, `violet`, `pink`, `red`, `orange`, `amber` e `gray`.
+		 * Border color indicating the active item.
+		 * There are some predefined colors following the RDS guides, they are:
+		 * `turquoise`, `green`, `blue`, `violet`, `pink`, `red`, `orange`, `amber` and `gray`.
 		 */
 		variant: {
 			type: String,
@@ -116,7 +116,7 @@ export default {
 			},
 		},
 		/**
-		 * Define se o botão de adicionar deve ser exibido ou não, por padrão ele não será exibido
+		 * Defines whether the add button should be displayed or not, by default it will not be displayed
 		 */
 		showAddAction: {
 			type: Boolean,
@@ -158,7 +158,7 @@ export default {
 
 		handleRightClick(event, item) {
 			/**
-			 * Evento emitido quando uma das abas é clicada com o botão direito
+			 * Event emitted when one of the tabs is right-clicked
 			* @event right-click
 			* @type {Event}
 				*/
@@ -167,7 +167,7 @@ export default {
 
 		handleClick(event, item) {
 			/**
-			 * Evento emitido quando a aba ativa é alterada
+			 * Event emitted when the active tab is changed
 			* @event tabs-change
 			* @type {Event}
 				*/
@@ -177,7 +177,7 @@ export default {
 
 		handleAddAction(event) {
 			/**
-			 * Evento emitido ao clicar no botão de adicionar
+			 * Event emitted when clicking the add button
 			* @event add-action
 			* @type {Event}
 			*/

@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-	<!--TODO: Substituir a tag img pela tag picture e modificar a API para refletir essa mudança. -->
+	<!--TODO: Replace the img tag with the picture tag and modify the API to reflect this change. -->
 	<img
 		v-bind="$attrs"
 		:src="innerSrc"
@@ -16,64 +16,64 @@ import rounder from '../utils/methods/rounder';
 export default {
 	props: {
 		/**
-		* Caminho da imagem que vai ser renderizada.
+		* Path of the image that will be rendered.
 		*/
 		src: {
 			type: String,
 			required: true,
 		},
 		/**
-		* Caminho da imagem que vai ser renderizada como fallback, caso a imagem principal
-		* apresentar algum erro de carregamento.
+		* Path of the image that will be rendered as a fallback, if the main image
+		* presents a loading error.
 		*/
 		fallbackSrc: {
 			type: String,
 			required: false,
 		},
 		/**
-		* Largura da imagem. Quando não especificada, o valor `auto` é aplicado.
+		* Image width. When not specified, the `auto` value is applied.
 		*/
 		width: {
 			type: [Number, String],
 			default: null,
 		},
 		/**
-		* Altura da imagem. Quando não especificada, o valor `auto` é aplicado.
+		* Image height. When not specified, the `auto` value is applied.
 		*/
 		height: {
 			type: [Number, String],
 			default: null,
 		},
 		/**
-		* Descrição em texto da imagem.
+		* Text description of the image.
 		*/
 		alt: {
 			type: String,
-			default: 'Imagem',
+			default: 'Image',
 		},
 		/**
-		* Opacidade da imagem.
+		* Image opacity.
 		*/
 		opacity: {
 			type: [Number, String],
 			default: 1,
 		},
 		/**
-		* Quando true, aplica um grayscale de 35% na imagem.
+		* When true, applies a 35% grayscale to the image.
 		*/
 		dimmed: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		* Torna a imagem preto e branca.
+		* Makes the image black and white.
 		*/
 		blackAndWhite: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		* Arrendonda as bordas da imagem.
+		* Rounds the edges of the image.
 		*/
 		roundedCorners: {
 			type: Boolean,

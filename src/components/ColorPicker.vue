@@ -89,35 +89,35 @@ export default {
 
 	props: {
 		/**
-		* Guarda a cor selecionada no Color Picker.
+		* Saves the selected color in the Color Picker.
 		*/
 		modelValue: {
 			type: String,
 			required: true,
 		},
 		/**
-		 * Especifica a label do ColorPicker.
+		 * Specifies the ColorPicker label.
 		 */
 		label: {
 			type: String,
 			default: 'Label',
 		},
 		/**
-		* Quando true passa a mostrar as opções de cores fora do popover.
+		* When true, it starts showing the color options outside the popover.
 		*/
 		inline: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		* Especifica a altura do popover. ⚠️ Quando a prop inline estiver ativa essa prop não surte efeito.
+		* Specifies the height of the popover. ⚠️ When the inline prop is active, this prop has no effect.
 		*/
 		popoverHeight: {
 			type: Number,
 			default: 190,
 		},
 		/**
-		* Conjunto de cores a serem renderizadas no ColorPicker. A prop espera um Array de Array de tokens de cor. Ex.: $gp-400
+		* Set of colors to be rendered in ColorPicker. The prop expects an Array of Array of color tokens. E.g.: $gp-400
 		*/
 		swatch: {
 			type: Array,
@@ -171,13 +171,13 @@ export default {
 			});
 
 			/**
-			 * **Implementa v-model**. Evento utilizado para emitir a *cor* selecionada. A cor é emitida como uma string no formato HEX.
+			 * **Implements v-model**. Event used to emit the selected *color*. The color is output as a string in HEX format.
 			 * @event update:modelValue
 			 * @type {Event}
 			*/
 			this.$emit('update:modelValue', this.selectedColor);
 			/**
-			 * Evento utilizado para emitir a *variante* da cor selecionada. A variante é emitida como uma string. ⚠️ Importante: a variante emitida só irá mudar se a cor mudar. A mudança de shade dentro da mesma cor não altera a variante. Ex.: $gp-400 e $gp-600 emitirão a mesta variante, a saber, "green".
+			 * Event used to emit the *variant* of the selected color. The variant is output as a string. ⚠️ Important: the issued variant will only change if the color changes. Changing the shade within the same color does not change the variant. E.g.: $gp-400 and $gp-600 will emit the same variant, namely "green".
 			 * @event update:colorVariant
 			 * @type {Event}
 			*/

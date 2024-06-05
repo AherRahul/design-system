@@ -12,7 +12,7 @@
 				'height': autoHeight ? 'auto' : maxHeight,
 			}"
 		>
-			<!-- @slot Slot com o conteúdo que você deseja que seja scrollable -->
+			<!-- @slot Slot with the content you want to be scrollable -->
 			<slot />
 		</div>
 	</span>
@@ -22,7 +22,7 @@
 export default {
 	props: {
 		/**
-		 * Altura máxima do container até ser scrollado
+		 * Maximum height of the container until scrolled
 		 */
 		maxHeight: {
 			type: String,
@@ -30,14 +30,14 @@ export default {
 			required: true,
 		},
 		/**
-		 * Define altura como 'auto' para o container até o limite máximo
+		 * Sets height to 'auto' for the container up to the maximum limit
 		 */
 		autoHeight: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Torna o container scrollável horizontalmente
+		 * Makes the container horizontally scrollable
 		 */
 		horizontalScroll: {
 			type: Boolean,

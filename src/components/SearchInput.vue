@@ -22,7 +22,7 @@
 				variant="blue"
 				@click="internalValue = ''"
 			>
-				Limpar
+				To clean
 			</cds-link-button> -->
 
 			<cds-icon
@@ -74,28 +74,28 @@ export default {
 
 	props: {
 		/**
-		* Prop utilizada como v-model.
+		* Prop used as v-model.
 		*/
 		modelValue: {
 			type: [String, Number],
 			default: '',
 		},
 		/**
-		 * Desabilita o input.
+		 * Disables input.
 		 */
 		disabled: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Especifica o placeholder do input
+		 * Specifies the input placeholder
 		 */
 		placeholder: {
 			type: String,
-			default: 'Busque...',
+			default: 'Search...',
 		},
 		/**
-		 * Especifica se a largura do TextInput deve ser fluida.
+		 * Specifies whether the TextInput width should be fluid.
 		 */
 		fluid: {
 			type: Boolean,
@@ -155,7 +155,7 @@ export default {
 	methods: {
 		handleInput(e) {
 			/**
-			* Evento utilizado para implementar o v-model.
+			* Event used to implement the v-model.
 			* @event update:modelValue
 			* @type {Event}
 			*/

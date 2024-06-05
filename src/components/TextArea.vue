@@ -5,9 +5,9 @@
 				v-if="hasSlots"
 			>
 				<!--
-					@slot Slot para renderização customizada da label
-					(Obs: Também existe a prop label que pode ser usada
-					quando não há necessidade de customização)
+					@slot Slot for custom label rendering
+					(Note: There is also a prop label that can be used
+					when there is no need for customization)
 				-->
 				<slot name="label" />
 			</span>
@@ -88,7 +88,7 @@ export default {
 	},
 	props: {
 		/**
-		* Prop utilizada como v-model.
+		* Prop used as v-model.
 		*/
 		modelValue: {
 			type: String,
@@ -97,7 +97,7 @@ export default {
 		},
 
 		/**
-		 * Especifica a label do textarea.
+		 * Specifies the label of the textarea.
 		 */
 		label: {
 			type: String,
@@ -105,7 +105,7 @@ export default {
 		},
 
 		/**
-		* Exibe asterisco que indica campo obrigatório (Obs: Não faz a validação)
+		* Displays asterisk indicating mandatory field (Note: Does not validate)
 		*/
 		required: {
 			type: Boolean,
@@ -113,15 +113,15 @@ export default {
 		},
 
 		/**
-		 * Especifica o placeholder do textarea.
+		 * Specifies the placeholder of the textarea.
 		 */
 		placeholder: {
 			type: String,
-			default: 'Digite aqui a descrição',
+			default: 'Enter description here',
 		},
 
 		/**
-		 * Desabilita o input do textarea.
+		 * Disables textarea input.
 		 */
 		disabled: {
 			type: Boolean,
@@ -129,7 +129,7 @@ export default {
 		},
 
 		/**
-		 * Especifica o estado do textarea. As opções são 'default', 'valid', 'invalid' e 'loading'.
+		 * Specifies the state of the textarea. The options are 'default', 'valid', 'invalid' and 'loading'.
 		 */
 		state: {
 			type: String,
@@ -137,16 +137,15 @@ export default {
 		},
 
 		/**
-		 * Especifica a mensagem de erro que será exibida, caso o estado do textarea seja inválido.
+		 * Specifies the error message that will be displayed if the textarea state is invalid.
 		 */
 		errorMessage: {
 			type: String,
-			default: 'Value inválido',
+			default: 'Invalid value',
 		},
 
-
 		/**
-		 * Especifica se a largura do textarea deve ser fluida.
+		 * Specifies whether the width of the textarea should be fluid.
 		 */
 		fluid: {
 			type: Boolean,
@@ -190,7 +189,7 @@ export default {
 	watch: {
 		internalValue(value) {
 			/**
-			* Evento utilizado para implementar o v-model.
+			* Event used to implement the v-model.
 			* @event input
 			* @type {Event}
 			*/
@@ -199,7 +198,7 @@ export default {
 
 		modelValue(value) {
 			/**
-			* Evento utilizado para implementar o v-model.
+			* Event used to implement the v-model.
 			* @event input
 			* @type {Event}
 			*/

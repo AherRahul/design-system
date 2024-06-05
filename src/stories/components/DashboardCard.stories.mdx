@@ -20,13 +20,13 @@ import Badge from '../../components/Badge.vue';
 >
 	<template #title-slot>
 		<bold>45</bold>
-		<span style="margin-left: 8px; font-size: 13.5px; font-weight: 500;">gestantes</span>
+		<span style="margin-left: 8px; font-size: 13.5px; font-weight: 500;">pregnant women</span>
 	</template>
 	<template #status-slot>
-		<cds-badge variant="red">Alerta</cds-badge>
+		<cds-badge variant="red">Alert</cds-badge>
 	</template>
 	<template #description-slot>
-		Não realizam consulta há mais de 30 dias
+		Haven't had a consultation for more than 30 days
 	</template>
 </cds-dashboard-card>`
 			},
@@ -49,13 +49,13 @@ export const Template = (args) => ({
 		>
 			<template #title-slot>
 				<bold>45</bold>
-				<span style="margin-left: 8px; font-size: 13.5px; font-weight: 500;">gestantes</span>
+				<span style="margin-left: 8px; font-size: 13.5px; font-weight: 500;">pregnant women</span>
 			</template>
 			<template #status-slot>
-				<cds-badge variant="red">Alerta</cds-badge>
+				<cds-badge variant="red">Alert</cds-badge>
 			</template>
 			<template #description-slot>
-				Não realizam consulta há mais de 30 dias
+				Haven't had a consultation for more than 30 days
 			</template>
 		</cds-dashboard-card>
 	`,
@@ -64,29 +64,29 @@ export const Template = (args) => ({
 
 # DashboardCards
 
-### DashboardCards são componentes utilizados para construir cards com informações que requeiram uma descrição curta e que possam ser classificadas em status.
+### DashboardCards are components used to build cards with information that requires a short description and can be classified into status.
 ---
 <br />
 
 ## When to use:
-- For necessário mostrar informações de modo resumido em dashboards
-- For necessário um card com botão clicável e que leve o usuário a uma nova tela.
-- A informação descrita no card possa ser classificada.
+- It is necessary to show information in summary form on dashboards
+- A card with a clickable button that takes the user to a new screen is required.
+- The information described on the card can be classified.
 
 
 <br />
 
 ## When not to use:
-- Houver um conjunto muito grande de informações a ser exibido.
-- Se deseja utilizar ícones em conjunto com os dados. Utilize <a href="https://sysvale.github.io/cuida/?path=/docs/componentes-containers-expansioncard--expansion-card">ExpansionCards</a> nesses cenários.
+- There is a very large set of information to be displayed.
+- If you want to use icons together with the data. Use <a href="https://sysvale.github.io/cuida/?path=/docs/componentes-containers-expansioncard--expansion-card"> ExpansionCards </a> in these scenarios.
 
 <br />
 
 ## Comments:
-- O DashboardCard exibee informações de modo vertical, ao contrário do <a href="https://sysvale.github.io/cuida/?path=/docs/componentes-containers-expansioncard--expansion-card">ExpansionCard</a>.
-- <a href="https://sysvale.github.io/cuida/?path=/docs/componentes-containers-expansioncard--expansion-card">ExpansionCards</a> comunicam informações de modo mais direto e com auxílio de ícones. DashboardCars focam mais em descrição e classificação das informações.
-- Considere utilizar DashboardCards se precisa que o componente redirecione o usuário para outra página para mais informações.
-- Considere <a href="https://sysvale.github.io/cuida/?path=/docs/componentes-containers-expansioncard--expansion-card">ExpansionCards</a> se for necessário detalhar o conteúdo do card, mas sem tirar o usuário da página.
+- DashboardCard displays information vertically, unlike <a href="https://sysvale.github.io/cuida/?path=/docs/componentes-containers-expansioncard--expansion-card">ExpansionCard</a >.
+- <a href="https://sysvale.github.io/cuida/?path=/docs/componentes-containers-expansioncard--expansion-card">ExpansionCards</a> communicate information more directly and with assistance of icons. DashboardCars focus more on description and classification of information.
+- Consider using DashboardCards if you need the component to redirect the user to another page for more information.
+- Consider <a href="https://sysvale.github.io/cuida/?path=/docs/componentes-containers-expansioncard--expansion-card">ExpansionCards</a> if you need to detail the card content , but without removing the user from the page.
 
 <br />
 
@@ -97,7 +97,7 @@ export const Template = (args) => ({
 		name="DashboardCard"
 		args={{
 			showAction: true,
-			action: 'Ver lista'
+			action: 'View list'
 		}}
 	>
 		{ Template.bind({}) }

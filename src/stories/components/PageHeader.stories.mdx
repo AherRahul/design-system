@@ -14,8 +14,8 @@ import Button from '../../components/Button.vue';
 				format:true,
 				code: /*html*/ 
 `<cds-page-header
-	title="Procedimentos"
-	subtitle="Gerencie os procedimentos cadastrados"
+	title="Procedures"
+	subtitle="Manage registered procedures"
 >
 	<template
 		#aside
@@ -71,24 +71,24 @@ export const Template = (args) => ({
 
 # PageHeader
 
-### PageHeader são componentes utilizados para adicionar título, subtítulo e ações em páginas.
+### PageHeader are components used to add title, subtitle and actions to pages.
 ---
 <br />
 
 ## When to use:
-- Precisar colocar headers em páginas.
-- Precisar adicionar botões de ação a nível de página.
-- Precisar adicionar cards informativos no topo de páginas.
+- Need to place headers on pages.
+- Need to add action buttons at the page level.
+- Need to add informative cards at the top of pages.
 
 <br />
 
 ## When not to use:
-- Fora do topo de páginas.
+- Off the top of pages.
 
 <br />
 
 ## Comments:
-- ⚠️ Quando uma URL é colocada como parte do subtítulo, ela é renderizada como link no componente. Para tanto, a URL deve ser precedidada de http:// ou https://.
+- ⚠️ When a URL is placed as part of the subtitle, it is rendered as a link in the component. To do so, the URL must be preceded by http:// or https://.
 
 <br />
 
@@ -98,8 +98,8 @@ export const Template = (args) => ({
 	<Story
 		name="PageHeader"
 		args={{
-			title:"Procedimentos",
-			subtitle:"Crie painéis e os associe a serviços. Para acessar os painéis de modo externo, acesse https://short.sysvale.com/totem e insira a chave correspondente."
+			title:"Procedures",
+			subtitle:"Create dashboards and associate them with services. To access the panels externally, go to https://rahulaher.netlify.app and enter the corresponding key."
 		}}
 	>
 		{ Template.bind({}) }

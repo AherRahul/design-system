@@ -24,8 +24,8 @@ import Select from '../../components/Select.vue';
 	:value="value"
 	:options="options"
 	width="wide"
-	label="Séries"
-	placeholder="Selecione uma das séries"
+	label="Series"
+	placeholder="Select one of the series"
 	required
 />`
 			},
@@ -59,27 +59,27 @@ export const Template = (args) => ({
 
 # Select
 
-### Selects permitem que o usuário escolha uma opção a partir de uma lista de itens.
+### Selects allow the user to choose an option from a list of items.
 ---
 <br />
 
 ## When to use:
-- O usuário tiver de escolher uma única opção em uma lista com diversos itens.
+- The user has to choose a single option from a list of several items.
 
 
 <br />
 
 ## When not to use:
-- A lista de opções possuir 3 itens ou menos. Nesses casos, recomendamos a utilização de radio buttons.
-- O usuário precisar selecionar mais de um item da lista. Nesse caso, utilize <a href="https://sysvale.github.io/cuida/?path=/docs/componentes-forms-clusteredmultiselect--clustered-multiselect">ClusteredMultiselects</a>.
+- The list of options has 3 items or less. In these cases, we recommend using radio buttons.
+- The user needs to select more than one item from the list. In this case, use <a href="https://sysvale.github.io/cuida/?path=/docs/componentes-forms-clusteredmultiselect--clustered-multiselect">ClusteredMultiselects</a>.
 
 <br />
 
 ## Comments:
-- Coloque as opções mais prováveis de serem selecionadas no topo do select. Na dúvida, ordene-os em ordem alfanumérica.
-- As labels dos selects devem ser sucintas (de uma a três palavras).
-- As labels devem ser ser escritas com a primeira letra maiúscula e as restantes minúsculas.
-- ⚠️ **Importante:** Para que o select funcione corretamente, a propriedade cujos valores serão exibidos no select, deve se chamar `value`, como indicado no exemplo abaixo na tabela de props.
+- Place the options most likely to be selected at the top of the select. If in doubt, sort them in alphanumeric order.
+- Select labels must be succinct (one to three words).
+- Labels must be written with the first letter capitalized and the rest lowercase.
+- ⚠️ **Important:** For the select to work correctly, the property whose values ​​will be displayed in the select must be called `value`, as indicated in the example below in the props table.
 
 <br />
 
@@ -89,7 +89,6 @@ export const value = {
 	value: '',
 	id: '',
 };
-
 export const options = [
 	{
 		value: 'Breaking Bad',
@@ -120,7 +119,7 @@ export const options = [
 		id: '7',
 	},
 	{
-		value: '👀 Borat: o segundo melhor repórter do glorioso país Cazaquistão viaja à América',
+		value: '👀 Borat: the second best reporter from the glorious country Kazakhstan travels to America',
 		id: '8',
 	},
 	{
@@ -136,7 +135,7 @@ export const options = [
 		id: '11',
 	},
 	{
-		value: 'Avatar: A Lenda de Aang',
+		value: 'Avatar: The Last Airbender',
 		id: '12',
 	},
 	{
@@ -161,8 +160,8 @@ export const options = [
 			options,
 			width: 'wide',
 			id: "idzera",
-			label: 'Séries',
-			placeholder: 'Selecione uma das séries',
+			label: 'Series',
+			placeholder: 'Select one of the series',
 			required: true,
 		}}
 	>

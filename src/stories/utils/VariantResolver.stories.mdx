@@ -4,31 +4,31 @@ import { Source, Meta, Story } from '@storybook/addon-docs';
 
 # VariantResolver()
 
-Mixin sass utilizado para auxiliar na construção de variantes em componentes do Design System.
+Mixin sass used to assist in the construction of variants in Design System components.
 
 <hr />
 <br />
 
-O VariantResolver implementa um loop por entre as cores da paleta do RDS e expõe algumas variáveis em cada uma
-das interações, evitando que seja preciso criar classes para cada variante em um componente. Usando o recurso do sass
-chamado de [Content Blocks](https://sass-lang.com/documentation/at-rules/mixin#content-blocks), é possível injetar código
-em cada uma das interações pela paleta, usando as variáveis de cor enviadas como argumento do Mixin.
+VariantResolver implements a loop through the colors in the RDS palette and exposes some variables in each one
+of interactions, avoiding the need to create classes for each variant in a component. Using the sass feature
+called [Content Blocks](https://sass-lang.com/documentation/at-rules/mixin#content-blocks), it is possible to inject code
+in each of the interactions through the palette, using the color variables sent as an argument to Mixin.
 
 <br />
 
-As variáveis disponíveis são:
-``$color-name``, ``$base-color``, ``$disabled``, ``$muted``, ``$background`` e ``$hover``.
+The available variables are:
+``$color-name``, ``$base-color``, ``$disabled``, ``$muted``, ``$background`` and ``$hover``.
 
 <br />
 
-- A variável ``$color-name`` traz o nome das cores: 'turquoise', 'green', 'blue',	'indigo',	'violet',
-'pink', 'red', 'orange', 'amber', 'dark', 'gray' e	'white'.
+- The variable ``$color-name`` contains the name of the colors: 'turquoise', 'green', 'blue', 'indigo', 'violet',
+'pink', 'red', 'orange', 'amber', 'dark', 'gray' and 'white'.
 
-- A ``$base-color`` retorna os tokens com shade `400`, como $gp-400, $bn-400, etc;
-- A ``$disabled`` retorna os tokens com shade `300`, como $gp-300, $bn-300, etc;
-- A ``$muted`` retorna os tokens com shade `200`, como $gp-200, $bn-200, etc;
-- A ``$background`` retorna os tokens com shade `50`, como $gp-50, $bn-50, etc;
-- E a ``$hover`` retorna os tokens com shade `500`, como $gp-500, $bn-500, etc;
+- ``$base-color`` returns tokens with shade `400`, such as $gp-400, $bn-400, etc;
+- ``$disabled`` returns tokens with shade `300`, such as $gp-300, $bn-300, etc;
+- ``$muted`` returns tokens with shade `200`, such as $gp-200, $bn-200, etc;
+- ``$background`` returns tokens with shade `50`, such as $gp-50, $bn-50, etc;
+- And ``$hover`` returns tokens with shade `500`, such as $gp-500, $bn-500, etc;
 
 <br />
 
@@ -59,7 +59,7 @@ As variáveis disponíveis são:
 `}
 />
 
-O código acima sem o seria o mesmo mesmo que:
+The code above without would be the same as:
 
 <Source
 	language='css'

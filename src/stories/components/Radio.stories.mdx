@@ -35,10 +35,10 @@ import Radio from '../../components/Radio.vue';
 `<cds-radio
 	v-model="selected"
 	value="option-1"
-	label="Opção 1"
+	label="Option 1"
 >
-	Opção de destaque
-</cds-radio>`
+	Highlight option
+</cds-radio>`	
 			},
 		}
 	}}
@@ -68,18 +68,18 @@ export const Template = (args) => ({
 
 # Radio
 
-### O Radio permite que os usuários selecionem uma opção de um conjunto.
+### Radio allows users to select an option from a set.
 ---
 <br />
 
 ## When to use:
-- As opções que o componente busca prover são mutuamente exclusivas.
+- The options that the component seeks to provide are mutually exclusive.
 
 <br />
 
 ## When not to use:
-- Duas ou mais opções puderem ser selecionadas ao mesmo tempo.
-- Houver 4 ou mais opções. Você pode usar o componente `Dropdown` nesses casos.
+- Two or more options can be selected at the same time.
+- There are 4 or more options. You can use the component `Dropdown` these cases.
 
 <br />
 
@@ -91,7 +91,7 @@ export const Template = (args) => ({
 		
 		args={{
 			value: 'option-1',
-			label: 'Opção 1',
+			label: 'Option 1',
 			disabled: false,
 		}}
 	>

@@ -126,25 +126,25 @@ export default {
 
 	props: {
 		/**
-		 * Especifica o título do select.
+		 * Specifies the title of the select.
 		 */
-		label: {
+		 label: {
 			type: String,
 			default: 'Label',
 			required: true,
 		},
 		/**
-		 * Indica o texto que instrui o usuário a como interagir com o select.
+		 * Indicates the text that instructs the user how to interact with the select.
 		 */
 		placeholder: {
 			type: String,
-			default: 'Selecione...',
+			default: 'Select...',
 			required: false,
 		},
 		/**
-		 * Array de objetos que especifica a lista de opções do select. Os valores
-		 * a serem mostrado como opções do select devem estar atribuídos a chave
-		 * `value` do objeto.
+		 * Array of objects that specifies the list of select options. The values
+		 * to be shown as select options must be assigned to the key
+		 * `value` of the object.
 		 */
 		options: {
 			type: Array,
@@ -152,21 +152,21 @@ export default {
 			required: true,
 		},
 		/**
-		 * Guarda o valor selecionado do select.
+		 * Saves the selected value of the select.
 		 */
 		modelValue: {
 			type: [Array, Object],
 			required: true,
 		},
 		/**
-		 * Especifica o estado do Select. As opções são 'default', 'valid', 'loading' e 'invalid'.
+		 * Specifies the state of the Select. The options are 'default', 'valid', 'loading' and 'invalid'.
 		 */
 		state: {
 			type: String,
 			default: 'default',
 		},
 		/**
-		 * Controla a exibição do asterísco indicativo de campo obrigatório.
+		 * Controls the display of the asterisk indicating a mandatory field.
 		 */
 		required: {
 			type: Boolean,
@@ -174,14 +174,14 @@ export default {
 			required: false,
 		},
 		/**
-		 * Especifica a mensagem de erro, que será exibida caso o estado seja inválido
+		 * Specifies the error message, which will be displayed if the status is invalid
 		 */
-		errorMessage: {
+		 errorMessage: {
 			type: String,
-			default: 'Value inválido',
+			default: 'Invalid value',
 		},
 		/**
-		 * Indica se vai ser possível fazer buscas no select.
+		 * Indicates whether it will be possible to search the select.
 		 */
 		searchable: {
 			type: Boolean,
@@ -189,7 +189,7 @@ export default {
 			required: false,
 		},
 		/**
-		 * Define a largura do Select. As opções são 'thin', 'default' e 'wide'.
+		 * Defines the width of the Select. The options are 'thin', 'default' and 'wide'.
 		 */
 		width: {
 			type: String,
@@ -197,7 +197,7 @@ export default {
 			required: false,
 		},
 		/**
-		 * Especifica se a largura do select deve ser fluida.
+		 * Specifies whether the select width should be fluid.
 		 */
 		fluid: {
 			type: Boolean,
@@ -205,7 +205,7 @@ export default {
 			required: false,
 		},
 		/**
-		 * Especifica o status de interação do select.
+		 * Specifies the interaction status of the select.
 		 */
 		disabled: {
 			type: Boolean,
@@ -213,22 +213,22 @@ export default {
 			required: false,
 		},
 		/**
-		 * Define exibição e texto do tooltip do select
+		 * Defines display and text of the select tooltip
 		 */
 		tooltip: {
 			type: String,
 			default: null,
 		},
 		/**
-		 * Especifica ícone do tooltip do Select.
+		 * Specifies Select tooltip icon.
 		 */
 		tooltipIcon: {
 			type: String,
 			default: 'info-outline',
 		},
 		/**
-		* Indica o nome da da chave do objeto a ser considerada na renderização
-		* das opções do select.
+		* Indicates the name of the object key to be considered in rendering
+		* of the select options.
 		*/
 		optionsField: {
 			type: String,
@@ -236,8 +236,8 @@ export default {
 			required: false,
 		},
 		/**
-		* Quando true, passa a retornar o optionsField no modelValue fora do objeto
-		* das opções do select.
+		* When true, it returns the optionsField in the modelValue outside the object
+		* of the select options.
 		*/
 		returnValue: {
 			type: Boolean,
@@ -339,7 +339,7 @@ export default {
 
 				if (this.returnValue) {
 					/**
-					* Evento que indica que o valor do Select foi alterado
+					* Event that indicates that the Select value has changed
 					* @event input
 					* @type {Event}
 					*/

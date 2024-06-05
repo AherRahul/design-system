@@ -23,42 +23,42 @@
 export default {
 	props: {
 		/**
-		 * Texto renderizado em cima ou ao lado do Divider
+		 * Text rendered on top or next to the Divider
 		 */
 		text: {
 			type: String,
 			default: null,
 		},
 		/**
-		 * Quando true, mostra o Divider na vertical
+		 * When true, shows the Divider vertically
 		 */
 		vertical: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Quando especificado, determina a largura do Divider.
+		 * When specified, determines the width of the Divider.
 		 */
 		width: {
 			type: [String, Number],
 			default: null,
 		},
 		/**
-		 * Torna o divider branco
+		 * Makes the divider white
 		 */
 		dimmed: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Torna o divider branco
+		 * Makes the divider white
 		 */
 		light: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Quando especificado, determina a largura do Divider.
+		 * When specified, determines the width of the Divider.
 		 */
 		inline: {
 			type: Boolean,

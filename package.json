@@ -1,24 +1,24 @@
 {
-	"name": "@sysvale/cuida",
-	"version": "3.13.1",
-	"description": "A design system built by Sysvale, using storybook and Vue components",
+	"name": "@aherrahul/design-system",
+	"version": "1.0.0",
+	"description": "A design system built by rahul aher, using storybook and Vue components",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/Sysvale/cuida.git"
+		"url": "git+https://github.com/aherrahul/design-system.git"
 	},
-	"main": "./dist/@sysvale/cuida.umd.js",
-	"module": "./dist/@sysvale/cuida.es.js",
+	"main": "./dist/@aherrahul/design-system.umd.js",
+	"module": "./dist/@aherrahul/design-system.es.js",
 	"files": [
 		"dist/*"
 	],
 	"exports": {
 		".": {
-			"import": "./dist/@sysvale/cuida.es.js",
-			"require": "./dist/@sysvale/cuida.umd.js"
+			"import": "./dist/@aherrahul/design-system.es.js",
+			"require": "./dist/@aherrahul/design-system.umd.js"
 		},
 		"./dist/style.css": "./dist/style.css"
 	},
-	"unpkg": "dist/@sysvale/cuida.umd.js",
+	"unpkg": "dist/@aherrahul/design-system.umd.js",
 	"scripts": {
 		"dev": "vite",
 		"build": "vue-tsc --noEmit && vite build && node buildtokens.js",
@@ -29,7 +29,6 @@
 	},
 	"dependencies": {
 		"@popperjs/core": "^2.11.6",
-		"@sysvale/cuida": "^3.13.1",
 		"@sysvale/cuida-icons": "^1.15.1",
 		"@sysvale/vue3-long-click": "^0.2.0",
 		"chart.js": "^4.3.0",
@@ -72,10 +71,13 @@
 		"vue-loader": "^16.8.3",
 		"vue-tsc": "^0.38.4"
 	},
+	"publishConfig": {
+		"access": "public"
+	},
 	"bugs": {
-		"url": "https://github.com/Sysvale/cuida/issues"
+		"url": "https://github.com/aherrahul/design-system/issues"
 	},
 	"readme": "ERROR: No README data found!",
-	"homepage": "https://github.com/Sysvale/cuida#readme",
-	"_id": "@sysvale/cuida@3.0.0-alpha.21"
+	"homepage": "https://github.com/aherrahul/design-system#readme",
+	"_id": "@aherrahul/design-system@1.0.0-alpha.1"
 }

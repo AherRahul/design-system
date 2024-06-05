@@ -13,7 +13,7 @@ import PageContainer from '../../components/PageContainer.vue';
 			format:true,
 			code: /*html*/ 
 `<cds-page-container>
-	Teste
+	Test
 </cds-page-container>`
 },
 		}
@@ -30,7 +30,7 @@ export const Template = (args) => ({
 			<cds-page-container
 				style="background: silver"
 			>
-				Componente interno
+				Internal component
 			</cds-page-container>
 		</div>
 	`,
@@ -38,17 +38,17 @@ export const Template = (args) => ({
 
 # PageContainer
 
-### PageContainers são blocos básicos de estrutura no RDS. Eles provêm padding e alinhamento de conteúdo.
+### PageContainers are basic structural blocks in RDS. They provide padding and content alignment.
 ---
 <br />
 
 ## When to use:
-- PageContainers devem ser usados sempre na construção das páginas, com o conteúdo sendo colocado como slot no componente.
+- PageContainers must always be used when building pages, with the content being placed as a slot in the component.
 
 <br />
 
 ## When not to use:
-- Não devem ser usados PageContainers aninhados.
+- Nested PageContainers should not be used.
 
 <br />
 
@@ -58,7 +58,7 @@ export const Template = (args) => ({
 	<Story
 		name="PageContainer"
 		args={{
-			text: 'Texto do tooltip'
+			text: 'Tooltip text'
 		}}
 	>
 		{ Template.bind({}) }

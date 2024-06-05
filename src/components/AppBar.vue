@@ -3,18 +3,18 @@
 		<img
 			v-if="csBrand"
 			class="app-bar__logo--cs"
-			src="https://framerusercontent.com/images/LqVj4DBbWvH0zr04qwYMlSPvEBY.svg"
-			alt="logo do Cidade Saudável"
+			src="https://rahulaher.netlify.app/img/logo/word-white-colored.svg"
+			alt="Rahul Aher logo"
 		>
 
 		<img
 			v-else-if="sysvaleBrand"
 			class="app-bar__logo--sv"
-			src="https://framerusercontent.com/images/djNYjj5IdpsZL50hF8HEDt5Wbg.svg"
-			alt="logo da Sysvale"
+			src="https://rahulaher.netlify.app/img/logo/glyph-white-colored.svg"
+			alt="rahul aher logo"
 		>
 
-		<!-- @slot Slot utilizado para renderização da logo no AppBar.-->
+		<!-- @slot Slot used to render the logo on the AppBar.-->
 		<slot
 			class="app-bar__logo"
 			name="brand"
@@ -60,7 +60,7 @@
 				/>
 			</cds-clickable>
 
-			<!-- @slot Slot utilizado para adição de informações sobre o usuário no AppBar.-->
+			<!-- @slot Slot used to add information about the user to the AppBar.-->
 			<slot
 				v-if="hasUserInfoSlot"
 				name="user-info"
@@ -87,7 +87,7 @@
 						v-if="clickable"
 						#dropdown-content
 					>
-						<!-- @slot Slot utilizado para renderização do conteúdo do dropdown do Avatar.-->
+						<!-- @slot Slot used for rendering Avatar dropdown content.-->
 						<slot name="dropdown-content" />
 					</template>
 				</cds-avatar>
@@ -129,7 +129,7 @@
 			</cds-clickable>
 		</div>
 
-		<!-- @slot Slot utilizado para renderização de ícone de módulos.-->
+		<!-- @slot Slot used for module icon rendering.-->
 		<div
 			v-if="hasAppSlot"
 			class="app-switcher"
@@ -155,70 +155,70 @@ export default {
 
 	props: {
 		/**
-		 * Controla a exibição do ícone de settings.
+		 * Controls the display of the settings icon.
 		 */
 		hideSettings: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Controla a exibição do ícone de ajuda.
+		 * Controls the display of the help icon.
 		 */
 		hideHelp: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Controla a exibição do ícone de notificação.
+		 * Controls notification icon display.
 		 */
 		hideNotification: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Controla a exibição do ícone de notificação.
+		 * Controls notification icon display.
 		 */
 		hideAppSwitcher: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Controla a exibição do ícone de Logout.
+		 * Controls the display of the Logout icon.
 		 */
 		hideLogout: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Indica se a logo a ser exibida é da Sysvale.
+		 * Indicates whether the logo to be displayed is from Sysvale.
 		 */
 		sysvaleBrand: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Indica se a logo a ser exibida é do Cidade Saudável.
+		 * Indicates whether the logo to be displayed is from Cidade Saudável.
 		 */
 		csBrand: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Name do usuário exibido no Avatar.
+		 * User name displayed on Avatar.
 		 */
 		userName: {
 			type: String,
 			default: null,
 		},
 		/**
-		 * Descrição do usuário mostrada embaixo do nome.
+		 *User description shown under name.
 		 */
 		userDescription: {
 			type: String,
 			default: null,
 		},
 		/**
-		 * Ativa ou desativa o clique no componente Avatar.
+		 * Enables or disables clicking on the Avatar component.
 		 */
 		clickable: {
 			type: Boolean,
@@ -252,8 +252,8 @@ export default {
 	methods: {
 		handleClick(element) {
 			/**
-			* Evento emitido quando os elementos da AppBar são clicados.
-			* Esse emit é dinâmico, gerando os eventos:
+			* Event emitted when AppBar elements are clicked.
+			* This emit is dynamic, generating the events:
 			*
 			* `settings-click`
 			*

@@ -37,13 +37,13 @@ import Tabs from '../../components/Tabs.vue';
 	:activeTab="items[1]"
 >
 	<template #room-42>
-		Sala de Psicologia
+		Psychology Room
 	</template>
 	<template #room-51>
-		Sala de Fisioterapia
+		Physiotherapy Room
 	</template>
 	<template #room-13>
-		Sala de Otorrinolaringologista
+		Otorhinolaryngologist Room
 	</template>
 </cds-tabs>`
 			},
@@ -63,13 +63,13 @@ export const Template = (args) => ({
 				@tabs-change="logTabsChange"
 			>
 				<template #room-42>
-					Sala de Psicologia
+					Psychology Room
 				</template>
 				<template #room-51>
-					Sala de Fisioterapia
+					Physiotherapy Room
 				</template>
 				<template #room-13>
-					Sala de Otorrinolaringologista
+					Otorhinolaryngologist Room
 				</template>
 			</cds-tabs>
 	</div>
@@ -83,19 +83,19 @@ export const Template = (args) => ({
 
 # Tabs
 
-### Tabs são componentes utilizados para criar soluções de navegação internas.
+### Tabs are components used to create internal navigation solutions.
 ---
 <br />
 
 ## When to use:
-- For necessário separar o conteúdo por abas e navergar por elas.
-- Não for o caso de utilizar soluções como navbars, sidebars, cards ou links como navegação.
+- It is necessary to separate the content into tabs and navigate through them.
+- It is not the case to use solutions such as navbars, sidebars, cards or links as navigation.
 
 <br />
 
 ## When not to use:
-- Houver muitos itens a serem mostrados como abas.
-- Quando a ação de clique realizada pelo usuário o levar para outra página.
+- There are too many items to be shown as tabs.
+- When the click action performed by the user takes him to another page.
 
 <br />
 
@@ -103,15 +103,15 @@ export const Template = (args) => ({
 
 export const items = [
 	{
-		title: 'Psicologia',
+		title: 'Psychology',
 		name: 'room-42',
 	},
 	{
-		title: 'Fisioterapia',
+		title: 'Physiotherapy',
 		name: 'room-51',
 	},
 	{
-		title: 'Otorrinolaringologista',
+		title: 'Otorhinolaryngologist',
 		name: 'room-13',
 	},
 ];

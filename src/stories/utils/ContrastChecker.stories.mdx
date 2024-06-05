@@ -4,38 +4,38 @@ import { Source, Meta, Story } from '@storybook/addon-docs';
 
 # ContrastChecker()
 
-Os ContrastChecker() é um método utilizado para testar o contraste entre duas cores.
+ContrastChecker() is a method used to test the contrast between two colors.
 
 <hr />
 <br />
 
-⚠️ *Método disponível apenas para desenvolvimento interno no RDS*
+⚠️ *Method only available for internal development in RDS*
 
 <br />
 
-#### Argumentos
+#### Arguments
 
 **(String):**
-- Hexadecimal da **primeira** cor de teste
-- Obrigatória: *Sim*
-- Valores válidos: qualquer string no formato hexadecimal. ex.: '#000000';
+- Hexadecimal of the **first** test color
+- Mandatory: *Yes*
+- Valid values: any string in hexadecimal format. e.g.: '#000000';
 
 **(String):**
-- Hexadecimal da **segunda** cor de teste
-- Obrigatória: *Sim*
-- Valores válidos: qualquer string no formato hexadecimal. ex.: '#000000';
+- Hexadecimal of the **second** test color
+- Mandatory: *Yes*
+- Valid values: any string in hexadecimal format. e.g.: '#000000';
 
 **(String):**
-- Parâmetro usado como referência na avaliação do contraste entre as cores. O parâmetro recomendado para textos de até 18px é 'VERYGOOD' ou 'SUPER'.
-- Obrigatória: *Não*
-- Valores válidos: 'POOR', 'GOOD', 'VERYGOOD', 'SUPER';
-- Value padrão: 'GOOD';
+- Parameter used as a reference in evaluating the contrast between colors. The recommended parameter for texts up to 18px is 'VERYGOOD' or 'SUPER'.
+- Mandatory: *No*
+- Valid values: 'POOR', 'GOOD', 'VERYGOOD', 'SUPER';
+- Default value: 'GOOD';
 
 <br />
 
-#### Retorno
+#### Return
 
-**(Boolean):** Indica se o teste de contraste entre as duas cores informadas foi aprovado.
+**(Boolean):** Indicates whether the contrast test between the two colors entered was approved.
 
 <br />
 

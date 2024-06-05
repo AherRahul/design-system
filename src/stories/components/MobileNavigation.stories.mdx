@@ -50,12 +50,12 @@ export const Template = (args) => ({
 			<cds-mobile-navigation
 				v-bind="args"
 				:main-logo="args.light
-					? 'https://framerusercontent.com/images/9r26Llo7eNrs3keUxCNEGc8ttYE.png'
-					: 'https://framerusercontent.com/images/oZRv3aHh1IPreheg1xQCkBQjQ.png'
+					? 'https://rahulaher.netlify.app/img/logo/word-black-colored.svg'
+					: 'https://rahulaher.netlify.app/img/logo/glyph-black-colored.svg'
 				"
 				:sidebar-logo="args.light
-					? 'https://framerusercontent.com/images/9r26Llo7eNrs3keUxCNEGc8ttYE.png'
-					: 'https://framerusercontent.com/images/oZRv3aHh1IPreheg1xQCkBQjQ.png'
+					? 'https://rahulaher.netlify.app/img/logo/word-black-colored.svg'
+					: 'https://rahulaher.netlify.app/img/logo/glyph-black-colored.svg'
 				"
 				@item-click="logClick"
 				@logout="logLogout"
@@ -73,20 +73,20 @@ export const Template = (args) => ({
 
 # MobileNavigation
 
-### O MobileNavigation é uma barra lateral que proporciona acesso rápido e fácil às principais seções da aplicação no ambiente mobile.
+### MobileNavigation is a sidebar that provides quick and easy access to the main sections of the application in the mobile environment.
 ---
 <br />
 
 ## When to use:
-- Quando for necessária uma navegação na versão mobile da aplicação;
-- Quando for necessário facilitar o acesso a diferentes seções do aplicativo, garantindo que o usuário possa navegar facilmente entre as páginas sem se perder;
-- Quando o espaço vertical for limitado, aproveitando ao máximo a largura da tela do dispositivo móvel.
+- When navigation in the mobile version of the application is necessary;
+- When it is necessary to facilitate access to different sections of the application, ensuring that the user can easily navigate between pages without getting lost;
+- When vertical space is limited, making the most of the mobile device's screen width.
 
 <br />
 
 ## When not to use:
-- Quando em ambiente desktop, onde uma barra de navegação superior ou lateral pode ser mais adequada;
-- Quando em telas que requerem espaço horizontal significativo, pois o menu pode sobrepor ou obstruir o conteúdo principal.
+- When in a desktop environment, where a top or side navigation bar may be more appropriate;
+- When on screens that require significant horizontal space, as the menu may overlap or obstruct the main content.
 
 <br />
 
@@ -94,7 +94,7 @@ export const Template = (args) => ({
 
 export const sideBarItems = [
 	{
-		label: 'Início',
+		label: 'Start',
 		icon: 'home-outline',
 		type: 'route',
 		route: {
@@ -103,7 +103,7 @@ export const sideBarItems = [
 		},
 	},
 	{
-		label: 'Vigilância sanitária',
+		label: 'Health surveillance',
 		icon: 'shield-outline',
 		type: 'route',
 		route: {
@@ -112,7 +112,7 @@ export const sideBarItems = [
 		},
 	},
 	{
-		label: 'Central de marcação',
+		label: 'Booking Center',
 		icon: 'calendar-outline',
 		type: 'route',
 		route: {
@@ -121,7 +121,7 @@ export const sideBarItems = [
 		},
 	},
 	{
-		label: 'Cuidados médicos',
+		label: 'Medical care',
 		icon: 'heart-rate-outline',
 		type: 'route',
 		route: {
@@ -137,13 +137,13 @@ export const sideBarItems = [
 		args={{
 			variant: 'indigo',
 			light: true,
-			mainLogo: 'https://framerusercontent.com/images/9r26Llo7eNrs3keUxCNEGc8ttYE.png',
-			sidebarLogo: 'https://framerusercontent.com/images/9r26Llo7eNrs3keUxCNEGc8ttYE.png',
+			mainLogo: 'https://rahulaher.netlify.app/img/logo/glyph-black-colored.svg',
+			sidebarLogo: 'https://rahulaher.netlify.app/img/logo/word-black-colored.svg',
 			items: sideBarItems,
 			activeItem: sideBarItems[1],
 			user: {
 				name: 'Joana Mendes',
-				role: 'Administradora',
+				role: 'Administrator',
 			},
 		}}
 	>

@@ -68,20 +68,20 @@ export const Template = (args) => ({
 
 # BarChart
 
-### Um componente de gráfico reutilizável para exibir dados visualmente.
+### A reusable chart component to display data visually.
 ---
 <br />
 
 ## When to use:
-- Exibir dados em formatos visuais;
-- É eficaz ao exibir muitas categorias;
-- Visualizar tendências, proporções ou comparações em dados.
+- Display data in visual formats;
+- It is effective when displaying many categories;
+- View trends, proportions or comparisons in data.
 
 <br />
 
 ## When not to use:
-- Para informações simples que podem ser exibidas em um formato tabular ou em texto;
-- Não é recomendado para comparação percentual ou partes de um todo.
+- For simple information that can be displayed in a tabular or text format;
+- It is not recommended for percentage comparison or parts of a whole.
 
 ## Preview
 
@@ -89,56 +89,56 @@ export const Template = (args) => ({
 	<Story
 		name="BarChart"
 		args={{
-			labels: ['Janeiro','Fevereiro','Março', 'Abril', 'Maio'],
+			labels: ['January', 'February', 'March', 'April', 'May'],
 			variant: 'green',
 			data: [
 				{
-					name: 'Ecocardiograma',
+					name: 'Echocardiogram',
 					datasets: [
 						{
-							label: 'Realizado',
+							label: 'Accomplished',
 							data: [50, 50, 50, 50, 50],
 						},
 						{
-							label: 'Pendente',
+							label: 'Pending',
 							data: [200, 180, 250, 190, 280],
 						},
 						{
-							label: 'Não realizado',
+							label: 'Unrealized',
 							data: [38, 84, 120, 90, 185],
 						}
 					]
 				},
 				{
-					name: 'Raio-X',
+					name: 'X-ray',
 					datasets: [
 						{
-							label: 'Realizado',
+							label: 'Accomplished',
 							data: [120, 220, 180, 320, 150],
 						},
 						{
-							label: 'Pendente',
+							label: 'Pending',
 							data: [98, 145, 160, 190, 175],
 						},
 						{
-							label: 'Não realizado',
+							label: 'Unrealized',
 							data: [49, 84, 120, 78, 130],
 						}
 					]
 				},
 				{
-					name: 'Tomografia',
+					name: 'Tomography',
 					datasets: [
 						{
-							label: 'Realizado',
+							label: 'Accomplished',
 							data: [55, 40, 33, 90, 120],
 						},
 						{
-							label: 'Pendente',
+							label: 'Pending',
 							data: [25, 30, 90, 45, 20],
 						},
 						{
-							label: 'Não realizado',
+							label: 'Unrealized',
 							data: [38, 84, 120, 90, 45],
 						}
 					]

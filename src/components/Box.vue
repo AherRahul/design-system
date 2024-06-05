@@ -9,7 +9,7 @@
 			:clickable="clickable"
 			@click="handleClick"
 		>
-			<!-- @slot Slot utilizado para renderização do conteúdo interno do Box.-->
+			<!-- @slot Slot used to render the Box's internal content.-->
 			<cds-spacer
 				:padding-top="padding"
 				:padding-right="padding"
@@ -36,22 +36,22 @@ export default {
 
 	props: {
 		/**
-		* Quando true aplica o token $shadow-sm como box-shadow do componente.
+		* When true applies the $shadow-sm token as the component's box-shadow.
 		*/
 		elevated: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		* Indica se o componente deverá ocupar 100% da largura disponível.
+		* Indicates whether the component should occupy 100% of the available width.
 		*/
 		fluid: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		* O valor setado é sempre multiplicado por 4, assim como nos tokens scss do RDS.
-		* O valor mínimo aceito é 4 e o máximo aceito é 12.
+		* The set value is always multiplied by 4, just like in RDS scss tokens.
+		* The minimum accepted value is 4 and the maximum accepted is 12.
 		*/
 		padding: {
 			type: [Number, String],
@@ -59,15 +59,15 @@ export default {
 			validator: (value) => value <= 12,
 		},
 		/**
-		* Ativa ou desativa o clique no componente
+		* Enables or disables clicking on the component
 		*/
 		clickable: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		* A variante de cor. São 9 variantes implementadas: 'green', 'teal',
-		* 'blue', 'indigo', 'violet', 'pink', 'red', 'orange', 'amber', 'gray' e 'dark'.
+		* The color variant. There are 9 variants implemented: 'green', 'teal',
+		* 'blue', 'indigo', 'violet', 'pink', 'red', 'orange', 'amber', 'gray' and 'dark'.
 		*/
 		variant: {
 			type: String,

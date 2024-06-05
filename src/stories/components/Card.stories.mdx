@@ -120,16 +120,16 @@ export const withSlotsTemplate = (args) => ({
 		<cds-card
 			v-bind="args"
 		>
-			<template #header>45 <small>gestantes</small></template>
+			<template #header>45 <small>pregnant women</small></template>
 			<template #extra>
-				<cds-badge variant="red">Alerta</cds-badge>
+				<cds-badge variant="red">Alert</cds-badge>
 			</template>
 			<template #body>
-				Não realizam consulta há mais de 30 dias
+				Haven't had a consultation for more than 30 days
 			</template>
 			<template #footer>
 				<div class="d-flex justify-content-end">
-					<small><strong>VER LISTA</strong></small>
+					<small><strong>VIEW LIST</strong></small>
 				</div>
 			</template>
 		</cds-card>
@@ -175,25 +175,25 @@ export const horizontalPropTemplate = (args) => ({
 
 # Card
 
-### Cards são componentes utilizados como containers de propósito geral. À partir das suas props e slots `header`, `body`, `footer`, `image`, `icon` e `extra` é possível criar variações e cards mais específicos, como o DashboardCard.
+### Cards are components used as general purpose containers. From your props and slots `header`, `body`, `footer`, `image`, `icon` and `extra` it is possible to create more specific variations and cards, such as the DashboardCard.
 
 ---
 <br />
 
 ## When to use:
-- Para agrupar elementos relacionados entre si.
-- Para dar proeminência visual a elementos relacionados entre si. 
+- To group related elements together.
+- To give visual prominence to related elements. 
 
 <br />
 
 ## When not to use:
-- De modo aninhado, com cards dentro de cards.
-- Quando o conteúdo encapsulado pelo card ocupar mais da metade da página.
+- In nested mode, with cards within cards.
+- When the content encapsulated by the card occupies more than half of the page.
 
 <br />
 
 ## Comments:
-- ⚠️ Há exemplos adicionais de card abaixo da tabela de props e slots.
+- ⚠️ There are additional card examples below the props and slots table.
 
 ## Preview
 
@@ -215,7 +215,7 @@ export const horizontalPropTemplate = (args) => ({
 <ArgsTable story="Card-standard" />
 
 ## __Card simples__
-As props `title` `content` e `imageSrc` nos permitem montar um layout simples de Card utilizando apenas props. 
+The `title` `content` and `imageSrc` props allow us to create a simple Card layout using just props.
 
 <br />
 
@@ -232,8 +232,8 @@ As props `title` `content` e `imageSrc` nos permitem montar um layout simples de
 <br />
 <br />
 
-## __Utilizando slots__
-Utilizando os slots `title`, `body`, `footer` e `extra` conseguimos criar Cards mais complexos, como o DashboardCard.  
+## __Using slots__
+Using the `title`, `body`, `footer` and `extra` slots we can create more complex Cards, such as the DashboardCard. 
 
 <br />
 
@@ -247,10 +247,10 @@ Utilizando os slots `title`, `body`, `footer` e `extra` conseguimos criar Cards 
 <br />
 
 ## __Slot icon__
-O Card possui um slot chamado `icon`, que pode ser utilizado para adição de ícones no Card.  
+The Card has a slot called `icon`, which can be used to add icons to the Card.  
 
-⚠️O Slot `image` tem precedência maior que o slot `icon`. Caso os dois sejam utiliados o slot `image` será exibido
-e o slot `icon` será ocultado.  
+⚠️The `image` Slot has higher precedence than the `icon` slot. If both are used, the `image` slot will be displayed
+and the `icon` slot will be hidden.  
 
 <br />
 
@@ -267,7 +267,7 @@ e o slot `icon` será ocultado.
 <br />
 
 ## __Prop `horizontal`__
-Para layouts horizontais de Card, utilize a prop `horizontal`
+For horizontal Card layouts, use the `horizontal` prop
 
 <br />
 

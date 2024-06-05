@@ -56,38 +56,38 @@ export default {
 
 	props: {
 		/**
-		 * Prop utilizada para receber a página atual.
+		 * Prop used to receive the current page.
 		 */
 		modelValue: {
 			type: [Number, String],
 			default: 1,
 		},
 		/**
-		 * Prop utilizada para receber o número total de registros a serem paginados.
+		 * Prop used to receive the total number of records to be paged.
 		 */
 		total: {
-			type: Number,
+			type:Number,
 			default: 1,
 			validator: (value) => value >= 1,
 		},
 		/**
-		 * Prop utilizada para receber o número de registros a serem exibidos
-		 * por página.
+		 * Prop used to receive the number of records to be displayed
+		 * per page.
 		 */
 		perPage: {
-			type: Number,
+			type:Number,
 			default: 1,
 			validator: (value) => value >= 1,
 		},
 		/**
-		 * Prop que indica se o componente deverá ocupar 100% do espaço disponível.
+		 * Prop that indicates whether the component should occupy 100% of the available space.
 		 */
 		fluid: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Prop que indica se o componente deverá ocupar 100% do espaço disponível.
+		 * Prop that indicates whether the component should occupy 100% of the available space.
 		 */
 		variant: {
 			type: String,
@@ -217,11 +217,11 @@ export default {
 					);
 
 					/**
-					* Evento que indica que a página atual foi alterada.
+					* Event that indicates that the current page has been changed.
 					*
-					* Altera o valor do v-model.
+					* Changes the value of the v-model.
 					*
-					* Emite o número referente à página selecionada.
+					* Outputs the number referring to the selected page.
 					* @event input
 					* @type {Event}
 					*/

@@ -68,21 +68,21 @@ export const Template = (args) => ({
 
 # LineChart
 
-### Um componente de gráfico reutilizável para exibir dados visualmente.
+### A reusable chart component to display data visually.
 ---
 <br />
 
 ## When to use:
-- Exibir dados em formatos visuais;
-- Ideal para mostrar tendências ao longo do tempo;
-- Comparação de múltiplas séries.
+- Display data in visual formats;
+- Ideal for showing trends over time;
+- Comparison of multiple series.
 
 <br />
 
 ## When not to use:
-- Para informações simples que podem ser exibidas em um formato tabular ou em texto;
-- Dados discretos sem sequência lógica;
-- Grande quantidade de série de dados.
+- For simple information that can be displayed in a tabular or text format;
+- Discrete data without logical sequence;
+- Large amount of data series.
 
 ## Preview
 
@@ -90,7 +90,7 @@ export const Template = (args) => ({
 	<Story
 		name="LineChart"
 		args={{
-			labels: ['Janeiro','Fevereiro','Março', 'Abril', 'Maio'],
+			labels: ['January', 'February', 'March', 'April', 'May'],
 			variant: 'green',
 			fill: false,
 			isDashed: false,
@@ -101,28 +101,28 @@ export const Template = (args) => ({
 			yAxisRange: [0, 100],
 			data: [
 				{
-					name: 'Ecocardiograma',
+					name: 'Echocardiogram',
 					datasets: [
 						{
-							label: 'Realizado',
+							label: 'Accomplished',
 							data: [50, 50, 50, 50, 50],
 						},
 					]
 				},
 				{
-					name: 'Raio-X',
+					name: 'X-Ray',
 					datasets: [
 						{
-							label: 'Realizado',
+							label: 'Accomplished',
 							data: [120, 220, 180, 320, 150],
 						},
 					]
 				},
 				{
-					name: 'Tomografia',
+					name: 'Tomography',
 					datasets: [
 						{
-							label: 'Realizado',
+							label: 'Accomplished',
 							data: [55, 40, 33, 90, 120],
 						},
 					]

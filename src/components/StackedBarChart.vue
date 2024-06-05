@@ -20,7 +20,7 @@ import { Bar } from 'vue-chartjs'
 import sassColorVariables from '../assets/sass/colors.module.scss';
 import paleteBuilder from '../utils/methods/paleteBuilder.js';
 
-// Registrar o elemento "point" no registro (Torna-se necessário para marcações de ponto)
+// Register the "point" element in the registry (It becomes necessary for point markings)
 Chart.register(...registerables);
 
 export default {
@@ -30,10 +30,10 @@ export default {
 
 	props: {
 		/**
-		 * Define o conjunto de dados a serem mostrados no gráfico.
-		 * O objeto deve conter o parâmetro `name` (para identificar o conjunto de dados)
-		 * e `datasets`, array de objetos que apresentará `label` (indicar o rótulo do dado) e
-		 * `data` (array com os valores númericos).
+		 * Defines the set of data to be shown in the chart.
+		 * The object must contain the `name` parameter (to identify the dataset)
+		 * and `datasets`, array of objects that will present `label` (indicate the label of the data) and
+		 * `data` (array with numeric values).
 		 */
 		data: {
 			type: Object,
@@ -48,7 +48,7 @@ export default {
 			})
 		},
 		/**
-		 * Personaliza a paleta de cores do gráfico. São 11 variantes implementadas:
+		 * Customizes the chart's color palette. There are 11 variants implemented:
 		 * `green`, `teal`, `turquoise`, `blue`, `indigo`, `violet`, `pink`, `red`, `orange`, `amber`, `gray`, `dark`.
 		 */
 		variant: {
@@ -68,7 +68,7 @@ export default {
 			default: () => [],
 		},
 		/**
-		 * Configura a porcentagem ocupada pela barra do gráfico. (0.1-1).
+		 * Configures the percentage occupied by the graph bar. (0.1-1).
 		 */
 		barWidth: {
 			type: Number,
@@ -82,7 +82,7 @@ export default {
 			localChartData: {},
 			localLabels: [],
 			palletColors: [],
-			deleteFirstTwoColors: false, //NOTE: Responsável por garantir que as cores gray e dark da paleta não serão removidos os dois primeiros elementos
+			deleteFirstTwoColors: false, //NOTE: Responsible for ensuring that the gray and dark colors of the palette are not removed, the first two elements
 			chartOptions: {
 				scales: {
 					x: {
@@ -99,8 +99,8 @@ export default {
 					},
 				},
 				responsive: true,
-				maintainAspectRatio: false, // NOTE: Caso true manterá aspecto de proporção original, caso false, será dimensionado para preencher completamente o contêiner (Isso pode fazer com que o gráfico pareça distorcido se o container tiver proporção de aspecto diferente do gráfico original)
-				categoryPercentage: null, //NOTE: Configura a porcentagem ocupada pela barra do gráfico. (0-1)
+				maintainAspectRatio: false, // NOTE: If true it will maintain the original aspect ratio, if false it will be scaled to completely fill the container (This may cause the graphic to appear distorted if the container has a different aspect ratio than the original graphic)
+				categoryPercentage: null, //NOTE: Configures the percentage occupied by the graph bar. (0-1)
 				plugins: {
 					tooltip: {
 						callbacks: {
@@ -178,7 +178,7 @@ export default {
 			this.removeFirstElement();
 		},
 
-		// NOTE: Função responsável por remover os dois primeiros elementos da paleta para quando não é gray ou Dark Neutrals
+		// NOTE: Function responsible for removing the first two elements from the palette when it is not gray or Dark Neutrals
 		removeFirstElement() {
 			for (let i = 0; i < this.palletColors.length; i++) {
 				const color = this.palletColors[i];
@@ -191,7 +191,7 @@ export default {
 			}
 		},
 
-		// NOTE: Adiciona campo dataset.name com o nome do objeto respectivo
+		// NOTE: Add dataset.name field with the name of the respective object
 		addDataSetNames() {
 			this.data.forEach(item => {
 				item.datasets.forEach(dataset => {
@@ -200,7 +200,7 @@ export default {
 			});
 		},
 
-		// NOTE: Função que recebe uma matriz de dados dos gráfico.
+		// NOTE: Function that receives an array of graph data.
 		mergeChartDataNoSelect(data) {
 			// data.labels = this.localLabels;
 			const mergedData = { labels: this.localLabels, datasets: [] };
@@ -266,8 +266,8 @@ export default {
 			});
 		},
 
-		// NOTE: Função responsável por setar backgroundColor
-		// Ocorre essa verificação para garantir que o mesmo conjunto de dados para mais de um item selecionado tenha a mesma cor
+		// NOTE: Function responsible for setting backgroundColor
+		// This check occurs to ensure that the same set of data for more than one selected item has the same color
 		setColors(datasets, backgroundColor) {
 			const colors = {};
 			this.chartOptions.plugins.legend.display = true;

@@ -9,7 +9,7 @@
 			v-if="!verticalFluid"
 			:max-height="`${popoverHeight}`"
 		>
-			<!-- @slot Slot utilizado para renderização do conteúdo do Popover.-->
+			<!-- @slot Slot used for rendering Popover content.-->
 			<slot />
 		</cds-scrollable>
 		
@@ -34,53 +34,53 @@ export default {
 
 	props: {
 		/**
-		* Prop utilizada como v-model.
-		* controla a exibição do Popover.
+		* Prop used as v-model.
+		* controls the display of the Popover.
 		*/
 		modelValue: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Largura do Popover. A largura mínima é 100px e a máxima é 400px.
+		 * Popover width. The minimum width is 100px and the maximum is 400px.
 		 */
 		width: {
 			type: [String, Number],
 			default: 250,
 		},
 		/**
-		* Quando true deixa a largura do popover adaptável ao conteúdo. `Essa prop tem prevalência sobre a prop width!`
+		* When true makes the popover width adaptable to the content. `This prop takes precedence over the width prop!`
 		*/
 		fitContentWidth: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Altura do Popover. A altura máxima é 500px
+		 * Popover height. The maximum height is 500px
 		 */
 		height: {
 			type: [String, Number],
 			default: 200,
 		},
 		/**
-		 * Id do elemento que será referência para a renderização
-		 * do Popover.
+		 * ID of the element that will be a reference for rendering
+		 * from Popover.
 		 */
 		targetId: {
 			type: String,
 			default: '',
 		},
 		/**
-		 * Quando `true`, alinha o popover à direita do
-		 * do componente referência (target).
+		 * When `true`, aligns the popover to the right of the
+		 * of the reference component (target).
 		 */
 		rightAligned: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Quando `true`, remove o scroll interno e torna
-		 * o tamanho do Popover fluido.
+		 * When `true`, removes the internal scroll and makes it
+		 * the size of the fluid Popover.
 		 */
 		verticalFluid: {
 			type: Boolean,
@@ -173,7 +173,7 @@ export default {
 			}));
 
 			/**
-			* Evento utilizado para implementar o v-model.
+			* Event used to implement the v-model.
 			* @event update:modelValue
 			* @type {Event}
 			*/
@@ -194,7 +194,7 @@ export default {
 					],
 				}));
 				/**
-				* Evento utilizado para implementar o v-model.
+				* Event used to implement the v-model.
 				* @event update:modelValue
 				* @type {Event}
 				*/

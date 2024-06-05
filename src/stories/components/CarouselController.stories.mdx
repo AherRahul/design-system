@@ -15,7 +15,7 @@ import CarouselController from '../../components/CarouselController.vue';
 <cds-carousel-controller
 	:total="12"
 	:perPage="4"
-	propertyName="Métricas"
+	propertyName="Metrics"
 	@click-forward="handleClickForwardEvent"
 	@click-back="handleClickBackEvent"
 />`
@@ -44,18 +44,19 @@ export const Template = (args) => ({
 
 # CarouselController
 
-### CarouselControllers são componentes utilizados para controlar a exibição de elementos em carrosséis.
+### CarouselControllers are components used to control the display of elements in carousels.
 ---
 <br />
 
 ## When to use:
-- Você possuir uma categoria de elementos da interface que se repetem e que podem ser exibidos em forma de carrossel.
+- You have a category of interface elements that are repeated and can be displayed in the form of a carousel.
 
 <br />
 
 ## When not to use:
-- Você estiver trabalhando com tabelas. Nesses casos recomendamos o uso de paginação (TODO).
-- Todo o conteúdo a ser gerenciado puder ser exibido de uma só vez. Nesse caso não há necessidade de controle de páginas e do uso do componente;
+- You are working with tables. In these cases we recommend using pagination (TODO).
+- All content to be managed can be displayed at once. In this case there is no need to control pages and use the component;
+
 
 <br />
 
@@ -67,7 +68,7 @@ export const Template = (args) => ({
 		args={{
 			total: 12,
 			perPage: 4,
-			propertyName: 'Métricas',
+			propertyName: 'Metrics',
 		}}
 	>
 		{ Template.bind({}) }

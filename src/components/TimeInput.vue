@@ -130,15 +130,15 @@ export default {
 
 	props: {
 		/**
-		* Prop utilizada como v-model. Define o horário exibido.
+		* Prop used as v-model. Sets the displayed time.
 		*
-		* Modo `single`: Deve ser enviada como uma String contendo o horário.
+		* `single` mode: Must be sent as a String containing the time.
 		*
-		* Modo `range`: Deve ser enviada como um Array contendo dois horários (inicial e final).
+		* `range` mode: Must be sent as an Array containing two times (start and end).
 		*
-		* Pode ser enviada como um Array vazio ou String vazia.
+		* Can be sent as an empty Array or empty String.
 		*
-		* Todos os horários devem estar no formato `HH:mm`.
+		* All times must be in the format `HH:mm`.
 		*
 		*/
 		modelValue: {
@@ -147,40 +147,40 @@ export default {
 			validator: valueValidator,
 		},
 		/**
-		 * O id a ser utilizado pelo elemento HTML.
+		 * The id to be used by the HTML element.
 		 */
 		id: {
 			type: String,
 			default: 'time-input',
 		},
 		/**
-		 * A label a ser exibida acima do input.
+		 * The label to be displayed above the input.
 		 */
 		label: {
 			type: String,
 			required: true,
 		},
 		/**
-		 * Propriedade utilizada para definir o estilo da label do componente.
-		 * Em caso positivo, exibe um * indicando que o campo é de preenchimento obrigatório.
+		 * Property used to define the component label style.
+		 * If yes, display a * indicating that the field is mandatory.
 		 */
 		required: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Propriedade utilizada para definir o desabilitado do componente
+		 * Property used to set the component to be disabled
 		 */
 		disabled: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Propriedade utilizada para definir o modo de exibição do componente.
+		 * Property used to define the component's display mode.
 		 *
-		 * `single`: Apenas um input de tempo;
+		 * `single`: Just one time input;
 		 *
-		 * `range`: Dois inputs de tempo (início e fim).
+		 * `range`: Two time inputs (start and end).
 		 */
 		mode: {
 			type: String,
@@ -188,7 +188,7 @@ export default {
 			validator: (value) => ['single', 'range'].includes(value),
 		},
 		/**
-		 * Propriedade utilizada para indicar o estado de validação do componente.
+		 * Property used to indicate the validation status of the component.
 		 */
 		state: {
 			type: String,
@@ -196,11 +196,11 @@ export default {
 			validator: (value) => ['default', 'valid', 'invalid'].includes(value),
 		},
 		/**
-		 * Mensagem a ser exibida em caso de estado inválido.
+		 * Message to be displayed in case of invalid status.
 		 */
 		errorMessage: {
 			type: String,
-			default: 'Horário inválido',
+			default: 'Invalid time',
 		},
 	},
 
@@ -265,14 +265,14 @@ export default {
 			}
 
 			/**
-			* Evento indicando que o input foi preenchido.
-			* Retorna uma string com o horário, caso o componente esteja em modo `single`,
-			* ou um array contendo horários inicial e final, quando em modo `range`.
+			* Event indicating that the input has been filled.
+			* Returns a string with the time, if the component is in `single` mode,
+			* or an array containing start and end times, when in `range` mode.
 			*
-			* Em caso de o valor do campo estar inválido, o evento é emitido com valor `null`,
-			* leve isto em consideração em possíveis formatações.
+			* If the field value is invalid, the event is emitted with a `null` value,
+			* take this into account in possible formatting.
 			*
-			* As datas são retornadas sempre no formato `HH:mm`.
+			* Dates are always returned in the format `HH:mm`.
 			* @event update:modelValue
 			* @type {Event}
 			*/
