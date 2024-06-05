@@ -15,17 +15,17 @@
 					</p>
 
 					<span class="content__text">
-						<!-- @slot Slot usado para inserção de conteúdo customizado no texto. -->
+						<!-- @slot Slot used to insert customized content into the text. -->
 						<slot name="text">
 							{{ text }}
 						</slot>
 					</span>
 				</div>
 				<div>
-					<!-- @slot Slot usado para inserção de conteúdo customizado no lugar do botão de ação. -->
+					<!-- @slot Slot used to insert customized content in place of the action button. -->
 					<slot name="action">
 						<!--
-							Evento que indica que o Botão foi clicado
+							Event that indicates that the Button was clicked
 							@event action-button-click
 							@type {Event}
 						-->
@@ -54,22 +54,22 @@ export default {
 
 	props: {
 		/**
-		 * O título do card. O título também pode ser usado com o slot.
+		 * The title of the card. The title can also be used with the slot.
 		 */
 		title: {
 			type: String,
-			default: 'Título do AlertCard',
+			default: 'AlertCard title',
 			required: true,
 		},
 		/**
-		 * O texto do card. O texto também pode ser usado com o slot.
+		 * The text of the card. Text can also be used with slot.
 		 */
 		text: {
 			type: String,
-			default: 'Subtítulo do AlertCard',
+			default: 'AlertCard Subtitle',
 		},
 		/**
-		 * A imagem do card.
+		 * The card image.
 		 */
 		image: {
 			type: String,
@@ -77,42 +77,42 @@ export default {
 			required: true,
 		},
 		/**
-		 * A descrição da imagem do card.
+		 * The description of the card image.
 		 */
 		imageDescription: {
 			type: String,
-			default: 'Imagem de CalloutCard',
+			default: 'Image by CalloutCard',
 		},
 		/**
-		 * A cor do botão do card.
+		 * The color of the card button.
 		 */
 		actionButtonVariant: {
 			type: String,
 			default: 'green',
 		},
 		/**
-		 * O texto do botão do card.
+		 * The card button text.
 		 */
 		actionButtonText: {
 			type: String,
 			default: 'Ok',
 		},
 		/**
-		 * A versão secundária do botão.
+		 * The minor version of the button.
 		 */
 		actionButtonSecondary: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * A versão disabled do botão.
+		 * The disabled version of the button.
 		 */
 		actionButtonDisabled: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Modo de exibição do card.
+		 * Card display mode.
 		 */
 		compact: {
 			type: Boolean,

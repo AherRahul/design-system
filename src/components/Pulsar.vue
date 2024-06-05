@@ -14,22 +14,22 @@
 export default {
 	props: {
 		/**
-		 * A variante de cor. São 9 variantes implementadas: 'green', 'teal',
-		 * 'blue', 'indigo', 'violet', 'pink', 'red', 'orange' e 'amber'.
+		 * The color variant. There are 9 variants implemented: 'green', 'teal',
+		 * 'blue', 'indigo', 'violet', 'pink', 'red', 'orange' and 'amber'.
 		 */
 		variant: {
 			type: String,
 			default: 'green',
 		},
 		/**
-		* Id do elemento que será referência para a renderização do Pulsar.
+		* ID of the element that will be a reference for Pulsar rendering.
 		*/
 		targetId: {
 			type: String,
 			default: '',
 		},
 		/**
-		* Posicionamento do Pulsar com relação ao elemento de referência.
+		* Positioning of the Pulsar in relation to the reference element.
 		*/
 		position: {
 			type: String,

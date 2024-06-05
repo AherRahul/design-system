@@ -72,22 +72,22 @@ export default {
 
 	props: {
 		/**
-		 * Tamanho dos avatares do AvatarGroup
+		 * Size of AvatarGroup avatars
 		 */
 		size: {
 			type: String,
 			default: 'md',
 		},
 		/**
-		 * Array de objetos contendo as propriedades dos Avatares.
-		 * As props aqui aceitas são as mesmas da API do componente Avatar.
+		 * Array of objects containing the properties of Avatars. 
+		 * The props accepted here are the same as those in the Avatar component API.
 		 */
 		avatars: {
 			type: Array,
 			default: () => [],
 		},
 		/**
-		 * O número máximo de avatares a ser exibido na lista.
+		 * The maximum number of avatars to be displayed in the list.
 		 */
 		maxCount: {
 			type: Number,
@@ -122,8 +122,8 @@ export default {
 	&__container {
 		display: flex;
 	
-		//FIXME: Número fixo. Se encontrarmos uma solução
-		//que não seja hardcoded, vale trocar aqui
+		//FIXME: Fixed number. If we find a solution
+		// that is not hardcoded, it's worth changing here
 		@for $i from 20 to 0 {
 			& > .tooltip:nth-child(#{$i - 1}) {
 				z-index: ($i - 20) * -1;

@@ -58,46 +58,46 @@ export default {
 
 	props: {
 		/**
-		 * A variante de cor. São 10 variantes implementadas: 'green', 'teal',
-		 * 'blue', 'indigo', 'violet', 'pink', 'red', 'orange','amber' e 'white'.
+		 * The color variant. There are 10 variants implemented: 'green', 'teal', 
+		 * 'blue', 'indigo', 'violet', 'pink', 'red', 'orange', 'amber' and 'white'.
 		 */
 		variant: {
 			type: String,
 			default: 'green',
 		},
 		/**
-		 * Especifica o tamanho do avatar. São 3 tamanhos implementados: 'sm', 'md', 'lg'.
+		 * Specifies the size of the avatar. There are 3 sizes implemented: 'sm', 'md', 'lg'.
 		 */
 		size: {
 			type: String,
 			default: 'md',
 		},
 		/**
-		 * src da imagem do avatar. Tem prioridade maior que as props de iniciais de nome.
+		 * src of the avatar image. It has higher priority than name initial props.
 		 */
 		src: {
 			type: String,
 			default: '',
 		},
 		/**
-		 * Recebe as iniciais do usuário cujas informações vão ser mostradas no Avatar.
-		 * As iniciais são exibidas apenas quando nenhuma imagem é especificada.
+		 * Receives the initials of the user whose information will be shown in the Avatar. 
+		 * Initials are only displayed when no image is specified.
 		 */
 		initials: {
 			type: String,
 			default: null,
 		},
 		/**
-		 * Recebe o nome do usuário cujas informações vão ser mostradas no Avatar.
-		 * Do nome são extraídas as duas primeiras iniciais para exibição no componente
-		 * quando nenhuma imagem é especificada.
+		 * Receives the name of the user whose information will be shown in the Avatar. 
+		 * The first two initials are extracted from the name for display in the component 
+		 * when no image is specified.
 		 */
 		name: {
 			type: String,
 			default: null,
 		},
 		/**
-		 * Ativa ou desativa o clique no componente
+		 * Enables or disables clicking on the component
 		 */
 		clickable: {
 			type: Boolean,

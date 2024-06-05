@@ -5,7 +5,7 @@
 		:class="dynamicHighlightClass"
 		:style="dynamicStyle"
 	>
-		<!-- @slot Slot usado para especificar o texto que receberá o highlight. -->
+		<!-- @slot Slot used to specify the text that will receive the highlight. -->
 		<slot />
 	</span>
 </template>
@@ -14,29 +14,29 @@
 export default {
 	props: {
 		/**
-		 * A variante do Highlight. São 3 variantes implementadas: 'info', 'success'
-		 * e 'danger'
+		 * The Highlight variant. There are 3 variants implemented: 'info', 'success'
+		 * and 'danger'
 		 */
 		variant: {
 			type: String,
 			default: 'info',
 		},
 		/**
-		 * Especifica se o highlight vai ser estático ou animado.
+		 * Specifies whether the highlight will be static or animated.
 		 */
 		animated: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Especifica a duração da animação.
+		 * Specifies the duration of the animation.
 		 */
 		duration: {
 			type: Number,
 			default: 1,
 		},
 		/**
-		 * O tempo de espera até a animação começar.
+		 * The waiting time until the animation starts.
 		 */
 		delay: {
 			type: Number,

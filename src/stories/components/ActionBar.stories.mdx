@@ -3,7 +3,7 @@ import ActionBar from '../../components/ActionBar.vue';
 import Button from '../../components/Button.vue';
 
 <Meta
-	title="Componentes/Display/ActionBar"
+	title="Components/Display/ActionBar"
 	component={ ActionBar }
 	parameters={{
 		viewMode: 'docs',
@@ -20,7 +20,7 @@ import Button from '../../components/Button.vue';
 	@close="logClose"
 >
 	<template #description>
-		8 itens selecionados
+		8 selected items
 	</template>
 </cds-action-bar>`
 			},
@@ -53,7 +53,7 @@ export const Template = (args) => ({
 				@close="logClose"
 			>
 				<template #description>
-					8 itens selecionados
+					8 selected items
 				</template>
 			</cds-action-bar>
 		</div>
@@ -74,19 +74,19 @@ export const Template = (args) => ({
 
 # ActionBar
 
-### ActionBars são barras de ferramentas que podem exibir ações e informações para o usuário.
+### ActionBars are toolbars that can display actions and information to the user.
 ---
 <br />
 
-## Quando usar:
-- Par agrupar ações que o usuário pode tomar sobre itens de uma lista ou tabela.
-- Não houver espaço nos menus e em outros locais para exibir ações e informações.
+## When to use:
+- To group actions that the user can take on items in a list or table.
+- There is no space in menus and other places to display actions and information.
 
 <br />
 
-## Quando não usar:
-- Para exibir os status do sistema.
-- Em modo flutuante, a ActionBar ocultar permanentemente informações na tela.
+## When not to use:
+- To view system statuses.
+- In floating mode, the ActionBar permanently hides information on the screen.
 
 <br />
 

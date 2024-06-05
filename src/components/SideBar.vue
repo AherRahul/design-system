@@ -247,7 +247,7 @@ export default {
 			default: true,
 		},
 		/**
-		* Nome do usuário logado. Essa informação é colocada ao lado do Avatar
+		* Name do usuário logado. Essa informação é colocada ao lado do Avatar
 		*/
 		userName: {
 			type: String,

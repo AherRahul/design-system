@@ -2,7 +2,7 @@ import { Meta, Story, Props, ArgsTable, Canvas, Preview } from '@storybook/addon
 import FloatingAssistant from '../../components/FloatingAssistant.vue';
 
 <Meta
-	title="Componentes/Display/FloatingAssistant"
+	title="Components/Display/FloatingAssistant"
 	component={ FloatingAssistant }
 	argTypes={{
 		variant: {
@@ -34,10 +34,10 @@ import FloatingAssistant from '../../components/FloatingAssistant.vue';
 `<cds-floating-assistant
 	v-model="showTip"
 	targetId="floating-assistant-target"
-	title="Nova funcionalidade!"
+	title="New functionality!"
 	url="https://medium.com/cidade-saud%C3%A1vel"
 >
-	Conteúdo a ser exibido quando o card for clicado
+	Content to be displayed when the card is clicked
 </cds-floating-assistant>`
 },
 		}
@@ -55,9 +55,9 @@ export const Template = (args) => ({
 				v-bind="args"
 				targetId="floating-assistant-target"
 			>
-				A nova funcionalidade de cadastrar motoristas permite que você organize e
-				gerencie a sua frota de forma mais fácil, vinculando cada motorista a seu
-				ônibus específico.
+				The new driver registration functionality allows you to organize and
+				manage your fleet more easily, linking each driver to their
+				specific bus.
 			</cds-floating-assistant>
 	`,
 	methods: {
@@ -69,21 +69,21 @@ export const Template = (args) => ({
 
 # FloatingAssistant
 
-### Floating Assistant é um componente flutuante que pode ser utilizado para fornecer dicas de usabilidade ou informações específicas sobre o conteúdo da página.
+### Floating Assistant is a floating component that can be used to provide usability tips or specific information about page content.
 ---
 <br />
 
-## Quando usar:
-- Houver necessidade de fornecer dicas ou informações adicionais sobre um determinado elemento ou seção da página.
-- For necessário direcionar o usuário para uma página externa que contenha informações/tutoriais adicionais sobre o conteúdo.
-- O objetivo for reduzir a quantidade de informações exibidas na tela, mantendo o foco do usuário no elemento relevante.
+## When to use:
+- There is a need to provide tips or additional information about a certain element or section of the page.
+- It is necessary to direct the user to an external page that contains additional information/tutorials about the content.
+- The objective is to reduce the amount of information displayed on the screen, keeping the user's focus on the relevant element.
 
 
 <br />
 
-## Quando não usar:
-- O componente se tornar intrusivo e atrapalhar a navegação e experiência do usuário.
-- Não houver espaço suficiente para exibição do componente e ele puder ser confundido com o conteúdo da página.
+## When not to use:
+- The component becomes intrusive and disrupts navigation and user experience.
+- There is not enough space to display the component and it could be confused with the page content.
 
 <br />
 
@@ -94,7 +94,7 @@ export const Template = (args) => ({
 		name="FloatingAssistant"
 		args={{
 			modelValue: true,
-			url: 'https://medium.com/cidade-saud%C3%A1vel',
+			url: 'https://rahulaher.netlify.app/RDS-saud%C3%A1vel',
 		}}
 	>
 		{ Template.bind({}) }

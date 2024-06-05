@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
 	<!--
-		Evento emitido quando o wrapper é clicado
+		Event emitted when wrapper is clicked
 		@event cds-click
 		@type {Event}
 	-->
@@ -20,7 +20,7 @@
 export default {
 	props: {
 		/**
-		 * Ativa ou desativa o clique no componente
+		 * Enables or disables clicking on the component
 		 */
 		clickable: {
 			type: Boolean,

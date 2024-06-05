@@ -15,21 +15,21 @@
 export default {
 	props: {
 		/**
-		 * O posicionamento do Tooltip. A prop aceita as opções: top, right, bottom e left.
+		 * The positioning of the Tooltip. The prop accepts the options: top, right, bottom and left.
 		 */
 		position: {
 			type: String,
 			default: 'top',
 		},
 		/**
-		 * Texto do Tooltip
+		 * Tooltip text
 		 */
 		text: {
 			type: String,
 			default: null,
 		},
 		/**
-		 * Quando marcada como true, deixa o texto e o tamanho do tooltip menores.
+		 * When set to true, it makes the text and tooltip size smaller.
 		 */
 		slim: {
 			type: Boolean,

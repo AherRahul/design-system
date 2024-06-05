@@ -2,7 +2,7 @@ import { Meta, Story, Props, ArgsTable, Canvas, Preview } from '@storybook/addon
 import Spacer from '../../components/Spacer.vue';
 
 <Meta
-	title="Componentes/Utils/Spacer"
+	title="Components/Utils/Spacer"
 	component={ Spacer }
 	argTypes={{
 		padding: {
@@ -142,18 +142,18 @@ export const Template = (args) => ({
 ---
 <br />
 
-## Quando usar:
+## When to use:
 - No caso de determinado componente ou elemento da interface precisar apenas de espaçamento (padding ou margin) como modificar de estilo.
 
 <br />
 
-## Quando não usar:
+## When not to use:
 - Nos casos em que determinado componente precisar de vários modificadores de estilo. Pra esses casos
 utilize classes e nelas inclua paddings e margins com os tokens de espaçamento do RDS.
 
 <br />
 
-## Observações:
+## Comments:
 - ⚠️ Dê preferência sempre que possível à utilização dos tokens em detrimento ao Spacer.
 - O valor mandado para as props do Spacer é sempre multiplicado por 4, assim como nos tokens scss do RDS.
 - O valor máximo aceito é 12.

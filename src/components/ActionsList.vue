@@ -10,7 +10,7 @@
 				<transition name="action-list__slide-fade">
 					<!--
 						Evento emitido quando uma das ações é clicada.
-						O dado associado à ação vai ser enviada ao componente pai.
+						The data associated with the action will be sent to the parent component.
 						@event action-clicked
 						@type {Event}
 					-->
@@ -23,9 +23,9 @@
 						}"
 						@click.stop="handleClick(action)"
 					>
-						<!-- @slot Scoped slot para renderização customizada das 'actions'.
-							A propriedade 'list', que pode ser acessada através do slot,
-							representa o array de actions a ser exibido.
+						<!-- @slot Scoped slot for custom rendering of 'actions'.							
+							The 'list' property, which can be accessed through the slot,
+							represents the array of actions to be displayed.
 						-->
 						<slot
 							name="action"
@@ -40,11 +40,11 @@
 				class="action-list__item--left-bordered"
 				@click.stop="toggleCollapseState"
 			>
-				<!-- @slot Slot para renderização customizada do conteúdo do item
-					de expandir/colapsar a lista
+				<!-- @slot Slot for custom rendering of item content
+					to expand/collapse the list
 				-->
 				<slot name="action-trigger">
-					{{ itsBeingShown ? 'Menos ações' : 'Mais ações' }}
+					{{ itsBeingShown ? 'Hide' : 'Show More' }}
 				</slot>
 			</div>
 		</div>
@@ -57,7 +57,8 @@ import cloneDeep from 'lodash.clonedeep';
 export default {
 	props: {
 		/**
-		* A lista de actions a ser renderizada. Caso queira que um item da lista fique desabilitado, basta passar a prop `disabled` como true nesse item no array.
+		* The list of actions to be rendered. If you want an item in the list 
+		* to be disabled, just set the prop disabledto true for that item in the array.
 		*/
 		actions: {
 			type: Array,
@@ -65,7 +66,7 @@ export default {
 			required: true,
 		},
 		/**
-		 * O número de itens que vai ser mostrado quando o componente for renderizado.
+		 * The number of items that will be shown when the component is rendered.
 		 */
 		numberOfExpandedActions: {
 			type: Number,
@@ -88,7 +89,7 @@ export default {
 				? this.numberOfExpandedActions : this.action.length;
 			this.itsBeingShown = !this.itsBeingShown;
 			/**
-			* Evento emitido quando a lista é expandida ('true') ou contraída ('false').
+			* Event emitted when the list is expanded ('true') or contracted ('false').
 			* @event expanded
 			* @type {Event}
 			*/
@@ -98,7 +99,7 @@ export default {
 		handleClick(action) {
 			if(!action.disabled) {
 				/**
-				* Evento emitido quando o item da lista é clicado.
+				* Event emitted when the list item is clicked.
 				* @event action-clicked
 				* @type {Event}
 				*/

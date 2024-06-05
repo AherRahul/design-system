@@ -3,7 +3,7 @@ import DialogModal from '../../components/DialogModal.vue';
 import Button from '../../components/Button.vue';
 
 <Meta
-	title="Componentes/Notification/DialogModal"
+	title="Components/Notification/DialogModal"
 	component={ DialogModal }
 	argTypes={{
 		variant: {
@@ -45,11 +45,10 @@ import Button from '../../components/Button.vue';
 				code: /*html*/
 `<cds-dialog-modal
 	v-model="showModal"
-	title="Tem certeza que deseja continuar?"
-	description="Esta ação afetará o sistema e
-			os arquivos associados. Ao prosseguir, você
-			confirma que está ciente e
-			concorda com as consequências. Deseja continuar?"
+	title="Are you sure you want to continue?"
+	description="This action will affect the system and associated files. 
+	By proceeding, you confirm that you are aware of and 
+	agree to the consequences. Do you wish to continue?"
 	@close="showModal = false"
 	@ok="showModal = false"
 >
@@ -80,11 +79,10 @@ export const Template = (args) => ({
 			<cds-dialog-modal
 				v-bind="args"
 				v-model="showModal"
-				title="Tem certeza que deseja continuar?"
-				description="Esta ação afetará o sistema e
-					os arquivos associados. Ao prosseguir, você
-					confirma que está ciente e
-					concorda com as consequências. Deseja continuar?"
+				title="Are you sure you want to continue?"
+				description="This action will affect the system and associated 
+				files. By proceeding, you confirm that you are aware of and 
+				agree to the consequences. Do you wish to continue?"
 			>
 			</cds-dialog-modal>
 		</div>
@@ -96,19 +94,19 @@ export const Template = (args) => ({
 
 # DialogModal
 
-### O DialogModal é um componente utilizado para interagir com o usuário em situações críticas ou informativas.
+### DialogModal is a component used to interact with the user in critical or informative situations.
 ---
 <br />
 
-## Quando usar:
-- Quando for necessário obter a confirmação do usuário para ações que podem ter consequências significativas, como excluir um item;
-- Quando ocorrer um erro no sistema e o usuário precisar ser notificado;
-- Quando for necessário informar o usuário sobre algo importante, mas que não requer uma ação imediata.
+## When to use:
+- When it is necessary to obtain user confirmation for actions that may have significant consequences, such as deleting an item;
+- When an error occurs in the system and the user needs to be notified;
+- When it is necessary to inform the user about something important, but which does not require immediate action.
 
 <br />
 
-## Quando não usar:
-- Quando as mensagens a serem passadas ao usuário forem triviais e não exijam a atenção imediata do usuário. Nestes casos, considere usar notificações ou alertas .
+## When not to use:
+- When the messages to be passed to the user are trivial and do not require the user's immediate attention. In these cases, consider using notifications or alerts.
 
 <br />
 

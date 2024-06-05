@@ -2,8 +2,8 @@
 	<div
 		class="empty-state"
 	>
-		<!-- @slot Slot usado para inserção de conteúdo gráfico
-			customizado como alternativa a imagem do empty-state. -->
+		<!-- @slot Slot used for inserting graphic content
+		customized as an alternative to the empty-state image. -->
 		<slot name="graphic-element">
 			<img
 				class="empty-state__image"
@@ -16,7 +16,7 @@
 		</div>
 
 		<div class="empty-state__text">
-			<!-- @slot Slot usado para inserção de conteúdo customizado no texto do corpo do
+			<!-- @slot Slot used to insert customized content into the body text of the
 				empty state. -->
 			<slot name="text">
 				{{ text }}
@@ -24,7 +24,7 @@
 		</div>
 
 		<!--
-			Evento emitido quando o botão do Empty State é clicado
+			Evento issued when the Empty State button is clicked
 			@event action-button-click
 			@type {Event}
 		-->
@@ -60,52 +60,52 @@ export default {
 
 	props: {
 		/**
-		 * A imagem a ser mostrada no Empty State. Obs.: o addon Controls
-		 * do Storybook ainda não permite a seleção de arquivos. Desse modo
-		 * não é possível testar o funcionamento dessa prop por aqui.
+		 * The image to be shown in Empty State. Note: the Storybook Controls 
+		 * addon does not yet allow file selection. Therefore, it is not 
+		 * possible to test the operation of this prop here.
 		 */
 		image: {
 			type: String,
 			default: '',
 		},
 		/**
-		 * O descritor da imagem do Empty State adicionado à 'alt' da tag <img>
+		 * Empty State image descriptor added to tag 'alt'
 		 */
 		imageDescription: {
 			type: String,
-			default: 'Imagem de Empty State',
+			default: 'Image of empty state',
 		},
 		/**
-		 * O título do Empty State.
+		 * The Empty State title.
 		 */
 		title: {
 			type: String,
-			default: 'Título do empty state',
+			default: 'Empty State Title',
 			required: true,
 		},
 		/**
-		 * O texto instrutivo do Empty State
+		 * The Empty State instructional text
 		 */
 		text: {
 			type: String,
-			default: 'Para sair dessa situação de empty state, realize a ação abaixo.',
+			default: 'To exit this empty state situation, perform the action below',
 		},
 		/**
-		 * Prop utilizada para ocultar o botão de ação do Empty State.
+		 * Prop used to hide the Empty State action button.
 		 */
 		hideActionButton: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * O texto mostrado no botão de ação do Empty State
+		 * The text shown on the Empty State action button
 		 */
 		actionButtonText: {
 			type: String,
-			default: 'Finalizar',
+			default: 'Finish',
 		},
 		/**
-		 * A variante do botão de ação do Empty State (segue as variantes do componente de botão do RDS)
+		 * The Empty State action button variant (follows the RDS button component variants)
 		 */
 		actionButtonVariant: {
 			type: String,

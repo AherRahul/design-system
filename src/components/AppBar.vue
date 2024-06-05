@@ -204,7 +204,7 @@ export default {
 			default: false,
 		},
 		/**
-		 * Nome do usuário exibido no Avatar.
+		 * Name do usuário exibido no Avatar.
 		 */
 		userName: {
 			type: String,

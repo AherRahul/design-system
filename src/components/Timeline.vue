@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
 	<div class="cds-timeline">
-		<!-- @slot Conteúdo a ser colocar na Timeline. Suporta o `TimelineItem` como subcomponente.  -->
+		<!-- @slot Content to be placed on the Timeline. Supports `TimelineItem` as a subcomponent.  -->
 		<slot />
 	</div>
 </template>
@@ -10,7 +10,7 @@
 export default {
 	props: {
 		/**
-		* Inverte a ordem dos elementos da Timeline.
+		* Reverses the order of Timeline elements.
 		*/
 		reverse: {
 			type: Boolean,

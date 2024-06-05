@@ -113,21 +113,22 @@ export default {
 
 	props: {
 		/**
-		 * Um array com objetos com as propriedades 'label', 'inProcessing',
-		 * 'error' e 'completed'. A 'label' é o texto que descreve o passo,
-		 * e as demais props são booleanas e representam o status do passo.
+		 * An array with objects with the properties 'label', 
+		 * 'inProcessing', 'error' and 'completed'. The 'label' is the 
+		 * text that describes the step, and the other props are Boolean 
+		 * and represent the status of the step.
 		 */
 		steps: {
 			type: Array,
 			default: () => [],
 			required: true,
 			description:
-				`Um array com objetos com as propriedades 'label', 'inProcessing',
-				'error' e 'completed'. A 'label' é o texto que descreve o passo,
-				e as demais props são booleanas e representam o status do passo.`,
+				`An array with objects with the properties 'label', 'inProcessing', 
+				'error' and 'completed'. The 'label' is the text that describes the 
+				step, and the other props are Boolean and represent the status of the step.`,
 		},
 		/**
-		 * Define direção do stepper como vertical, por padrão a direção é horizontal (vertical = false).
+		 * Sets the stepper direction to vertical, by default the direction is horizontal (vertical = false).
 		 */
 		vertical: {
 			type: Boolean,
@@ -135,7 +136,7 @@ export default {
 			required: false,
 		},
 		/**
-		* Controla qual step está ativo variando de 1 até o número de steps.
+		* Controls which step is active, ranging from 1 to the number of steps.
 		*/
 		value: {
 			type: Number,
@@ -143,7 +144,7 @@ export default {
 			required: true,
 		},
 		/**
-		* Desabilita navegação pelos steps quando setado como `true`.
+		* Disables step navigation when set to `true`.
 		*/
 		disableOnClick: {
 			type: Boolean,

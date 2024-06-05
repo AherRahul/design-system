@@ -2,7 +2,7 @@ import { Meta, Story, Props, ArgsTable, Canvas, Preview } from '@storybook/addon
 import Multiselect from '../../components/Multiselect.vue';
 
 <Meta
-	title="Componentes/Forms/Multiselect"
+	title="Components/Forms/Multiselect"
 	component={ Multiselect }
 	argTypes={{
 		variant: {
@@ -70,19 +70,19 @@ export const Template = (args) => ({
 ---
 <br />
 
-## Quando usar:
+## When to use:
 - Houver a possibilidade de selecionar múltipos itens em um select.
 - Se deseja classificar os itens do select em categorias.
 
 <br />
 
-## Quando não usar:
+## When not to use:
 - Os itens do select não puderem ser classificados em categorias.
 - Houver necessidade de detalhar no input as opções selecionadas, já que mostramos como resumo apenas quantas e não quais foram as opções escolhidas.
 
 <br />
 
-## Observações:
+## Comments:
 - O Multiselect do RDS é um wrapper do <a href="https://vue-multiselect.js.org/">Vue Multiselect</a>
 com a sua adequação aos nossos Principles e recomendações. Para informações detalhadas sobre o componente, recomendamos
 leitura da documentação.

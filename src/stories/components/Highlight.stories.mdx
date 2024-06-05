@@ -2,7 +2,7 @@ import { Meta, Story, Props, ArgsTable, Canvas, Preview } from '@storybook/addon
 import Highlight from '../../components/Highlight.vue';
 
 <Meta
-	title="Componentes/Display/Highlight"
+	title="Components/Display/Highlight"
 	component={ Highlight }
 	argTypes={{
 		variant: {
@@ -45,7 +45,7 @@ import Highlight from '../../components/Highlight.vue';
 	:duration="1"
 	:delay="0"
 >
-	<span> Texto bem importante</span>
+	<span> Very important text</span>
 </cds-highlight>`
 			},
 		}
@@ -59,27 +59,28 @@ export const Template = (args) => ({
 	},
 	template: /*html*/ `
 		<cds-highlight v-bind="args">
-			<span> Texto bem importante</span>
+			<span> Very important text</span>
 		</cds-highlight>
 	`,
 });
 
 # Highlight
 
-### Highlights são componentes utilizados para destacar palavras ou frases importantes em um determinado contexto.
+### Highlights are components used to highlight important words or phrases in a given context.
 ---
 <br />
 
-## Quando usar:
-- Se deseja guiar a atenção do usuário para palavras ou frases específicas na interface (nesses cenários, Highlights animados podem ser ainda mais efetivos que os comuns).
-- Estiver implementando alguma feature de *diff* e precisar indicar elementos que foram substituídos por outros.
+## When to use:
+- If you want to guide the user's attention to specific words or phrases in the interface 
+(in these scenarios, animated Highlights can be even more effective than regular ones).
+- You are implementing a diff feature and need to indicate elements that have been replaced by others.
 
 <br />
 
-## Quando não usar:
-- Se deseja criar hierarquia na página. Para esses casos, use mecanismos de hierarquia tipográfica como peso da fonte, tamanho ou cor.
-- O elemento sobre o qual o Highlight será *wrapper* não for um elemento de texto.
-- Forem destacados trechos muito grandes de texto. Isso pode acabar resultando no oposto do que se espera com o uso de Highlights.
+## When not to use:
+- If you want to create hierarchy on the page. For these cases, use typographic hierarchy mechanisms such as font weight, size, or color.
+- The element that the Highlight will be wrapped around is not a text element.
+- Very large sections of text are highlighted. This can end up resulting in the opposite of what you expect with the use of Highlights.
 
 <br />
 

@@ -185,7 +185,7 @@ Para organizar e nomear nossas classes scss, utilizamos as convenções do padr�
 
 #### Documentação
 
-Utilizamos algumas convenções de comentários como anotações para a documentação gerada pelo Storybook:
+Utilizamos algumas convenções de comentários como anotações para a documentação gerada pelo RDS:
 
 -   Documentações de props são criadas com comentários multilinha acima da definição da propriedade:
 
@@ -297,8 +297,8 @@ src
 -   **dist:** repositório que armazena os arquivos compilados pelo `rollup.config.js` para distribuição.
 -   **src:** armazena diversos subdiretórios com os arquivos dos componentes do Design System, além de tokens, arquivos de documentação e testes.
     -   **sass:** nesse subdiretório estão definidos os tokens do RDS em arquivos `.scss`. Esses arquivos são importados no arquivo `app.scss` contido nessa pasta.
-    -   **components:** aqui ficam contidos os arquivos `.vue` que definem os componentes. Novos componentes devem ser exportados no arquivo `index.js`, presente nesse subdiretório para que possam ser efetivamente utilizados na aplicação. Além disso, cada novo arquivo `.vue` adicionado nesse diretório deve ter um arquivo `.stories.mdx` correspondente no diretório **stories** para que seja criada e exibida sua documentação no Storybook.
-    -   **docs-components:** armazena os componentes vue criados para auxílio da documentação no Storybook e que não devem ser exportados como componentes do Design System. Novos componentes devem ser exportados no arquivo `index.js`, presente nesse subdiretório, para que possam ser efetivamente utilizados na aplicação.
+    -   **components:** aqui ficam contidos os arquivos `.vue` que definem os componentes. Novos componentes devem ser exportados no arquivo `index.js`, presente nesse subdiretório para que possam ser efetivamente utilizados na aplicação. Além disso, cada novo arquivo `.vue` adicionado nesse diretório deve ter um arquivo `.stories.mdx` correspondente no diretório **stories** para que seja criada e exibida sua documentação no RDS.
+    -   **docs-components:** armazena os componentes vue criados para auxílio da documentação no RDS e que não devem ser exportados como componentes do Design System. Novos componentes devem ser exportados no arquivo `index.js`, presente nesse subdiretório, para que possam ser efetivamente utilizados na aplicação.
     -   **stories:** nesse subdiretório estão contido os arquivos `.stories.mdx` responsáveis por criar a documentação dos componentes e por exibi-los no storybook. Possui dois subdiretórios, a pasta **components** guarda os `.mdx` com a documentação dos componentes e a pasta **tokens** guarda os `.mdx` com a documentação dos tokens.
     -   **entry.js**: arquivo utilizado no `rollup.config.js` como input do processo de building. Nesse arquivo são importadas e configuradas algumas das dependências do projeto que vão ser exportadas dentro do pacote do RDS. Nesse arquivo também é adicionado o prefixo **_cds-_** necessário para utilizar os componentes do RDS em outras aplicações, ou seja, se no contexto do RDS você usa o componente **badge** utilizando `<badge>`, numa aplicação externa que usa o RDS para chamar esse componente você vai utilizar a sintaxe `<cds-badge>`.
 -   **tests:** diretório que armazena os testes de snapshot e testes unitários dos componentes do RDS.
@@ -328,7 +328,7 @@ Quando um pull request é aprovado e merjado, automaticamente, através dos work
 
 ## Como testar um recurso que ainda não foi publicado?
 
-Muitas vezes não é possível simular o comportamento de um componente dentro do Storybook tal qual nos projetos em que eles serão usados. Para esse caso uma alternativa para testar um recurso ou componente que ainda esteja em desenvolvimento no RDS é possível instalar o pacote a partir de um branch do github.
+Muitas vezes não é possível simular o comportamento de um componente dentro do RDS tal qual nos projetos em que eles serão usados. Para esse caso uma alternativa para testar um recurso ou componente que ainda esteja em desenvolvimento no RDS é possível instalar o pacote a partir de um branch do github.
 
 -   Primeiro você deve executar o `npm run build` para gerar a compilação do pacote;
 -   Em seguida você deve enviar o diretório `/dist` para o branch em desenvolvimento, para tal você deve comentar o `/dist` no arquivo `.gitignore`, commitar as alterações e fazer o push;

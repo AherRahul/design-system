@@ -2,7 +2,7 @@ import { Meta, Story, Props, ArgsTable, Canvas, Preview } from '@storybook/addon
 import Stepper from '../../components/Stepper.vue';
 
 <Meta
-	title="Componentes/Display/Stepper"
+	title="Components/Display/Stepper"
 	component={ Stepper }
 	argTypes={{
 		value: {
@@ -44,32 +44,32 @@ export const Template = (args) => ({
 
 # Stepper
 
-### Steppers são componentes que controlam e exibem tarefas divididas em etapas.
+### Steppers are components that control and display tasks divided into steps.
 
 ---
 <br />
 
-## Quando usar:
-- For necessário mostrar, de forma visual, o estado e a etapa atual de um stepper.
-- Houver um modal com várias etapas.
-- Houver uma série de entradas ou ações que desejam mostrar o progresso do seu preenchimento, não importando data e hora dos estados.
+## When to use:
+- It is necessary to visually show the status and current stage of a stepper.
+- There is a modal with several steps.
+- There are a series of entries or actions that want to show the progress of filling them, regardless of the date and time of the states.
 
 <br />
 
-## Quando não usar:
-- Se precisa da cronologia (data, hora) dos steps. Para isso, utilize componente Timeline.
-- A ordem das etapas, eventos ou ações não são relevantes.
+## When not to use:
+- If you need the chronology (date, time) of the steps. To do this, use the Timeline component.
+- The order of steps, events or actions is not relevant.
 
 <br />
 
 ## Preview
 
 export const steps = [
-    { label: 'Dados da operadora', completed: true, inProcessing: false, error: false },
-    { label: 'Bandeira 2', completed: false, inProcessing: true, error: false },
-    { label: 'Bandeira 3', completed: false, inProcessing: false, error: true },
-    { label: 'Bandeira 4', completed: false, inProcessing: false, error: false },
-    { label: 'Bandeira 5', completed: false, inProcessing: false, error: false },
+    { label: 'Operator Data', completed: true, inProcessing: false, error: false },
+    { label: 'Flag 2', completed: false, inProcessing: true, error: false },
+    { label: 'Flag 3', completed: false, inProcessing: false, error: true },
+    { label: 'Flag 4', completed: false, inProcessing: false, error: false },
+    { label: 'Flag 5', completed: false, inProcessing: false, error: false },
 ];
 
 <Canvas>

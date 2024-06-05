@@ -3,7 +3,7 @@ import Wizard from '../../components/Wizard.vue';
 import TextInput from '../../components/TextInput.vue';
 
 <Meta
-	title="Componentes/Display/Wizard"
+	title="Components/Display/Wizard"
 	component={ Wizard }
 	argTypes={{
 		activeStep: {
@@ -45,10 +45,10 @@ import TextInput from '../../components/TextInput.vue';
 	:steps="steps"
 >
 	<template #step-1>
-		Etapa 1
+		Step 1
 	</template>
 	<template #step-2>
-		Etapa 2
+		Step 2
 	</template>
 </cds-wizard>
 `
@@ -79,15 +79,15 @@ export const Template = (args) => ({
 				<div style="height: 400px; gap: 16px; display: flex; flex-direction: column;">
 					<cds-text-input
 						fluid
-						label="Nome"
+						label="Name"
 					/>
 					<cds-text-input
 						fluid
-						label="Sobrenome"
+						label="Surname"
 					/>
 					<cds-text-input
 						fluid
-						label="Nome da mãe"
+						label="Mother's name"
 					/>
 				</div>
 			</template>
@@ -95,19 +95,19 @@ export const Template = (args) => ({
 				<div style="height: 400px; gap: 16px; display: flex; flex-direction: column;">
 					<cds-text-input
 						fluid
-						label="CEP"
+						label="Zip code"
 					/>
 					<cds-text-input
 						fluid
-						label="Rua"
+						label="Road"
 					/>
 					<cds-text-input
 						fluid
-						label="Bairro"
+						label="Neighborhood"
 					/>
 					<cds-text-input
 						fluid
-						label="Cidade"
+						label="City"
 					/>
 				</div>
 			</template>
@@ -115,15 +115,15 @@ export const Template = (args) => ({
 				<div style="height: 400px; gap: 16px; display: flex; flex-direction: column;">
 					<cds-text-input
 						fluid
-						label="Modalidade"
+						label="Modality"
 					/>
 					<cds-text-input
 						fluid
-						label="URL do site"
+						label="URL of site"
 					/>
 					<cds-text-input
 						fluid
-						label="Informação Complementar"
+						label="Additional Information"
 					/>
 				</div>
 			</template>
@@ -147,20 +147,20 @@ export const Template = (args) => ({
 
 # Wizard
 
-### Wizards são componentes utilizados para um processo passo a passo que permite ao usuário inserir informações em uma ordem prescrita e na qual as etapas subsequentes podem depender das informações inseridas nas etapas anteriores.
+### Wizards are components used for a step-by-step process that allows the user to enter information in a prescribed order and in which subsequent steps may depend on the information entered in previous steps.
 ---
 <br />
 
-## Quando usar:
-- Quando precisar completar etapas em uma determinada sequência.
-- For necessário exibir informações em  blocos para simplificar o fluxo.
+## When to use:
+- When you need to complete steps in a certain sequence.
+- It is necessary to display information in blocks to simplify the flow.
 
 <br />
 
-## Quando não usar:
-- Quando o processo não for tão complexo, não havendo necessidade de divisão em etapas.
-- Quando houver mais de três etapas, deve se considerar dividir em mais processos.
-- Quando não houver necessidade de guiar o usuário numa sequência.
+## When not to use:
+- When the process is not so complex, there is no need to divide it into stages.
+- When there are more than three steps, you should consider dividing them into more processes.
+- When there is no need to guide the user in a sequence.
 
 <br />
 
@@ -169,15 +169,15 @@ export const Template = (args) => ({
 
 export const steps = [
 	{
-		title: 'Informações gerais',
-		subtitle: 'Insira as informações de identificação',
+		title: 'General information',
+		subtitle: 'Enter identification information',
 	},
 	{
-		title: 'Endereço de entrega',
+		title: 'Delivery address',
 	},
 	{
-		title: 'Informações complementares',
-		subtitle: 'Adicione informações complementares para triagem',
+		title: 'Additional information',
+		subtitle: 'Add additional information for screening',
 		image: 'https://static.vecteezy.com/system/resources/previews/011/537/753/non_2x/box-empty-state-single-isolated-icon-with-flat-style-free-vector.jpg',
 	},
 ];

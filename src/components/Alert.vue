@@ -30,7 +30,7 @@
 					{{ text }}
 				</span>
 
-				<!-- @slot Slot padrão utilizado para exibir texto do alert caso não tenha sido especificado por prop -->
+				<!-- @slot Default slot used to display alert text if not specified by prop -->
 				<span
 					v-else
 					class="alert__text"
@@ -68,8 +68,7 @@ export default {
 
 	props: {
 		/**
-		 * A variante do Alert. São 3 variantes implementadas: 'info', 'warning'
-		 * e 'danger'
+		 * The Alert variant. There are 3 variants implemented: 'info', 'warning' and 'danger'
 		 */
 		variant: {
 			type: String,
@@ -77,15 +76,15 @@ export default {
 			required: false,
 		},
 		/**
-		 * O título do alert. O título também pode ser usado com o slot.
+		 * The title of the alert. The title can also be used with the slot.
 		 */
 		text: {
 			type: String,
-			default: 'Título do AlertCard',
+			default: 'AlertCard Title',
 			required: false,
 		},
 		/**
-		 * Prop que exibe botão de fechamento do alert.
+		 * Prop that displays the alert close button.
 		 */
 		dismissible: {
 			type: Boolean,
@@ -128,7 +127,7 @@ export default {
 	methods: {
 		close() {
 			/**
-			 * Evento emitido quando o botão de fechar o alert é clicado.
+			 * Event emitted when the close alert button is clicked.
 			 * @event close
 			 * @type {Event}
 			 */
@@ -185,7 +184,7 @@ export default {
 	}
 
 	&__icon {
-		//Value fixo utilizado apenas para ajuste do posicionamento do ícone
+		//Fixed value used only to adjust icon positioning
 		margin-top: 2px;
 
 		&--info {

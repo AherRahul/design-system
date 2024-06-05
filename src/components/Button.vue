@@ -13,7 +13,7 @@
 			class="button__loader"
 		/>
 
-		<!-- @slot Slot padrão utilizado para exibir texto do botão. -->
+		<!-- @slot Default slot used to display button text. -->
 		<slot>
 			{{ text }}
 		</slot>
@@ -36,58 +36,58 @@ export default {
 
 	props: {
 		/**
-		 * A variante de cor. São 9 variantes implementadas: 'green', 'teal',
-		 * 'blue', 'indigo', 'violet', 'pink', 'red', 'orange' e 'amber'.
+		 * The color variant. There are 9 variants implemented: 'green', 'teal',
+		 * 'blue', 'indigo', 'violet', 'pink', 'red', 'orange' and 'amber'.
 		 */
 		variant: {
 			type: String,
 			default: 'green',
 		},
 		/**
-		 * Especifica o tamanho do botão. São 3 tamanhos implementados: 'sm', 'md', 'lg'.
+		 * Specifies the size of the button. There are 3 sizes implemented: 'sm', 'md', 'lg'.
 		 */
 		size: {
 			type: String,
 			default: 'md',
 		},
 		/**
-		* Quando true, torna a largura do botão fluida
+		* When true, makes the button width fluid
 		*/
 		block: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Especifica o texto a ser apresentado no corpo do botão.
-		 * Este texto será exibido apenas se o slot default não for utilizado.
+		 * Specifies the text to be displayed in the button body.
+		 * This text will only be displayed if the default slot is not used.
 		 */
 		text: {
 			type: String,
 			default: 'Lorem ipsum',
 		},
 		/**
-		 * Controla a disponibilidade do Botão.
+		 * Controls Button availability.
 		 */
 		disabled: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Texto a ser exibido como tooltip com o hover do botão quando a prop disabled estiver ativa.
+		 * Text to be displayed as a tooltip on button hover when the disabled prop is active.
 		 */
 		tooltipText: {
 			type: String,
 			default: null,
 		},
 		/**
-		 * Especifica se a versão do Botão é a secundária.
+		 * Specifies whether the Button version is the secondary one.
 		 */
 		secondary: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Especifica se a versão do Botão é a secundária.
+		 * Specifies whether the Button version is the secondary one.
 		 */
 		loading: {
 			type: Boolean,
@@ -159,7 +159,7 @@ export default {
 				return;
 			}
 			/**
-			* Evento que indica que o Botão foi clicado
+			* Event that indicates that the Button was clicked
 			* @event button-click
 			* @type {Event}
 			*/

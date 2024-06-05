@@ -20,28 +20,28 @@
 export default {
 	props: {
 		/**
-		 * Indica em que direção o Chevron vai ser renderizado. As opções são: 'Top', 'Right', 'Bottom' e 'Left'
+		 * Indicates which direction the Chevron will be rendered. The options are: 'Top', 'Right', 'Bottom' and 'Left'
 		 */
 		direction: {
 			type: String,
 			default: 'bottom',
 		},
 		/**
-		 * Quando true, torna o chevron mais claro
+		 * When true, makes the chevron lighter
 		 */
 		light: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Especifica o tamanho do Chevron. São 3 tamanhos implementados: 'sm', 'md', 'lg'.
+		 * Specifies the size of the Chevron. There are 3 sizes implemented: 'sm', 'md', 'lg'.
 		 */
 		size: {
 			type: String,
 			default: 'md',
 		},
 		/**
-		 * Ativa animação na transição das posições do Chevron
+		 * Activates animation when transitioning Chevron positions
 		 */
 		animate: {
 			type: Boolean,

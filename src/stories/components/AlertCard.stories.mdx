@@ -2,7 +2,7 @@ import { Meta, Story, Props, ArgsTable, Canvas, Preview } from '@storybook/addon
 import AlertCard from '../../components/AlertCard.vue';
 
 <Meta
-	title="Componentes/Notification/AlertCard"
+	title="Components/Notification/AlertCard"
 	component={ AlertCard }
 	argTypes={{
 		variant: {
@@ -48,31 +48,31 @@ export const Template = (args) => ({
 
 # AlertCard
 
-### AlertCards são componentes utilizados para transmitir mensagens contextuais importantes e apresentar possíveis ações a serem tomadas em cima delas.
+### AlertCards are components used to convey important contextual messages and present possible actions to be taken based on them.
 ---
 <br />
 
-## Quando usar:
-- For necessário mostrar informações contextuais extensas.
-- For necessário mostrar informações contextuais que requerem ações do usuário sobre elas.
+## When to use:
+- It is necessary to show extensive contextual information.
+- It is necessary to show contextual information that requires user actions on it.
 
 <br />
 
-## Quando não usar:
-- For necessário mostrar informações de maneira discreta ou que pode ser ocultada. Para esse caso, recomendamos o uso de b-toasts.
-- For necessário mostrar informações contextuais curtas.
+## When not to use:
+- It is necessary to show information in a discreet way or in a way that can be hidden. In this case, we recommend using b-toasts.
+- It is necessary to show short contextual information.
+
 
 <br />
 
 ## Preview
 
-export const title = 'Título do AlertCard';
+export const title = 'AlertCard Title';
 
-export const subTitle =  `Existe uma teoria que diz que, se um dia alguém descobrir 
-				exatamente para que serve o Universo e por que ele está aqui, ele 
-				desaparecerá instantaneamente e será substituídopor al go ainda 
-				mais estranho e inexplicável. Existe uma segunda teoria que diz 
-				que isso já aconteceu.`;
+export const subTitle =  `There is a theory that says that if one day someone 
+discovers exactly what the Universe is for and why it is here, it will disappear 
+instantly and be replaced by something still stranger and more inexplicable. 
+There is a second theory that says that this has already happened.`;
 
 <Canvas>
 	<Story

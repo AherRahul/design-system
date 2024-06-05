@@ -17,7 +17,7 @@ export const parameters = {
           "Spacing",
           "Edges",
         ],
-        "Componentes",
+        "Components",
         [
           "Display",
           "Notification",

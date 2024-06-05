@@ -2,7 +2,7 @@ import { Meta, Story, Props, ArgsTable, Canvas, Preview } from '@storybook/addon
 import EmptyState from '../../components/EmptyState.vue';
 
 <Meta
-	title="Componentes/Display/EmptyState"
+	title="Components/Display/EmptyState"
 	component={ EmptyState }
 	argTypes={{
 		actionButtonVariant: {
@@ -33,10 +33,10 @@ import EmptyState from '../../components/EmptyState.vue';
 				code: /*html*/ `
 <cds-empty-state
 	image="static/media/CuidaTempLogo.f4adb1cc.png"
-	image-description="Imagem de empty state"
-	title="Título do empty state"
-	text="Para sair dessa situação de empty state, realize a ação abaixo"
-	action-button-text="Adicionar novo recurso"
+	image-description="Image of empty state"
+	title="Empty State Title"
+	text="To exit this empty state situation, perform the action below"
+	action-button-text="Add new feature"
 	@action-button-click="handleClick"
 />`
 			},
@@ -64,21 +64,21 @@ export const Template = (args) => ({
 
 # EmptyState
 
-### EmptyStates são componentes utilizados em momentos instrutivos aos usuários.
+### EmptyStates are components used in instructive moments for users.
 
 ---
 <br />
 
-## Quando usar:
-- For necessário instruir o usuário sobre o funcionamento de uma determinada página.
-- Uma página ou componente não possuir conteúdo padrão a ser mostrado.
-- Uma determinada ação resultar em erro.
+## When to use:
+- It is necessary to instruct the user on how a particular page works.
+- A page or component does not have default content to be displayed.
+- A certain action results in an error.
 
 <br />
 
-## Quando não usar:
-- Utilizado como um loader.
-- Utilizado apenas com título.
+## When not to use:
+- Used as a loader.
+- Used only with title.
 
 <br />
 
@@ -89,10 +89,10 @@ export const Template = (args) => ({
 		name="EmptyState"
 		args={{
 			image: 'https://cdn-icons-png.flaticon.com/512/7486/7486747.png',
-			imageDescription: 'Imagem de empty state',
-			title: 'Título do empty state',
-			text: 'Para sair dessa situação de empty state, realize a ação abaixo',
-			actionButtonText: 'Adicionar novo recurso',
+			imageDescription: 'Image of empty state',
+			title: 'Empty state title',
+			text: 'To exit this empty state situation, perform the action below',
+			actionButtonText: 'Add new feature',
 		}}
 	>
 		{ Template.bind({}) }

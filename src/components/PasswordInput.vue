@@ -118,7 +118,7 @@ export default {
 		 */
 		placeholder: {
 			type: String,
-			default: 'Digite aqui a informação',
+			default: 'Enter information here',
 		},
 		/**
 		 * Especifica a mensagem de erro, que será exibida caso o estado seja inválido.

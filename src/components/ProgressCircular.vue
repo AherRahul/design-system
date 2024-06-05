@@ -40,14 +40,14 @@ import { colorOptions, colorHexCode } from '../utils/constants/colors';
 export default {
 	props: {
 		/**
-		 * Define a cor da ProgressCircular.
+		 * Sets the color of the ProgressCircular.
 		 */
 		variant: {
 			type: String,
 			default: 'green',
 		},
 		/**
-		 * Define o tamanho (diâmetro) da ProgressCircular.
+		 * Defines the size (diameter) of the ProgressCircular.
 		 */
 		size: {
 			type: String,
@@ -55,7 +55,8 @@ export default {
 			required: false,
 		},
 		/**
-		 * Define o valor correspondente ao percentual ou fração preenchida da ProgressCircular.
+		 * Defines the value corresponding to the filled percentage or fraction 
+		 * of the ProgressCircular.
 		 */
 		value: {
 			type: Number,
@@ -63,8 +64,8 @@ export default {
 			required: true,
 		},
 		/**
-		 * Define o valor máximo, a porção toda do processo, da ProgressCircular.
-		 * Por padrão o valor máximo é 100 (padrão porcentagem).
+		 * Sets the maximum value, the entire process portion, of the ProgressCircular. 
+		 * By default, the maximum value is 100 (default percentage).
 		 */
 		maxValue: {
 			type: Number,
@@ -72,21 +73,21 @@ export default {
 			required: false,
 		},
 		/**
-		* Torna a espessura do circulo da ProgressCircular menor.
+		* Makes the ProgressCircular circle thickness smaller.
 		*/
 		slim: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		* Torna a espessura do circulo da ProgressCircular maior.
+		* Makes the ProgressCircular circle thicker.
 		*/
 		thick: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		* Controla a exibição da label.
+		* Controls the display of the label.
 		*/
 		noLabel: {
 			type: Boolean,

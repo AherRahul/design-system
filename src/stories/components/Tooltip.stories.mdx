@@ -2,7 +2,7 @@ import { Meta, Story, Props, ArgsTable, Canvas, Preview } from '@storybook/addon
 import Tooltip from '../../components/Tooltip.vue';
 
 <Meta
-	title="Componentes/Display/Tooltip"
+	title="Components/Display/Tooltip"
 	component={ Tooltip }
 	argTypes={{
 		position: {
@@ -26,7 +26,7 @@ import Tooltip from '../../components/Tooltip.vue';
 				format:true,
 				code: /*html*/ 
 `<cds-tooltip
-	text="Texto do tooltip"
+	text="Tooltip text"
 >
 	Tooltip trigger
 </cds-tooltip>`
@@ -58,20 +58,20 @@ export const Template = (args) => ({
 
 # Tooltip
 
-### Tooltip são labels flutuantes não interativas usados para explicar um elemento ou recurso da interface. Podem ser acionados com hover.
+### Tooltips are non-interactive floating labels used to explain an interface element or feature. They can be activated with hover.
 ---
 <br />
 
-## Quando usar:
-- O texto a ser exibido como label for conciso, com no máximo 4 palavras.
-- Para exibir informações suplementares sobre uma feature ou elemento da interface.
+## When to use:
+- The text to be displayed as a label is concise, with a maximum of 4 words.
+- To display supplementary information about a feature or interface element.
 
 
 <br />
 
-## Quando não usar:
-- Para comunicar erros e status do sistema.
-- Para mostrar informações críticas para a compreensão de uma feature ou elemento da interface.
+## When not to use:
+- To communicate errors and system status.
+- To show critical information for understanding a feature or interface element.
 
 <br />
 
@@ -81,7 +81,7 @@ export const Template = (args) => ({
 	<Story
 		name="Tooltip"
 		args={{
-			text: 'Texto do tooltip'
+			text: 'Tooltip text'
 		}}
 	>
 		{ Template.bind({}) }

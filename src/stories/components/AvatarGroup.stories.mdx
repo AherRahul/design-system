@@ -3,7 +3,7 @@ import AvatarGroup from '../../components/AvatarGroup.vue';
 import Avatar from '../../components/Avatar.vue';
 
 <Meta
-	title="Componentes/Display/AvatarGroup"
+	title="Components/Display/AvatarGroup"
 	component={ AvatarGroup }
 	argTypes={{
 		size: {
@@ -48,24 +48,24 @@ export const Template = (args) => ({
 
 # AvatarGroup
 
-### AvatarGroups exibem vários avatares agrupados em forma de pilha.
+### AvatarGroups display multiple avatars grouped together in a stack.
 ---
 <br />
 
-## Quando usar:
-- Utilize AvatarGroups quando, em um determinado contexto, vários usuários 
-dividirem resposabilidades sobre uma informação ou regra de negócio.
+## When to use:
+- Use AvatarGroups when, in a given context, several users share responsibilities for 
+information or business rules.
 
-## Quando não usar:
-- Em casos que apenas a informação de um usuário será apresentada.
+## When not to use:
+- In cases where only one user's information will be presented.
 
-## Observações:
-- Ao passar o mouse sobre cada Avatar será mostrado um tooltip com o nome
-do usuário, caso tenha sido informado.
-- Quando o número de avatares foi maior que o valor especificado na prop maxCount
-será exibido um avatar com um contador indicando o número de avatares
-que foram suprimidos do AvatarGroup. Este contador é clicável e abre um Popover
-com a lista de avatares suprimidos.
+## Comments:
+- When you hover the mouse over each Avatar, a tooltip will be displayed with the user's 
+name, if it has been entered.
+- When the number of avatars was greater than the value specified in the maxCount prop, 
+an avatar will be displayed with a counter indicating the number of avatars that were 
+deleted from the AvatarGroup. This counter is clickable and opens a Popover with the 
+list of suppressed avatars.
 
 <br />
 

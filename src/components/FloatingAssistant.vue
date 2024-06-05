@@ -24,18 +24,18 @@
 				@click="expand"
 			>
 				<div v-if="waitingConfirmation">
-					Ocultar dica para sempre?
+					Hide tip forever?
 					<span
 						:class="`floating-assistant__link--${variant}`"
 						@click="confirmationHandle(true)"
 					>
-						Sim
+						Yes
 					</span> /
 					<span
 						:class="`floating-assistant__link--${variant}`"
 						@click="confirmationHandle(false)"
 					>
-						Não
+						No
 					</span>
 				</div>
 				<div v-else>
@@ -46,17 +46,17 @@
 						v-if="isExpanded"
 						class="floating-assistant__content"
 					>
-						<!-- @slot Slot usado para inserção de conteúdo dentro do card do FloatingAssistant
-							quando estiver expandido -->
+						<!-- @slot Slot used to insert content into the FloatingAssistant card
+							when it is expanded -->
 						<slot />
 						<span class="floating-assistant__footer">
-							Você pode saber mais
+							You can find out more
 							<a
 								:class="`floating-assistant__link--${variant}`"
 								:href="url"
 								target="_blank"
 							>
-								clicando aqui
+							clicking here
 							</a>.
 						</span>
 					</div>
@@ -64,7 +64,7 @@
 						v-else
 						class="floating-assistant__subtitle"
 					>
-						Clique para mais informações
+						Click for more information
 					</span>
 				</div>
 				<div v-if="isExpanded">
@@ -99,8 +99,8 @@ export default {
 
 	props: {
 		/**
-		 * Representa o estado do componente. Quando 'false' o componente não é mostrado
-		 * e quando 'true' o componente é exibido.
+		 * Represents the state of the component. When 'false' the component is not shown
+		 * and when 'true' the component is displayed.
 		 */
 		modelValue: {
 			type: Boolean,
@@ -108,16 +108,16 @@ export default {
 			required: true,
 		},
 		/**
-		 * O título do card flutuante que é exibido.
+		 * The title of the floating card that is displayed.
 		 */
 		title: {
 			type: String,
-			default: 'Nova funcionalidade!',
+			default: 'New functionality',
 			validator: (value) => value.length <= 22,
 		},
 		/**
-		 * A url para redirecionar para uma página externa ao clicar no
-		 * 'clicando aqui' para saber mais sobre o que é descrito no card
+		 * The url to redirect to an external page when clicking on the
+		 * 'click here' to find out more about what is described in the card
 		 */
 		url: {
 			type: String,
@@ -125,15 +125,15 @@ export default {
 			required: true,
 		},
 		/**
-		* A variante da Badge. São 9 variantes: 'turquoise', 'green', 'blue',
-		* 'violet', 'pink', 'red', 'orange', 'amber' e 'gray'.
+		* The Badge variant. There are 9 variants: 'turquoise', 'green', 'blue',
+		* 'violet', 'pink', 'red', 'orange', 'amber' and 'gray'.
 		*/
 		variant: {
 			type: String,
 			default: 'green',
 		},
 		/**
-		* Id do elemento que será referência para a renderização do FloatingAssistant.
+		* Id of the element that will be a reference for the FloatingAssistant rendering.
 		*/
 		targetId: {
 			type: String,
@@ -157,7 +157,7 @@ export default {
 	watch: {
 		isActive(newValue) {
 			/**
-			* Evento emitido quando o componente é exibido ('true') ou ocultado ('false').
+			* Event emitted when the component is displayed ('true') or hidden ('false').
 			* @event expanded
 			* @type {Event}
 			*/
@@ -180,9 +180,9 @@ export default {
 
 	methods: {
 		startAnimation() {
-			// verifica se o elemento está visível
+			// checks if the element is visible
 			if (this.isScrolledIntoView()) {
-				// adiciona classe 'animation' se estiver visível
+				// add class 'animation' if visible
 				document.getElementById(this.id).classList.add('animation');
 
 				window.removeEventListener('scroll', this.startAnimation);
@@ -193,7 +193,7 @@ export default {
 			const scrollTop = window.scrollY;
 			const scrollBottom = scrollTop + window.innerHeight;
 
-			// obtém posição e dimensões do elemento
+			// gets position and dimensions of the element
 			const box = document.getElementById(this.id).getBoundingClientRect();
 			if (!this.boxTop) {
 				this.boxTop = box.top;
@@ -226,7 +226,7 @@ export default {
 			}
 
 			/**
-			* Evento que indica que a opção de desativar a dica foi selecionada
+			* Event indicating that the option to disable the tip was selected
 			* @event disable-tip
 			* @type {Event}
 			*/

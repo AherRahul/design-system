@@ -25,8 +25,7 @@
 		"preview": "vite preview",
 		"storybook": "start-storybook --docs --no-manager-cache",
 		"build-storybook": "build-storybook -s public --docs",
-		"test": "vitest",
-		"chromatic": "npx chromatic --project-token=a0f13ffc7d61"
+		"test": "vitest"
 	},
 	"dependencies": {
 		"@popperjs/core": "^2.11.6",

@@ -26,7 +26,7 @@
 					{{ title }}
 				</span>
 
-				<!-- @slot Slot usado para inserção de conteúdo customizado no subtítulo. -->
+				<!-- @slot Slot used to insert customized content in the subtitle. -->
 				<span
 					class="alert-card__subtitle"
 					:class="`${noTitle ? 'mt-0' : 'mt-2'}`"
@@ -36,8 +36,8 @@
 					</slot>
 				</span>
 
-				<!-- @slot Slot usado para inserção de conteúdo adicional no AlertCard
-					abaixo do subtítulo. -->
+				<!-- @slot Slot used to insert additional content into the AlertCard
+					below the subtitle. -->
 				<slot
 					name="content-slot"
 					class="alert-card__content"
@@ -58,36 +58,36 @@ export default {
 
 	props: {
 		/**
-		 * A variante do Alert. São 3 variantes implementadas: 'info', 'warning'
-		 * e 'danger'
+		 * The Alert variant. There are 3 variants implemented: 'info', 'warning'
+		 * and 'danger'
 		 */
 		variant: {
 			type: String,
 			default: 'info',
 		},
 		/**
-		 * O título do alerta. O título também pode ser usado com o slot.
+		 * The title of the alert. The title can also be used with the slot.
 		 */
 		title: {
 			type: String,
-			default: 'Título do AlertCard',
+			default: 'AlertCard Title',
 		},
 		/**
-		 * O subtítulo do alerta. O subtítulo também pode ser usado com o slot.
+		 * The alert subtitle. Subtitle can also be used with slot.
 		 */
 		subTitle: {
 			type: String,
-			default: 'Subtítulo do AlertCard',
+			default: 'AlertCard Sub-Title',
 		},
 		/**
-		 * Determina se o Alert vai ter ícone ou não.
+		 * Determines whether the Alert will have an icon or not.
 		 */
 		withIcon: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		* Prop utilizada como v-model. Controla a visibilidade do popover .
+		* Prop used as v-model. Controls the visibility of the popover.
 		*/
 		value: {
 			type: Boolean,

@@ -15,7 +15,7 @@
 				v-if="clickable"
 				@click="$emit('click', true)"
 			>
-				<!-- @slot Slot padrão utilizado para exibir o conteúdo dentro da badge -->
+				<!-- @slot Standard slot used to display content inside the badge -->
 				<slot />
 			</cds-clickable>
 
@@ -34,22 +34,22 @@ export default {
 
 	props: {
 		/**
-		 * A variante da Badge. São 9 variantes: 'turquoise', 'green', 'blue',
-		 * 'violet', 'pink', 'red', 'orange', 'amber' e 'gray'.
+		 * The Badge variant. There are 9 variants: 'turquoise', 'green', 
+		 * 'blue', 'violet', 'pink', 'red', 'orange', 'amber' and 'gray'.
 		 */
 		variant: {
 			type: String,
 			default: 'gray',
 		},
 		/**
-		 * Especifica o tamanho da badge. São 3 tamanhos implementados: 'sm', 'md', 'lg'.
+		 * Specifies the size of the badge. There are 3 sizes implemented: 'sm', 'md', 'lg'.
 		 */
 		size: {
 			type: String,
 			default: 'md',
 		},
 		/**
-		 * Especifica o tamanho da badge. São 3 tamanhos implementados: 'sm', 'md', 'lg'.
+		 * Specifies the size of the badge. There are 3 sizes implemented: 'sm', 'md', 'lg'.
 		 */
 		clickable: {
 			type: Boolean,

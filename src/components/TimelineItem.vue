@@ -2,7 +2,7 @@
 <template>
 	<div class="cds-timeline-item">
 		<div class="cds-timeline-item__opposite">
-			<!-- @slot Slot utilizado para renderização de conteúdo no lado esquerdo do TimelineItem.-->
+			<!-- @slot Slot used for rendering content on the left side of the TimelineItem.-->
 			<slot name="opposite" />
 		</div>
 
@@ -31,12 +31,12 @@
 				v-if="hasSlot($slots, 'title')"
 				class="cds-timeline-item__title"
 			>
-				<!-- @slot Slot utilizado para renderização do título do TimelineItem.-->
+				<!-- @slot Slot used to render the TimelineItem title.-->
 				<slot name="title" />
 			</div>
 
 			<span class="cds-timeline-item__text">
-				<!-- @slot Slot utilizado para renderização do conteúdo do TimelineItem. Os elementos adicionados nesse slot ficam dispostos abaixo do título. -->
+				<!-- @slot Slot used to render TimelineItem content. The elements added in this slot are arranged below the title. -->
 				<slot name="content" />
 			</span>
 		</div>
@@ -54,22 +54,22 @@ export default {
 
 	props: {
 		/**
-		* A variante do TimelineItem. São 10 variantes: 'teal', 'green', 'blue',
-		* 'violet', 'pink', 'red', 'orange', 'amber', 'gray' e 'dark'.
+		* The TimelineItem variant. There are 10 variants: 'teal', 'green', 'blue',
+		* 'violet', 'pink', 'red', 'orange', 'amber', 'gray' and 'dark'.
 		*/
 		variant: {
 			type: String,
 			default: 'green',
 		},
 		/**
-		* Altera o estado do pin. Quando true torna o pin em um `Cds-spinner`.
+		* Changes the pin state. When true turns the pin into a `Cds-spinner`.
 		*/
 		loading: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		* Altera o estado do pin. Quando true deixa o pin sem preenchimento, apenas com borda.
+		* Changes the pin state. When true, it leaves the pin without filling, just with a border.
 		*/
 		hollowed: {
 			type: Boolean,

@@ -23,7 +23,7 @@
 			>
 				<div class="table__header-item-content">
 					<!--
-						@slot Slot usado para renderizar itens personalizados para o cabeçalho da tabela. Dados do item referente à coluna podem ser acessados através da propriedade `data`. Os dados do escopo do slot podem ser acessados no formato a seguir: slot-scope={ data }
+						@slot Slot used to render custom items for the table header. Item data relating to the column can be accessed through the `data` property. Slot scope data can be accessed in the following format: slot-scope={ data }
 					-->
 					<slot
 						v-if="hasSlot($slots, 'header-item')"
@@ -87,7 +87,7 @@
 				:class="resolveContentItemClass(itemIndex, fieldIndex)"
 			>
 				<!--
-					@slot Slot usado para renderizar itens personalizados para o conteúdo da tabela. Dados do item referente à linha podem ser acessados através da propriedade `data`, enquanto a key referente à coluna pode ser acessada através da propriedade `field`. Os dados do escopo do slot podem ser acessados no formato a seguir: slot-scope={ `data`, `field`, `rowIndex` e `colIndex` }
+					@slot Slot used to render custom items for table content. Item data for the row can be accessed through the `data` property, while the key for the column can be accessed through the `field` property. Slot scope data can be accessed in the following format: slot-scope={ `data`, `field`, `rowIndex` and `colIndex` }
 				-->
 				<slot
 					name="table-item"
@@ -124,19 +124,19 @@ export default {
 
 	props: {
 		/**
-		 * Guarda os itens selecionados da tabela.
+		 * Saves the selected items from the table.
 		 */
 		modelValue: {
 			type: Array,
 			default: () => ([]),
 		},
 		/**
-		 * Array contendo os itens a serem exibidos na tabela. Os itens devem estar no seguinte formato:
+		 * Array containing the items to be displayed in the table. Items must be in the following format:
 		 *
 		 *
 		 * ``{ 'exampleKey1': 'exampleValue1', 'exampleKey2': 'exampleValue2' }``
 		 *
-		 * Com a 'key' sendo a mesma do campo da tabela onde o valor deve ser exibido
+		 * With the 'key' being the same as the table field where the value should be displayed
 		 */
 		items: {
 			type: Array,
@@ -144,59 +144,59 @@ export default {
 			default: () => ([]),
 		},
 		/**
-		 * Array contendo os campos a serem exibidos no cabeçalho da tabela. Os campos devem estar no seguinte formato:
+		 * Array containing the fields to be displayed in the table header. Fields must be in the following format:
 		 *
 		 * ``{ key: 'exampleKey1', label: 'exampleLabel1' }``
 		 *
-		 * Ou em formato de string simples (``'fieldkey'``). Neste caso, o valor exibido no cabeçalho da tabela será a string convertida para [Start Case](https://en.wikipedia.org/wiki/Letter_case#Stylistic_or_specialised_usage).
+		 * Or in simple string format (``'fieldkey'``). In this case, the value displayed in the table header will be the string converted to [Start Case](https://en.wikipedia.org/wiki/Letter_case#Stylistic_or_specialized_usage).
 		 *
-		 * Caso essa propriedade não seja enviada, o cabeçalho da tabela será montado de acordo com as `keys` do primeiro objeto do array enviado através da prop `items`.
+		 * If this property is not sent, the table header will be assembled according to the `keys` of the first object in the array sent through the `items` prop.
 		 */
 		fields: {
 			type: Array,
 			default: () => ([]),
 		},
 		/**
-		 * Boolean, informa se o estilo será alterado no hover da linha.
+		 * Boolean, informs whether the style will be changed on line hover.
 		 */
 		hover: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Boolean, informa se devem ser exibidas checkboxes para selecionar linhas.
+		 * Boolean, informs whether checkboxes should be displayed to select lines.
 		 */
 		allowSelection: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * A variante das checkboxes de seleção. São 10 variantes: 'teal', 'green', 'blue',
-		 * 'indigo', 'violet', 'pink', 'red', 'orange', 'amber' e 'dark'.
+		 * The checkboxes variant. There are 10 variants: 'teal', 'green', 'blue',
+		 * 'indigo', 'violet', 'pink', 'red', 'orange', 'amber' and 'dark'.
 		 */
 		selectionVariant: {
 			type: String,
 			default: 'green',
 		},
 		/**
-		 * Boolean, informa se a UI de ordenação deve ser exibida nos itens
-		 * do header
+		 * Boolean, informs whether the sorting UI should be displayed on items
+		 * from header
 		 */
 		sortable: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Específica a propriedade (chave da coluna) usada para ordenação.
-		 * Por padrão os itens são exibidos na sequência definida pelo array `items`
+		 * Specifies the property (column key) used for sorting.
+		 * By default, items are displayed in the sequence defined by the `items` array
 		 */
 		sortBy: {
 			type: String,
 			default: null,
 		},
 		/**
-		 * Boolean, informa que a ordenação deve ser descendente, por padrão
-		 * a ordenação é ascendente (`sortDesc: false`).
+		 * Boolean, informs that the ordering must be descending, by default
+		 * sorting is ascending (`sortDesc: false`).
 		 */
 		sortDesc: {
 			type: Boolean,
@@ -281,7 +281,7 @@ export default {
 				const selectedItems = this.localItems.filter((item, index) => newValue[index]);
 
 				/**
-				* Evento que indica que o valor do Select foi alterado
+				* Event that indicates that the Select value has changed
 				* @event update:modelValue
 				* @type {Event}
 				*/

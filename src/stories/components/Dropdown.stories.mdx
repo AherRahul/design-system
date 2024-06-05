@@ -2,7 +2,7 @@ import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
 import Dropdown from '../../components/Dropdown.vue';
 
 <Meta
-	title="Componentes/Display/Dropdown"
+	title="Components/Display/Dropdown"
 	component={ Dropdown }
 	parameters={{
 		viewMode: 'docs',
@@ -31,26 +31,26 @@ export const Template = (args) => ({
 		<cds-dropdown
 			v-bind="$props"
 		>
-			<p>Slot do dropdown do Dropdown</p>
+			<p>Dropdown Slot</p>
 		</cds-dropdown>`,
 });
 
 
 # Dropdown
 
-### Dropdown são componentes utilizados para ativar popovers contendo filtros para listas e views.
+### Dropdown are components used to activate popovers containing filters for lists and views.
 ---
 <br />
 
-## Quando usar:
-- Para utilizar com filtros.
-- Houver popovers contendo opções de filtragem.
+## When to use:
+- For use with filters.
+- There are popovers containing filtering options.
 
 
 <br />
 
-## Quando não usar:
-- Em substituição à um Multiselect ou Select.
+## When not to use:
+- Replacing a Multiselect or Select.
 
 <br />
 
@@ -60,8 +60,8 @@ export const Template = (args) => ({
 	<Story
 		name="Dropdown"
 		args={{
-			label: 'Idade',
-			content: '0 a 120 anos',
+			label: 'Age',
+			content: '0 to 120 years',
 		}}
 	>
 		{ Template.bind({}) }

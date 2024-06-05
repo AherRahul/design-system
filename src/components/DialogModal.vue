@@ -22,7 +22,7 @@
 							width="40"
 							name="warning-outline"
 						/>
-						Atenção
+						Attention
 					</div>
 
 					<div
@@ -35,7 +35,7 @@
 							width="40"
 							name="alert-outline"
 						/>
-						Erro
+						Error
 					</div>
 
 					<div
@@ -48,7 +48,7 @@
 							width="40"
 							name="info-outline"
 						/>
-						Informativo
+						Informative
 					</div>
 				</div>
 
@@ -139,7 +139,7 @@ export default {
 	},
 	props: {
 		/**
-		 *  Define a variante do Dialog Modal.
+		 *  Defines the Dialog Modal variant.
 		 */
 		variant: {
 			type: String,
@@ -147,14 +147,14 @@ export default {
 			validator: (value) => predefinedVariants.includes(value),
 		},
 		/**
-		 *  Define a descrição do Dialog Modal.
+		 *  Defines the description of the Modal Dialog.
 		 */
 		description: {
 			type: String,
 			required: true,
 		},
 		/**
-		 *  Controla a exibição do Dialog Modal.
+		 *  Controls the display of the Modal Dialog.
 		 */
 		modelValue: {
 			type: Boolean,
@@ -162,28 +162,28 @@ export default {
 			required: true,
 		},
 		/**
-		 * Define o título do Dialog Modal exibido no header
+		 * Defines the title of the Modal Dialog displayed in the header
 		 */
 		title: {
 			type: String,
 			required: true,
 		},
 		/**
-		 *  Define texto do botão de ação do Dialog Modal
+		 *  Sets text for the Modal Dialog action button
 		 */
 		okButtonText: {
 			type: String,
-			default: 'Continuar',
+			default: 'Continue',
 		},
 		/**
-		 *  Define texto do botão de cancelar do Dialog Modal
+		 *  Defines text for the Modal Dialog cancel button
 		 */
 		cancelButtonText: {
 			type: String,
-			default: 'Cancelar',
+			default: 'Cancel',
 		},
 		/**
-		 * Define a variante do botão de ação do Dialog Modal (segue as variantes do componente de botão do RDS)
+		 * Sets the Dialog Modal action button variant (follows RDS button component variants)
 		 */
 		actionButtonVariant: {
 			type: String,
@@ -213,7 +213,7 @@ export default {
 
 		closeHandle() {
 			/**
-			 * Evento que indica se o modal foi escondido.
+			 * Event that indicates whether the modal was hidden.
 			 * @event close
 			 * @type {Event}
 			*/
@@ -224,7 +224,7 @@ export default {
 
 		okHandle() {
 			/**
-			 * Evento que indica se o botão de ação do modal foi clicado.
+			 * Event that indicates whether the modal action button was clicked.
 			* @event ok
 			* @type {Event}
 			*/

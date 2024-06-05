@@ -41,7 +41,7 @@ import variantClassResolver from '../utils/methods/variantClassResolver';
 export default {
 	props: {
 		/**
-		* A prop usada como v-model para monitorar a seleção do Checkbox
+		* The prop used as a v-model to monitor Checkbox selection
 		*/
 		modelValue: {
 			type: Boolean,
@@ -49,36 +49,36 @@ export default {
 			required: true,
 		},
 		/**
-		* Exibe a etiqueta do checkbox
+		* Displays the checkbox label
 		*/
 		label: {
 			type: String,
 			default: 'checkbox content',
 		},
 		/**
-		* A variante da Checkbox. São 10 variantes: 'teal', 'green', 'blue',
-		* 'indigo', 'violet', 'pink', 'red', 'orange', 'amber' e 'dark'.
+		* The Checkbox variant. There are 10 variants: 'teal', 'green', 'blue',
+		* 'indigo', 'violet', 'pink', 'red', 'orange', 'amber' and 'dark'.
 		*/
 		variant: {
 			type: String,
 			default: 'green',
 		},
 		/**
-		* Prop usada para indicar visualmente se o checkbox está no estado indeterminado. Two-way binding ativo com o `v-model:indeterminate`
+		* Prop used to visually indicate whether the checkbox is in the indeterminate state. Two-way binding active with `v-model:indeterminate`
 		*/
 		indeterminate: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		* Destaca visualmente a label
+		* Visually highlights the label
 		*/
 		prominent: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		* Controla o status checkbox
+		* Controls the status box
 		*/
 		disabled: {
 			type: Boolean,
@@ -136,14 +136,14 @@ export default {
 			this.isChecked = this.isIndeterminate ? false : !this.isChecked;
 			this.isIndeterminate = false;
 			/**
-			* Evento utilizado para implementar o v-model.
+			* Event used to implement the v-model.
 			* @event update:modelValue
 			* @type {Event}
 			*/
 			this.$emit('update:modelValue', this.isChecked);
 
 			/**
-			* Evento utilizado para implementar o modelValue com a prop "Indeterminate".
+			* Event used to implement the modelValue with the "Indeterminate" prop.
 			* @event update:indeterminate
 			* @type {Event}
 			*/

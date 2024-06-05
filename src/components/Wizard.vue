@@ -79,9 +79,9 @@ export default {
 
 	props: {
 		/**
-		 * Um array com objetos com as propriedades 'title' (obrigatório), 'subtitle' e 'image'.
-		 * O 'title' e 'subtitle' são textos que descrevem a etapa, a 'imagem' é o caminho para
-		 * a imagem do empty-state;
+		 * An array with objects with the properties 'title' (required), 'subtitle' and 'image'.
+		 * The 'title' and 'subtitle' are texts that describe the step, the 'image' is the path to
+		 * the empty-state image;
 		 */
 		steps: {
 			type: Array,
@@ -90,7 +90,7 @@ export default {
 			validator: (value) => value.length >= 2 && value.length <= 3,
 		},
 		/**
-		 * O índice da etapa atual (0, 1 ou 2)
+		 * The index of the current step (0, 1, or 2)
 		 */
 		activeStep: {
 			type: Number,
@@ -98,36 +98,36 @@ export default {
 			validator: (value) => (value >= 0 && value <= 2),
 		},
 		/**
-		* Ativa ou desativa o clique no passo (etapa) para ir para esta etapa
+		* Enables or disables clicking on the step (step) to go to this step
 		*/
 		clickable: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * O texto do botão de avançar (ação principal).
+		 * The text of the next button (main action).
 		 */
 		nextButtonText: {
 			type: String,
-			default: 'Próximo',
+			default: 'Next',
 		},
 		/**
-		 * O texto do botão de voltar (ação secundária).
+		 * The text of the back button (secondary action).
 		 */
 		cancelButtonText: {
 			type: String,
-			default: 'Anterior',
+			default: 'Previous',
 		},
 		/**
-		 * A variante do botão de ação principal. São 10 variantes: 'teal', 'green', 'blue',
-		 * 'indigo', 'violet', 'pink', 'red', 'orange', 'amber' e 'dark'.
+		 * The main action button variant. There are 10 variants: 'teal', 'green', 'blue',
+		 * 'indigo', 'violet', 'pink', 'red', 'orange', 'amber' and 'dark'.
 		 */
 		nextButtonVariant: {
 			type: String,
 			default: 'green',
 		},
 		/**
-		 * Controla a disponibilidade do botão de ação principal.
+		 * Controls the availability of the main action button.
 		 */
 		disableNextButton: {
 			type: Boolean,
@@ -164,7 +164,7 @@ export default {
 		currentStep(newValue, oldValue) {
 			if (newValue !== oldValue) {
 				/**
-				 * Evento emitido quando a etapa ativa é alterada
+				 * Event emitted when the active step changes
 				* @event step-change
 				* @type {Event}
 				*/
@@ -175,8 +175,8 @@ export default {
 
 	methods: {
 		emptyStateText(title) {
-			return `Preencha todos os campos obrigatórios da etapa anterior para
-				liberar a seção de ${title.toLowerCase()}`;
+			return `Fill in all the mandatory fields from the previous step to
+				release the section ${title.toLowerCase()}`;
 		},
 
 		handleStepBoxClick(index) {
@@ -188,8 +188,8 @@ export default {
 				this.currentStep--;
 			} else {
 				/**
-				* Evento que indica que a ação de cancelar foi acionada.
-				* Emitido ao clicar no botão de voltar na primeira etapa.
+				* Event that indicates that the cancel action was triggered.
+				*Emitted when clicking the back button in the first step.
 				* @event cancel-action
 				* @type {Event}
 				*/
@@ -203,7 +203,7 @@ export default {
 				nextStep++;
 			}
 			/**
-			* Evento que indica que ação de avançar foi acionada
+			* Event that indicates that the next action was triggered
 			* @event next-action
 			* @type {Event}
 			*/

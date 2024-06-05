@@ -25,15 +25,15 @@
 export default {
 	props: {
 		/**
-		 * A variante de cor. São 9 variantes implementadas: 'green', 'teal', 'turquoise',
-		 * 'blue', 'indigo', 'violet', 'pink', 'red', 'orange' e 'amber'.
+		 * The color variant. There are 9 variants implemented: 'green', 'teal', 
+		 * 'turquoise', 'blue', 'indigo', 'violet', 'pink', 'red', 'orange' and 'amber'.
 		 */
 		variant: {
 			type: String,
 			default: 'green',
 		},
 		/**
-		 * Define o indicador de progresso da ProgressBar.
+		 * Sets the ProgressBar's progress indicator.
 		 */
 		value: {
 			type: Number,
@@ -41,7 +41,7 @@ export default {
 			required: true,
 		},
 		/**
-		 * Define se a porcentagem vai ser mostrada.
+		 * Defines whether the percentage will be shown.
 		 */
 		showText: {
 			type: Boolean,
@@ -49,7 +49,7 @@ export default {
 			required: false,
 		},
 		/**
-		 * Quando true, dispõe o texto à direita.
+		 * When true, wraps the text to the right.
 		 */
 		textAside: {
 			type: Boolean,

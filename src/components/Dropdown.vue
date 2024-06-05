@@ -27,7 +27,7 @@
 			:style="dynamicStyle"
 			class="filter-pill__dropdown"
 		>
-			<!-- @slot Slot usado para inserção de conteúdo dentro do dropdown do FilterPill. -->
+			<!-- @slot Slot used to insert content into the FilterPill dropdown. -->
 			<slot />
 		</div>
 	</div>
@@ -49,15 +49,15 @@ export default {
 
 	props: {
 		/**
-		 * Conteúdo do Dropdown.
+		 * 	Dropdown Content.
 		 */
 		content: {
 			type: String,
-			default: 'Conteúdo',
+			default: 'Content',
 			required: true,
 		},
 		/**
-		 * Label exibida ao lado do conteúdo
+		 * Label displayed next to content
 		 */
 		label: {
 			type: String,
@@ -65,15 +65,15 @@ export default {
 			required: true,
 		},
 		/**
-		 * Controla a disponibilidade do Dropdown
+		 * Control Dropdown availability
 		 */
 		disabled: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Controla o tamanho do popover do Dropdown (em pixels).
-		 * O tamanho nunca é menor que a largura do Dropdown.
+		 * Controls the size of the Dropdown popover (in pixels). 
+		 * The size is never smaller than the width of the Dropdown.
 		 */
 		dropdownWidth: {
 			type: Number,
@@ -123,7 +123,7 @@ export default {
 			this.isActive = !this.isActive;
 
 			/**
-			* Evento que indica que o FilterPill foi clicado
+			* Event indicating that the FilterPill was clicked
 			* @event click
 			* @type {Event}
 			*/

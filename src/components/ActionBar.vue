@@ -10,7 +10,7 @@
 				'toolbar--dark': !light,
 			}"
 		>
-			<!-- @slot Slot utilizado para renderização de texto no componente.-->
+			<!-- @slot Slot used for rendering text in the component.-->
 			<slot
 				name="description"
 			/>
@@ -19,7 +19,7 @@
 				v-if="hasActionSlot"
 				class="toolbar__buttons-container"
 			>
-				<!-- @slot Slot para renderização de botões na ActionBar.-->
+				<!-- @slot Slot for rendering buttons on the ActionBar.-->
 				<slot
 					name="actions"
 				/>
@@ -35,7 +35,7 @@
 					class="toolbar__button"
 				>
 					<!--
-						Evento emitido quando os botões são clicados.
+						Event emitted when buttons are clicked.
 						@event click
 						@type {Event}
 					-->
@@ -77,7 +77,7 @@ export default {
 
 	props: {
 		/**
-		 *  Controla a exibição do modal.
+		 *  Controls the display of the modal.
 		 */
 		show: {
 			type: Boolean,
@@ -85,29 +85,29 @@ export default {
 			required: false,
 		},
 		/**
-		* Faz com que a ActionBar flutue acima do conteúdo da view,
-		* sendo colocada na parte inferior da página
+		* Makes the ActionBar float above the view content, 
+		* placing it at the bottom of the page
 		*/
 		float: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Prop que exibe botão de fechamento da ActionBar.
+		 * Prop that displays the ActionBar's close button.
 		 */
 		dismissible: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Especifica se a versão da ActionBar é a light.
+		 * Specifies whether the ActionBar version is light.
 		 */
 		light: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 * Indica os botões a serem exibidos na ActionBar.
+		 * Indicates the buttons to be displayed on the ActionBar.
 		 */
 		actions: {
 			type: Array,
@@ -142,7 +142,7 @@ export default {
 			this.internalShow = false;
 
 			/**
-			* Evento emitido quando o botão "X" é clicado.
+			* Event emitted when the "X" button is clicked.
 			* @event close
 			* @type {Event}
 			*/
