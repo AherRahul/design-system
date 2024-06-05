@@ -1,5 +1,5 @@
 [build]
   publish = "storybook-static"
-  command = "npm run build-storybook"
+  command = "NODE_OPTIONS=--max-old-space-size=4096 npm run build-storybook"
 [build.environment]
   NODE_VERSION = "20"
