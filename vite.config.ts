@@ -23,9 +23,9 @@ export default defineConfig({
 		target: ['es2020', 'safari14', 'chrome87', 'edge88', 'firefox78'],
 		lib: {
 			entry: path.resolve(__dirname, './src/components/index.ts'),
-			name: '@sysvale/cuida',
+			name: '@aherrahul/design-system',
 			// the proper extensions will be added
-			fileName: (format) => `@sysvale/cuida.${format}.js`,
+			fileName: (format) => `@aherrahul/design-system.${format}.js`,
 		},
 		rollupOptions: {
 			// make sure to externalize deps that shouldn't be bundled

@@ -1,6 +1,6 @@
 {
 	"name": "@aherrahul/design-system",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "A design system built by rahul aher, using storybook and Vue components",
 	"repository": {
 		"type": "git",
@@ -79,5 +79,5 @@
 	},
 	"readme": "ERROR: No README data found!",
 	"homepage": "https://github.com/aherrahul/design-system#readme",
-	"_id": "@aherrahul/design-system@1.0.0-alpha.1"
+	"_id": "@aherrahul/design-system@1.0.1-alpha.1"
 }
