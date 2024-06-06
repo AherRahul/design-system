@@ -238,7 +238,7 @@ export default {
 		 */
 		linkUrl: {
 			type: String,
-			default: 'https://cuida.framer.wiki/',
+			default: 'https://rahulaher.netlify.app/',
 		},
 	},
 

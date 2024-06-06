@@ -218,7 +218,7 @@ export default {
 		 */
 		linkUrl: {
 			type: String,
-			default: 'https://cuida.framer.wiki/',
+			default: 'https://rds-design-system.netlify.app/',
 		},
 		/**
 		 * Defines the use of lazy for debouncer.
