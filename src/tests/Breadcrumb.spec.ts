@@ -5,21 +5,21 @@ import { mount } from '@vue/test-utils';
 
 const items = [
 	{
-		label: 'Relatórios',
+		label: 'Reports',
 		route: {
 			path: '/reports',
 			name: 'reports'
 		},
 	},
 	{
-		label: 'Relatórios individualizados',
+		label: 'Individualized reports',
 		route: {
 			path: '/individualized-reports',
 			name: 'individualized'
 		},
 	},
 	{
-		label: 'Relatório de usuários',
+		label: 'User Report',
 		route: {
 			path: '/users-reports',
 			name: 'users'

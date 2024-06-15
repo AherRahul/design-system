@@ -7,8 +7,8 @@ describe('DialogModal', () => {
 		const wrapper = mount(DialogModal, {
 			props: {
 				modelValue: true,
-				title: 'Olá, mundo!',
-				description: 'Esta ação afetará o sistema e os arquivos associados.',
+				title: 'Hello world!',
+				description: 'This action will affect the system and associated files.',
 			},
 		});
 

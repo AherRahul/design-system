@@ -10,7 +10,7 @@ describe('Radio', () => {
 			props: {
 				modelValue: null,
 				value: 'option-1',
-				label: 'Opção 1',
+				label: 'Option 1',
 			},
 		});
 

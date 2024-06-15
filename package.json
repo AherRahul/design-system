@@ -1,6 +1,6 @@
 {
 	"name": "@aherrahul/design-system",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "A design system built by rahul aher, using storybook and Vue components",
 	"repository": {
 		"type": "git",
@@ -79,5 +79,5 @@
 	},
 	"readme": "ERROR: No README data found!",
 	"homepage": "https://rds-design-system.netlify.app/",
-	"_id": "@aherrahul/design-system@1.0.1-alpha.1"
+	"_id": "@aherrahul/design-system@1.0.2-alpha.1"
 }

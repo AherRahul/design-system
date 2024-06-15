@@ -7,7 +7,7 @@ describe('CollapsibleContainer', () => {
 		const wrapper = mount(CollapsibleContainer, {
 			props: {
 				value: true,
-				title: 'Seu universo expandido',
+				title: 'Your expanded universe',
 			},
 		});
   

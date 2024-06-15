@@ -1,5 +1,10 @@
 <template>
-	<tooltip :value="value" :show="showTooltip" :target='target' @hide="showTooltip = false">
+	<tooltip
+		:value="value"
+		:show="showTooltip"
+		:target="target"
+		@hide="showTooltip = false"
+	>
 		<span> ✅ Token Copied!</span>
 	</tooltip>
 </template>

@@ -4,29 +4,29 @@ import { shallowMount } from '@vue/test-utils';
 
 const mockedData = [
 	{
-		name: 'Ecocardiograma',
+		name: 'Echocardiogram',
 		datasets: [
 			{
-				label: 'Realizado',
-				data: [50, 50, 50, 50, 50],
+				label: 'Accomplished',
+				date: [50, 50, 50, 50, 50],
 			},
 		]
 	},
 	{
-		name: 'Raio-X',
+		name: 'X-Ray',
 		datasets: [
 			{
-				label: 'Realizado',
-				data: [120, 220, 180, 320, 150],
+				label: 'Accomplished',
+				date: [120, 220, 180, 320, 150],
 			},
 		]
 	},
 	{
-		name: 'Tomografia',
+		name: 'Tomography',
 		datasets: [
 			{
-				label: 'Realizado',
-				data: [55, 40, 33, 90, 120],
+				label: 'Accomplished',
+				date: [55, 40, 33, 90, 120],
 			},
 		]
 	}
@@ -36,7 +36,7 @@ describe('LineChart', () => {
 	test('renders correctly', async () => {
 		const wrapper = shallowMount(LineChart, {
 			props: {
-				labels: ['Janeiro','Fevereiro','Março', 'Abril', 'Maio'],
+				labels: ['January','February','March', 'April', 'May'],
 				variant: 'green',
 				showLabelName: true,
 				data: mockedData,

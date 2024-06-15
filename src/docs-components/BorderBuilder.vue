@@ -1,6 +1,9 @@
 <template>
 	<div>
-		<copy-token :target="target" :value="target" />
+		<copy-token
+			:target="target"
+			:value="target"
+		/>
 
 		<cds-table
 			:items="items"
@@ -10,9 +13,9 @@
 			<template #table-item="{ data, field, rowIndex }">
 				<div
 					v-if="field === 'token'"
-					@click="target = data.token"
 					:id="data.token"
 					class="copy-clip"
+					@click="target = data.token"
 				>
 					<cds-icon
 						height="20"
@@ -30,7 +33,6 @@
 					<div :class="borderRadiusClass(rowIndex)" />
 				</div>
 			</template>
-
 		</cds-table>
 	</div>
 </template>
@@ -77,12 +79,6 @@ export default {
 		};
 	},
 
-	methods: {
-		borderRadiusClass(index) {
-			return this.borderVariables[index].replace('$border-radius-', '');
-		},
-	},
-
 	computed: {
 		items() {
 			const factors = [1, 1.5, 2, 3, 4, 5, 6];
@@ -95,6 +91,12 @@ export default {
 			}
 
 			return items;
+		},
+	},
+
+	methods: {
+		borderRadiusClass(index) {
+			return this.borderVariables[index].replace('$border-radius-', '');
 		},
 	}
 };

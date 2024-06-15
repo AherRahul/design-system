@@ -16,9 +16,9 @@ const mockedData = [
 		icon: 'link-outline',
 		items: [
 			{
-				label: 'Painel (Tv)',
+				label: 'Panel (Tv)',
 				path: '/tv-link',
-				name: 'painel-tv'
+				name: 'panel-tv'
 			},
 			{
 				label: 'Totem',
@@ -28,11 +28,11 @@ const mockedData = [
 		]
 	},
 	{
-		label: 'Relatórios',
+		label: 'Reports',
 		icon: 'printer-outline',
 		route: {
 			path: '/reports',
-			name: 'pagina2'
+			name: 'page2'
 		},
 	},
 ];
@@ -49,7 +49,7 @@ describe('SideBar', () => {
 				items: mockedData,
 				activeItem: mockedData[4],
 				userName: 'Joana Mendes',
-				userRole: 'Administradora',
+				userRole: 'Administrator',
 			},
 		});
 

@@ -12,7 +12,7 @@ describe('Spacer snapshot test', () => {
 			},
 			slots: {
 				default:
-					'Conteúdo do SideSheet',
+					'SideSheet Content',
 			},
 		});
 

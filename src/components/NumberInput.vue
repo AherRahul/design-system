@@ -185,7 +185,7 @@ export default {
 		 */
 		errorMessage: {
 			type: String,
-			default: 'Value inválido',
+			default: 'Invalid value',
 		},
 		/**
 		 * Specifies whether the width of the TextInput should be fluid.

@@ -7,10 +7,10 @@ describe('CalloutCard', () => {
 		const wrapper = mount(CalloutCard, {
 			props: {
 				image: 'https://cdn-icons-png.flaticon.com/512/7486/7486747.png',
-				title: 'Título do CalloutCard',
+				title: 'CalloutCard title',
 			},
 			slots: {
-				text: 'Texto do CalloutCar',
+				text: 'CalloutCar Text',
 			}
 		});
 

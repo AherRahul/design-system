@@ -4,29 +4,29 @@ import { shallowMount } from '@vue/test-utils';
 
 const mockedData = [
 	{
-		name: 'Ecocardiograma',
+		name: 'Echocardiogram',
 		datasets: [
 			{
-				label: 'Realizado',
-				data: [50, 50, 50, 50, 50],
+				label: 'Accomplished',
+				date: [50, 50, 50, 50, 50],
 			},
 		]
 	},
 	{
-		name: 'Raio-X',
+		name: 'X-Ray',
 		datasets: [
 			{
-				label: 'Não realizado',
-				data: [49, 84, 120, 78, 130],
+				label: 'Not done',
+				date: [49, 84, 120, 78, 130],
 			}
 		]
 	},
 	{
-		name: 'Tomografia',
+		name: 'Tomography',
 		datasets: [
 			{
-				label: 'Não realizado',
-				data: [38, 84, 120, 90, 45],
+				label: 'Not done',
+				date: [38, 84, 120, 90, 45],
 			}
 		]
 	}
@@ -36,7 +36,7 @@ describe('StackedBarChart', () => {
 	test('renders correctly', async () => {
 		const wrapper = shallowMount(StackedBarChart, {
 			props: {
-				labels: ['Janeiro','Fevereiro','Março', 'Abril', 'Maio'],
+				labels: ['January','February','March', 'April', 'May'],
 				variant: 'green',
 				data: mockedData,
 				barWidth: 1,

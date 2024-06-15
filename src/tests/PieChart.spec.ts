@@ -4,11 +4,11 @@ import { shallowMount } from '@vue/test-utils';
 
 const mockedData =[
 	{
-		name: 'Ecocardiograma',
+		name: 'Echocardiogram',
 		datasets: [
 			{
-				label: 'Exames realizados',
-				data: [120, 220, 180, 320, 150],
+				label: 'Exams performed',
+				date: [120, 220, 180, 320, 150],
 			},
 		]
 	},
@@ -20,7 +20,7 @@ describe('PieChart', () => {
 	test('renders correctly', async () => {
 		const wrapper = shallowMount(PieChart, {
 			props: {
-				labels: ['Janeiro','Fevereiro','Março', 'Abril', 'Maio'],
+				labels: ['January','February','March', 'April', 'May'],
 				variant: 'green',
 				data: mockedData,
 			},

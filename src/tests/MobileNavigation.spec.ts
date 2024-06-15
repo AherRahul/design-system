@@ -4,7 +4,7 @@ import { mount } from '@vue/test-utils';
 
 const mockedData = [
 	{
-		label: 'Início',
+		label: 'Start',
 		icon: 'home-outline',
 		route: {
 			path: '/home',
@@ -12,7 +12,7 @@ const mockedData = [
 		},
 	},
 	{
-		label: 'Vigilância Sanitária',
+		label: 'Health Surveillance',
 		icon: 'shield-outline',
 		route: {
 			path: '/visa',
@@ -20,7 +20,7 @@ const mockedData = [
 		}
 	},
 	{
-		label: 'Central de marcação',
+		label: 'Booking Center',
 		icon: 'calendar-outline',
 		route: {
 			path: '/regulation',
@@ -43,7 +43,7 @@ describe('MobileNavigation', () => {
 				activeItem: mockedData[1],
 				user: {
 					name: 'Joana Mendes',
-					role: 'Administradora',
+					role: 'Administrator',
 				}
 			},
 		});

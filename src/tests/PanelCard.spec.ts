@@ -6,8 +6,8 @@ describe('PanelCard', () => {
 	test('renders correctly', async () => {
 		const wrapper = mount(PanelCard, {
 			props: {
-				title: 'Redes',
-				subtitle: 'Habilite as redes da regulação',
+				title: 'Networks',
+				subtitle: 'Enable regulatory networks',
 			},
 		});
 

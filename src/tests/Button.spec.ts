@@ -11,7 +11,7 @@ describe('Button', () => {
 				text: 'Button',
 			},
 			slots: {
-				default: 'Botão'
+				default: 'Button'
 			}
 		});
 

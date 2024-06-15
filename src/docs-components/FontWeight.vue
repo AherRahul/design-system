@@ -1,6 +1,9 @@
 <template>
 	<div>
-		<copy-token :target="target" :value="target" />
+		<copy-token
+			:target="target"
+			:value="target"
+		/>
 
 		<cds-table
 			:items="items"
@@ -10,9 +13,9 @@
 			<template #table-item="{ data, field, rowIndex }">
 				<div
 					v-if="field === 'token'"
-					@click="target = data.token"
 					:id="data.token"
 					class="copy-clip"
+					@click="target = data.token"
 				>
 					<cds-icon
 						height="20"
@@ -85,12 +88,6 @@ export default {
 		};
 	},
 
-	methods: {
-		shadowClass(index) {
-			return this.fontWeightVariables[index].replace('$font-weight-', '');
-		},
-	},
-
 	computed: {
 		items() {
 			let items = [];
@@ -102,6 +99,12 @@ export default {
 			}
 
 			return items;
+		},
+	},
+
+	methods: {
+		shadowClass(index) {
+			return this.fontWeightVariables[index].replace('$font-weight-', '');
 		},
 	},
 };

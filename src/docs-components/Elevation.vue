@@ -1,6 +1,9 @@
 <template>
 	<div>
-		<copy-token :target="target" :value="target" />
+		<copy-token
+			:target="target"
+			:value="target"
+		/>
 
 		<cds-table
 			:items="items"
@@ -10,9 +13,9 @@
 			<template #table-item="{ data, field, rowIndex }">
 				<div
 					v-if="field === 'token'"
-					@click="target = data.token"
 					:id="data.token"
 					class="copy-clip"
+					@click="target = data.token"
 				>
 					<cds-icon
 						height="20"
@@ -31,15 +34,15 @@
 				</div>
 
 				<div
-					class="elevation__example"
 					v-if="field === 'example'"
+					class="elevation__example"
 				>
 					<div
 						class="toast"
 						:class="rowIndex === 6 ? 'active' : ''"
 					/>
 					<span
-					 	class="toast-text"
+						class="toast-text"
 					>
 						- toast
 					</span>
@@ -48,7 +51,7 @@
 						:class="rowIndex === 5 ? 'active' : ''"
 					/>
 					<span
-					 	class="tooltip-text"
+						class="tooltip-text"
 					>
 						- tooltip
 					</span>
@@ -57,7 +60,7 @@
 						:class="rowIndex === 4 ? 'active' : ''"
 					/>
 					<span
-					 	class="modal-text"
+						class="modal-text"
 					>
 						- modal
 					</span>
@@ -66,7 +69,7 @@
 						:class="rowIndex === 3 ? 'active' : ''"
 					/>
 					<span
-					 	class="toolbar-text"
+						class="toolbar-text"
 					>
 						- toolbar
 					</span>
@@ -75,7 +78,7 @@
 						:class="rowIndex === 2 ? 'active' : ''"
 					/>
 					<span
-					 	class="backdrop-text"
+						class="backdrop-text"
 					>
 						- backdrop
 					</span>
@@ -84,7 +87,7 @@
 						:class="rowIndex === 1 ? 'active' : ''"
 					/>
 					<span
-					 	class="base-text"
+						class="base-text"
 					>
 						- base
 					</span>
@@ -93,7 +96,7 @@
 						:class="rowIndex === 0 ? 'active' : ''"
 					/>
 					<span
-					 	class="sunk-text"
+						class="sunk-text"
 					>
 						- sunk
 					</span>
@@ -153,12 +156,6 @@ export default {
 		};
 	},
 
-	methods: {
-		elevationClass(index) {
-			return this.elevationVariables[index].replace('$z-index-', '');
-		},
-	},
-
 	computed: {
 		items() {
 			let items = [];
@@ -170,6 +167,12 @@ export default {
 			}
 
 			return items;
+		},
+	},
+
+	methods: {
+		elevationClass(index) {
+			return this.elevationVariables[index].replace('$z-index-', '');
 		},
 	}
 };

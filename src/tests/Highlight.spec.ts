@@ -9,7 +9,7 @@ describe('Highlight', () => {
 				variant: 'success',
 			},
 			slots: {
-				default: 'Texto',
+				default: 'Text',
 			}
 		});
 

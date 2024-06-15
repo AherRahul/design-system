@@ -4,52 +4,52 @@ import { shallowMount } from '@vue/test-utils';
 
 const mockedData = [
 	{
-		name: 'Ecocardiograma',
+		name: 'Echocardiogram',
 		datasets: [
 			{
-				label: 'Realizado',
+				label: 'Accomplished',
 				data: [50, 50, 50, 50, 50],
 			},
 			{
-				label: 'Pendente',
+				label: 'Pending',
 				data: [200, 180, 250, 190, 280],
 			},
 			{
-				label: 'Não realizado',
+				label: 'Unrealized',
 				data: [38, 84, 120, 90, 185],
 			}
 		]
 	},
 	{
-		name: 'Raio-X',
+		name: 'X-ray',
 		datasets: [
 			{
-				label: 'Realizado',
+				label: 'Accomplished',
 				data: [120, 220, 180, 320, 150],
 			},
 			{
-				label: 'Pendente',
+				label: 'Pending',
 				data: [98, 145, 160, 190, 175],
 			},
 			{
-				label: 'Não realizado',
+				label: 'Unrealized',
 				data: [49, 84, 120, 78, 130],
 			}
 		]
 	},
 	{
-		name: 'Tomografia',
+		name: 'Tomography',
 		datasets: [
 			{
-				label: 'Realizado',
+				label: 'Accomplished',
 				data: [55, 40, 33, 90, 120],
 			},
 			{
-				label: 'Pendente',
+				label: 'Pending',
 				data: [25, 30, 90, 45, 20],
 			},
 			{
-				label: 'Não realizado',
+				label: 'Unrealized',
 				data: [38, 84, 120, 90, 45],
 			}
 		]
@@ -60,7 +60,7 @@ describe('BarChart', () => {
 	test('renders correctly', async () => {
 		const wrapper = shallowMount(BarChart, {
 			props: {
-				labels: ['Janeiro','Fevereiro','Março', 'Abril', 'Maio'],
+				labels: ['January', 'February', 'March', 'April', 'May'],
 				variant: 'green',
 				data: mockedData,
 				barWidth: 1,

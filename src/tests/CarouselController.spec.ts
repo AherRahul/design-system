@@ -8,7 +8,7 @@ describe('Button', () => {
 			props: {
 				total: 12,
 				perPage: 4,
-				propertyName: 'Métricas',
+				propertyName: 'Metrics',
 			},
 		});
 

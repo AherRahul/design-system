@@ -173,7 +173,7 @@ export default {
 		 */
 		errorMessage: {
 			type: String,
-			default: 'Value inválido',
+			default: 'Invalid value',
 		},
 		/**
 		 * Controls Select availability.
