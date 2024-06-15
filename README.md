@@ -56,33 +56,6 @@ etc.
 - [Using Vue Design System as NPM dependency on Vue.js project/starter-pack](https://github.com/aherrahul/RDS-design-system-example) 
 
 
-## Installing
-
-- RDS can be installed with npm:
-
-```bash
-npm i @aherrahul/design-system;
-```
-
-## Using
-
-- To use RDS, import the library into your entry point, it will probably be your main.js or app.js:
-
-```js
-import RDS from "@aherrahul/design-system";
-```
-
-- Import RDS styles:
-```js
-import '@aherrahul/design-system/dist/style.css';
-```
-
-- And install RDS:
-
-```js
-Vue.use(RDS);
-```
-
 ## Installation
 
 Add this package to your project:
