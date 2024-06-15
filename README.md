@@ -1,28 +1,29 @@
 <p align="center">
-  <a href="https://rahulaher.netlify.app">
-    <img src="https://rahulaher.netlify.app/img/logo/glyph-black-colored.svg" alt="Take care soon" width="250" />
-  </a>
+ <a href="https://rahulaher.netlify.app">
+  <img src="https://rahulaher.netlify.app/img/logo/glyph-black-colored.svg" alt="Take care soon" width="250" />
+ </a>
 </p>
 
 <p align="center">
-    <a href="https://github.com/aherrahul/design-system/blob/main/LICENSE"><img src="https://img.shields.io/github/license/aherrahul/design-system" alt="License"></a>
-    <a href="https://github.com/aherrahul/design-system"><img src="https://img.shields.io/jsdelivr/npm/hy/@aherrahul/design-system" alt="Downloads"></a>
-    <a href="https://bundlephobia.com/package/@aherrahul/design-system" target="_blank"><img src="https://img.shields.io/bundlephobia/minzip/@aherrahul/design-system" alt="minzipped size"></a>
-    <a href="https://www.npmjs.com/package/@aherrahul/design-system"><img src="https://img.shields.io/npm/v/@aherrahul/design-system" alt="Version"></a>
-    <a href="https://github.com/aherrahul/design-system/pulls"><img src="https://img.shields.io/github/issues-pr/aherrahul/design-system" alt="Pull Request"></a>
-    <a href="https://github.com/aherrahul/design-system/issues"><img src="https://img.shields.io/github/issues/aherrahul/design-system" alt="Issues"></a>
+  <a href="https://github.com/aherrahul/design-system/blob/main/LICENSE"><img src="https://img.shields.io/github/license/aherrahul/design-system" alt="License"></a>
+  <a href="https://github.com/aherrahul/design-system"><img src="https://img.shields.io/jsdelivr/npm/hy/@aherrahul/design-system" alt="Downloads"></a>
+  <a href="https://bundlephobia.com/package/@aherrahul/design-system" target="_blank"><img src="https://img.shields.io/bundlephobia/minzip/@aherrahul/design-system" alt="minzipped size"></a>
+  <a href="https://www.npmjs.com/package/@aherrahul/design-system"><img src="https://img.shields.io/npm/v/@aherrahul/design-system" alt="Version"></a>
+  <a href="https://github.com/aherrahul/design-system/pulls"><img src="https://img.shields.io/github/issues-pr/aherrahul/design-system" alt="Pull Request"></a>
+  <a href="https://github.com/aherrahul/design-system/issues"><img src="https://img.shields.io/github/issues/aherrahul/design-system" alt="Issues"></a>
 </p>
 
 <div align="center">
-  <p align="center">A design system built by @aherrahul, using storybook and Vue components</p>
-  <p>**RDS Design System** is an open source tool for building UI Design Systems with [Vue.js](https://vuejs.org). It provides you and your team a set of organized tools, patterns & practices that work as the foundation for your application development.
+ <p align="center">A design system built by @aherrahul, using storybook and Vue components</p>
+ <p align="center">
+  <strong>RDS Design System</strong> is an open source tool for building UI Design Systems with [Vue.js](https://vuejs.org){:target="_blank"} . It provides you and your team a set of organized tools, patterns & practices that work as the foundation for your application development.
 
-The tool is built on top of [Vue.js](https://vuejs.org), [Vue storybook](https://storybook.js.org/docs/get-started), [Webpack](https://webpack.js.org), and is aimed for designers and front-end developers who have at least basic knowledge of component based workflows + HTML, SCSS & JavaScript.
+ The tool is built on top of [Vue.js](https://vuejs.org){:target="_blank"} , [Vue storybook](https://storybook.js.org/docs/get-started){:target="_blank"} , [Webpack](https://webpack.js.org){:target="_blank"} , and is aimed for designers and front-end developers who have at least basic knowledge of component based workflows + HTML, SCSS & JavaScript.
 
-**Made by [@aherrahul](https://github.com/AherRahul) and other contributors. See also [the official website](https://rds-design-system.netlify.app) of Vue Design System and [read my article](https://rahulaher.netlify.app/articles/rds-design-system/) on the processes and workflow I use to get started with a new design system project.**
-</p>
-  <p align="center">https://rahulaher.netlify.app/</p>
-  <p align="center">https://rds-design-system.netlify.app/</p>
+ **Made by [@aherrahul](https://github.com/AherRahul){:target="_blank"} and other contributors. See also [the official website](https://rds-design-system.netlify.app){:target="_blank"} of RDS Design System and [read my article](https://rahulaher.netlify.app/articles/rds-design-system/){:target="_blank"} on the How to use RDS design system**
+ </p>
+ <p align="center">https://rahulaher.netlify.app/</p>
+ <p align="center">https://rds-design-system.netlify.app/</p>
 </div>
 
 ## Features
@@ -36,24 +37,25 @@ The tool is built on top of [Vue.js](https://vuejs.org), [Vue storybook](https:/
 - Pre-configured Prettier setup for auto-formatting code on both save and before commit.
 - Live Reloading, Autoprefixing, SCSS, and helper functions + simple and sane defaults for SVG and Webfont usage out-of-the-box.
 - Documentation and the app logic are separated, so you can have public docs while the app itself stays private.
-- [And more…](https://rds-design-system.netlify.app)
+- [And more…](https://rds-design-system.netlify.app){:target="_blank"} 
  
 ## Documentation
 
-- **[Getting Started](https://rds-design-system.netlify.app/?path=/docs/foundation-principles--page): How to install and run Vue Design System.**
-- [Cores](https://rds-design-system.netlify.app/?path=/docs/foundation-cores--color-palete): Colors are important for identifying our product, in addition to helping to create consistent experiences across our solutions.
-- [Typography](https://rds-design-system.netlify.app/?path=/docs/foundation-typography--tokens): RDS's default typography is Satoshi. We use the Satoshi variable with OpenType resources.
-- [Font Weight]https://rds-design-system.netlify.app/?path=/docs/foundation-font-weight--font-weight): Font weight is a typographic token that can be used to change the default value of the typographic scale weight and add emphasis to certain text or phrase.
-- [Spacing](https://rds-design-system.netlify.app/?path=/docs/foundation-spacing--escala): Spacing tokens are an essential part of building interfaces using RDS. 
+- **[Getting Started](https://rds-design-system.netlify.app/?path=/docs/foundation-principles--page){:target="_blank"} : How to install and run Vue Design System.**
+- [Cores](https://rds-design-system.netlify.app/?path=/docs/foundation-cores--color-palete){:target="_blank"} : Colors are important for identifying our product, in addition to helping to create consistent experiences across our solutions.
+- [Typography](https://rds-design-system.netlify.app/?path=/docs/foundation-typography--tokens){:target="_blank"} : RDS's default typography is Satoshi. We use the Satoshi variable with OpenType resources.
+- [Font Weight](https://rds-design-system.netlify.app/?path=/docs/foundation-font-weight--font-weight){:target="_blank"} : Font weight is a typographic token that can be used to change the default value of the typographic scale weight and add emphasis to certain text or phrase.
+- [Spacing](https://rds-design-system.netlify.app/?path=/docs/foundation-spacing--escala){:target="_blank"} : Spacing tokens are an essential part of building interfaces using RDS. 
+
 etc.
 
 
 ## Examples
 
-- **[Official example](https://vueds.com/example)**
-- [Using Vue Design System as NPM dependency on Vue.js project](https://github.com/aherrahul/vue-design-system-example)
-- [Using Vue Design System as NPM Dependency on Nuxt.js project](https://github.com/aherrahul/nuxt-design-system)
-- [Using Vue Design System as NPM Dependency on a static website](https://github.com/aherrahul/vue-design-system-example-website)
+- **[Official example](https://vueds.com/example){:target="_blank"}**
+- [Using Vue Design System as NPM dependency on Vue.js project](https://github.com/aherrahul/vue-design-system-example){:target="_blank"} 
+- [Using Vue Design System as NPM Dependency on Nuxt.js project](https://github.com/aherrahul/nuxt-design-system){:target="_blank"} 
+- [Using Vue Design System as NPM Dependency on a static website](https://github.com/aherrahul/vue-design-system-example-website){:target="_blank"} 
 
 
 ## Installing
@@ -159,9 +161,9 @@ Example:
 import meta from "./cds-button.stories";
 
 export default {
-  ...meta,
-  title: "Interaction Tests/base/cds-button",
-  component: CdsButton,
+ ...meta,
+ title: "Interaction Tests/base/cds-button",
+ component: CdsButton,
 };
 ```
 
@@ -199,19 +201,19 @@ For reduced flakiness all animations are automatically disabled from Playwright.
 
 ## Roadmap
 
-- See [Roadmap tag](https://github.com/aherrahul/design-system/issues?q=is%3Aissue+is%3Aopen+label%3Aroadmap) in the issues.
+- See [Roadmap tag](https://github.com/aherrahul/design-system/issues?q=is%3Aissue+is%3Aopen+label%3Aroadmap){:target="_blank"} in the issues.
 
 ## Changelog
 
 - `1.0.3` is the latest release.
-- See [Releases page](https://github.com/aherrahul/design-system/releases) for the full changelog.
+- See [Releases page](https://github.com/aherrahul/design-system/releases){:target="_blank"} for the full changelog.
 
 ## Need more help?
 
-About to get started with a new design system? I’m an independent designer and developer, specialized in helping companies to build [design systems](https://rds-design-system.netlify.app/). You can also contact me via [Link](https://rahulaher.netlify.app/contact/) and schedule a meeting with me. [Let’s talk!](https://twitter.com/rahulvijayaher)
+About to get started with a new design system? I’m an independent designer and developer, specialized in helping companies to build [design systems](https://rds-design-system.netlify.app/){:target="_blank"} . You can also contact me via [Link](https://rahulaher.netlify.app/contact/){:target="_blank"} and schedule a meeting with me. [Let’s talk!](https://twitter.com/rahulvijayaher){:target="_blank"} 
 
 ## Authors and License
 
-[Rahul Aher](https://rahulaher.netlify.app/).
+[Rahul Aher](https://rahulaher.netlify.app/){:target="_blank"} .
 
-Licensed under the [MIT license](https://github.com/aherrahul/design-system/blob/master/LICENSE).
+Licensed under the [MIT license](https://github.com/aherrahul/design-system/blob/master/LICENSE){:target="_blank"} .
