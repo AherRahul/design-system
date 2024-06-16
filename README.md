@@ -14,11 +14,14 @@
 </p>
 
 <div align="center">
- <p align="center">A design system built by @aherrahul, using storybook and Vue components</p>
+<p align="center">
+A design system built by [Rahul Aher](https://rahulaher.netlify.app) using storybook and Vue components
+</p>
  <p align="center">
-  <strong>RDS Design System</strong> is an open source tool for building UI Design Systems with [Vue.js](https://vuejs.org) . It provides you and your team a set of organized tools, patterns & practices that work as the foundation for your application development.
+	 
+**RDS Design System** is an open source tool for building UI Design Systems with [Vue.js](https://vuejs.org), It provides you and your team a set of organized tools, patterns & practices that work as the foundation for your application development.
 
- The tool is built on top of [Vue.js](https://vuejs.org), [Vue storybook](https://storybook.js.org/docs/get-started), [Webpack](https://webpack.js.org), and is aimed for designers and front-end developers who have at least basic knowledge of component based workflows + HTML, SCSS & JavaScript.
+The tool is built on top of [Vue.js](https://vuejs.org), [Vue storybook](https://storybook.js.org/docs/get-started), [Webpack](https://webpack.js.org), and is aimed for designers and front-end developers who have at least basic knowledge of component based workflows + HTML, SCSS & JavaScript.
 
  **Made by [@aherrahul](https://github.com/AherRahul) and other contributors. See also [the official website](https://rds-design-system.netlify.app) of RDS Design System and [read my article](https://rahulaher.netlify.app/articles/rds-design-system/) on the How to use RDS design system**
  </p>
