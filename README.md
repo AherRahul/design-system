@@ -15,7 +15,9 @@
 
 <div align="center">
 <p align="center">
+
 A design system built by [Rahul Aher](https://rahulaher.netlify.app) using storybook and Vue components
+
 </p>
  <p align="center">
 	 
@@ -23,10 +25,8 @@ A design system built by [Rahul Aher](https://rahulaher.netlify.app) using story
 
 The tool is built on top of [Vue.js](https://vuejs.org), [Vue storybook](https://storybook.js.org/docs/get-started), [Webpack](https://webpack.js.org), and is aimed for designers and front-end developers who have at least basic knowledge of component based workflows + HTML, SCSS & JavaScript.
 
- **Made by [@aherrahul](https://github.com/AherRahul) and other contributors. See also [the official website](https://rds-design-system.netlify.app) of RDS Design System and [read my article](https://rahulaher.netlify.app/articles/rds-design-system/) on the How to use RDS design system**
+ **Made by [@aherrahul](https://github.com/AherRahul) and other contributors. See also [the official website](https://rds-design-system.netlify.app) of RDS Design System and [read my article](https://github.com/AherRahul/RDS-design-system-example) on the How to use RDS design system**
  </p>
- <p align="center">https://rahulaher.netlify.app/</p>
- <p align="center">https://rds-design-system.netlify.app/</p>
 </div>
 
 ## Features
@@ -55,8 +55,9 @@ etc.
 
 ## Examples
 
-- [Official example](https://rds-design-system.netlify.app)
+- [Official Documentation](https://rds-design-system.netlify.app)
 - [Using Vue Design System as NPM dependency on Vue.js project/starter-pack](https://github.com/aherrahul/RDS-design-system-example) 
+- [How to use?](https://github.com/AherRahul/RDS-design-system-example)
 
 
 ## Installation
@@ -179,7 +180,7 @@ For reduced flakiness all animations are automatically disabled from Playwright.
 
 ## Changelog
 
-- `1.0.5` is the latest release.
+- `1.0.6` is the latest release.
 - See [Releases page](https://github.com/aherrahul/design-system/releases) for the full changelog.
 
 ## Need more help?
