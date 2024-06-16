@@ -25,7 +25,7 @@ A design system built by [Rahul Aher](https://rahulaher.netlify.app) using story
 
 The tool is built on top of [Vue.js](https://vuejs.org), [Vue storybook](https://storybook.js.org/docs/get-started), [Webpack](https://webpack.js.org), and is aimed for designers and front-end developers who have at least basic knowledge of component based workflows + HTML, SCSS & JavaScript.
 
- **Made by [@aherrahul](https://github.com/AherRahul) and other contributors. See also [the official website](https://rds-design-system.netlify.app) of RDS Design System and [read my article](https://github.com/AherRahul/RDS-design-system-example) on the How to use RDS design system**
+ **Made by [@aherrahul](https://github.com/AherRahul) and other contributors. See also [the official website](https://rds-design-system.netlify.app) of RDS Design System and [read my article](https://rahulaher.netlify.app/projects/rds-design-system/) on the How to use RDS design system**
  </p>
 </div>
 
@@ -56,8 +56,8 @@ etc.
 ## Examples
 
 - [Official Documentation](https://rds-design-system.netlify.app)
-- [Using Vue Design System as NPM dependency on Vue.js project/starter-pack](https://github.com/aherrahul/RDS-design-system-example) 
-- [How to use?](https://github.com/AherRahul/RDS-design-system-example)
+- [Using RDS Design System as NPM dependency on VueJS project/starter-pack](https://github.com/aherrahul/RDS-design-system-example) 
+- [How to use?](https://rahulaher.netlify.app/projects/rds-design-system/)
 
 
 ## Installation
