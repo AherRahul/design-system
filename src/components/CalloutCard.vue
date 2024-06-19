@@ -29,7 +29,7 @@
 							@event action-button-click
 							@type {Event}
 						-->
-						<cds-button
+						<rds-button
 							id="content-button"
 							:variant="actionButtonVariant"
 							:text="actionButtonText"
@@ -45,11 +45,11 @@
 </template>
 
 <script>
-import CdsButton from './Button.vue';
+import RdsButton from './Button.vue';
 
 export default {
 	components: {
-		CdsButton,
+		RdsButton,
 	},
 
 	props: {

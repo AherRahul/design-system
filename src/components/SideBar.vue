@@ -25,12 +25,12 @@
 					class="side-bar__collapsible"
 					@click="handleCollapse"
 				>
-					<cds-icon
+					<rds-icon
 						v-if="!collapsed"
 						name="sidebar-collapse-outline"
 					/>
 
-					<cds-icon
+					<rds-icon
 						v-else
 						name="sidebar-expand-outline"
 					/>
@@ -56,7 +56,7 @@
 							:class="isActive(item) ? 'side-bar__item--active' : 'side-bar__item--inactive'"
 						>
 							<div>
-								<cds-icon
+								<rds-icon
 									:name="item.icon"
 									width="20"
 									height="20"
@@ -64,7 +64,7 @@
 								<span>{{ item.label }}</span>
 							</div>
 
-							<cds-icon
+							<rds-icon
 								v-if="!!item.items && item.items.length > 0"
 								name="caret-down-outline"
 								:class="{'item__caret': isActive(item)}"
@@ -81,7 +81,7 @@
 							@click="(event) => handleClick(event, item)"
 						>
 							<div>
-								<cds-icon
+								<rds-icon
 									:name="item.icon"
 									width="20"
 									height="20"
@@ -89,7 +89,7 @@
 								<span>{{ item.label }}</span>
 							</div>
 
-							<cds-icon
+							<rds-icon
 								v-if="!!item.items && item.items.length > 0"
 								name="caret-down-outline"
 								:class="{'item__caret': isActive(item)}"
@@ -123,7 +123,7 @@
 									>
 										{{ subitem.label }}
 
-										<cds-icon
+										<rds-icon
 											height="16"
 											width="16"
 											name="open-in-new-tab-outline"
@@ -151,7 +151,7 @@
 			<div
 				class="side-bar__avatar"
 			>
-				<cds-avatar
+				<rds-avatar
 					:src="userPicture"
 					:name="userName"
 					variant="white"
@@ -177,7 +177,7 @@
 					class="side-bar__logout-button"
 					@click="$emit('logout', true)"
 				>
-					<cds-icon
+					<rds-icon
 						name="logout-outline"
 						width="20"
 						height="20"
@@ -191,15 +191,15 @@
 <script>
 import isEqual from 'lodash.isequal';
 import isEmpty from 'lodash.isempty';
-import CdsIcon from './Icon.vue';
-import CdsAvatar from './Avatar.vue';
+import RdsIcon from './Icon.vue';
+import RdsAvatar from './Avatar.vue';
 
 import { colorOptions, colorHexCode } from '../utils/constants/colors';
 
 export default {
 	components: {
-		CdsIcon,
-		CdsAvatar,
+		RdsIcon,
+		RdsAvatar,
 	},
 
 	props: {

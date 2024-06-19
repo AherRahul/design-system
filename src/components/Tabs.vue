@@ -27,7 +27,7 @@
 			<li
 				v-if="showAddAction"
 				role="presentation"
-				class="nav-item cds-tab__action"
+				class="nav-item rds-tab__action"
 			>
 				<a
 					role="tab"
@@ -37,7 +37,7 @@
 					@click.prevent="handleAddAction"
 				>
 
-					<cds-icon
+					<rds-icon
 						height="32"
 						width="32"
 						name="plus-outline"
@@ -69,13 +69,13 @@
 <script>
 import isEmpty from 'lodash.isempty';
 import isEqual from 'lodash.isequal';
-import CdsIcon from '../components/Icon.vue';
+import RdsIcon from '../components/Icon.vue';
 
 import { colorOptions, colorHexCode } from '../utils/constants/colors';
 
 export default {
 	components: {
-		CdsIcon,
+		RdsIcon,
 	},
 
 	props: {
@@ -278,7 +278,7 @@ export default {
 		}
 	}
 
-	.cds-tab__action {
+	.rds-tab__action {
 		display: flex;
 		align-items: center;
 		height: 68px;

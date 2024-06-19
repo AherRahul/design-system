@@ -45,6 +45,7 @@ import Modal from './Modal.vue';
 import Multiselect from './Multiselect.vue';
 import NavBar from './NavBar.vue';
 import NumberInput from './NumberInput.vue';
+import OverlayLoader from './OverlayLoader.vue';
 import PageContainer from './PageContainer.vue';
 import PageLayout from './PageLayout.vue';
 import PageHeader from './PageHeader.vue';
@@ -83,97 +84,98 @@ import Truncate from './Truncate.vue';
 import PasswordInput from './PasswordInput.vue';
 import Wizard from './Wizard.vue';
 
-import Cdstip from '../utils/directives/cdstip';
-import CdsFloatify from "../utils/directives/cdsFloatify";
+import Rdstip from '../utils/directives/cdstip';
+import RdsFloatify from "../utils/directives/cdsFloatify";
 
 export default {
 	install: (app: any, options: any) => {
-		app.directive('cdstip', Cdstip);
-		app.directive("cds-floatify", CdsFloatify);
+		app.directive('cdstip', Rdstip);
+		app.directive("rds-floatify", RdsFloatify);
 
-		app.component('CdsActionBar', ActionBar); //NOTE: Testado no SB
-		app.component('CdsActionsList', ActionsList); //NOTE: Testado no SB
-		app.component('CdsAlert', Alert); //NOTE: Testado no SB
-		app.component('CdsAlertCard', AlertCard);
-		app.component('CdsAppBar', AppBar); //NOTE: Testado no SB
-		app.component('CdsAvatar', Avatar); //NOTE: Testado no SB
-		app.component('CdsAvatarGroup', AvatarGroup); //NOTE: Testado no SB
-		app.component('CdsBadge', Badge); //NOTE: Testado no SB
-		app.component('CdsBarChart', BarChart);
-		app.component('CdsBox', Box);
-		app.component('CdsBreadcrumb', Breadcrumb);
-		app.component('CdsButton', Button); //NOTE: Testado no SB
-		app.component('CdsCard', Card);
-		app.component('CdsCalloutCard', CalloutCard); //NOTE: Testado no SB
-		app.component('CdsCarouselController', CarouselController);
-		app.component('CdsCheckbox', Checkbox); //FIXME: Problema no SB de estilo
-		app.component('CdsChevron', Chevron); //NOTE: Testado no SB
-		app.component('CdsClickable', Clickable); //NOTE: Testado no SB
-		app.component('CdsCollapsibleContainer', CollapsibleContainer); //NOTE: Testado no SB. !Reativo!
-		app.component('CdsColorPicker', ColorPicker); //NOTE: Testado no SB.
-		app.component('CdsDashboardCard', DashboardCard);
-		app.component('CdsDateInput', DateInput); //NOTE: Testado no SB
-		app.component('CdsDialogModal', DialogModal); //NOTE: Testado no SB
-		app.component('CdsDivider', Divider); //NOTE: Testado no SB
-		app.component('CdsDropdown', Dropdown); //NOTE: Testado no SB
-		app.component('CdsDonutChart', DonutChart); //NOTE: Testado no SB
-		app.component('CdsEmptyState', EmptyState); //NOTE: Testado no SB
-		app.component('CdsFileInput', FileInput); //NOTE: Testado no SB
-		app.component('CdsFlatButton', FlatButton); //NOTE: Testado no SB
-		app.component('CdsFloatingAssistant', FloatingAssistant);
-		app.component('CdsGaugeChart', GaugeChart); //NOTE: Testado no SB
-		app.component('CdsHighlight', Highlight); //NOTE: Testado no SB
-		app.component('CdsIcon', Icon); //NOTE: Testado no SB
-		app.component('CdsIconButton', IconButton); //NOTE: Testado no SB
-		app.component('CdsImage', Image);
-		app.component('CdsInnerTabs', InnerTabs); //NOTE: Testado no SB
-		app.component('CdsLineChart', LineChart);
-		app.component('CdsLink', Link); //NOTE: Testado no SB
-		app.component('CdsLoadingBar', LoadingBar); //NOTE: Testado no SB
-		app.component('CdsMobileNavigation', MobileNavigation); //NOTE: Testado no SB
-		app.component('CdsModal', Modal); //NOTE: Testado no SB
-		app.component('CdsMultiselect', Multiselect); //FIXME: Problema no SB
-		app.component('CdsNavBar', NavBar); //NOTE: Testado no SB
-		app.component('CdsNumberInput', NumberInput); //NOTE: Testado no SB. !Reativo!
-		app.component('CdsPageContainer', PageContainer); //NOTE: Testado no SB
-		app.component('CdsPageLayout', PageLayout); //NOTE: Testado no SB
-		app.component('CdsPageHeader', PageHeader); //NOTE: Testado no SB
-		app.component('CdsPagination', Pagination); //NOTE: Testado no SB. !Reativo!
-		app.component('CdsPanelCard', PanelCard); //NOTE: Testado no SB
-		app.component('CdsPinInput', PinInput); //NOTE: Testado no SB. !Reativo!
-		app.component('CdsPopover', Popover);
-		app.component('CdsProgressBar', ProgressBar); //NOTE: Testado no SB
-		app.component('CdsProgressCircular', ProgressCircular); //NOTE: Testado no SB
-		app.component('CdsPulsar', Pulsar);
-		app.component('CdsRadio', Radio); //NOTE: Testado no SB
-		app.component('CdsRadioButtonGroup', RadioButtonGroup); //NOTE: Testado no SB
-		app.component('CdsSpacer', Spacer);
-		app.component('CdsScrollable', Scrollable); //FIXME: Problema no SB
-		app.component('CdsSearchInput', SearchInput);
-		app.component('CdsSegmentedControl', SegmentedControl);
-		app.component('CdsSelect', Select); //NOTE: Testado no SB. !Reativo!
-		app.component('CdsSideBar', SideBar);
-		app.component('CdsSideSheet', SideSheet);
-		app.component('CdsSkeleton', Skeleton);
-		app.component('CdsSkeletonText', SkeletonText); //NOTE: Testado no SB
-		// app.component('CdsSlider', Slider);
-		app.component('CdsSpinner', Spinner); //NOTE: Testado no SB
-		app.component('CdsStackedBarChart', StackedBarChart);
-		app.component('CdsStepper', Stepper);
-		app.component('CdsStepperInput', StepperInput); //NOTE: Testado no SB. !Reativo!
-		app.component('CdsSwitch', Switch); //NOTE: Testado no SB
-		app.component('CdsTable', Table); //NOTE: Testado no SB
-		app.component('CdsTabs', Tabs); //NOTE: Testado no SB
-		app.component('CdsTextArea', TextArea); //NOTE: Testado no SB. !Reativo!
-		app.component('CdsTextInput', TextInput); //NOTE: Testado no SB. !Reativo!
-		app.component('CdsTimeInput', TimeInput); //NOTE: Testado no SB. !Reativo!
-		app.component('CdsTooltip', Tooltip); //NOTE: Testado no SB
-		app.component('CdsTimeline', Timeline);
-		app.component('CdsTimelineItem', TimelineItem);
-		app.component('CdsTruncate', Truncate); //NOTE: Testado no SB
-		app.component('CdsPasswordInput', PasswordInput);
-		app.component('CdsPieChart', PieChart);
-		app.component('CdsPolarAreaChart', PolarAreaChart);
-		app.component('CdsWizard', Wizard);
+		app.component('RdsActionBar', ActionBar); //NOTE: Tested in SB
+		app.component('RdsActionsList', ActionsList); //NOTE: Tested in SB
+		app.component('RdsAlert', Alert); //NOTE: Tested in SB
+		app.component('RdsAlertCard', AlertCard);
+		app.component('RdsAppBar', AppBar); //NOTE: Tested in SB
+		app.component('RdsAvatar', Avatar); //NOTE: Tested in SB
+		app.component('RdsAvatarGroup', AvatarGroup); //NOTE: Tested in SB
+		app.component('RdsBadge', Badge); //NOTE: Tested in SB
+		app.component('RdsBarChart', BarChart);
+		app.component('RdsBox', Box);
+		app.component('RdsBreadcrumb', Breadcrumb);
+		app.component('RdsButton', Button); //NOTE: Tested in SB
+		app.component('RdsCard', Card);
+		app.component('RdsCalloutCard', CalloutCard); //NOTE: Tested in SB
+		app.component('RdsCarouselController', CarouselController);
+		app.component('RdsCheckbox', Checkbox); //FIXME: Style SB issue
+		app.component('RdsChevron', Chevron); //NOTE: Tested in SB
+		app.component('RdsClickable', Clickable); //NOTE: Tested in SB
+		app.component('RdsCollapsibleContainer', CollapsibleContainer); //NOTE: Tested in SB. !Reactive!
+		app.component('RdsColorPicker', ColorPicker); //NOTE: Tested in SB.
+		app.component('RdsDashboardCard', DashboardCard);
+		app.component('RdsDateInput', DateInput); //NOTE: Tested in SB
+		app.component('RdsDialogModal', DialogModal); //NOTE: Tested in SB
+		app.component('RdsDivider', Divider); //NOTE: Tested in SB
+		app.component('RdsDropdown', Dropdown); //NOTE: Tested in SB
+		app.component('RdsDonutChart', DonutChart); //NOTE: Tested in SB
+		app.component('RdsEmptyState', EmptyState); //NOTE: Tested in SB
+		app.component('RdsFileInput', FileInput); //NOTE: Tested in SB
+		app.component('RdsFlatButton', FlatButton); //NOTE: Tested in SB
+		app.component('RdsFloatingAssistant', FloatingAssistant);
+		app.component('RdsGaugeChart', GaugeChart); //NOTE: Tested in SB
+		app.component('RdsHighlight', Highlight); //NOTE: Tested in SB
+		app.component('RdsIcon', Icon); //NOTE: Tested in SB
+		app.component('RdsIconButton', IconButton); //NOTE: Tested in SB
+		app.component('RdsImage', Image);
+		app.component('RdsInnerTabs', InnerTabs); //NOTE: Tested in SB
+		app.component('RdsLineChart', LineChart);
+		app.component('RdsLink', Link); //NOTE: Tested in SB
+		app.component('RdsLoadingBar', LoadingBar); //NOTE: Tested in SB
+		app.component('RdsMobileNavigation', MobileNavigation); //NOTE: Tested in SB
+		app.component('RdsModal', Modal); //NOTE: Tested in SB
+		app.component('RdsMultiselect', Multiselect); //FIXME: Problema no SB
+		app.component('RdsNavBar', NavBar); //NOTE: Tested in SB
+		app.component('RdsNumberInput', NumberInput); //NOTE: Tested in SB. !Reactive!
+		app.component('RdsPageContainer', PageContainer); //NOTE: Tested in SB
+		app.component('RdsPageLayout', PageLayout); //NOTE: Tested in SB
+		app.component('RdsPageHeader', PageHeader); //NOTE: Tested in SB
+		app.component('RdsPagination', Pagination); //NOTE: Tested in SB. !Reactive!
+		app.component('RdsPanelCard', PanelCard); //NOTE: Tested in SB
+		app.component('RdsPinInput', PinInput); //NOTE: Tested in SB. !Reactive!
+		app.component('RdsPopover', Popover);
+		app.component('RdsProgressBar', ProgressBar); //NOTE: Tested in SB
+		app.component('RdsOverlayLoader', OverlayLoader); 
+		app.component('RdsProgressCircular', ProgressCircular); //NOTE: Tested in SB
+		app.component('RdsPulsar', Pulsar);
+		app.component('RdsRadio', Radio); //NOTE: Tested in SB
+		app.component('RdsRadioButtonGroup', RadioButtonGroup); //NOTE: Tested in SB
+		app.component('RdsSpacer', Spacer);
+		app.component('RdsScrollable', Scrollable); //FIXME: Problema no SB
+		app.component('RdsSearchInput', SearchInput);
+		app.component('RdsSegmentedControl', SegmentedControl);
+		app.component('RdsSelect', Select); //NOTE: Tested in SB. !Reactive!
+		app.component('RdsSideBar', SideBar);
+		app.component('RdsSideSheet', SideSheet);
+		app.component('RdsSkeleton', Skeleton);
+		app.component('RdsSkeletonText', SkeletonText); //NOTE: Tested in SB
+		// app.component('RdsSlider', Slider);
+		app.component('RdsSpinner', Spinner); //NOTE: Tested in SB
+		app.component('RdsStackedBarChart', StackedBarChart);
+		app.component('RdsStepper', Stepper);
+		app.component('RdsStepperInput', StepperInput); //NOTE: Tested in SB. !Reactive!
+		app.component('RdsSwitch', Switch); //NOTE: Tested in SB
+		app.component('RdsTable', Table); //NOTE: Tested in SB
+		app.component('RdsTabs', Tabs); //NOTE: Tested in SB
+		app.component('RdsTextArea', TextArea); //NOTE: Tested in SB. !Reactive!
+		app.component('RdsTextInput', TextInput); //NOTE: Tested in SB. !Reactive!
+		app.component('RdsTimeInput', TimeInput); //NOTE: Tested in SB. !Reactive!
+		app.component('RdsTooltip', Tooltip); //NOTE: Tested in SB
+		app.component('RdsTimeline', Timeline);
+		app.component('RdsTimelineItem', TimelineItem);
+		app.component('RdsTruncate', Truncate); //NOTE: Tested in SB
+		app.component('RdsPasswordInput', PasswordInput);
+		app.component('RdsPieChart', PieChart);
+		app.component('RdsPolarAreaChart', PolarAreaChart);
+		app.component('RdsWizard', Wizard);
 	},
 }

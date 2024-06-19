@@ -6,7 +6,7 @@
 				:key="`${index}-${item.name}-item`"
 				role="presentation"
 			>
-				<cds-clickable
+				<rds-clickable
 					v-if="index === 0"
 					clickable
 				>
@@ -14,33 +14,33 @@
 						:to="routerPushTo(item)"
 						class="breadcrumb__link"
 					>
-						<cds-icon
+						<rds-icon
 							v-if="items.length <= 2"
 							height="16"
 							width="16"
 							name="arrow-left-outline"
 						/>
 
-						<cds-icon
+						<rds-icon
 							v-else
 							height="15"
 							width="15"
 							name="home-outline"
 						/>
 
-						<cds-spacer margin-left="2">
+						<rds-spacer margin-left="2">
 							{{ item.label }}
-						</cds-spacer>
+						</rds-spacer>
 					</router-link>
-				</cds-clickable>
+				</rds-clickable>
 
-				<cds-spacer
+				<rds-spacer
 					v-else
 					class="breadcrumb__item"
 					margin-right="1"
 					margin-left="1"
 				>
-					<cds-icon
+					<rds-icon
 						height="16"
 						width="16"
 						name="caret-right-outline"
@@ -51,27 +51,27 @@
 						:to="routerPushTo(item)"
 						class="breadcrumb__link"
 					>
-						<cds-clickable clickable>
+						<rds-clickable clickable>
 							{{ item.label }}
-						</cds-clickable>
+						</rds-clickable>
 					</router-link>
-				</cds-spacer>
+				</rds-spacer>
 			</li>
 		</ul>
 	</nav>
 </template>
 
 <script>
-import CdsIcon from './Icon.vue';
-import CdsSpacer from './Spacer.vue';
-import CdsClickable from './Clickable.vue';
+import RdsIcon from './Icon.vue';
+import RdsSpacer from './Spacer.vue';
+import RdsClickable from './Clickable.vue';
 import isEmpty from 'lodash.isempty';
 
 export default {
 	components: {
-		CdsIcon,
-		CdsSpacer,
-		CdsClickable,
+		RdsIcon,
+		RdsSpacer,
+		RdsClickable,
 	},
 	props: {
 		/**

@@ -12,7 +12,7 @@ import Breadcrumb from '../../components/Breadcrumb.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<cds-breadcrumb
+`<rds-breadcrumb
 	:items="items"
 />`
 			},
@@ -21,12 +21,12 @@ import Breadcrumb from '../../components/Breadcrumb.vue';
 />
 
 export const Template = (args) => ({
-	components: { CdsBreadcrumb: Breadcrumb },
+	components: { RdsBreadcrumb: Breadcrumb },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
-		<cds-breadcrumb
+		<rds-breadcrumb
 			v-bind="args"
 		/>
 	`,

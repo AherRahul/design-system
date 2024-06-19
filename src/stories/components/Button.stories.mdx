@@ -42,7 +42,7 @@ import Button from '../../components/Button.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<cds-button
+`<rds-button
 	variant="green"
 	size="md"
 	text="Lorem Ipsum"
@@ -54,16 +54,16 @@ import Button from '../../components/Button.vue';
 />
 
 export const Template = (args) => ({
-	components: { CdsButton: Button },
+	components: { RdsButton: Button },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
-		<cds-button
+		<rds-button
 			v-bind="args"
             @button-click="logButtonClick"
 		>
-		</cds-button>`,
+		</rds-button>`,
     methods: {
 		logButtonClick(event) {
 			console.info('%con click: ', 'color: #2C70CD;', event);

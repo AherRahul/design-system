@@ -2,7 +2,7 @@
 	<span>
 		<div class="source-code__title">Icon list:</div>
 
-		<cds-search-input
+		<rds-search-input
 			v-model="typedIcon"
 			fluid
 			class="icon__search-input"
@@ -31,7 +31,7 @@
 							:id="icon"
 							class="icon__tile"
 						>
-							<cds-icon
+							<rds-icon
 								height="16"
 								width="16"
 								color="#36424E"
@@ -39,7 +39,7 @@
 								class="copy-icon"
 							/>
 
-							<cds-icon
+							<rds-icon
 								:key="`${index}-${typedIcon}`"
 								height="32"
 								width="32"
@@ -58,17 +58,17 @@
 <script>
 import { completeIconSet } from "@sysvale/cuida-icons/dist";
 import { iconsData } from '../utils/constants/iconsData.js';
-import CdsIcon from '../components/Icon.vue';
-import CdsActionBar from '../components/ActionBar.vue';
-import CdsSearchInput from '../components/SearchInput.vue';
+import RdsIcon from '../components/Icon.vue';
+import RdsActionBar from '../components/ActionBar.vue';
+import RdsSearchInput from '../components/SearchInput.vue';
 import CopyToken from '../docs-components/CopyToken.vue';
 
 export default {
 	components: {
-		CdsIcon,
-		CdsActionBar,
+		RdsIcon,
+		RdsActionBar,
 		CopyToken,
-		CdsSearchInput,
+		RdsSearchInput,
 	},
 
 	data() {
@@ -81,7 +81,7 @@ export default {
 			set: completeIconSet,
 			typedIcon: '',
 			exampleSourceCode: `
-<cds-icon
+<rds-icon
 	name="box-outline"
 	height="40"
 	width="40"
@@ -103,7 +103,7 @@ export default {
 		handleClipBoardContent(icon) {
 			this.target = icon;
 			this.value = `
-<cds-icon
+<rds-icon
 	height="32"
 	width="32"
 	name="${icon}"

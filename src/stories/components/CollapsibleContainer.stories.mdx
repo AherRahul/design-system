@@ -12,7 +12,7 @@ import CollapsibleContainer from '../../components/CollapsibleContainer.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ `
-<cds-collapsible-container
+<rds-collapsible-container
 	:value="false"
 	title="See more information"
 >
@@ -26,7 +26,7 @@ import CollapsibleContainer from '../../components/CollapsibleContainer.vue';
 		orci ornare consequat. Praesent lacinia ultrices consectetur.
 		Sed non ipsum felis. Cevadis im ampola pa arma uma pindureta.
 	</p>
-</cds-collapsible-container>
+</rds-collapsible-container>
 `
 			},
 		}
@@ -34,12 +34,12 @@ import CollapsibleContainer from '../../components/CollapsibleContainer.vue';
 />
 
 export const Template = (args) => ({
-	components: { CdsCollapsibleContainer: CollapsibleContainer },
+	components: { RdsCollapsibleContainer: CollapsibleContainer },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
-		<cds-collapsible-container
+		<rds-collapsible-container
 			v-bind="args" 
 		>
 			<p class="p-3">
@@ -52,7 +52,7 @@ export const Template = (args) => ({
 				orci ornare consequat. Praesent lacinia ultrices consectetur.
 				Sed non ipsum felis. Cevadis im ampola pa arma uma pindureta.
 			</p>
-		</cds-collapsible-container>
+		</rds-collapsible-container>
 	`,
 });
 

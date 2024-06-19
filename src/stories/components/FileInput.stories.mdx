@@ -25,19 +25,19 @@ import FileInput from '../../components/FileInput.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<cds-file-input />`
+`<rds-file-input />`
 			},
 		}
 	}}
 />
 
 export const Template = (args) => ({
-	components: { CdsFileInput: FileInput },
+	components: { RdsFileInput: FileInput },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
-		<cds-file-input
+		<rds-file-input
 			v-bind="args" 
 		/>
 	`,

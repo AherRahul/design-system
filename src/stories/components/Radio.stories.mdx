@@ -32,20 +32,20 @@ import Radio from '../../components/Radio.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<cds-radio
+`<rds-radio
 	v-model="selected"
 	value="option-1"
 	label="Option 1"
 >
 	Highlight option
-</cds-radio>`	
+</rds-radio>`	
 			},
 		}
 	}}
 />
 
 export const Template = (args) => ({
-	components: { CdsRadio: Radio },
+	components: { RdsRadio: Radio },
 	setup() {
 		return { args };
 	},
@@ -56,12 +56,12 @@ export const Template = (args) => ({
 	},
 	template: /*html*/ `
 		<div>
-			<cds-radio
+			<rds-radio
 				v-model="selected"
 				v-bind="args"
 			>
 				Radio label
-			</cds-radio>
+			</rds-radio>
 		</div>
 	`,
 });

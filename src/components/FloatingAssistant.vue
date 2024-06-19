@@ -4,14 +4,14 @@
 		class="floating-assistant"
 		:class="{ 'floating-assistant--hidden': !isActive }"
 	>
-		<cds-pulsar
+		<rds-pulsar
 			:id="pulsarId"
 			:target-id="targetId"
 			:variant="variant"
 		/>
 		<div
 			:id="containerId"
-			v-cds-floatify:[position]="pulsarId"
+			v-rds-floatify:[position]="pulsarId"
 			class="floating-assistant__container"
 		>
 			<div
@@ -69,7 +69,7 @@
 				</div>
 				<div v-if="isExpanded">
 					<div @click.stop="close">
-						<cds-icon
+						<rds-icon
 							class="floating-assistant__close-button"
 							name="x-outline"
 							height="20"
@@ -84,13 +84,13 @@
 
 <script>
 import vClickOutside from 'click-outside-vue3';
-import CdsPulsar from './Pulsar.vue';
-import CdsIcon from './Icon.vue';
+import RdsPulsar from './Pulsar.vue';
+import RdsIcon from './Icon.vue';
 
 export default {
 	components: {
-		CdsPulsar,
-		CdsIcon,
+		RdsPulsar,
+		RdsIcon,
 	},
 
 	directives: {

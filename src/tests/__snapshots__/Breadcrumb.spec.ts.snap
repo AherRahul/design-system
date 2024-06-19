@@ -6,7 +6,7 @@ exports[`Breadcrumb snapshot test > renders correctly 1`] = `
     <li data-v-1a0f46d9=\\"\\" role=\\"presentation\\">
       <!--
 		Evento emitido quando o wrapper é clicado
-		@event cds-click
+		@event rds-click
 		@type {Event}
 	-->
       <div data-v-1a0f46d9=\\"\\" class=\\"clickable__container--clickable\\">
@@ -24,7 +24,7 @@ exports[`Breadcrumb snapshot test > renders correctly 1`] = `
         <router-link data-v-1a0f46d9=\\"\\" to=\\"/individualized-reports\\" class=\\"breadcrumb__link\\">
           <!--
 		Evento emitido quando o wrapper é clicado
-		@event cds-click
+		@event rds-click
 		@type {Event}
 	-->
           <div data-v-1a0f46d9=\\"\\" class=\\"clickable__container--clickable\\">Relatórios individualizados</div>
@@ -38,7 +38,7 @@ exports[`Breadcrumb snapshot test > renders correctly 1`] = `
         <router-link data-v-1a0f46d9=\\"\\" to=\\"/users-reports\\" class=\\"breadcrumb__link\\">
           <!--
 		Evento emitido quando o wrapper é clicado
-		@event cds-click
+		@event rds-click
 		@type {Event}
 	-->
           <div data-v-1a0f46d9=\\"\\" class=\\"clickable__container--clickable\\">Relatório de usuários</div>

@@ -24,7 +24,7 @@ import Link from '../../components/Link.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<cds-link
+`<rds-link
 	href="https://github.com/aherrahul/design-system"
 	text="RDS"
 />`
@@ -34,12 +34,12 @@ import Link from '../../components/Link.vue';
 />
 
 export const Template = (args) => ({
-	components: { CdsLink: Link },
+	components: { RdsLink: Link },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
-		<cds-link
+		<rds-link
 			v-bind="args"
 		/>
 	`,

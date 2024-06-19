@@ -1,35 +1,35 @@
 <template>
 	<div class="avatar-group__container">
-		<cds-tooltip
+		<rds-tooltip
 			v-for="(avatarData, index) in listAvatars"
 			:key="index"
 			position="bottom"
 			:text="avatarData.name"
 			slim
 		>
-			<cds-avatar
+			<rds-avatar
 				v-bind="avatarData"
 				:size="size"
 				:clickable="false"
 			/>
-		</cds-tooltip>
+		</rds-tooltip>
 
-		<cds-clickable
+		<rds-clickable
 			v-if="showAvatarCounter"
 			id="avatar-counter"
 			clickable
 			@click="showPopover = true"
 		>
-			<cds-avatar
+			<rds-avatar
 				:size="size"
 				:clickable="false"
 				:name="avatarCounterText"
 				variant="gray"
 				class="avatar-group__counter"
 			/>
-		</cds-clickable>
+		</rds-clickable>
 
-		<cds-popover
+		<rds-popover
 			v-model="showPopover"
 			target-id="avatar-counter"
 			width="180"
@@ -41,33 +41,33 @@
 				:key="index"
 				class="avatar__data"
 			>
-				<cds-avatar
+				<rds-avatar
 					v-bind="avatarData"
 					size="sm"
 					:clickable="false"
 				/>
 
-				<cds-truncate width="180">
+				<rds-truncate width="180">
 					<span class="avatar__name">{{ avatarData.name }}</span>
-				</cds-truncate>
+				</rds-truncate>
 			</div>
-		</cds-popover>
+		</rds-popover>
 	</div>
 </template>
 <script>
-import CdsAvatar from './Avatar.vue';
-import CdsClickable from './Clickable.vue';
-import CdsPopover from './Popover.vue';
-import CdsTruncate from './Truncate.vue';
-import CdsTooltip from './Tooltip.vue';
+import RdsAvatar from './Avatar.vue';
+import RdsClickable from './Clickable.vue';
+import RdsPopover from './Popover.vue';
+import RdsTruncate from './Truncate.vue';
+import RdsTooltip from './Tooltip.vue';
 
 export default {
 	components: {
-		CdsAvatar,
-		CdsClickable,
-		CdsPopover,
-		CdsTruncate,
-		CdsTooltip,
+		RdsAvatar,
+		RdsClickable,
+		RdsPopover,
+		RdsTruncate,
+		RdsTooltip,
 	},
 
 	props: {

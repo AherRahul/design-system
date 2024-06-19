@@ -12,7 +12,7 @@ import PanelCard from '../../components/PanelCard.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<cds-panel-card
+`<rds-panel-card
 	title="Networks"
 	subtitle="Enable regulatory networks"
 >
@@ -24,20 +24,20 @@ import PanelCard from '../../components/PanelCard.vue';
 	I threw the stick at the cathouse, but you didn't die. There, then
 	divoltis porris, paradis. Capybara milk, mule milk
 	headless manquis.
-</cds-panel-card>`
+</rds-panel-card>`
 			},
 		}
 	}}
 />
 
 export const Template = (args) => ({
-	components: { CdsPanelCard: PanelCard },
+	components: { RdsPanelCard: PanelCard },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
 		<div style="background: linear-gradient(158.71deg, #FFFFFF -36.57%, #F1F5FB 156.92%); padding: 24px;">
-			<cds-panel-card
+			<rds-panel-card
 				v-bind="args"
 			>
 				<template #panel-actions>
@@ -51,7 +51,7 @@ export const Template = (args) => ({
 				torquent coast. For the increase in cachacis, I complained. Nec
 				orci ornare consequat. Praesent lacinia ultrices consectetur.
 				Sed non ipsum felis. Cevadis in ampoule to form a pindurette.
-			</cds-panel-card>
+			</rds-panel-card>
 		</div>
 	`,
 });

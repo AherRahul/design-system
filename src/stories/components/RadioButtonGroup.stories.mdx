@@ -12,7 +12,7 @@ import RadioButtonGroup from '../../components/RadioButtonGroup.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<cds-radio-button-group
+`<rds-radio-button-group
 	:options="options"
 	:value="value"
 />`
@@ -22,12 +22,12 @@ import RadioButtonGroup from '../../components/RadioButtonGroup.vue';
 />
 
 export const Template = (args) => ({
-	components: { CdsRadioButtonGroup: RadioButtonGroup },
+	components: { RdsRadioButtonGroup: RadioButtonGroup },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
-		<cds-radio-button-group
+		<rds-radio-button-group
 			v-bind="args" 
 		/>
 	`,

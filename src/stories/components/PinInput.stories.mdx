@@ -24,14 +24,14 @@ import PinInput from '../../components/PinInput.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<cds-pin-input />`
+`<rds-pin-input />`
 			},
 		}
 	}}
 />
 
 export const Template = (args) => ({
-	components: { CdsPinInput: PinInput },
+	components: { RdsPinInput: PinInput },
 	setup() {
 		return { args };
 	},
@@ -41,7 +41,7 @@ export const Template = (args) => ({
 		};
 	},
 	template: /*html*/ `
-		<cds-pin-input
+		<rds-pin-input
 			v-bind="args"
 			v-model="value"
 		/>

@@ -26,7 +26,7 @@ import Button from '../../components/Button.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<cds-side-sheet
+`<rds-side-sheet
 	v-model="show"
 	:position="right"
 	:no-close-on-backdrop="false"
@@ -42,14 +42,14 @@ import Button from '../../components/Button.vue';
 		orci ornare consequat. Praesent lacinia ultrices consectetur.
 		Sed non ipsum felis. Cevadis in ampoule to form a pindurette.
 	</p>
-</cds-side-sheet>`
+</rds-side-sheet>`
 			},
 		}
 	}}
 />
 
 export const Template = (args) => ({
-	components: { CdsSideSheet: SideSheet, CdsButton: Button },
+	components: { RdsSideSheet: SideSheet, RdsButton: Button },
 	setup() {
 		return { args };
 	},
@@ -61,12 +61,12 @@ export const Template = (args) => ({
 	props: Object.keys(args),
 	template: /*html*/ `
 		<div>
-			<cds-button
+			<rds-button
 				@click="show = true"
 			>
 				Click
-			</cds-button>
-			<cds-side-sheet
+			</rds-button>
+			<rds-side-sheet
 				v-model="show"
 				v-bind="$props"
 			>
@@ -80,7 +80,7 @@ export const Template = (args) => ({
 					orci ornare consequat. Praesent lacinia ultrices consectetur.
 					Sed non ipsum felis. Cevadis in ampoule to form a pindurette.
 				</p>
-			</cds-side-sheet>
+			</rds-side-sheet>
 		</div>
 	`,
 	updated() {

@@ -106,7 +106,7 @@
 						class="inner-container__token-text"
 						@click="target = `${spacer}${direction}(${size})`"
 					>
-						<cds-icon
+						<rds-icon
 							height="20"
 							width="20"
 							name="copy-outline"
@@ -122,12 +122,12 @@
 </template>
 
 <script>
-import CdsIcon from '../components/Icon.vue';
+import RdsIcon from '../components/Icon.vue';
 import CopyToken from '../docs-components/CopyToken.vue';
 
 export default {
 	components: {
-		CdsIcon,
+		RdsIcon,
 		CopyToken,
 	},
 

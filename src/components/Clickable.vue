@@ -2,7 +2,7 @@
 <template>
 	<!--
 		Event emitted when wrapper is clicked
-		@event cds-click
+		@event rds-click
 		@type {Event}
 	-->
 	<div
@@ -10,7 +10,7 @@
 			'clickable__container--clickable': clickable,
 			'clickable__container--not-clickable': !clickable,
 		}"
-		@click.stop="$emit('cds-click', true)"
+		@click.stop="$emit('rds-click', true)"
 	>
 		<slot />
 	</div>

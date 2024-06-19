@@ -32,7 +32,7 @@ import Switch from '../../components/Switch.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ `
-<cds-switch
+<rds-switch
 	v-model="isSelected"
 />`
 			},
@@ -41,7 +41,7 @@ import Switch from '../../components/Switch.vue';
 />
 
 export const Template = (args) => ({
-	components: { CdsSwitch: Switch },
+	components: { RdsSwitch: Switch },
 	data() {
 		return {
 			value: false,
@@ -51,7 +51,7 @@ export const Template = (args) => ({
 		return { args };
 	},
 	template: /*html*/ `
-		<cds-switch
+		<rds-switch
 			v-bind="args"
 			v-model="value"
 		/>

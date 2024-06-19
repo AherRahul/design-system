@@ -22,27 +22,27 @@ import Truncate from '../../components/Truncate.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<cds-truncate
+`<rds-truncate
 	width="80"
 >
 	Long text to test truncate
-</cds-truncate>`
+</rds-truncate>`
 			},
 		}
 	}}
 />
 
 export const Template = (args) => ({
-	components: { CdsTruncate: Truncate },
+	components: { RdsTruncate: Truncate },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
-		<cds-truncate
+		<rds-truncate
 			v-bind="args"
 		>
 			Long text to test truncate
-		</cds-truncate>
+		</rds-truncate>
 	`,
 	methods: {
 		logClickableClick(event) {

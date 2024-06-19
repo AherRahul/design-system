@@ -31,7 +31,7 @@ import PageLayout from '../../components/PageLayout.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/
-`<cds-page-layout
+`<rds-page-layout
 	v-bind="args"
 	@click="logClick"
 />`
@@ -41,12 +41,12 @@ import PageLayout from '../../components/PageLayout.vue';
 />
 
 export const Template = (args) => ({
-	components: { CdsPageLayout: PageLayout },
+	components: { RdsPageLayout: PageLayout },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
-		<cds-page-layout
+		<rds-page-layout
 			v-bind="args"
 			@navigation-item-click="logClick"
 			@sidebar-item-click="logClick"
@@ -55,7 +55,7 @@ export const Template = (args) => ({
 			<template #default>
 				Page content
 			</template>
-		</cds-page-layout>`,
+		</rds-page-layout>`,
 	methods: {
 		logClick(element) {
 			console.info('%clogItemClick: ', 'color: #2C70CD;', element);

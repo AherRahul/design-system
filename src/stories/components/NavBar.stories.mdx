@@ -32,7 +32,7 @@ import NavBar from '../../components/NavBar.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<cds-nav-bar
+`<rds-nav-bar
 	v-bind="args"
 	@click="logClick"
 />`
@@ -42,12 +42,12 @@ import NavBar from '../../components/NavBar.vue';
 />
 
 export const Template = (args) => ({
-	components: { CdsNavBar: NavBar },
+	components: { RdsNavBar: NavBar },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
-		<cds-nav-bar
+		<rds-nav-bar
 			v-bind="args"
 			@click="logClick"
 		/>`,

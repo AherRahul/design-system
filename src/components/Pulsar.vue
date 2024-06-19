@@ -1,8 +1,8 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
 	<div
-		id="cds-pulsar"
-		v-cds-floatify:[position]="targetId"
+		id="rds-pulsar"
+		v-rds-floatify:[position]="targetId"
 	>
 		<div :class="`pulsar__outer-circle--${variant}`">
 			<div :class="`pulsar__inner-circle--${variant}`" />

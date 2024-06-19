@@ -32,15 +32,15 @@ import Button from '../../components/Button.vue';
 				format:true,
 				code: /*html*/ 
 `<div class="d-flex justify-content-center">
-	<cds-button
-		id="trigger-cds-popover"
+	<rds-button
+		id="trigger-rds-popover"
 		@click="showPopover = true"
 	>
 		Click
-	</cds-button>
-	<cds-popover
+	</rds-button>
+	<rds-popover
 		rightAligned="false"
-		targetId="trigger-cds-popover"
+		targetId="trigger-rds-popover"
 		width="250"
 		height="250"
 		v-model="showPopover"
@@ -55,7 +55,7 @@ import Button from '../../components/Button.vue';
 			I know a cachacis that can brighten your life.Paisis, filhis, espiritis santis.Leite de capivaris,
 			headless manquis mule milk.
 		</span>
-	</cds-popover>
+	</rds-popover>
 </div>`
 			},
 		}
@@ -71,16 +71,16 @@ export const Template = (args) => ({
 			showPopover: false,
 		};
 	},
-	components: { CdsPopover: Popover, CdsButton: Button },
+	components: { RdsPopover: Popover, RdsButton: Button },
 	template: /*html*/ `
 		<div class="d-flex justify-content-center">
-			<cds-button
-				id="trigger-cds-popover"
+			<rds-button
+				id="trigger-rds-popover"
 				@click="showPopover = true"
 			>
 				Click
-			</cds-button>
-			<cds-popover
+			</rds-button>
+			<rds-popover
 				v-bind="args"
 				v-model="showPopover"
 			>
@@ -94,7 +94,7 @@ export const Template = (args) => ({
 					I know a cachacis that can brighten your life.Paisis, filhis, espiritis santis.Leite de capivaris,
 					headless manquis mule milk.
 				</span>
-			</cds-popover>
+			</rds-popover>
 		</div>
 	`,
 	updated() {
@@ -139,7 +139,7 @@ export const Template = (args) => ({
 		name="Popover"
 		args={{
 			rightAligned: false,
-			targetId: 'trigger-cds-popover',
+			targetId: 'trigger-rds-popover',
 			width: 250,
 			height: 250,
 		}}

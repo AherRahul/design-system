@@ -11,13 +11,13 @@
 				'badge__content--lg': size === 'lg',
 			}"
 		>
-			<cds-clickable
+			<rds-clickable
 				v-if="clickable"
 				@click="$emit('click', true)"
 			>
 				<!-- @slot Standard slot used to display content inside the badge -->
 				<slot />
-			</cds-clickable>
+			</rds-clickable>
 
 			<slot v-else />
 		</div>
@@ -25,11 +25,11 @@
 </template>
 
 <script>
-import CdsClickable from './Clickable.vue'
+import RdsClickable from './Clickable.vue'
 
 export default {
 	components: {
-		CdsClickable,
+		RdsClickable,
 	},
 
 	props: {

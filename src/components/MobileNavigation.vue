@@ -20,7 +20,7 @@
 					class="mobile-navigation__menu-btn"
 					@click="handleOpenSidebar"
 				>
-					<cds-icon
+					<rds-icon
 						name="menu-outline"
 					/>
 				</div>
@@ -44,7 +44,7 @@
 						class="mobile-navigation__sidebar-btn"
 						@click="handleCloseSidebar"
 					>
-						<cds-icon
+						<rds-icon
 							name="menu-outline"
 						/>
 					</div>
@@ -62,7 +62,7 @@
 							}"
 							@click="handleItemClick(item)"
 						>
-							<cds-icon
+							<rds-icon
 								:name="item.icon"
 								width="24"
 								height="24"
@@ -77,7 +77,7 @@
 							class="mobile-navigation__sidebar-user-info"
 							@click="emit('profile-click')"
 						>
-							<cds-avatar
+							<rds-avatar
 								:src="user.picture ?? ''"
 								:name="user.name ?? ''"
 								:variant="variant"
@@ -94,7 +94,7 @@
 							class="mobile-navigation__sidebar-logout"
 							@click="emit('logout')"
 						>
-							<cds-icon
+							<rds-icon
 								name="logout-outline"
 								width="24"
 								height="24"
@@ -110,8 +110,8 @@
 <script setup>
 import { ref, defineProps, defineEmits, computed } from 'vue';
 import { isEqual, isEmpty } from 'lodash';
-import CdsIcon from './Icon.vue';
-import CdsAvatar from './Avatar.vue';
+import RdsIcon from './Icon.vue';
+import RdsAvatar from './Avatar.vue';
 
 const props = defineProps({
 	/**

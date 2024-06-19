@@ -2,22 +2,22 @@
 <template>
 	<div
 		v-if="innerValue"
-		class="cds-modal__backdrop"
+		class="rds-modal__backdrop"
 	>
 		<div
 			v-if="innerValue"
-			class="cds-modal"
+			class="rds-modal"
 		>
 			<header
-				:class="`cds-modal__header--${variant}`"
+				:class="`rds-modal__header--${variant}`"
 			>
-				<div class="cds-modal__header-content">
+				<div class="rds-modal__header-content">
 					<div
 						v-if="variant === 'warning'"
-						class="cds-modal__header-title"
+						class="rds-modal__header-title"
 					>
-						<cds-icon
-							:class="`cds-modal__header-icon--${variant}`"
+						<rds-icon
+							:class="`rds-modal__header-icon--${variant}`"
 							height="40"
 							width="40"
 							name="warning-outline"
@@ -27,10 +27,10 @@
 
 					<div
 						v-else-if="variant === 'error'"
-						class="cds-modal__header-title"
+						class="rds-modal__header-title"
 					>
-						<cds-icon
-							:class="`cds-modal__header-icon--${variant}`"
+						<rds-icon
+							:class="`rds-modal__header-icon--${variant}`"
 							height="40"
 							width="40"
 							name="alert-outline"
@@ -40,10 +40,10 @@
 
 					<div
 						v-else-if="variant === 'info'"
-						class="cds-modal__header-title"
+						class="rds-modal__header-title"
 					>
-						<cds-icon
-							:class="`cds-modal__header-icon--${variant}`"
+						<rds-icon
+							:class="`rds-modal__header-icon--${variant}`"
 							height="40"
 							width="40"
 							name="info-outline"
@@ -52,25 +52,25 @@
 					</div>
 				</div>
 
-				<cds-icon
+				<rds-icon
 					v-if="variant === 'warning'"
-					:class="`cds-modal__header-detail--${variant}`"
+					:class="`rds-modal__header-detail--${variant}`"
 					height="60"
 					width="60"
 					name="warning-outline"
 				/>
 
-				<cds-icon
+				<rds-icon
 					v-else-if="variant === 'error'"
-					:class="`cds-modal__header-detail--${variant}`"
+					:class="`rds-modal__header-detail--${variant}`"
 					height="60"
 					width="60"
 					name="alert-outline"
 				/>
 
-				<cds-icon
+				<rds-icon
 					v-else-if="variant === 'info'"
-					:class="`cds-modal__header-detail--${variant}`"
+					:class="`rds-modal__header-detail--${variant}`"
 					height="60"
 					width="60"
 					name="info-outline"
@@ -78,27 +78,27 @@
 			</header>
 
 			<div
-				class="cds-modal__body"
+				class="rds-modal__body"
 			>
-				<span class="cds-modal__body-title">
+				<span class="rds-modal__body-title">
 					{{ title }}
 				</span>
-				<span class="cds-modal__body-description">
+				<span class="rds-modal__body-description">
 					{{ description }}
 				</span>
 			</div>
 
 			<footer
-				class="cds-modal__footer"
+				class="rds-modal__footer"
 			>
-				<cds-button
+				<rds-button
 					v-if="variant === 'warning'"
 					:text="cancelButtonText"
 					secondary
 					@click="closeHandle()"
 				/>
 
-				<cds-button
+				<rds-button
 					class="footer__ok-button"
 					:text="okButtonText"
 					:variant="actionButtonVariant"
@@ -110,8 +110,8 @@
 </template>
 
 <script>
-import CdsIcon from '../components/Icon.vue';
-import CdsButton from '../components/Button.vue';
+import RdsIcon from '../components/Icon.vue';
+import RdsButton from '../components/Button.vue';
 import vClickOutside from 'click-outside-vue3';
 
 const predefinedColors = [
@@ -134,8 +134,8 @@ export default {
 	},
 
 	components: {
-		CdsIcon,
-		CdsButton,
+		RdsIcon,
+		RdsButton,
 	},
 	props: {
 		/**
@@ -239,7 +239,7 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/sass/tokens.scss';
 
-.cds-modal {
+.rds-modal {
 	display: flex;
 	flex-direction: column;
 	max-height: 90%;
@@ -281,17 +281,17 @@ export default {
 		justify-content: space-between;
 
 		&--warning {
-			@extend .cds-modal__header;
+			@extend .rds-modal__header;
 			background: linear-gradient(90deg, #FFF1D9 0%, #FFE5B8 100%);
 		}
 
 		&--info {
-			@extend .cds-modal__header;
+			@extend .rds-modal__header;
 			background: linear-gradient(90deg, #DFEBFF 0%, #BDD5FF 100%);
 		}
 
 		&--error {
-			@extend .cds-modal__header;
+			@extend .rds-modal__header;
 			background: linear-gradient(90deg, #FFE7E1 0%, #FFD6CC 100%);
 		}
 	}
@@ -329,17 +329,17 @@ export default {
 		margin: spacer(n6);
 
 		&--warning {
-			@extend .cds-modal__header-detail;
+			@extend .rds-modal__header-detail;
 			color: rgba(242, 154, 0, 0.16)
 		}
 
 		&--error {
-			@extend .cds-modal__header-detail;
+			@extend .rds-modal__header-detail;
 			color: rgba(238, 45, 69, 0.11)
 		}
 
 		&--info {
-			@extend .cds-modal__header-detail;
+			@extend .rds-modal__header-detail;
 			color: rgba(47, 123, 255, 0.11)
 		}
 	}
@@ -382,12 +382,12 @@ export default {
 }
 
 @media (min-width: 576px) {
-	.cds-modal--md {
+	.rds-modal--md {
 		max-width: 500px;
 		width: 500px;
 		right: calc(50% - 500px / 2);
 	}
-	.cds-modal--sm {
+	.rds-modal--sm {
 		max-width: 300px;
 		width: 300px;
 		right: calc(50% - 300px / 2);
@@ -395,7 +395,7 @@ export default {
 }
 
 @media (min-width: 992px) {
-	.cds-modal--lg {
+	.rds-modal--lg {
 		max-width: 800px;
 		width: 800px;
 		right: calc(50% - 800px / 2);
@@ -403,7 +403,7 @@ export default {
 }
 
 @media (min-width: 1500px) {
-	.cds-modal--xl {
+	.rds-modal--xl {
 		max-width: 1200px;
 		width: 1200px;
 		right: calc(50% - 1200px / 2);

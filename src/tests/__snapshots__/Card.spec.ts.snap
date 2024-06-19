@@ -4,7 +4,7 @@ exports[`Card snapshot test > renders correctly 1`] = `
 "<div data-v-f9290560=\\"\\" data-v-c6c3362a=\\"\\" class=\\"box--gray\\">
   <!--
 		Evento emitido quando o wrapper é clicado
-		@event cds-click
+		@event rds-click
 		@type {Event}
 	-->
   <div data-v-f9290560=\\"\\" class=\\"clickable__container--not-clickable box__container\\">

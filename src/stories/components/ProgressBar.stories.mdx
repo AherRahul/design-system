@@ -40,7 +40,7 @@ import ProgressBar from '../../components/ProgressBar.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<cds-progress-bar
+`<rds-progress-bar
 	showText
 	:value="0.5"
 />`
@@ -50,11 +50,11 @@ import ProgressBar from '../../components/ProgressBar.vue';
 />
 
 export const Template = (args) => ({
-	components: { CdsProgressBar: ProgressBar },
+	components: { RdsProgressBar: ProgressBar },
 	setup() {
 		return { args };
 	},
-	template: /*html*/ `<cds-progress-bar v-bind="args"/>`,
+	template: /*html*/ `<rds-progress-bar v-bind="args"/>`,
 });
 
 <div align="center" style={{display: 'flex'}}>

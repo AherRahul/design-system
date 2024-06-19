@@ -31,7 +31,7 @@ import MobileNavigation from '../../components/MobileNavigation.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/
-`<cds-mobile-navigation
+`<rds-mobile-navigation
 	v-bind="args"
 	@click="logClick"
 />`
@@ -41,13 +41,13 @@ import MobileNavigation from '../../components/MobileNavigation.vue';
 />
 
 export const Template = (args) => ({
-	components: { CdsMobileNavigation: MobileNavigation },
+	components: { RdsMobileNavigation: MobileNavigation },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
 		<div style="position: relative; overflow: hidden; height: 930px; width: 430px; border: 1px solid #CCC; margin: auto; border-radius: 20px; cursor: pointer">
-			<cds-mobile-navigation
+			<rds-mobile-navigation
 				v-bind="args"
 				:main-logo="args.light
 					? 'https://rahulaher.netlify.app/img/logo/word-black-colored.svg'
@@ -59,7 +59,7 @@ export const Template = (args) => ({
 				"
 				@item-click="logClick"
 				@logout="logLogout"
-			></cds-mobile-navigation>
+			></rds-mobile-navigation>
 		</div>`,
 	methods: {
 		logClick(element) {

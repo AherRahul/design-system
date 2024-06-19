@@ -13,7 +13,7 @@
 			<span class="filter-pill__label">{{ label }}: </span>
 			<span class="filter-pill__content">{{ content }} </span>
 
-			<cds-chevron
+			<rds-chevron
 				:key="isActive"
 				animate
 				size="sm"
@@ -36,11 +36,11 @@
 <script>
 /* eslint-disable no-underscore-dangle */
 import vClickOutside from 'click-outside-vue3';
-import CdsChevron from './Chevron.vue';
+import RdsChevron from './Chevron.vue';
 
 export default {
 	components: {
-		CdsChevron,
+		RdsChevron,
 	},
 
 	directives: {

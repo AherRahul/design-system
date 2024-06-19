@@ -16,6 +16,7 @@ export const parameters = {
           "Font Weight",
           "Spacing",
           "Edges",
+          "Layout"
         ],
         "Components",
         [
@@ -41,9 +42,9 @@ export const parameters = {
 };
 
 import { app } from "@storybook/vue3";
-import Cdstip from "../src/utils/directives/cdstip";
-import CdsFloatify from "../src/utils/directives/cdsFloatify";
+import Rdstip from "../src/utils/directives/cdstip";
+import RdsFloatify from "../src/utils/directives/cdsFloatify";
 
-app.directive("cdstip", Cdstip);
-app.directive("cds-floatify", CdsFloatify);
+app.directive("cdstip", Rdstip);
+app.directive("rds-floatify", RdsFloatify);
 app.mount("#app");

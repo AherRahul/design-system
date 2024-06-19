@@ -12,29 +12,29 @@
 			}"
 			@click="handleClick(segment, index)"
 		>
-			<cds-tooltip
+			<rds-tooltip
 				v-if="withIcon"
 				:text="segmentsTooltipText[index]"
 			>
-				<cds-icon
+				<rds-icon
 					height="20"
 					width="20"
 					:name="segment"
 				/>
-			</cds-tooltip>
+			</rds-tooltip>
 
 			<span v-else>{{ segment }}</span>
 		</button>
 	</div>
 </template>
 <script>
-import CdsIcon from './Icon.vue';
-import CdsTooltip from './Tooltip.vue';
+import RdsIcon from './Icon.vue';
+import RdsTooltip from './Tooltip.vue';
 
 export default {
 	components: {
-		CdsIcon,
-		CdsTooltip,
+		RdsIcon,
+		RdsTooltip,
 	},
 	props: {
 		segments: {

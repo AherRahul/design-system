@@ -28,7 +28,7 @@
 			@event action-button-click
 			@type {Event}
 		-->
-		<cds-button
+		<rds-button
 			v-if="!hideActionButton"
 			class="empty-state__button"
 			:text="actionButtonText"
@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import CdsButton from './Button.vue';
+import RdsButton from './Button.vue';
 
 const predefinedColors = [
 	'teal',
@@ -55,7 +55,7 @@ const predefinedColors = [
 
 export default {
 	components: {
-		CdsButton,
+		RdsButton,
 	},
 
 	props: {

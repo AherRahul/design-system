@@ -1,11 +1,11 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-	<div class="cds-wizard">
-		<div class="cds-wizard__container">
-			<cds-box
+	<div class="rds-wizard">
+		<div class="rds-wizard__container">
+			<rds-box
 				v-for="(step, index) in steps"
 				:key="`wizard-step-${index}`"
-				:class="{ 'cds-wizard__empty-state-box': currentStep < index }"
+				:class="{ 'rds-wizard__empty-state-box': currentStep < index }"
 				:padding="5"
 				:elevated="currentStep === index"
 				fluid
@@ -15,48 +15,48 @@
 			>
 				<span v-if="currentStep >= index">
 					<slot :name="`step-${index + 1}-header`">
-						<h3 class="cds-wizard__title">
+						<h3 class="rds-wizard__title">
 							{{ step.title }}
 						</h3>
-						<h4 class="cds-wizard__subtitle">
+						<h4 class="rds-wizard__subtitle">
 							{{ step.subtitle }}
 						</h4>
 					</slot>
-					<div class="cds-wizard__content">
+					<div class="rds-wizard__content">
 						<slot :name="`step-${index + 1}`" />
 					</div>
 				</span>
 				<div
 					v-else
-					class="cds-wizard__empty-state"
+					class="rds-wizard__empty-state"
 				>
 					<img
 						v-if="step.image"
-						class="cds-wizard__empty-state-image"
+						class="rds-wizard__empty-state-image"
 						:src="step.image"
 						:alt="`Imagem de ${step.title}`"
 					>
 					<div
-						class="cds-wizard__empty-state-title"
+						class="rds-wizard__empty-state-title"
 					>
 						{{ step.title }}
 					</div>
 					<div
-						class="cds-wizard__empty-state-subtitle"
+						class="rds-wizard__empty-state-subtitle"
 					>
 						{{ emptyStateText(step.title) }}
 					</div>
 				</div>
-			</cds-box>
+			</rds-box>
 		</div>
-		<div class="cds-wizard__buttons">
-			<cds-button
+		<div class="rds-wizard__buttons">
+			<rds-button
 				:text="cancelButtonText"
 				secondary
 				@button-click="backActionClick"
 				@click.prevent
 			/>
-			<cds-button
+			<rds-button
 				:text="nextButtonText"
 				:variant="nextButtonVariant"
 				:disabled="disableNextButton"
@@ -68,13 +68,13 @@
 </template>
 
 <script>
-import CdsBox from './Box.vue';
-import CdsButton from './Button.vue';
+import RdsBox from './Box.vue';
+import RdsButton from './Button.vue';
 
 export default {
 	components: {
-		CdsBox,
-		CdsButton,
+		RdsBox,
+		RdsButton,
 	},
 
 	props: {
@@ -216,15 +216,15 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/sass/tokens.scss';
 
-::v-deep .cds-wizard__empty-state-box .box__container {
+::v-deep .rds-wizard__empty-state-box .box__container {
 	height: 100% !important;
 }
-::v-deep .cds-wizard__empty-state-box .spacer {
+::v-deep .rds-wizard__empty-state-box .spacer {
 	display: flex !important;
 	height: 100% !important;
 }
 
-.cds-wizard {
+.rds-wizard {
 	&__container {
 		display: flex;
 		gap: spacer(3);
@@ -281,7 +281,7 @@ export default {
 }
 
 @media (max-width: 992px) {
-	.cds-wizard {
+	.rds-wizard {
 		&__container {
 			flex-direction: column;
 		}

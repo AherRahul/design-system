@@ -2,27 +2,27 @@
 <template>
 	<div
 		v-if="innerValue"
-		class="cds-modal__backdrop"
+		class="rds-modal__backdrop"
 	>
 		<div
 			v-if="innerValue"
 			v-on-click-outside="noCloseOnBackdrop ? () => {} : closeHandle"
-			class="cds-modal"
-			:class="`cds-modal--${size}`"
+			class="rds-modal"
+			:class="`rds-modal--${size}`"
 		>
 			<header
 				v-if="!noHeader"
 			>
 				<!-- @slot Slot used to use custom headers. -->
 				<slot name="header">
-					<div class="cds-modal__header">
+					<div class="rds-modal__header">
 						<h3>{{ title }}</h3>
 						<div
 							v-if="!noCloseButton"
-							class="cds-modal__close-icon"
+							class="rds-modal__close-icon"
 							@click="closeHandle"
 						>
-							<cds-icon
+							<rds-icon
 								name="x-outline"
 								height="20"
 								width="20"
@@ -35,15 +35,15 @@
 
 			<!-- @slot Slot used to insert content into the Modal. -->
 			<section>
-				<cds-scrollable
+				<rds-scrollable
 					v-if="scrollable"
-					class="cds-modal__body"
+					class="rds-modal__body"
 				>
 					<slot />
-				</cds-scrollable>
+				</rds-scrollable>
 				<div
 					v-else
-					class="cds-modal__body"
+					class="rds-modal__body"
 				>
 					<slot />
 				</div>
@@ -51,11 +51,11 @@
 
 			<footer
 				v-if="!noFooter"
-				class="cds-modal__footer"
+				class="rds-modal__footer"
 			>
 				<!-- @slot Slot used to insert custom footers. -->
 				<slot name="footer">
-					<cds-button
+					<rds-button
 						v-if="!noCancelButton"
 						:text="cancelButtonText"
 						secondary
@@ -63,7 +63,7 @@
 						@click="!disableCancelButton ? closeHandle() : false"
 					/>
 
-					<cds-button
+					<rds-button
 						class="footer__ok-button"
 						:text="okButtonText"
 						:variant="actionButtonVariant"
@@ -77,10 +77,10 @@
 </template>
 
 <script>
-import CdsIcon from '../components/Icon.vue';
-import CdsButton from '../components/Button.vue';
+import RdsIcon from '../components/Icon.vue';
+import RdsButton from '../components/Button.vue';
 import vClickOutside from 'click-outside-vue3';
-import CdsScrollable from '../components/Scrollable.vue';
+import RdsScrollable from '../components/Scrollable.vue';
 
 const predefinedColors = [
 	'teal',
@@ -100,9 +100,9 @@ export default {
 	},
 
 	components: {
-		CdsIcon,
-		CdsButton,
-		CdsScrollable
+		RdsIcon,
+		RdsButton,
+		RdsScrollable
 	},
 	props: {
 		/**
@@ -269,7 +269,7 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/sass/tokens.scss';
 
-.cds-modal {
+.rds-modal {
 	display: flex;
 	flex-direction: column;
 	max-height: 90%;
@@ -344,12 +344,12 @@ export default {
 }
 
 @media (min-width: 576px) {
-	.cds-modal--md {
+	.rds-modal--md {
 		max-width: 500px;
 		width: 500px;
 		right: calc(50% - 500px / 2);
 	}
-	.cds-modal--sm {
+	.rds-modal--sm {
 		max-width: 300px;
 		width: 300px;
 		right: calc(50% - 300px / 2);
@@ -357,7 +357,7 @@ export default {
 }
 
 @media (min-width: 992px) {
-	.cds-modal--lg {
+	.rds-modal--lg {
 		max-width: 800px;
 		width: 800px;
 		right: calc(50% - 800px / 2);
@@ -365,7 +365,7 @@ export default {
 }
 
 @media (min-width: 1500px) {
-	.cds-modal--xl {
+	.rds-modal--xl {
 		max-width: 1200px;
 		width: 1200px;
 		right: calc(50% - 1200px / 2);

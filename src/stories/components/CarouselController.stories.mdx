@@ -12,7 +12,7 @@ import CarouselController from '../../components/CarouselController.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ `
-<cds-carousel-controller
+<rds-carousel-controller
 	:total="12"
 	:perPage="4"
 	propertyName="Metrics"
@@ -25,12 +25,12 @@ import CarouselController from '../../components/CarouselController.vue';
 />
 
 export const Template = (args) => ({
-	components: { CdsCarouselController: CarouselController },
+	components: { RdsCarouselController: CarouselController },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
-		<cds-carousel-controller
+		<rds-carousel-controller
 			v-bind="args"
 			@click-forward="handleClickForwardEvent"
 			@click-back="handleClickBackEvent"

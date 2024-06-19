@@ -44,7 +44,7 @@ import IconButton from '../../components/IconButton.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/
-`<cds-icon-button
+`<rds-icon-button
 	size="sm"
 	icon="trash-outline"
 />`
@@ -54,14 +54,14 @@ import IconButton from '../../components/IconButton.vue';
 />
 
 export const Template = (args) => ({
-	components: { CdsIconButton: IconButton },
+	components: { RdsIconButton: IconButton },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
-		<cds-icon-button
+		<rds-icon-button
 			v-bind="args"
-			@cds-click="logIconButtonClick"
+			@rds-click="logIconButtonClick"
 		/>`,
 	methods: {
 		logIconButtonClick(event) {

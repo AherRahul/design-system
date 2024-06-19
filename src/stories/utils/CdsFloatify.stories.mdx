@@ -1,6 +1,6 @@
 import { Source, Meta, Story } from '@storybook/addon-docs';
 
-<Meta title="Utils/Directives/CdsFloatify()"/>
+<Meta title="Utils/Directives/RdsFloatify()"/>
 
 <div align="center" style={{display: 'flex'}}>
     <a href="https://rahulaher.netlify.app">
@@ -12,9 +12,9 @@ import { Source, Meta, Story } from '@storybook/addon-docs';
 <br />
 <br />
 
-# CdsFloatify()
+# RdsFloatify()
 
-CdsFloatify() is an RDS directive that allows elements that use it to become floats.
+RdsFloatify() is an RDS directive that allows elements that use it to become floats.
 
 <hr />
 <br />
@@ -22,12 +22,12 @@ CdsFloatify() is an RDS directive that allows elements that use it to become flo
 #### Arguments
 
 **(String):**
-- Indicates the positioning of the component in reference to the target element. It is passed as an argument to the directive, in the format `v-cds-floatify:[argument]`
+- Indicates the positioning of the component in reference to the target element. It is passed as an argument to the directive, in the format `v-rds-floatify:[argument]`
 - Mandatory: *No*
 - Valid values: 'top', 'top-start', 'top-end, 'bottom', 'bottom-start, 'bottom-end, 'left', 'left-start, 'left-end, 'right' , 'right-start, 'right-end;
 
 **(String):**
-- The id of the element that ContrastChecker will use as a reference to position itself. It is passed as a value to the directive, in the format `v-cds-floatify="argument"`
+- The id of the element that ContrastChecker will use as a reference to position itself. It is passed as a value to the directive, in the format `v-rds-floatify="argument"`
 - Mandatory: *Yes*
 - Valid values: any string that indicates the id of a DOM element;
 
@@ -46,7 +46,7 @@ None
 
 #### Example
 
-<Story name="CdsFloatify">
+<Story name="RdsFloatify">
 </Story>
 
 <Source
@@ -55,7 +55,7 @@ None
   code={/*html*/ `
 <template>
 	<div
-		v-cds-floatify:[position]="targetId"
+		v-rds-floatify:[position]="targetId"
 	>
 		...
 	</div>

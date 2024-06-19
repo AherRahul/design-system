@@ -10,7 +10,7 @@
 			>
 				<div
 					class="password-input__label__content"
-					for="cds-password-input"
+					for="rds-password-input"
 				>
 					<span>{{ label }}</span>
 
@@ -20,7 +20,7 @@
 					>
 						*
 					</span>
-					<cds-icon
+					<rds-icon
 						v-if="tooltip"
 						v-cdstip="tooltip"
 						:name="tooltipIcon"
@@ -33,7 +33,7 @@
 		</span>
 		<div :class="stepperInputDynamicClass">
 			<input
-				id="cds-password-input"
+				id="rds-password-input"
 				v-model="internalValue"
 				:type="customInputType"
 				:placeholder="placeholder"
@@ -46,13 +46,13 @@
 				v-if="!disableTextPasswordInput"
 				class="password-input__password-toogle"
 			>
-				<cds-clickable
-					id="cds-clickable"
+				<rds-clickable
+					id="rds-clickable"
 					clickable
 					@click="handleShowPassword"
 				>
 					{{ customTextPasswordInput }}
-				</cds-clickable>
+				</rds-clickable>
 			</div>
 		</div>
 		<div
@@ -65,16 +65,16 @@
 </template>
 
 <script>
-import CdsIcon from './Icon.vue';
-import Cdstip from '../utils/directives/cdstip';
+import RdsIcon from './Icon.vue';
+import Rdstip from '../utils/directives/cdstip';
 
 export default {
 	directives: {
-		cdstip: Cdstip,
+		cdstip: Rdstip,
 	},
 
 	components: {
-		CdsIcon
+		RdsIcon
 	},
 
 	props: {

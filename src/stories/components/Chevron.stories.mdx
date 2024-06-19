@@ -35,14 +35,14 @@ import Chevron from '../../components/Chevron.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<cds-chevron />`
+`<rds-chevron />`
 			},
 		}
 	}}
 />
 
 export const Template = (args) => ({
-	components: { CdsChevron: Chevron },
+	components: { RdsChevron: Chevron },
 	setup() {
 		return { args };
 	},
@@ -54,7 +54,7 @@ export const Template = (args) => ({
 			top: 35px;
 			left: 40px;"
 		>
-			<cds-chevron
+			<rds-chevron
 				v-bind="args" 
 			/>
 		</div>`,

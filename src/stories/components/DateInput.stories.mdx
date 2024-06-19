@@ -29,7 +29,7 @@ import DateInput from '../../components/DateInput.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ `
-<cds-date-input
+<rds-date-input
 	label="Time"
 />`
 			},
@@ -38,7 +38,7 @@ import DateInput from '../../components/DateInput.vue';
 />
 
 export const Template = (args) => ({
-	components: { CdsDateInput: DateInput },
+	components: { RdsDateInput: DateInput },
 	setup() {
 		return { args };
 	},
@@ -48,7 +48,7 @@ export const Template = (args) => ({
 		};
 	},
 	template: /*html*/ `
-		<cds-date-input
+		<rds-date-input
 			v-bind="args"
 			v-model="value"
 		/>`,

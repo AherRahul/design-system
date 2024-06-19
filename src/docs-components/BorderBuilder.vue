@@ -5,7 +5,7 @@
 			:value="target"
 		/>
 
-		<cds-table
+		<rds-table
 			:items="items"
 			:fields="fields"
 			hover
@@ -17,7 +17,7 @@
 					class="copy-clip"
 					@click="target = data.token"
 				>
-					<cds-icon
+					<rds-icon
 						height="20"
 						width="20"
 						name="copy-outline"
@@ -33,20 +33,20 @@
 					<div :class="borderRadiusClass(rowIndex)" />
 				</div>
 			</template>
-		</cds-table>
+		</rds-table>
 	</div>
 </template>
 
 <script>
-import CdsIcon from '../components/Icon.vue';
-import CdsTable from '../components/Table.vue';
+import RdsIcon from '../components/Icon.vue';
+import RdsTable from '../components/Table.vue';
 import CopyToken from '../docs-components/CopyToken.vue';
 
 export default {
 	components: {
-		CdsIcon,
+		RdsIcon,
 		CopyToken,
-		CdsTable,
+		RdsTable,
 	},
 
 	data() {

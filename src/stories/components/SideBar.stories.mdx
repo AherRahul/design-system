@@ -31,7 +31,7 @@ import SideBar from '../../components/SideBar.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/
-`<cds-side-bar
+`<rds-side-bar
 	v-bind="args"
 	@click="logClick"
 />`
@@ -41,12 +41,12 @@ import SideBar from '../../components/SideBar.vue';
 />
 
 export const Template = (args) => ({
-	components: { CdsSideBar: SideBar },
+	components: { RdsSideBar: SideBar },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
-		<cds-side-bar
+		<rds-side-bar
 			v-bind="args"
 			@sidebar-click="logClick"
 			@logout="logLogout"
@@ -71,7 +71,7 @@ export const Template = (args) => ({
 					src="https://rahulaher.netlify.app/img/logo/glyph-black-colored.svg"
 				>
 			</template>
-		</cds-side-bar>`,
+		</rds-side-bar>`,
 	methods: {
 		logClick(element) {
 			console.info('%clogItemClick: ', 'color: #2C70CD;', element);

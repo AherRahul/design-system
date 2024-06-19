@@ -13,7 +13,7 @@ import Button from '../../components/Button.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ `
-<cds-action-bar
+<rds-action-bar
 	v-bind="args"
 	:show="showActionBar"
 	@click="logAction"
@@ -22,7 +22,7 @@ import Button from '../../components/Button.vue';
 	<template #description>
 		8 selected items
 	</template>
-</cds-action-bar>`
+</rds-action-bar>`
 			},
 		}}
 	}
@@ -37,16 +37,16 @@ export const Template = (args) => ({
 			showActionBar: false,
 		};
 	},
-	components: { CdsActionBar: ActionBar, CdsButton: Button },
+	components: { RdsActionBar: ActionBar, RdsButton: Button },
 	template: /*html*/ `
 		<div>
-			<cds-button
+			<rds-button
 				id="trigger-popover"
 				@click="togglePopover"
 			>
 				Click
-			</cds-button>
-			<cds-action-bar
+			</rds-button>
+			<rds-action-bar
 				v-bind="args"
 				:show="showActionBar"
 				@click="logAction"
@@ -55,7 +55,7 @@ export const Template = (args) => ({
 				<template #description>
 					8 selected items
 				</template>
-			</cds-action-bar>
+			</rds-action-bar>
 		</div>
 	`,
 	methods: {

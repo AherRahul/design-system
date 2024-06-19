@@ -24,14 +24,14 @@ import TextArea from '../../components/TextArea.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ `
-<cds-text-area />`
+<rds-text-area />`
 			},
 		}
 	}}
 />
 
 export const Template = (args) => ({
-	components: { CdsTextArea: TextArea },
+	components: { RdsTextArea: TextArea },
 	setup() {
 		return { args };
 	},
@@ -41,7 +41,7 @@ export const Template = (args) => ({
 		};
 	},
 	template: /*html*/ `
-		<cds-text-area
+		<rds-text-area
 			v-bind="args" 
 			v-model="value"
 		/>

@@ -16,12 +16,12 @@
 				>
 					{{ splitedSubtitle[0] }}
 
-					<cds-link
+					<rds-link
 						:href="url"
 						bold
 					>
 						{{ fancyUrl }}
-					</cds-link>
+					</rds-link>
 
 					{{ splitedSubtitle[1] }}
 				</span>
@@ -42,11 +42,11 @@
 	</header>
 </template>
 <script>
-import CdsLink from '../components/Link.vue';
+import RdsLink from '../components/Link.vue';
 
 export default {
 	components: {
-		CdsLink,
+		RdsLink,
 	},
 
 	props: {

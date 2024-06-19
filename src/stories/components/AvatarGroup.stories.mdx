@@ -25,7 +25,7 @@ import Avatar from '../../components/Avatar.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ `
-<cds-avatar
+<rds-avatar
 	src="https://userstock.io/data/wp-content/uploads/2020/06/women-s-white-and-black-button-up-collared-shirt-774909-2-1024x1024.jpg"
 />`
 			},
@@ -34,12 +34,12 @@ import Avatar from '../../components/Avatar.vue';
 />
 
 export const Template = (args) => ({
-	components: { CdsAvatarGroup: AvatarGroup, CdsAvatar: Avatar },
+	components: { RdsAvatarGroup: AvatarGroup, RdsAvatar: Avatar },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
-		<cds-avatar-group
+		<rds-avatar-group
 			v-bind="args" 
 		/>
 	`

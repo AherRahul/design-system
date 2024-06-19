@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-	<cds-clickable
+	<rds-clickable
 		id="avatar-dropdown"
 		:clickable="clickable"
 		@click="toggleDropdown"
@@ -24,7 +24,7 @@
 				>
 			</div>
 
-			<cds-chevron
+			<rds-chevron
 				v-if="clickable"
 				size="sm"
 				class="avatar__chevron"
@@ -32,7 +32,7 @@
 			/>
 		</div>
 
-		<cds-popover
+		<rds-popover
 			v-model="showPopover"
 			target-id="avatar-dropdown"
 			width="180"
@@ -40,20 +40,20 @@
 			vertical-fluid
 		>
 			<slot name="dropdown-content" />
-		</cds-popover>
-	</cds-clickable>
+		</rds-popover>
+	</rds-clickable>
 </template>
 <script>
-import CdsChevron from './Chevron.vue';
-import CdsClickable from './Clickable.vue';
-import CdsPopover from './Popover.vue';
+import RdsChevron from './Chevron.vue';
+import RdsClickable from './Clickable.vue';
+import RdsPopover from './Popover.vue';
 
 export default {
 
 	components: {
-		CdsChevron,
-		CdsClickable,
-		CdsPopover
+		RdsChevron,
+		RdsClickable,
+		RdsPopover
 	},
 
 	props: {

@@ -22,7 +22,7 @@ import ColorPicker from '../../components/ColorPicker.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<cds-color-picker
+`<rds-color-picker
 	v-model="color"
 	label="Cor"
 	:swatch="swatch"
@@ -35,7 +35,7 @@ import ColorPicker from '../../components/ColorPicker.vue';
 />
 
 export const Template = (args) => ({
-	components: { CdsColorPicker: ColorPicker },
+	components: { RdsColorPicker: ColorPicker },
 	setup() {
 		return { args };
 	},
@@ -47,7 +47,7 @@ export const Template = (args) => ({
 	template: /*html*/ `
 		<div class="d-flex" style="width: 550px; justify-content: space-between; align-items: end;">
 			<div>
-				<cds-color-picker
+				<rds-color-picker
 					v-bind="args"
 					v-model="color"
 					@change="handleEmit"

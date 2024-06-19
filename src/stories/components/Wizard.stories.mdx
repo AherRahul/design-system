@@ -41,7 +41,7 @@ import TextInput from '../../components/TextInput.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<cds-wizard
+`<rds-wizard
 	:steps="steps"
 >
 	<template #step-1>
@@ -50,7 +50,7 @@ import TextInput from '../../components/TextInput.vue';
 	<template #step-2>
 		Step 2
 	</template>
-</cds-wizard>
+</rds-wizard>
 `
 			},
 		}
@@ -58,7 +58,7 @@ import TextInput from '../../components/TextInput.vue';
 />
 
 export const Template = (args) => ({
-	components: { CdsWizard: Wizard, CdsTextInput: TextInput },
+	components: { RdsWizard: Wizard, RdsTextInput: TextInput },
 	setup() {
 		return { args };
 	},
@@ -68,7 +68,7 @@ export const Template = (args) => ({
 		};
 	},
 	template: /*html*/
-		`<cds-wizard
+		`<rds-wizard
 			v-bind="args"
 			:active-step="activeStep"
 			@step-change="handleStepChange"
@@ -77,15 +77,15 @@ export const Template = (args) => ({
 		>
 			<template #step-1>
 				<div style="height: 400px; gap: 16px; display: flex; flex-direction: column;">
-					<cds-text-input
+					<rds-text-input
 						fluid
 						label="Name"
 					/>
-					<cds-text-input
+					<rds-text-input
 						fluid
 						label="Surname"
 					/>
-					<cds-text-input
+					<rds-text-input
 						fluid
 						label="Mother's name"
 					/>
@@ -93,19 +93,19 @@ export const Template = (args) => ({
 			</template>
 			<template #step-2>
 				<div style="height: 400px; gap: 16px; display: flex; flex-direction: column;">
-					<cds-text-input
+					<rds-text-input
 						fluid
 						label="Zip code"
 					/>
-					<cds-text-input
+					<rds-text-input
 						fluid
 						label="Road"
 					/>
-					<cds-text-input
+					<rds-text-input
 						fluid
 						label="Neighborhood"
 					/>
-					<cds-text-input
+					<rds-text-input
 						fluid
 						label="City"
 					/>
@@ -113,21 +113,21 @@ export const Template = (args) => ({
 			</template>
 			<template #step-3>
 				<div style="height: 400px; gap: 16px; display: flex; flex-direction: column;">
-					<cds-text-input
+					<rds-text-input
 						fluid
 						label="Modality"
 					/>
-					<cds-text-input
+					<rds-text-input
 						fluid
 						label="URL of site"
 					/>
-					<cds-text-input
+					<rds-text-input
 						fluid
 						label="Additional Information"
 					/>
 				</div>
 			</template>
-		</cds-wizard>
+		</rds-wizard>
 		<br>
 		`,
 	methods: {

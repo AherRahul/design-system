@@ -31,34 +31,34 @@ import FloatingAssistant from '../../components/FloatingAssistant.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<cds-floating-assistant
+`<rds-floating-assistant
 	v-model="showTip"
 	targetId="floating-assistant-target"
 	title="New functionality!"
 	url="https://medium.com/cidade-saud%C3%A1vel"
 >
 	Content to be displayed when the card is clicked
-</cds-floating-assistant>`
+</rds-floating-assistant>`
 },
 		}
 	}}
 />
 
 export const Template = (args) => ({
-	components: { CdsFloatingAssistant: FloatingAssistant },
+	components: { RdsFloatingAssistant: FloatingAssistant },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
 			<div id="floating-assistant-target" style="width: fit-content;">FloatingAssistant target</div>
-			<cds-floating-assistant
+			<rds-floating-assistant
 				v-bind="args"
 				targetId="floating-assistant-target"
 			>
 				The new driver registration functionality allows you to organize and
 				manage your fleet more easily, linking each driver to their
 				specific bus.
-			</cds-floating-assistant>
+			</rds-floating-assistant>
 	`,
 	methods: {
 		logClickableClick(event) {

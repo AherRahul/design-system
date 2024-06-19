@@ -22,19 +22,19 @@ import Divider from '../../components/Divider.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ `
-<cds-divider />`
+<rds-divider />`
 			},
 		}
 	}}
 />
 
 export const Template = (args) => ({
-	components: { CdsDivider: Divider },
+	components: { RdsDivider: Divider },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
-		<cds-divider
+		<rds-divider
 			v-bind="args" 
 		/>`,
 });

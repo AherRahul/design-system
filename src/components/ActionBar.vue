@@ -39,14 +39,14 @@
 						@event click
 						@type {Event}
 					-->
-					<cds-button
+					<rds-button
 						:id="`btn-${index + 1}`"
 						:secondary="light"
 						variant="dark"
 						@click="$emit('click', action)"
 					>
 						<span>{{ action }}</span>
-					</cds-button>
+					</rds-button>
 				</div>
 			</div>
 
@@ -55,7 +55,7 @@
 				:class="light ? 'toolbar__icon--light' : 'toolbar__icon--dark'"
 				@click="handleClose"
 			>
-				<cds-icon
+				<rds-icon
 					name="x-outline"
 					height="20"
 					width="20"
@@ -66,13 +66,13 @@
 </template>
 
 <script>
-import CdsIcon from '../components/Icon.vue';
-import CdsButton from '../components/Button.vue';
+import RdsIcon from '../components/Icon.vue';
+import RdsButton from '../components/Button.vue';
 
 export default {
 	components: {
-		CdsIcon,
-		CdsButton,
+		RdsIcon,
+		RdsButton,
 	},
 
 	props: {

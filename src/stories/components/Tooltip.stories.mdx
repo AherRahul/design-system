@@ -25,28 +25,28 @@ import Tooltip from '../../components/Tooltip.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<cds-tooltip
+`<rds-tooltip
 	text="Tooltip text"
 >
 	Tooltip trigger
-</cds-tooltip>`
+</rds-tooltip>`
 },
 		}
 	}}
 />
 
 export const Template = (args) => ({
-	components: { CdsTooltip: Tooltip },
+	components: { RdsTooltip: Tooltip },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
 		<div class="d-flex justify-content-center">
-			<cds-tooltip
+			<rds-tooltip
 				v-bind="args"
 			>
 				Tooltip trigger
-			</cds-tooltip>
+			</rds-tooltip>
 		</div>
 	`,
 	methods: {

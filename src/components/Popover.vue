@@ -5,27 +5,27 @@
 		v-on-click-outside="hide"
 		class="popover"
 	>
-		<cds-scrollable
+		<rds-scrollable
 			v-if="!verticalFluid"
 			:max-height="`${popoverHeight}`"
 		>
 			<!-- @slot Slot used for rendering Popover content.-->
 			<slot />
-		</cds-scrollable>
+		</rds-scrollable>
 		
 		<slot v-else />
 	</div>
 </template>
 
 <script>
-import CdsScrollable from './Scrollable.vue';
+import RdsScrollable from './Scrollable.vue';
 import vClickOutside from 'click-outside-vue3';
 import { createPopper } from '@popperjs/core';
 import { generateKey } from '../utils';
 
 export default {
 	components: {
-		CdsScrollable,
+		RdsScrollable,
 	},
 
 	directives: {
@@ -131,7 +131,7 @@ export default {
 	},
 
 	mounted() {
-		this.id = `cds-popover-${this.uniqueKey}`;
+		this.id = `rds-popover-${this.uniqueKey}`;
 		this.setPopper(this.targetId);
 	},
 

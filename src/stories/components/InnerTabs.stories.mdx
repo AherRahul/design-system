@@ -32,7 +32,7 @@ import InnerTabs from '../../components/InnerTabs.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<cds-inner-tabs
+`<rds-inner-tabs
 	:tabs="dataSet"
 	:activeTab="dataSet[1]"
 >
@@ -51,20 +51,20 @@ import InnerTabs from '../../components/InnerTabs.vue';
 	<template #indicator-4>
 		Contents of tab-4
 	</template>
-</cds-inner-tabs>`
+</rds-inner-tabs>`
 			},
 		}
 	}}
 />
 
 export const Template = (args) => ({
-	components: { CdsInnerTabs: InnerTabs },
+	components: { RdsInnerTabs: InnerTabs },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
 		<div style="background-color: #F8F9FA; padding: 16px; border-radius: 4px;">
-			<cds-inner-tabs
+			<rds-inner-tabs
 				v-bind="args"
 			>
 				<template #overview>
@@ -94,7 +94,7 @@ export const Template = (args) => ({
 				<template #indicator-8>
 					Contents of tab-8
 				</template>
-			</cds-inner-tabs>
+			</rds-inner-tabs>
 	</div>
 	`,
 });

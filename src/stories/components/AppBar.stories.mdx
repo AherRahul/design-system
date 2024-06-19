@@ -13,7 +13,7 @@ import Icon from '../../components/Icon.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ `
-<cds-app-bar
+<rds-app-bar
 	:csBrand="true"
 	:sysvaleBrand="false"
 	:appSwitcher="true"
@@ -28,7 +28,7 @@ import Icon from '../../components/Icon.vue';
 >
 	<template #app-info>
 		<div class="app-switcher">
-			<cds-icon
+			<rds-icon
 				height="24"
 				width="24"
 				light
@@ -42,19 +42,19 @@ import Icon from '../../components/Icon.vue';
 	<template #dropdown-content>
 			Dropdown content
 	</template>
-</cds-app-bar>`
+</rds-app-bar>`
 			},
 		}
 	}}
 />
 
 export const Template = (args) => ({
-	components: { CdsAppBar: AppBar, CdsIcon: Icon },
+	components: { RdsAppBar: AppBar, RdsIcon: Icon },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
-		<cds-app-bar
+		<rds-app-bar
 			v-bind="args"
 			@settings-click="logClick"
 			@help-click="logClick"
@@ -64,7 +64,7 @@ export const Template = (args) => ({
 		>
 			<template #app-info>
 				<div>
-					<cds-icon
+					<rds-icon
 						height="24"
 						width="24"
 						light
@@ -78,7 +78,7 @@ export const Template = (args) => ({
             <template #dropdown-content>
 				Dropdown content
 			</template>
-		</cds-app-bar>
+		</rds-app-bar>
 	`,
 	methods: {
 		logClick(element) {

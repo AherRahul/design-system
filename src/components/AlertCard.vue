@@ -8,7 +8,7 @@
 				v-if="withIcon"
 				:class="iconClass"
 			>
-				<cds-icon
+				<rds-icon
 					height="24"
 					width="24"
 					:name="dynamicIcon"
@@ -49,11 +49,11 @@
 </template>
 
 <script>
-import CdsIcon from './Icon.vue';
+import RdsIcon from './Icon.vue';
 
 export default {
 	components: {
-		CdsIcon,
+		RdsIcon,
 	},
 
 	props: {

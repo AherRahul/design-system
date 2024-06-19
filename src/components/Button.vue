@@ -6,7 +6,7 @@
 		:class="computedStyle"
 		@click.stop="clickHandler"
 	>
-		<cds-spinner
+		<rds-spinner
 			v-if="loading"
 			variant="white"
 			size="sm"
@@ -21,17 +21,17 @@
 </template>
 
 <script>
-import CdsSpinner from '../components/Spinner.vue';
-import Cdstip from '../utils/directives/cdstip';
+import RdsSpinner from '../components/Spinner.vue';
+import Rdstip from '../utils/directives/cdstip';
 
 export default {
 
 	directives: {
-		cdstip: Cdstip,
+		cdstip: Rdstip,
 	},
 
 	components: {
-		CdsSpinner,
+		RdsSpinner,
 	},
 
 	props: {

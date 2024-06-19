@@ -14,7 +14,7 @@
 			>
 				<div
 					class="label__content"
-					for="cds-text-input"
+					for="rds-text-input"
 				>
 					<span>
 						{{ label }}
@@ -31,7 +31,7 @@
 		</span>
 
 		<v-date-picker
-			id="cds-date-input"
+			id="rds-date-input"
 			v-model="internalDate"
 			locale="en-us"
 			:min-date="minDate ? new Date(minDate) : null"
@@ -42,13 +42,13 @@
 			@update:model-value="handleUpdateInput"
 		>
 			<template #header-left-button="{ page }">
-				<cds-chevron
+				<rds-chevron
 					direction="left"
 					@click="page.movePrevMonth()"
 				/>
 			</template>
 			<template #header-right-button="{ page }">
-				<cds-chevron
+				<rds-chevron
 					direction="right"
 					@click="page.moveNextMonth()"
 				/>
@@ -69,7 +69,7 @@
 						@blur="isBeingFocused = false"
 					>
 					<div class="date-input__icon">
-						<cds-icon
+						<rds-icon
 							height="20"
 							width="20"
 							name="calendar-outline"
@@ -92,16 +92,16 @@ import { DateTime } from 'luxon';
 import { DatePicker } from 'v-calendar';
 import 'v-calendar/dist/style.css';
 import { isEmpty } from 'lodash';
-import CdsChevron from './Chevron.vue';
-import CdsIcon from './Icon.vue';
+import RdsChevron from './Chevron.vue';
+import RdsIcon from './Icon.vue';
 
 const dateStringValidator = (value) => /^(19|20)\d\d-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$/.test(value);
 
 export default {
 	components: {
 		VDatePicker: DatePicker,
-		CdsChevron,
-		CdsIcon,
+		RdsChevron,
+		RdsIcon,
 	},
 
 	props: {

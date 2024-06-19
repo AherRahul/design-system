@@ -22,7 +22,7 @@ import Image from '../../components/Image.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<cds-image
+`<rds-image
 	:width="400"
 	:blackAndWhite="false"
 	:dimmed="false"
@@ -30,7 +30,7 @@ import Image from '../../components/Image.vue';
 	:opacity="1"
 	src="https://cdn.dribbble.com/users/56251/screenshots/10780716/media/bf16339f04fb54b38055adcce2a6da21.png?compress=1&resize=1000x750&vertical=top"
 	fallbackSrc="https://cdn.dribbble.com/users/945601/screenshots/15072838/media/4a82b3dc2b8b419e245f28fd1767f717.png?compress=1&resize=1000x750&vertical=top"
-	alt="Example image from cds-image"
+	alt="Example image from rds-image"
 />`
 			},
 		}
@@ -38,12 +38,12 @@ import Image from '../../components/Image.vue';
 />
 
 export const Template = (args) => ({
-	components: { CdsImage: Image },
+	components: { RdsImage: Image },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
-		<cds-image
+		<rds-image
 			v-bind="args"
 		/>
 	`,
@@ -83,7 +83,7 @@ export const Template = (args) => ({
 			dimmed: false,
 			roundedCorners: false,
 			opacity: 1,
-			alt: 'Example image from cds-image',
+			alt: 'Example image from rds-image',
 		}}
 	>
 		{ Template.bind({}) }

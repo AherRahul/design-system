@@ -12,7 +12,7 @@ import ActionsList from '../../components/ActionsList.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ `
-<cds-actions-list
+<rds-actions-list
 	:actions="actions"
 	:numberOfExpandedActions="2"
 >
@@ -21,19 +21,19 @@ import ActionsList from '../../components/ActionsList.vue';
 	>
 		{{ list.title }}
 	</template>
-</cds-actions-list>`
+</rds-actions-list>`
 			},
 		}
 	}}
 />
 
 export const Template = (args) => ({
-	components: { CdsActionsList: ActionsList },
+	components: { RdsActionsList: ActionsList },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
-		<cds-actions-list
+		<rds-actions-list
 			v-bind="args"
 			@actionClicked="logActionClick"
 			@expanded="logExpansion"
@@ -43,7 +43,7 @@ export const Template = (args) => ({
 			>
 				{{ list.title }}
 			</template>
-		</cds-actions-list>
+		</rds-actions-list>
 	`,
 	methods: {
 		logActionClick(action) {

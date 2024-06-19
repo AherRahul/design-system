@@ -32,7 +32,7 @@ import Tabs from '../../components/Tabs.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/
-`<cds-tabs
+`<rds-tabs
 	:tabs="items"
 	:activeTab="items[1]"
 >
@@ -45,20 +45,20 @@ import Tabs from '../../components/Tabs.vue';
 	<template #room-13>
 		Otorhinolaryngologist Room
 	</template>
-</cds-tabs>`
+</rds-tabs>`
 			},
 		}
 	}}
 />
 
 export const Template = (args) => ({
-	components: { CdsTabs: Tabs },
+	components: { RdsTabs: Tabs },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
 		<div style="background-color: #F8F9FA; padding: 16px; border-radius: 4px;">
-			<cds-tabs
+			<rds-tabs
 				v-bind="args"
 				@tabs-change="logTabsChange"
 			>
@@ -71,7 +71,7 @@ export const Template = (args) => ({
 				<template #room-13>
 					Otorhinolaryngologist Room
 				</template>
-			</cds-tabs>
+			</rds-tabs>
 	</div>
 	`,
 	methods: {

@@ -32,7 +32,7 @@ import Table from '../../components/Table.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<cds-table
+`<rds-table
 	:fields="fields"
 	:items="items"
 />`
@@ -42,7 +42,7 @@ import Table from '../../components/Table.vue';
 />
 
 export const Template = (args) => ({
-	components: { CdsTable: Table },
+	components: { RdsTable: Table },
 	setup() {
 		return { args };
 	},
@@ -52,7 +52,7 @@ export const Template = (args) => ({
 		};
 	},
 	template: /*html*/
-		`<cds-table
+		`<rds-table
 			v-model="selected"
 			v-bind="args"
 		/>

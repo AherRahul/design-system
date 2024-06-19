@@ -1,37 +1,37 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
 	<div
-		ref="cds-box"
+		ref="rds-box"
 		:class="elevated ? 'box--elevated' : `box--${variant}`"
 	>
-		<cds-clickable
+		<rds-clickable
 			class="box__container"
 			:clickable="clickable"
 			@click="handleClick"
 		>
 			<!-- @slot Slot used to render the Box's internal content.-->
-			<cds-spacer
+			<rds-spacer
 				:padding-top="padding"
 				:padding-right="padding"
 				:padding-bottom="padding"
 				:padding-left="padding"
 			>
 				<slot />
-			</cds-spacer>
-		</cds-clickable>
+			</rds-spacer>
+		</rds-clickable>
 	</div>
 </template>
 
 <script>
-import CdsSpacer from './Spacer.vue';
-import CdsClickable from './Clickable.vue';
+import RdsSpacer from './Spacer.vue';
+import RdsClickable from './Clickable.vue';
 
 import rounder from '../utils/methods/rounder';
 
 export default {
 	components: {
-		CdsSpacer,
-		CdsClickable,
+		RdsSpacer,
+		RdsClickable,
 	},
 
 	props: {
@@ -92,7 +92,7 @@ export default {
 	},
 
 	mounted() {
-		this.width = this.$refs['cds-box'].getBoundingClientRect().width;
+		this.width = this.$refs['rds-box'].getBoundingClientRect().width;
 	},
 
 	methods: {

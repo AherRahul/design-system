@@ -40,7 +40,7 @@ import GaugeChart from '../../components/GaugeChart.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/
-`<cds-gauge-chart
+`<rds-gauge-chart
 	variant="green"
 	:size="300"
 	:value="79.2"
@@ -51,12 +51,12 @@ import GaugeChart from '../../components/GaugeChart.vue';
 />
 
 export const Template = (args) => ({
-	components: { CdsGaugeChart: GaugeChart },
+	components: { RdsGaugeChart: GaugeChart },
 	setup() {
 		return { args };
 	},
 	template: /*html*/
-		`<cds-gauge-chart
+		`<rds-gauge-chart
 			v-bind="args"
 		/>`,
 });

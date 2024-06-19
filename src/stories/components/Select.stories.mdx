@@ -20,7 +20,7 @@ import Select from '../../components/Select.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<cds-select
+`<rds-select
 	:value="value"
 	:options="options"
 	width="wide"
@@ -34,7 +34,7 @@ import Select from '../../components/Select.vue';
 />
 
 export const Template = (args) => ({
-	components: { CdsSelect: Select },
+	components: { RdsSelect: Select },
 	setup() {
 		return { args };
 	},
@@ -47,7 +47,7 @@ export const Template = (args) => ({
 		};
 	},
 	template: /*html*/ `
-		<cds-select
+		<rds-select
 			v-bind="args" 
 			v-model="value"
 		/>

@@ -1,33 +1,33 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
 	<div
-		class="cds-checkbox__container"
+		class="rds-checkbox__container"
 	>
 		<div
-			class="cds-checkbox__input"
+			class="rds-checkbox__input"
 		>
 			<input
-				:id="$attrs.id || 'cds-checkbox-option-input'"
+				:id="$attrs.id || 'rds-checkbox-option-input'"
 				:value="modelValue"
 				type="checkbox"
-				:name="$attrs.name || 'cds-checkbox-option'"
+				:name="$attrs.name || 'rds-checkbox-option'"
 				:disabled="disabled"
 			>
 
 			<label
-				:for="$attrs.id || 'cds-checkbox-option-input'"
+				:for="$attrs.id || 'rds-checkbox-option-input'"
 				:class="resolveCheckboxClass"
 				@click="toggleValue"
 			/>
 		</div>
 
 		<label
-			class="cds-checkbox__label"
+			class="rds-checkbox__label"
 			:class="{
-				'cds-checkbox__label--disabled': disabled,
-				'cds-checkbox__label--prominent': prominent && modelValue,
+				'rds-checkbox__label--disabled': disabled,
+				'rds-checkbox__label--prominent': prominent && modelValue,
 			}"
-			:for="$attrs.id || 'cds-checkbox-option-input'"
+			:for="$attrs.id || 'rds-checkbox-option-input'"
 			@click="toggleValue"
 		>
 			{{ label }}
@@ -95,12 +95,12 @@ export default {
 
 	computed: {
 		resolveCheckboxClass() {
-			const disabledClass = this.disabled ? 'cds-checkbox__input--disabled' : '';
-			const variantClass = variantClassResolver('cds-checkbox__input', this.variant);
+			const disabledClass = this.disabled ? 'rds-checkbox__input--disabled' : '';
+			const variantClass = variantClassResolver('rds-checkbox__input', this.variant);
 			let checkedClass = this.isChecked
-				? `cds-checkbox__input--checked`
-				: 'cds-checkbox__input--unchecked';
-			checkedClass = this.isIndeterminate ? 'cds-checkbox__input--indeterminate' : checkedClass;
+				? `rds-checkbox__input--checked`
+				: 'rds-checkbox__input--unchecked';
+			checkedClass = this.isIndeterminate ? 'rds-checkbox__input--indeterminate' : checkedClass;
 
 			return `${variantClass} ${checkedClass} ${disabledClass}`;
 		}
@@ -155,7 +155,7 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/sass/tokens.scss';
 
-.cds-checkbox__container {
+.rds-checkbox__container {
 	display: flex;
 	align-items: center;
 	gap: spacer(2);
@@ -166,7 +166,7 @@ export default {
 		position: absolute;
 	}
 
-	.cds-checkbox__input {
+	.rds-checkbox__input {
 		position: relative;
 
 		@include variantResolver using ($color-name, $shade-50, $shade-100, $shade-200, $shade-300, $base-color, $shade-500, $shade-600) {
@@ -223,7 +223,7 @@ export default {
 			cursor: default !important;
 		}
 
-		&--disabled:not(.cds-checkbox__input--checked) {
+		&--disabled:not(.rds-checkbox__input--checked) {
 			background-color: $n-20 !important;
 			border: 1px solid $n-200 !important;
 			cursor: default !important;
@@ -236,13 +236,13 @@ export default {
 
 	}
 
-	.cds-checkbox__label {
+	.rds-checkbox__label {
 		@include body-2;
 		cursor: pointer;
 		color: $n-700;
 
 		&--disabled {
-			@extend .cds-checkbox__label;
+			@extend .rds-checkbox__label;
 			color: $n-400;
 			cursor: default !important;
 		}

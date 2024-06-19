@@ -5,7 +5,7 @@
 		tabindex="0"
 		@click="shouldCloseOnBackdrop"
 	>
-		<cds-box
+		<rds-box
 			padding="5"
 			class="side-sheet__container"
 			elevated
@@ -21,16 +21,16 @@
 							class="side-sheet__close-icon"
 							@click="closeHandle"
 						>
-							<cds-clickable
+							<rds-clickable
 								clickable
 							>
-								<cds-icon
+								<rds-icon
 									height="20"
 									width="20"
 									name="x-outline"
 									@click.stop="$emit('update:modelValue', !modelValue)"
 								/>
-							</cds-clickable>
+							</rds-clickable>
 						</div>
 					</div>
 				</slot>
@@ -38,23 +38,23 @@
 
 			<!-- @slot Slot used to display content within the component. -->
 			<slot />
-		</cds-box>
+		</rds-box>
 	</div>
 </template>
 
 <script>
-import CdsIcon from '../components/Icon.vue';
-import CdsClickable from '../components/Clickable.vue';
-import CdsBox from '../components/Box.vue';
+import RdsIcon from '../components/Icon.vue';
+import RdsClickable from '../components/Clickable.vue';
+import RdsBox from '../components/Box.vue';
 import sassColorVariables from '../assets/sass/colors.module.scss';
 import hexToRgb from '../utils/methods/hexToRgb';
 import { KeyCodes } from '../utils';
 
 export default {
 	components: {
-		CdsIcon,
-		CdsBox,
-		CdsClickable,
+		RdsIcon,
+		RdsBox,
+		RdsClickable,
 	},
 	props: {
 		/**

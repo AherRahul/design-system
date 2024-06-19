@@ -1,9 +1,9 @@
 import { Meta, Story, Props, ArgsTable, Canvas, Preview } from '@storybook/addon-docs';
-import Spinner from '../../components/Spinner.vue';
+import OverlayLoader from '../../components/OverlayLoader.vue';
 
 <Meta
-	title="Components/Loaders/Spinner"
-	component={ Spinner }
+	title="Components/Loaders/OverlayLoader"
+	component={ OverlayLoader }
 	argTypes={{
 		size: {
 			control: {
@@ -38,7 +38,7 @@ import Spinner from '../../components/Spinner.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<rds-spinner
+`<rds-overlay-loader
 	variant="green"
 	size="md"
 />`
@@ -48,40 +48,31 @@ import Spinner from '../../components/Spinner.vue';
 />
 
 export const Template = (args) => ({
-	components: { RdsSpinner: Spinner },
+	components: { RdsOverlayLoader: OverlayLoader },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
-		<rds-spinner
+		<rds-overlay-loader
 			v-bind="args"
 		/>
 	`,
 });
 
-<div align="center" style={{display: 'flex'}}>
-    <a href="https://rahulaher.netlify.app">
-        <img src="https://rahulaher.netlify.app/img/logo/glyph-black-colored.svg" alt="Take care soon" width="50" />
-        <img src="https://rahulaher.netlify.app/img/logo/word-black-colored.svg" alt="Take care soon" width="150" />
-    </a>
-</div>
+# OverlayLoader
 
-<br />
-<br />
-
-# Spinner
-
-### Spinners is a component used to indicate that the progress of an operation has not yet been completed.
+### OverlayLoader is used to indicate the loading of internal page components, such as cards and graphics.
 ---
 <br />
 
 ## When to use:
-- It is necessary to prevent the viewing and navigation of page content while there is a pending operation.
+- To indicate the loading of page elements that do not yet have a skeleton implemented.
 
 <br />
 
 ## When not to use:
-- Viewing and navigation cannot be interrupted.
+- Do not use OverlayLoader to load pages. In these cases, choose Spinner.
+- Do not use OverlayLoader to indicate loading of components that have skeletons implemented
 
 <br />
 
@@ -89,10 +80,10 @@ export const Template = (args) => ({
 
 <Canvas>
 	<Story
-		name="Spinner"
+		name="OverlayLoader"
 	>
 		{ Template.bind({}) }
 	</Story>
 </Canvas>
 
-<ArgsTable story="Spinner" />
+<ArgsTable story="OverlayLoader" />

@@ -32,7 +32,7 @@ import Multiselect from '../../components/Multiselect.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<cds-multiselect
+`<rds-multiselect
 	:options="options"
 	v-model="value"
 	label="title"
@@ -44,7 +44,7 @@ import Multiselect from '../../components/Multiselect.vue';
 />
 
 export const Template = (args) => ({
-	components: { CdsMultiselect: Multiselect },
+	components: { RdsMultiselect: Multiselect },
 	setup() {
 		return { args };
 	},
@@ -54,7 +54,7 @@ export const Template = (args) => ({
 		};
 	},
 	template: /*html*/ `
-		<cds-multiselect
+		<rds-multiselect
 			v-bind="args"
 			v-model="value"
 		/>

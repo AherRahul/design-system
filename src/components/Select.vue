@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
 	<div
-		ref="cds-select"
+		ref="rds-select"
 		class="select"
 	>
 		<label
@@ -9,7 +9,7 @@
 		>
 			<div
 				class="label__content"
-				for="cds-select"
+				for="rds-select"
 			>
 				<span>
 					{{ label }}
@@ -22,7 +22,7 @@
 					*
 				</span>
 
-				<cds-icon
+				<rds-icon
 					v-if="tooltip"
 					v-cdstip="tooltip"
 					:name="tooltipIcon"
@@ -117,11 +117,11 @@ import { widths } from '../utils';
 import { generateKey } from '../utils';
 import cloneDeep from 'lodash.clonedeep';
 import removeAccents from '../utils/methods/removeAccents';
-import CdsIcon from './Icon.vue';
+import RdsIcon from './Icon.vue';
 
 export default {
 	components: {
-		CdsIcon,
+		RdsIcon,
 	},
 
 	props: {
@@ -353,8 +353,8 @@ export default {
 	},
 
 	mounted() {
-		this.id = `cds-select-${this.uniqueKey}`;
-		this.selectElement = this.$refs['cds-select'];
+		this.id = `rds-select-${this.uniqueKey}`;
+		this.selectElement = this.$refs['rds-select'];
 	},
 
 	methods: {
@@ -478,7 +478,7 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/sass/tokens.scss';
 
-#cds-select {
+#rds-select {
 	-webkit-user-select: none; /* Safari */
 	-ms-user-select: none; /* IE 10 and IE 11 */
 	user-select: none;

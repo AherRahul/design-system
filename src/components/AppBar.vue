@@ -21,44 +21,44 @@
 		/>
 
 		<div class="app-bar__icons-grid">
-			<cds-clickable
+			<rds-clickable
 				v-if="!hideNotification"
 				clickable
 				@click="handleClick('notification')"
 			>
-				<cds-icon
+				<rds-icon
 					height="24"
 					width="24"
 					light
 					name="notification-bell-outline"
 				/>
-			</cds-clickable>
+			</rds-clickable>
 
-			<cds-clickable
+			<rds-clickable
 				v-if="!hideHelp"
 				clickable
 				@click="handleClick('help')"
 			>
-				<cds-icon
+				<rds-icon
 					height="24"
 					width="24"
 					light
 					name="help-outline"
 				/>
-			</cds-clickable>
+			</rds-clickable>
 
-			<cds-clickable
+			<rds-clickable
 				v-if="!hideSettings"
 				clickable
 				@click="handleClick('settings')"
 			>
-				<cds-icon
+				<rds-icon
 					height="24"
 					width="24"
 					light
 					name="settings-outline"
 				/>
-			</cds-clickable>
+			</rds-clickable>
 
 			<!-- @slot Slot used to add information about the user to the AppBar.-->
 			<slot
@@ -76,7 +76,7 @@
 					<span class="user-info__description">{{ userDescription }}</span>
 				</div>
 
-				<cds-avatar
+				<rds-avatar
 					:name="userName"
 					variant="white"
 					size="md"
@@ -90,43 +90,43 @@
 						<!-- @slot Slot used for rendering Avatar dropdown content.-->
 						<slot name="dropdown-content" />
 					</template>
-				</cds-avatar>
+				</rds-avatar>
 			</div>
 
 			<div
 				v-if="!hideAppSwitcher"
 				class="app-switcher__container"
 			>
-				<cds-divider
+				<rds-divider
 					vertical
 					width="30"
 				/>
 
-				<cds-clickable
+				<rds-clickable
 					clickable
 					@click="handleClick('app-switcher')"
 				>
-					<cds-icon
+					<rds-icon
 						height="24"
 						width="24"
 						light
 						name="grid-outline"
 					/>
-				</cds-clickable>
+				</rds-clickable>
 			</div>
 
-			<cds-clickable
+			<rds-clickable
 				v-if="!hideLogout"
 				clickable
 				@click="handleClick('logout')"
 			>
-				<cds-icon
+				<rds-icon
 					height="24"
 					width="24"
 					light
 					name="logout-outline"
 				/>
-			</cds-clickable>
+			</rds-clickable>
 		</div>
 
 		<!-- @slot Slot used for module icon rendering.-->
@@ -140,17 +140,17 @@
 </template>
 
 <script>
-import CdsIcon from './Icon.vue';
-import CdsDivider from './Divider.vue';
-import CdsAvatar from './Avatar.vue';
-import CdsClickable from './Clickable.vue';
+import RdsIcon from './Icon.vue';
+import RdsDivider from './Divider.vue';
+import RdsAvatar from './Avatar.vue';
+import RdsClickable from './Clickable.vue';
 
 export default {
 	components: {
-		CdsIcon,
-		CdsAvatar,
-		CdsDivider,
-		CdsClickable,
+		RdsIcon,
+		RdsAvatar,
+		RdsDivider,
+		RdsClickable,
 	},
 
 	props: {

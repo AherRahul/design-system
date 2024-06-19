@@ -42,7 +42,7 @@ describe('SideBar', () => {
 		const wrapper = mount(SideBar, {
 			global: {
 				stubs: {
-					'cds-icon': true,
+					'rds-icon': true,
 				},
 			},
 			props: {

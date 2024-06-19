@@ -32,7 +32,7 @@ import Checkbox from '../../components/Checkbox.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<cds-checkbox
+`<rds-checkbox
 	v-model="value"
 	label="checkbox"
 />`
@@ -42,7 +42,7 @@ import Checkbox from '../../components/Checkbox.vue';
 />
 
 export const Template = (args) => ({
-	components: { CdsCheckbox: Checkbox },
+	components: { RdsCheckbox: Checkbox },
 	setup() {
 		return { args };
 	},
@@ -53,7 +53,7 @@ export const Template = (args) => ({
 		};
 	},
 	template: /*html*/ `
-		<cds-checkbox
+		<rds-checkbox
 			v-bind="args"
 			v-model="value"
 			v-model:indeterminate="indeterminate"

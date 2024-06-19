@@ -1,12 +1,12 @@
 <template>
 	<div
 		v-if="internalShow"
-		class="cds-modal__backdrop"
+		class="rds-modal__backdrop"
 	>
 		<div
 			v-if="internalShow"
-			class="cds-modal"
-			:class="`cds-modal--${size}`"
+			class="rds-modal"
+			:class="`rds-modal--${size}`"
 			:style="dynamicStyle"
 			v-on-click-outside="noCloseOnBackdrop ? () => {} : closeHandle"
 		>
@@ -15,14 +15,14 @@
 			>
 				<!-- @slot Slot usado para utilização de header customizado. -->
 				<slot name="header">
-					<div class="cds-modal__header">
+					<div class="rds-modal__header">
 						<h3>{{ title }}</h3>
 						<div
 							v-if="!noCloseButton"
-							class="cds-modal__close-icon"
+							class="rds-modal__close-icon"
 							@click="closeHandle"
 						>
-							<cds-icon
+							<rds-icon
 								name="x-outline"
 								height="20"
 								width="20"
@@ -35,21 +35,21 @@
 
 			<!-- @slot Slot usado para inserção de conteúdo dentro do Modal. -->
 			<section>
-				<cds-scrollable
+				<rds-scrollable
 					:max-height="maxBodyHeight"
 					auto-height
 				>
 					<slot />
-				</cds-scrollable>
+				</rds-scrollable>
 			</section>
 
 			<footer
 				v-if="!noFooter"
-				class="cds-modal__footer"
+				class="rds-modal__footer"
 			>
 				<!-- @slot Slot usado para inserção de footer customizado. -->
 				<slot name="footer">
-					<cds-button
+					<rds-button
 						v-if="!noCancelButton"
 						:text="cancelButtonText"
 						secondary
@@ -57,7 +57,7 @@
 						@click="closeHandle"
 					/>
 
-					<cds-button
+					<rds-button
 						class="footer__ok-button"
 						:text="okButtonText"
 						variant="green"
@@ -71,9 +71,9 @@
 </template>
 
 <script>
-import CdsIcon from '../components/Icon.vue';
-import CdsButton from '../components/Button.vue';
-import CdsScrollable from '../components/Scrollable.vue';
+import RdsIcon from '../components/Icon.vue';
+import RdsButton from '../components/Button.vue';
+import RdsScrollable from '../components/Scrollable.vue';
 import vClickOutside from 'click-outside-vue3';
 
 export default {
@@ -82,9 +82,9 @@ export default {
 	},
 
 	components: {
-		CdsIcon,
-		CdsButton,
-		CdsScrollable,
+		RdsIcon,
+		RdsButton,
+		RdsScrollable,
 	},
 
 	data() {
@@ -216,7 +216,7 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/sass/tokens.scss';
 
-.cds-modal {
+.rds-modal {
 	display: flex;
 	flex-direction: column;
 	max-height: 90%;
@@ -284,12 +284,12 @@ export default {
 }
 
 @media (min-width: 576px) {
-	.cds-modal--md {
+	.rds-modal--md {
 		max-width: 500px;
 		width: 500px;
 		right: calc(50% - 500px / 2);
 	}
-	.cds-modal--sm {
+	.rds-modal--sm {
 		max-width: 300px;
 		width: 300px;
 		right: calc(50% - 300px / 2);
@@ -297,7 +297,7 @@ export default {
 }
 
 @media (min-width: 992px) {
-	.cds-modal--lg {
+	.rds-modal--lg {
 		max-width: 800px;
 		width: 800px;
 		right: calc(50% - 800px / 2);

@@ -35,7 +35,7 @@ import dedent from 'ts-dedent';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<cds-timeline-item
+`<rds-timeline-item
 	variant="green"
 	:loading="false"
 	:hollowed="false"
@@ -49,19 +49,19 @@ import dedent from 'ts-dedent';
 	<template #content>
 		Creator of the C programming language
 	</template>
-</cds-timeline-item>`
+</rds-timeline-item>`
 			},
 		}
 	}}
 />
 
 export const Template = (args) => ({
-	components: { CdsTimelineItem: TimelineItem },
+	components: { RdsTimelineItem: TimelineItem },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
-		<cds-timeline-item
+		<rds-timeline-item
 			v-bind="args"
 		>
 			<template #opposite>
@@ -73,7 +73,7 @@ export const Template = (args) => ({
 			<template #content>
 				Creator of the C programming language
 			</template>
-		</cds-timeline-item>
+		</rds-timeline-item>
 	`,
 });
 

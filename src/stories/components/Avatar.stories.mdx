@@ -43,7 +43,7 @@ import Avatar from '../../components/Avatar.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ `
-<cds-avatar
+<rds-avatar
 	src="https://this-person-does-not-exist.com/img/avatar-gen83fa18cdcd216e7220794a23e76fe0dc.jpg"
 />`
 			},
@@ -52,18 +52,18 @@ import Avatar from '../../components/Avatar.vue';
 />
 
 export const Template = (args) => ({
-	components: { CdsAvatar: Avatar },
+	components: { RdsAvatar: Avatar },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
-		<cds-avatar
+		<rds-avatar
 			v-bind="args" 
 		>
 			<template #dropdown-content>
 				Conteúdo do dropdown
 			</template>
-		</cds-avatar>
+		</rds-avatar>
 	`,
 });
 

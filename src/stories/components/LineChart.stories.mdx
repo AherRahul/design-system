@@ -41,7 +41,7 @@ import LineChart from '../../components/LineChart.vue';
 				language: 'html',
 				format: true,
 				code: /*html*/
-`<cds-line-chart
+`<rds-line-chart
 	:data="chartData"
 	variant="variant"
 	:labels="chartLabels"
@@ -53,13 +53,13 @@ import LineChart from '../../components/LineChart.vue';
 />
 
 export const Template = (args) => ({
-	components: { CdsLineChart: LineChart },
+	components: { RdsLineChart: LineChart },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
 		<div style="background-color: #F8F9FA; padding: 16px; border-radius: 4px; height: 300px">
-			<cds-line-chart
+			<rds-line-chart
 				v-bind="args"
 			/>
 		</div>

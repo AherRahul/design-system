@@ -35,7 +35,7 @@ import Icon from '../../components/Icon.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<cds-card
+`<rds-card
 	imageWidth="300"
 	imageHeight="180"
 	imageSrc="https://images.unsplash.com/photo-1677391520535-e03e845dec33?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
@@ -47,29 +47,29 @@ import Icon from '../../components/Icon.vue';
 		</div>
 	</template>
 	<template #extra>
-		<cds-badge>Action</cds-badge>
+		<rds-badge>Action</rds-badge>
 	</template>
 	<template #body>
 		Some quick example text to build on the card title and make up the bulk of the card's content.
 	</template>
 	<template #footer>
-		<cds-button size="md" style="margin-top: 16px">
+		<rds-button size="md" style="margin-top: 16px">
 			Action 1
-		</cds-button>
+		</rds-button>
 	</template>
-</cds-card>`
+</rds-card>`
 			},
 		}
 	}}
 />
 
 export const TemplateStandard = (args) => ({
-	components: { CdsCard: Card, CdsButton: Button, CdsBadge: Badge },
+	components: { RdsCard: Card, RdsButton: Button, RdsBadge: Badge },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
-		<cds-card
+		<rds-card
 			v-bind="args"
 			@cardClick="logClick"
 		>
@@ -79,17 +79,17 @@ export const TemplateStandard = (args) => ({
 				</div>
 			</template>
 			<template #extra>
-				<cds-badge>Action</cds-badge>
+				<rds-badge>Action</rds-badge>
 			</template>
 			<template #body>
 				Some quick example text to build on the card title and make up the bulk of the card's content.
 			</template>
 			<template #footer>
-				<cds-button size="md" style="margin-top: 16px">
+				<rds-button size="md" style="margin-top: 16px">
 					Action 1
-				</cds-button>
+				</rds-button>
 			</template>
-		</cds-card>
+		</rds-card>
 	`,
 	methods: {
 		logClick(event) {
@@ -99,30 +99,30 @@ export const TemplateStandard = (args) => ({
 });
 
 export const SimpleCardTemplate = (args) => ({
-	components: { CdsCard: Card, CdsButton: Button, CdsBadge: Badge },
+	components: { RdsCard: Card, RdsButton: Button, RdsBadge: Badge },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
-		<cds-card
+		<rds-card
 			v-bind="args"
 		>
-		</cds-card>
+		</rds-card>
 	`,
 });
 
 export const withSlotsTemplate = (args) => ({
-	components: { CdsCard: Card, CdsButton: Button, CdsBadge: Badge },
+	components: { RdsCard: Card, RdsButton: Button, RdsBadge: Badge },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
-		<cds-card
+		<rds-card
 			v-bind="args"
 		>
 			<template #header>45 <small>pregnant women</small></template>
 			<template #extra>
-				<cds-badge variant="red">Alert</cds-badge>
+				<rds-badge variant="red">Alert</rds-badge>
 			</template>
 			<template #body>
 				Haven't had a consultation for more than 30 days
@@ -132,22 +132,22 @@ export const withSlotsTemplate = (args) => ({
 					<small><strong>VIEW LIST</strong></small>
 				</div>
 			</template>
-		</cds-card>
+		</rds-card>
 	`,
 });
 
 export const withIconTemplate = (args) => ({
-	components: { CdsCard: Card, CdsButton: Button, CdsIcon: Icon },
+	components: { RdsCard: Card, RdsButton: Button, RdsIcon: Icon },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
-		<cds-card
+		<rds-card
 			v-bind="args"
 		>
 			<template #icon>
 				<div class="d-flex align-items-center justify-content-center" style="background: #ecf1fe; height: 48px; width: 48px; border-radius: 8px">
-					<cds-icon name="home-outline" color="#1A55A8"/>
+					<rds-icon name="home-outline" color="#1A55A8"/>
 				</div>
 			</template>
 			<template #header>
@@ -156,20 +156,20 @@ export const withIconTemplate = (args) => ({
 			<template #body>
 				UBSs com dados atualizados
 			</template>
-		</cds-card>
+		</rds-card>
 	`,
 });
 
 export const horizontalPropTemplate = (args) => ({
-	components: { CdsCard: Card, CdsButton: Button, CdsBadge: Badge },
+	components: { RdsCard: Card, RdsButton: Button, RdsBadge: Badge },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
-		<cds-card
+		<rds-card
 			v-bind="args"
 		>
-		</cds-card>
+		</rds-card>
 	`,
 });
 

@@ -50,7 +50,7 @@ import ProgressCircular from '../../components/ProgressCircular.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<cds-progress-circular
+`<rds-progress-circular
 	variant="blue"
 	size="md"
 	:value="35"
@@ -61,11 +61,11 @@ import ProgressCircular from '../../components/ProgressCircular.vue';
 />
 
 export const Template = (args) => ({
-	components: { CdsProgressCircular: ProgressCircular },
+	components: { RdsProgressCircular: ProgressCircular },
 	setup() {
 		return { args };
 	},
-	template: /*html*/ `<cds-progress-circular v-bind="args"/>`,
+	template: /*html*/ `<rds-progress-circular v-bind="args"/>`,
 });
 
 <div align="center" style={{display: 'flex'}}>

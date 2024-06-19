@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-	<span class="cds-radio__container">
+	<span class="rds-radio__container">
 		<!--
 			Event emitted when Radio changes its state.
 			@event change
@@ -9,8 +9,8 @@
 		<input
 			:id="`${uniqueId}-${value}`"
 			type="radio"
-			class="cds-radio"
-			:class="`cds-radio--${variant}`"
+			class="rds-radio"
+			:class="`rds-radio--${variant}`"
 			:value="value"
 			:disabled="disabled"
 			:name="$attrs.name"
@@ -19,13 +19,13 @@
 		>
 
 		<label
-			class="cds-radio__label"
+			class="rds-radio__label"
 			:for="`${uniqueId}-${value}`"
 		>
 			<!-- @slot Standard slot for rendering custom label content -->
 			<slot>
 				<span
-					class="cds-radio__label-text"
+					class="rds-radio__label-text"
 					:disabled="disabled"
 				>
 					{{ label }}
@@ -98,18 +98,18 @@ export default {
 <style lang="scss">
 @import '../assets/sass/tokens.scss';
 
-.cds-radio__container {
+.rds-radio__container {
 	display: flex;
 	align-items: flex-start;
 }
 
-.cds-radio__label {
+.rds-radio__label {
 	cursor: v-bind(cursorType);
 	@include body-2;
 	margin: ml(2);
 }
 
-.cds-radio {
+.rds-radio {
 	cursor: v-bind(cursorType);
 	-webkit-appearance: none;
 	appearance: none;

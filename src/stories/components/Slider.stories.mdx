@@ -32,7 +32,7 @@ import Slider from '../../components/Slider.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<cds-slider
+`<rds-slider
 	:min="0"
 	:max="100"
 	:value="value"
@@ -43,7 +43,7 @@ import Slider from '../../components/Slider.vue';
 />
 
 export const Template = (args) => ({
-	components: { CdsSlider: Slider },
+	components: { RdsSlider: Slider },
 	setup() {
 		return { args };
 	},
@@ -53,7 +53,7 @@ export const Template = (args) => ({
 		};
 	},
 	template: /*html*/ `
-		<cds-slider
+		<rds-slider
 			v-bind="args"
 			v-model="value"
 		/>

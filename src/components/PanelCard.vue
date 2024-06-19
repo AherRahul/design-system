@@ -1,5 +1,5 @@
 <template>
-	<cds-box
+	<rds-box
 		class="panel-card"
 		padding="0"
 		fluid
@@ -16,23 +16,23 @@
 			</div>
 		</div>
 
-		<cds-divider dimmed />
+		<rds-divider dimmed />
 
 		<div :class="contentClass">
 			<!-- @slot Slot used to insert customized content. -->
 			<slot />
 		</div>
-	</cds-box>
+	</rds-box>
 </template>
 
 <script>
-import CdsBox from './Box.vue';
-import CdsDivider from './Divider.vue';
+import RdsBox from './Box.vue';
+import RdsDivider from './Divider.vue';
 
 export default {
 	components: {
-		CdsBox,
-		CdsDivider,
+		RdsBox,
+		RdsDivider,
 	},
 
 	props: {

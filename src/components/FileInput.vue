@@ -31,7 +31,7 @@
 				v-if="!file"
 				class="file-input__container"
 			>
-				<cds-icon
+				<rds-icon
 					name="upload-cloud-outline"
 					:class="{
 						'icon-upload--sm': size === 'sm',
@@ -71,7 +71,7 @@
 				v-else
 				class="file-input__container"
 			>
-				<cds-icon
+				<rds-icon
 					height="24"
 					width="24"
 					name="document-text-outline"
@@ -99,7 +99,7 @@
 							class="x-icon__container"
 							@click.stop="handleRemove"
 						>
-							<cds-icon
+							<rds-icon
 								height="18"
 								width="18"
 								name="x-outline"
@@ -131,11 +131,11 @@
 
 <script>
 import isEmpty from 'lodash.isempty';
-import CdsIcon from './Icon.vue';
+import RdsIcon from './Icon.vue';
 
 export default {
 	components: {
-		CdsIcon,
+		RdsIcon,
 	},
 
 	props: {

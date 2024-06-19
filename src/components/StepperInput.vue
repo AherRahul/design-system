@@ -55,7 +55,7 @@
 					@blur="isBeingFocused = false"
 					@click="changeValue(1)"
 				>
-					<cds-icon
+					<rds-icon
 						height="16"
 						width="16"
 						name="plus-outline"
@@ -71,7 +71,7 @@
 					@blur="isBeingFocused = false"
 					@click="changeValue(-1)"
 				>
-					<cds-icon
+					<rds-icon
 						height="16"
 						width="16"
 						name="minus-outline"
@@ -93,12 +93,12 @@
 import { longClickDirective } from '@sysvale/vue3-long-click';
 const longClickInstance = longClickDirective({ delay: 400, interval: 50 });
 
-import CdsIcon from './Icon.vue';
+import RdsIcon from './Icon.vue';
 
 export default {
 
 	components: {
-		CdsIcon,
+		RdsIcon,
 	},
 
 	directives: {

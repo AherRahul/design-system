@@ -25,14 +25,14 @@ import TextInput from '../../components/TextInput.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ `
-<cds-text-input />`
+<rds-text-input />`
 			},
 		}
 	}}
 />
 
 export const Template = (args) => ({
-	components: { CdsTextInput: TextInput },
+	components: { RdsTextInput: TextInput },
 	setup() {
 		return { args };
 	},
@@ -42,7 +42,7 @@ export const Template = (args) => ({
 		};
 	},
 	template: /*html*/ `
-		<cds-text-input
+		<rds-text-input
 			v-bind="args" 
 			v-model="value"
 			@blur="logBlur"

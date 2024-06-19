@@ -31,7 +31,7 @@ import CalloutCard from '../../components/CalloutCard.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ `
-<cds-callout-card
+<rds-callout-card
 	image="caminho-da-imagem.jpg"
 	text="Texto do CalloutCard"
 	title="Título do CalloutCard"
@@ -42,12 +42,12 @@ import CalloutCard from '../../components/CalloutCard.vue';
 />
 
 export const Template = (args) => ({
-	components: { CdsCalloutCard: CalloutCard },
+	components: { RdsCalloutCard: CalloutCard },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
-		<cds-callout-card
+		<rds-callout-card
 			v-bind="args"
 			@actionButtonClick="logButtonClick"
 		/>

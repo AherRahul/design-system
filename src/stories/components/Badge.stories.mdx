@@ -43,29 +43,29 @@ import Badge from '../../components/Badge.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<cds-badge
+`<rds-badge
 	variant="red"
 	size="md"
 >
 	Badge
-</cds-badge>`
+</rds-badge>`
 			},
 		}
 	}}
 />
 
 export const Template = (args) => ({
-	components: { CdsBadge: Badge },
+	components: { RdsBadge: Badge },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
-		<cds-badge
+		<rds-badge
 			v-bind="args"
 			@click="handleEmit"
 		>
 			Badge
-		</cds-badge>`,
+		</rds-badge>`,
 	methods: {
 		handleEmit(value) { console.info('value: ', value); }
 	}

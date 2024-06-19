@@ -12,7 +12,7 @@ import Dropdown from '../../components/Dropdown.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<cds-dropdown
+`<rds-dropdown
 	label="Idade"
 	content="0 a 120 anos"
 	@click="isActive = !isActive"
@@ -23,16 +23,16 @@ import Dropdown from '../../components/Dropdown.vue';
 />
 
 export const Template = (args) => ({
-	components: { CdsDropdown: Dropdown },
+	components: { RdsDropdown: Dropdown },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
-		<cds-dropdown
+		<rds-dropdown
 			v-bind="$props"
 		>
 			<p>Dropdown Slot</p>
-		</cds-dropdown>`,
+		</rds-dropdown>`,
 });
 
 <div align="center" style={{display: 'flex'}}>

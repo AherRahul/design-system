@@ -13,7 +13,7 @@ import Button from '../../components/Button.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<cds-page-header
+`<rds-page-header
 	title="Procedures"
 	subtitle="Manage registered procedures"
 >
@@ -21,12 +21,12 @@ import Button from '../../components/Button.vue';
 		#aside
 	>
 		<div class="d-flex">
-			<cds-button
+			<rds-button
 				secondary
 				@click="logClick('Btn 1')"
 				text="Button 1"
 			/>
-			<cds-button
+			<rds-button
 				class="d-flex align-items-center ml-4"
 				variant="success"
 				@click="logClick('Btn 2')"
@@ -34,37 +34,37 @@ import Button from '../../components/Button.vue';
 			/>
 		</div>
 	</template>
-</cds-page-header>`
+</rds-page-header>`
 			},
 		}
 	}}
 />
 
 export const Template = (args) => ({
-	components: { CdsPageHeader: PageHeader, CdsButton: Button },
+	components: { RdsPageHeader: PageHeader, RdsButton: Button },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
-		<cds-page-header
+		<rds-page-header
 			v-bind="args"
 		>
 			<template
 				#aside
 			>
-				<cds-button
+				<rds-button
 					secondary
 					@click="logClick('Btn 1')"
 					text="Button 1"
 				/>
-				<cds-button
+				<rds-button
 					class="d-flex align-items-center ml-4"
 					variant="success"
 					@click="logClick('Btn 2')"
 					text="Button 2"
 				/>
 			</template>
-		</cds-page-header>
+		</rds-page-header>
 	`,
 	methods: { logClick(btnName) { console.info(btnName) } }
 });

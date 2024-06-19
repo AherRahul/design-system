@@ -12,7 +12,7 @@
 		>
 			<div class="alert__body">
 				<div>
-					<cds-icon
+					<rds-icon
 						:name="icon"
 						:class="{
 							'alert__icon--info': variant === 'info',
@@ -44,7 +44,7 @@
 				class="alert__close-button"
 				@click="close"
 			>
-				<cds-icon
+				<rds-icon
 					name="x-outline"
 					:class="{
 						'alert__icon--info': variant === 'info',
@@ -59,11 +59,11 @@
 </template>
 
 <script>
-import CdsIcon from '../components/Icon.vue';
+import RdsIcon from '../components/Icon.vue';
 
 export default {
 	components: {
-		CdsIcon,
+		RdsIcon,
 	},
 
 	props: {

@@ -1,7 +1,7 @@
 import { Source, Meta, Canvas, Story } from '@storybook/addon-docs';
-import Iconography from '../../docs-components/Iconography.vue';
+import LayoutGrid from '../../docs-components/LayoutGrid.vue';
 
-<Meta title="Foundation/Iconography" component={ Iconography } />
+<Meta title="Foundation/Layout" component={ LayoutGrid } />
 
 <div align="center" style={{display: 'flex'}}>
     <a href="https://rahulaher.netlify.app">
@@ -57,10 +57,10 @@ export const Template = (args) => ({
 	setup() {
 		return { args };
 	},
-	components: { Iconography },
-	template:`<iconography />`,
+	components: { LayoutGrid },
+	template:`<layout-grid />`,
 });
 
-<Story name="Iconography">
+<Story name="LayoutGrid">
 	{ Template.bind({}) }
 </Story>

@@ -2,7 +2,7 @@
 	<div>
 		<copy-token :target="target" :value="targetWithInclude" />
 
-		<cds-table
+		<rds-table
 			:items="items"
 			:fields="fields"
 			hover
@@ -14,7 +14,7 @@
 					:id="data.name"
 					class="copy-clip"
 				>
-					<cds-icon
+					<rds-icon
 						height="20"
 						width="20"
 						name="copy-outline"
@@ -42,32 +42,32 @@
 					>
 						{{ data.sample }}
 					</div>
-					<cds-button
+					<rds-button
 						v-else
 						secondary
 						class="button-sample"
 						:style="dynamicStyle(data)"
 					>
 						Button
-					</cds-button>
+					</rds-button>
 				</div>
 			</template>
-		</cds-table>
+		</rds-table>
 	</div>
 </template>
 
 <script>
-import CdsIcon from '../components/Icon.vue';
-import CdsButton from '../components/Button.vue';
-import CdsTable from '../components/Table.vue';
+import RdsIcon from '../components/Icon.vue';
+import RdsButton from '../components/Button.vue';
+import RdsTable from '../components/Table.vue';
 import CopyToken from '../docs-components/CopyToken.vue';
 
 export default {
 	components: {
-		CdsIcon,
-		CdsTable,
+		RdsIcon,
+		RdsTable,
 		CopyToken,
-		CdsButton,
+		RdsButton,
 	},
 	data() {
 		return {

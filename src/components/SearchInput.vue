@@ -1,13 +1,13 @@
 <template>
 	<div>
 		<div :class="stepperInputDynamicClass">
-			<cds-icon
+			<rds-icon
 				name="search-outline"
 				class="search-input__search-icon"
 			/>
 
 			<input
-				id="cds-search-input"
+				id="rds-search-input"
 				:value="modelValue"
 				:placeholder="placeholder"
 				:disabled="disabled"
@@ -17,15 +17,15 @@
 				@input="handleInput"
 			>
 
-			<!-- <cds-link-button
+			<!-- <rds-link-button
 				v-if="internalValue"
 				variant="blue"
 				@click="internalValue = ''"
 			>
 				To clean
-			</cds-link-button> -->
+			</rds-link-button> -->
 
-			<cds-icon
+			<rds-icon
 				v-if="modelValue"
 				name="x-outline"
 				width="18"
@@ -45,7 +45,7 @@
 					size="1x"
 					class="search-input__icon--alert-circle-icon"
 				/>
-				<cds-spinner
+				<rds-spinner
 					v-if="loadingState && !disabled"
 					size="sm"
 					variant="blue"
@@ -63,13 +63,13 @@
 </template>
 
 <script>
-import CdsIcon from './Icon.vue';
-import CdsLinkButton from './FlatButton.vue';
+import RdsIcon from './Icon.vue';
+import RdsLinkButton from './FlatButton.vue';
 
 export default {
 	components: {
-		CdsIcon,
-		CdsLinkButton,
+		RdsIcon,
+		RdsLinkButton,
 	},
 
 	props: {

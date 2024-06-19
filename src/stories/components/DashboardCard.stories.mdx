@@ -13,7 +13,7 @@ import Badge from '../../components/Badge.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ `
-<cds-dashboard-card
+<rds-dashboard-card
 	:showAction="true"
 	:action="Ver lista"
 	@action-button-click="handleActionClick"
@@ -23,12 +23,12 @@ import Badge from '../../components/Badge.vue';
 		<span style="margin-left: 8px; font-size: 13.5px; font-weight: 500;">pregnant women</span>
 	</template>
 	<template #status-slot>
-		<cds-badge variant="red">Alert</cds-badge>
+		<rds-badge variant="red">Alert</rds-badge>
 	</template>
 	<template #description-slot>
 		Haven't had a consultation for more than 30 days
 	</template>
-</cds-dashboard-card>`
+</rds-dashboard-card>`
 			},
 		}
 	}}
@@ -36,14 +36,14 @@ import Badge from '../../components/Badge.vue';
 
 export const Template = (args) => ({
 	components: {
-		CdsDashboardCard: DashboardCard,
-		CdsBadge: Badge,
+		RdsDashboardCard: DashboardCard,
+		RdsBadge: Badge,
 	},
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
-		<cds-dashboard-card
+		<rds-dashboard-card
 			v-bind="args"
 			@action-button-click="handleActionClick"
 		>
@@ -52,12 +52,12 @@ export const Template = (args) => ({
 				<span style="margin-left: 8px; font-size: 13.5px; font-weight: 500;">pregnant women</span>
 			</template>
 			<template #status-slot>
-				<cds-badge variant="red">Alert</cds-badge>
+				<rds-badge variant="red">Alert</rds-badge>
 			</template>
 			<template #description-slot>
 				Haven't had a consultation for more than 30 days
 			</template>
-		</cds-dashboard-card>
+		</rds-dashboard-card>
 	`,
 	methods: { handleActionClick() { console.info('clicked'); } },
 });

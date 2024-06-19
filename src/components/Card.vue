@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-	<cds-box
+	<rds-box
 		padding="0"
 		:clickable="clickable"
 		@boxClick="handleClick"
@@ -24,7 +24,7 @@
 				v-else-if="imageSrc"
 				class="card__image"
 			>
-				<cds-image
+				<rds-image
 					:src="imageSrc"
 					:width="imageWidth"
 					:height="imageHeight"
@@ -76,19 +76,19 @@
 				</div>
 			</div>
 		</div>
-	</cds-box>
+	</rds-box>
 </template>
 
 <script>
-import CdsBox from './Box.vue';
-import CdsImage from './Image.vue';
+import RdsBox from './Box.vue';
+import RdsImage from './Image.vue';
 
 import hasSlot from '../utils/methods/hasSlot';
 
 export default {
 	components: {
-		CdsBox,
-		CdsImage,
+		RdsBox,
+		RdsImage,
 	},
 
 	props: {

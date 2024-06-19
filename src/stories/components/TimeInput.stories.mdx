@@ -33,7 +33,7 @@ import TimeInput from '../../components/TimeInput.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ `
-<cds-time-input
+<rds-time-input
 	label="Time"
 />`
 			},
@@ -42,7 +42,7 @@ import TimeInput from '../../components/TimeInput.vue';
 />
 
 export const Template = (args) => ({
-	components: { CdsTimeInput: TimeInput },
+	components: { RdsTimeInput: TimeInput },
 	setup() {
 		return { args };
 	},
@@ -52,7 +52,7 @@ export const Template = (args) => ({
 		};
 	},
 	template: /*html*/ `
-		<cds-time-input
+		<rds-time-input
 			v-bind="args"
 			v-model="value"
 		/>`,

@@ -50,28 +50,28 @@ import Pulsar from '../../components/Pulsar.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<cds-tooltip
+`<rds-tooltip
 	text="Texto of tooltip"
 >
 	Tooltip trigger
-</cds-tooltip>`
+</rds-tooltip>`
 },
 		}
 	}}
 />
 
 export const Template = (args) => ({
-	components: { CdsPulsar: Pulsar },
+	components: { RdsPulsar: Pulsar },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
 			<div id="pulsar-target" style="width: fit-content;">Pulsar target</div>
-			<cds-pulsar
+			<rds-pulsar
 				v-bind="args"
 				targetId="pulsar-target"
 			>
-			</cds-pulsar>
+			</rds-pulsar>
 	`,
 	methods: {
 		logClickableClick(event) {

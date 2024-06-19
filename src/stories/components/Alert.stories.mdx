@@ -25,7 +25,7 @@ import Alert from '../../components/Alert.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<cds-alert
+`<rds-alert
 	variant="info",
 	text="Alert text",
 />`
@@ -35,16 +35,16 @@ import Alert from '../../components/Alert.vue';
 />
 
 export const Template = (args) => ({
-	components: { CdsAlert: Alert },
+	components: { RdsAlert: Alert },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
-		<cds-alert
+		<rds-alert
 			v-bind="args" 
 		>
 			Alert text by slot
-		</cds-alert>
+		</rds-alert>
 	`,
 });
 

@@ -12,26 +12,26 @@ import PageContainer from '../../components/PageContainer.vue';
 			language: 'html',
 			format:true,
 			code: /*html*/ 
-`<cds-page-container>
+`<rds-page-container>
 	Test
-</cds-page-container>`
+</rds-page-container>`
 },
 		}
 	}}
 />
 
 export const Template = (args) => ({
-	components: { CdsPageContainer: PageContainer },
+	components: { RdsPageContainer: PageContainer },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
 		<div class="d-flex justify-content-center">
-			<cds-page-container
+			<rds-page-container
 				style="background: silver"
 			>
 				Internal component
-			</cds-page-container>
+			</rds-page-container>
 		</div>
 	`,
 });

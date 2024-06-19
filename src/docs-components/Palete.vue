@@ -36,7 +36,7 @@
 								class="color-swatch__format-select"
 								@click.stop="handlePop(idx)"
 							>
-								<cds-icon
+								<rds-icon
 									height="18"
 									width="18"
 									name="unfold-vertical-outline"
@@ -50,7 +50,7 @@
 						</div>
 						<br>
 						<div class="color-swatch__color">
-							<cds-icon
+							<rds-icon
 								height="20"
 								width="20"
 								name="copy-outline"
@@ -67,7 +67,7 @@
 						v-else
 						class="color-swatch__color"
 					>
-						<cds-icon
+						<rds-icon
 							height="20"
 							width="20"
 							name="copy-outline"
@@ -91,7 +91,7 @@
 				class="gradient-container"
 				@click="handleClick('linear-gradient($bg-gradient)', 'linear-gradient($bg-gradient)')"
 			>
-				<cds-icon
+				<rds-icon
 					height="20"
 					width="20"
 					name="copy-outline"
@@ -104,7 +104,7 @@
 </template>
 
 <script>
-import CdsIcon from '../components/Icon.vue';
+import RdsIcon from '../components/Icon.vue';
 import CopyToken from '../docs-components/CopyToken.vue';
 import sassColorVariables from '../assets/sass/colors.module.scss';
 import paleteBuilder from '../utils/methods/paleteBuilder.js';
@@ -112,7 +112,7 @@ import ContrastChecker from '../utils/methods/contrastChecker';
 
 export default {
 	components: {
-		CdsIcon,
+		RdsIcon,
 		CopyToken,
 	},
 

@@ -24,7 +24,7 @@ import AlertCard from '../../components/AlertCard.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<cds-alert-card
+`<rds-alert-card
 	:title="title"
 	:subTitle="subTitle"
 	variant="info"
@@ -35,12 +35,12 @@ import AlertCard from '../../components/AlertCard.vue';
 />
 
 export const Template = (args) => ({
-	components: { CdsAlertCard: AlertCard },
+	components: { RdsAlertCard: AlertCard },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
-		<cds-alert-card
+		<rds-alert-card
 			v-bind="args" 
 		/>
 	`,

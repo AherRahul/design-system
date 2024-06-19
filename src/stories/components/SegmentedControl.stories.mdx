@@ -13,7 +13,7 @@ import Icon from '../../components/Icon.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<cds-segmented-control
+`<rds-segmented-control
 	:segments="['info-outline', 'copy-outline', 'edit-outline']"
 />`
 			},
@@ -22,16 +22,16 @@ import Icon from '../../components/Icon.vue';
 />
 
 export const Template = (args) => ({
-	components: { CdsSegmentedControl: SegmentedControl, CdsIcon: Icon },
+	components: { RdsSegmentedControl: SegmentedControl, RdsIcon: Icon },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
-		<cds-segmented-control
+		<rds-segmented-control
 			v-bind="args"
 			@click="handleEmit"
 		>
-		</cds-segmented-control>
+		</rds-segmented-control>
 	`,
 	methods: {
 		handleEmit(value, index) { console.info('value: ', value); }

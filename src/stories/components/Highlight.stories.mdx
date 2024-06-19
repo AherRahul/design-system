@@ -40,27 +40,27 @@ import Highlight from '../../components/Highlight.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<cds-highlight
+`<rds-highlight
 	animated
 	:duration="1"
 	:delay="0"
 >
 	<span> Very important text</span>
-</cds-highlight>`
+</rds-highlight>`
 			},
 		}
 	}}
 />
 
 export const Template = (args) => ({
-	components: { CdsHighlight: Highlight },
+	components: { RdsHighlight: Highlight },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
-		<cds-highlight v-bind="args">
+		<rds-highlight v-bind="args">
 			<span> Very important text</span>
-		</cds-highlight>
+		</rds-highlight>
 	`,
 });
 

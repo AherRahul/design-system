@@ -7,7 +7,7 @@
 				class="table__select-item"
 				:class="resolveHeaderItemClass(0)"
 			>
-				<cds-checkbox
+				<rds-checkbox
 					id="select-all-rows"
 					v-model="selectAll"
 					class="table__select-checkbox"
@@ -30,35 +30,35 @@
 						name="header-item"
 						:data="field"
 					/>
-					<cds-clickable
+					<rds-clickable
 						v-else
 						:id="`sort-icon-${field.key}`"
 						:clickable="sortable"
 						@click.stop="handleSortBy(field.key)"
 					>
 						{{ field.label }}
-						<cds-icon
+						<rds-icon
 							v-if="sortable && field.key !== localSortBy"
 							class="table__sort-icon"
 							height="13"
 							width="13"
 							name="swap-vertical-arrows-outline"
 						/>
-						<cds-icon
+						<rds-icon
 							v-else-if="sortable && localSortDesc"
 							class="table__sort-icon"
 							height="13"
 							width="13"
 							name="sort-descending-duotone"
 						/>
-						<cds-icon
+						<rds-icon
 							v-else-if="sortable"
 							class="table__sort-icon"
 							height="13"
 							width="13"
 							name="sort-ascending-duotone"
 						/>
-					</cds-clickable>
+					</rds-clickable>
 				</div>
 			</th>
 		</tr>
@@ -72,7 +72,7 @@
 				class="table__select-item"
 				:class="resolveContentItemClass(itemIndex, 0)"
 			>
-				<cds-checkbox
+				<rds-checkbox
 					:id="`select-row-${itemIndex}`"
 					v-model="select[itemIndex]"
 					class="table__select-checkbox"
@@ -111,15 +111,15 @@ import {
 	isEqual,
 } from 'lodash';
 import hasSlot from '../utils/methods/hasSlot';
-import CdsCheckbox from './Checkbox.vue';
-import CdsIcon from '../components/Icon.vue';
-import CdsClickable from '../components/Clickable.vue';
+import RdsCheckbox from './Checkbox.vue';
+import RdsIcon from '../components/Icon.vue';
+import RdsClickable from '../components/Clickable.vue';
 
 export default {
 	components: {
-		CdsCheckbox,
-		CdsIcon,
-		CdsClickable,
+		RdsCheckbox,
+		RdsIcon,
+		RdsClickable,
 	},
 
 	props: {

@@ -13,7 +13,7 @@
 			>
 				<div
 					class="label__content"
-					for="cds-text-input"
+					for="rds-text-input"
 				>
 					<span>
 						{{ label }}
@@ -26,7 +26,7 @@
 						*
 					</span>
 
-					<cds-icon
+					<rds-icon
 						v-if="tooltip"
 						v-cdstip="tooltip"
 						:name="tooltipIcon"
@@ -36,7 +36,7 @@
 					/>
 				</div>
 
-				<cds-link
+				<rds-link
 					v-if="linkText"
 					class="label__link"
 					:href="linkUrl"
@@ -50,7 +50,7 @@
 		<div :class="stepperInputDynamicClass">
 			<input
 				v-if="money"
-				id="cds-text-input"
+				id="rds-text-input"
 				v-model.lazy="internalValue"
 				v-money="moneyDirectiveConfig"
 				:placeholder="placeholder"
@@ -62,7 +62,7 @@
 
 			<input
 				v-else
-				id="cds-text-input"
+				id="rds-text-input"
 				v-model="internalValue"
 				:placeholder="placeholder"
 				:disabled="disabled"
@@ -73,7 +73,7 @@
 			>
 
 			<div class="text-input__icon-container">
-				<cds-icon
+				<rds-icon
 					v-if="validState && !disabled"
 					height="20"
 					width="20"
@@ -82,7 +82,7 @@
 				/>
 
 				
-				<cds-icon
+				<rds-icon
 					v-if="errorState && !disabled"
 					height="20"
 					width="20"
@@ -90,7 +90,7 @@
 					class="text-input__icon--alert-circle-icon"
 				/>
 
-				<cds-spinner
+				<rds-spinner
 					v-if="loadingState && !disabled"
 					size="sm"
 					variant="blue"
@@ -110,23 +110,23 @@
 <script>
 import { Money3Directive } from 'v-money3';
 import { facade } from 'vue-input-facade';
-import CdsLink from './Link.vue';
-import CdsIcon from './Icon.vue';
-import CdsSpinner from './Spinner.vue';
-import Cdstip from '../utils/directives/cdstip';
+import RdsLink from './Link.vue';
+import RdsIcon from './Icon.vue';
+import RdsSpinner from './Spinner.vue';
+import Rdstip from '../utils/directives/cdstip';
 
 export default {
 
 	directives: {
 		money: Money3Directive,
-		cdstip: Cdstip,
+		cdstip: Rdstip,
 		facade,
 	},
 
 	components: {
-		CdsLink,
-		CdsIcon,
-		CdsSpinner,
+		RdsLink,
+		RdsIcon,
+		RdsSpinner,
 	},
 
 	props: {

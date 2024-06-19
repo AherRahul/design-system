@@ -17,7 +17,7 @@ import Scrollable from '../../components/Scrollable.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<cds-scrollable
+`<rds-scrollable
 	maxHeight="150px"
 >
 	<p>
@@ -34,19 +34,19 @@ import Scrollable from '../../components/Scrollable.vue';
 		stranger and more inexplicable. There is a second theory that says 
 		that this has already happened.
 	</p>
-</cds-scrollable>`
+</rds-scrollable>`
 			},
 		}
 	}}
 />
 
 export const Template = (args) => ({
-	components: { CdsScrollable: Scrollable },
+	components: { RdsScrollable: Scrollable },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
-		<cds-scrollable
+		<rds-scrollable
 			v-bind="args" 
 		>
 			<p>
@@ -77,7 +77,7 @@ export const Template = (args) => ({
 				stranger and more inexplicable. There is a second theory that says 
 				that this has already happened.
 			</p>
-		</cds-scrollable>
+		</rds-scrollable>
 	`,
 });
 

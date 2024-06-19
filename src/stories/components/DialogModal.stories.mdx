@@ -43,7 +43,7 @@ import Button from '../../components/Button.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/
-`<cds-dialog-modal
+`<rds-dialog-modal
 	v-model="showModal"
 	title="Are you sure you want to continue?"
 	description="This action will affect the system and associated files. 
@@ -52,7 +52,7 @@ import Button from '../../components/Button.vue';
 	@close="showModal = false"
 	@ok="showModal = false"
 >
-</cds-dialog-modal>`
+</rds-dialog-modal>`
 			},
 		}
 	}}
@@ -67,16 +67,16 @@ export const Template = (args) => ({
 			showModal: false,
 		};
 	},
-	components: { CdsDialogModal: DialogModal, CdsButton: Button },
+	components: { RdsDialogModal: DialogModal, RdsButton: Button },
 	template: /*html*/ `
 		<div class="d-flex justify-content-center">
-			<cds-button
+			<rds-button
 				id="trigger-popover"
 				@click="showModal = true"
 			>
 				Click
-			</cds-button>
-			<cds-dialog-modal
+			</rds-button>
+			<rds-dialog-modal
 				v-bind="args"
 				v-model="showModal"
 				title="Are you sure you want to continue?"
@@ -84,7 +84,7 @@ export const Template = (args) => ({
 				files. By proceeding, you confirm that you are aware of and 
 				agree to the consequences. Do you wish to continue?"
 			>
-			</cds-dialog-modal>
+			</rds-dialog-modal>
 		</div>
 	`,
 	updated() {

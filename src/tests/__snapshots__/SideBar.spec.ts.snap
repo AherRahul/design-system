@@ -12,7 +12,7 @@ exports[`SideBar > renders correctly 1`] = `
         <div class=\\"side-bar__item-container side-bar__item-container--inactive\\">
           <router-link to=\\"/dashboard\\" class=\\"side-bar__item side-bar__item--inactive\\">
             <div>
-              <cds-icon-stub name=\\"dashboard-outline\\" width=\\"20\\" height=\\"20\\" color=\\"currentColor\\" dark=\\"false\\" light=\\"false\\"></cds-icon-stub><span>Dashboard</span>
+              <rds-icon-stub name=\\"dashboard-outline\\" width=\\"20\\" height=\\"20\\" color=\\"currentColor\\" dark=\\"false\\" light=\\"false\\"></rds-icon-stub><span>Dashboard</span>
             </div>
             <!--v-if-->
           </router-link>
@@ -25,9 +25,9 @@ exports[`SideBar > renders correctly 1`] = `
         <div class=\\"side-bar__item-container side-bar__item-container--inactive\\">
           <div class=\\"side-bar__item side-bar__item--inactive\\">
             <div>
-              <cds-icon-stub name=\\"link-outline\\" width=\\"20\\" height=\\"20\\" color=\\"currentColor\\" dark=\\"false\\" light=\\"false\\"></cds-icon-stub><span>Links</span>
+              <rds-icon-stub name=\\"link-outline\\" width=\\"20\\" height=\\"20\\" color=\\"currentColor\\" dark=\\"false\\" light=\\"false\\"></rds-icon-stub><span>Links</span>
             </div>
-            <cds-icon-stub name=\\"caret-down-outline\\" width=\\"16\\" height=\\"16\\" color=\\"currentColor\\" dark=\\"false\\" light=\\"false\\" class=\\"\\"></cds-icon-stub>
+            <rds-icon-stub name=\\"caret-down-outline\\" width=\\"16\\" height=\\"16\\" color=\\"currentColor\\" dark=\\"false\\" light=\\"false\\" class=\\"\\"></rds-icon-stub>
           </div>
         </div>
         <transition-stub appear=\\"false\\" persisted=\\"false\\" css=\\"true\\">
@@ -38,7 +38,7 @@ exports[`SideBar > renders correctly 1`] = `
         <div class=\\"side-bar__item-container side-bar__item-container--inactive\\">
           <router-link to=\\"/reports\\" class=\\"side-bar__item side-bar__item--inactive\\">
             <div>
-              <cds-icon-stub name=\\"printer-outline\\" width=\\"20\\" height=\\"20\\" color=\\"currentColor\\" dark=\\"false\\" light=\\"false\\"></cds-icon-stub><span>Relatórios</span>
+              <rds-icon-stub name=\\"printer-outline\\" width=\\"20\\" height=\\"20\\" color=\\"currentColor\\" dark=\\"false\\" light=\\"false\\"></rds-icon-stub><span>Relatórios</span>
             </div>
             <!--v-if-->
           </router-link>
@@ -53,7 +53,7 @@ exports[`SideBar > renders correctly 1`] = `
     <div class=\\"side-bar__avatar\\">
       <!--
 		Evento emitido quando o wrapper é clicado
-		@event cds-click
+		@event rds-click
 		@type {Event}
 	-->
       <div class=\\"clickable__container--not-clickable\\" id=\\"avatar-dropdown\\">
@@ -72,7 +72,7 @@ exports[`SideBar > renders correctly 1`] = `
     </div>
     <ul>
       <li class=\\"side-bar__logout-button\\">
-        <cds-icon-stub name=\\"logout-outline\\" width=\\"20\\" height=\\"20\\" color=\\"currentColor\\" dark=\\"false\\" light=\\"false\\"></cds-icon-stub>
+        <rds-icon-stub name=\\"logout-outline\\" width=\\"20\\" height=\\"20\\" color=\\"currentColor\\" dark=\\"false\\" light=\\"false\\"></rds-icon-stub>
       </li>
     </ul>
   </div>

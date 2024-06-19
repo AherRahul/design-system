@@ -41,7 +41,7 @@ import StackedBarChart from '../../components/StackedBarChart.vue';
 				language: 'html',
 				format: true,
 				code: /*html*/
-`<cds-stacked-bar-chart
+`<rds-stacked-bar-chart
 	:data="chartData"
 	:variant="variant"
 	:labels="chartLabels"
@@ -53,13 +53,13 @@ import StackedBarChart from '../../components/StackedBarChart.vue';
 />
 
 export const Template = (args) => ({
-	components: { CdsStackedBarChart: StackedBarChart },
+	components: { RdsStackedBarChart: StackedBarChart },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
 		<div style="background-color: #F8F9FA; padding: 16px; border-radius: 4px; height: 500px">
-			<cds-stacked-bar-chart
+			<rds-stacked-bar-chart
 				v-bind="args"
 			/>
 		</div>

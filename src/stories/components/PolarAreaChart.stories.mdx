@@ -33,7 +33,7 @@ import PolarAreaChart from '../../components/PolarAreaChart.vue';
 				language: 'html',
 				format: true,
 				code: /*html*/
-`<cds-polar-area-chart
+`<rds-polar-area-chart
 	:data="chartData"
 	:variant="variant"
 	:labels="chartLabels"
@@ -45,13 +45,13 @@ import PolarAreaChart from '../../components/PolarAreaChart.vue';
 />
 
 export const Template = (args) => ({
-	components: { CdsPolarAreaChart: PolarAreaChart },
+	components: { RdsPolarAreaChart: PolarAreaChart },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
 		<div style="background-color: #F8F9FA; padding: 16px; border-radius: 4px; height: 300px">
-			<cds-polar-area-chart
+			<rds-polar-area-chart
 				v-bind="args"
 			/>
 		</div>

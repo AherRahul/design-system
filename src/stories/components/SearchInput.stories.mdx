@@ -24,19 +24,19 @@ import SearchInput from '../../components/SearchInput.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<cds-search-input />`
+`<rds-search-input />`
 			},
 		}
 	}}
 />
 
 export const Template = (args) => ({
-	components: { CdsSearchInput: SearchInput },
+	components: { RdsSearchInput: SearchInput },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
-		<cds-search-input
+		<rds-search-input
 			v-bind="args" 
 		/>
 	`,

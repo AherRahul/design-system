@@ -12,7 +12,7 @@ import SkeletonText from '../../components/SkeletonText.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<cds-skeleton-text
+`<rds-skeleton-text
 	:width="250"
 />`
 			},
@@ -21,12 +21,12 @@ import SkeletonText from '../../components/SkeletonText.vue';
 />
 
 export const Template = (args) => ({
-	components: { CdsSkeletonText: SkeletonText },
+	components: { RdsSkeletonText: SkeletonText },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
-		<cds-skeleton-text
+		<rds-skeleton-text
 			v-bind="args" 
 		/>
 	`,

@@ -133,12 +133,12 @@ All interaction tests are written in `component-name.interactive.stories.js` fil
 Example:
 
 ```js
-import meta from "./cds-button.stories";
+import meta from "./rds-button.stories";
 
 export default {
  ...meta,
- title: "Interaction Tests/base/cds-button",
- component: CdsButton,
+ title: "Interaction Tests/base/rds-button",
+ component: RdsButton,
 };
 ```
 

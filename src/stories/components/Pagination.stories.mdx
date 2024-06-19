@@ -32,7 +32,7 @@ import Pagination from '../../components/Pagination.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<cds-pagination
+`<rds-pagination
 	v-model="page"
 	per-page="10"
 	total="60"
@@ -43,12 +43,12 @@ import Pagination from '../../components/Pagination.vue';
 />
 
 export const Template = (args) => ({
-	components: { CdsPagination: Pagination },
+	components: { RdsPagination: Pagination },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
-		<cds-pagination
+		<rds-pagination
 			v-bind="args"
 		/>`,
 });

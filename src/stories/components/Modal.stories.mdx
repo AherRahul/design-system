@@ -43,7 +43,7 @@ import Button from '../../components/Button.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<cds-modal
+`<rds-modal
 	v-model="showModal"
 	@close="showModal = false"
 	@ok="showModal = false"
@@ -53,7 +53,7 @@ import Button from '../../components/Button.vue';
 		I know a cachacis that can brighten your life.Paisis, filhis, espiritis santis.Leite de capivaris,
 		headless manquis mule milk.
 	</span>
-</cds-modal>`
+</rds-modal>`
 			},
 		}
 	}}
@@ -68,16 +68,16 @@ export const Template = (args) => ({
 			showModal: false,
 		};
 	},
-	components: { CdsModal: Modal, CdsButton: Button },
+	components: { RdsModal: Modal, RdsButton: Button },
 	template: /*html*/ `
 		<div class="d-flex justify-content-center">
-			<cds-button
+			<rds-button
 				id="trigger-popover"
 				@click="showModal = true"
 			>
 				Click
-			</cds-button>
-			<cds-modal
+			</rds-button>
+			<rds-modal
 				v-bind="args"
 				v-model="showModal"
 			>
@@ -86,7 +86,7 @@ export const Template = (args) => ({
 					I know a cachacis that can brighten your life.Paisis, filhis, espiritis santis.Leite de capivaris,
 					headless manquis mule milk.
 				</span>
-			</cds-modal>
+			</rds-modal>
 		</div>
 	`,
 	updated() {

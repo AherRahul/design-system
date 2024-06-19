@@ -33,7 +33,7 @@ import PieChart from '../../components/PieChart.vue';
 				language: 'html',
 				format: true,
 				code: /*html*/
-`<cds-pie-chart
+`<rds-pie-chart
 	:data="chartData"
 	:variant="variant"
 	:labels="chartLabels"
@@ -44,13 +44,13 @@ import PieChart from '../../components/PieChart.vue';
 />
 
 export const Template = (args) => ({
-	components: { CdsPieChart: PieChart },
+	components: { RdsPieChart: PieChart },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
 		<div style="background-color: #F8F9FA; padding: 16px; border-radius: 4px; height: 300px">
-			<cds-pie-chart
+			<rds-pie-chart
 				v-bind="args"
 			/>
 		</div>

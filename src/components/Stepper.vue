@@ -38,7 +38,7 @@
 					/> -->
 
 
-					<cds-icon
+					<rds-icon
 						v-if="step.completed"
 						height="32"
 						width="32"
@@ -50,7 +50,7 @@
 						size="1x"
 					/> -->
 					
-					<cds-icon
+					<rds-icon
 						v-else-if="step.error"
 						height="32"
 						width="32"
@@ -104,11 +104,11 @@
 </template>
 <script>
 // import { CheckIcon, XIcon } from 'vue-feather-icons';
-import CdsIcon from './Icon.vue';
+import RdsIcon from './Icon.vue';
 
 export default {
 	components: {
-		CdsIcon,
+		RdsIcon,
 	},
 
 	props: {

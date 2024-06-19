@@ -21,7 +21,7 @@ import Stepper from '../../components/Stepper.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<cds-stepper
+`<rds-stepper
 	:steps="steps"
 	:value="4"
 />`
@@ -31,12 +31,12 @@ import Stepper from '../../components/Stepper.vue';
 />
 
 export const Template = (args) => ({
-	components: { CdsStepper: Stepper },
+	components: { RdsStepper: Stepper },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
-		<cds-stepper
+		<rds-stepper
 			v-bind="args" 
 		/>
 	`,

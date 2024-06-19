@@ -12,20 +12,20 @@ import LoadingBar from '../../components/LoadingBar.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<cds-loading-bar />`
+`<rds-loading-bar />`
 			},
 		}
 	}}
 />
 
 export const Template = (args) => ({
-	components: { CdsLoadingBar: LoadingBar },
+	components: { RdsLoadingBar: LoadingBar },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
 		<center>
-			<cds-loading-bar
+			<rds-loading-bar
 				v-bind="args"
 			/>
 		</center>

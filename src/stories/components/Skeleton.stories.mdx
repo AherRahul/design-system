@@ -24,7 +24,7 @@ import Skeleton from '../../components/Skeleton.vue';
 				format:true,
 				code: /*html*/
 				`
-					<cds-skeleton
+					<rds-skeleton
 						:width="100"
 					/>
 				`
@@ -34,13 +34,13 @@ import Skeleton from '../../components/Skeleton.vue';
 />
 
 export const Template = (args) => ({
-	components: { CdsSkeleton: Skeleton },
+	components: { RdsSkeleton: Skeleton },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
 	<div style="height: 100px">
-		<cds-skeleton
+		<rds-skeleton
 			v-bind="args"
 		/>
 	</div>`,

@@ -41,7 +41,7 @@ import BarChart from '../../components/BarChart.vue';
 				language: 'html',
 				format: true,
 				code: /*html*/
-`<cds-bar-chart
+`<rds-bar-chart
 	:data="chartData"
 	:variant="variant"
 	:labels="chartLabels"
@@ -53,13 +53,13 @@ import BarChart from '../../components/BarChart.vue';
 />
 
 export const Template = (args) => ({
-	components: { CdsBarChart: BarChart },
+	components: { RdsBarChart: BarChart },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
 		<div style="background-color: #F8F9FA; padding: 16px; border-radius: 4px; height: 300px">
-			<cds-bar-chart
+			<rds-bar-chart
 				v-bind="args"
 			/>
 		</div>

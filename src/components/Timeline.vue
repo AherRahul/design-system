@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-	<div class="cds-timeline">
+	<div class="rds-timeline">
 		<!-- @slot Content to be placed on the Timeline. Supports `TimelineItem` as a subcomponent.  -->
 		<slot />
 	</div>
@@ -35,7 +35,7 @@ export default {
 	},
 
 	mounted() {
-		let oppositeSlots = document.querySelectorAll('.cds-timeline-item__opposite');
+		let oppositeSlots = document.querySelectorAll('.rds-timeline-item__opposite');
 
 		oppositeSlots.forEach(slot => {
 			let slotWidth = slot.getClientRects()[0].width;
@@ -48,13 +48,13 @@ export default {
 </script>
 <style lang="scss">
 @import '../assets/sass/tokens.scss';
-.cds-timeline {
+.rds-timeline {
 	padding: pa(5);
 	display: flex;
 	flex-direction: v-bind(directionResolver);
 }
 
-.cds-timeline > .cds-timeline-item > .cds-timeline-item__opposite {
+.rds-timeline > .rds-timeline-item > .rds-timeline-item__opposite {
 	min-width: v-bind(oppositeSlotWidthResolver);
 }
 </style>

@@ -7,8 +7,8 @@ describe('IconButton', () => {
 		const wrapper = mount(IconButton, {
 			global: {
 				stubs: {
-					'cds-icon': true,
-					'cds-tooltip': true,
+					'rds-icon': true,
+					'rds-tooltip': true,
 				},
 			},
 			props: {

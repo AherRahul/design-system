@@ -1,5 +1,5 @@
 <template>
-	<span id="cds-link-button">
+	<span id="rds-link-button">
 		<button
 			class="link-button__container"
 			:class="computedStyle"

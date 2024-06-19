@@ -34,8 +34,8 @@ describe('MobileNavigation', () => {
 		const wrapper = mount(MobileNavigation, {
 			global: {
 				stubs: {
-					'cds-icon': true,
-					'cds-avatar': true,
+					'rds-icon': true,
+					'rds-avatar': true,
 				},
 			},
 			props: {

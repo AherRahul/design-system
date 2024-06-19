@@ -31,7 +31,7 @@ import FlatButton from '../../components/FlatButton.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<cds-flat-button
+`<rds-flat-button
 	variant="green"
 	text="Link Button"
 />`
@@ -41,15 +41,15 @@ import FlatButton from '../../components/FlatButton.vue';
 />
 
 export const Template = (args) => ({
-	components: { CdsFlatButton: FlatButton },
+	components: { RdsFlatButton: FlatButton },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
-		<cds-flat-button
+		<rds-flat-button
 			v-bind="args" 
 		>
-		</cds-flat-button>`,
+		</rds-flat-button>`,
 });
 
 <div align="center" style={{display: 'flex'}}>

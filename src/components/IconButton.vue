@@ -1,26 +1,26 @@
 <template>
-	<span id="cds-icon-button">
-		<cds-tooltip
+	<span id="rds-icon-button">
+		<rds-tooltip
 			:text="innerTooltipText"
 		>
 			<button
-				class="cds-icon-button__container"
+				class="rds-icon-button__container"
 				:class="computedModifiers"
 				@click="clickHandler"
 			>
-				<cds-icon
+				<rds-icon
 					:key="inputControlPanel"
 					:name="internalIcon"
-					class="cds-icon-button__icon"
+					class="rds-icon-button__icon"
 				/>
 			</button>
-		</cds-tooltip>
+		</rds-tooltip>
 	</span>
 </template>
 
 <script>
-import CdsIcon from './Icon.vue';
-import CdsTooltip from './Tooltip.vue';
+import RdsIcon from './Icon.vue';
+import RdsTooltip from './Tooltip.vue';
 
 const predefinedSizes = [
 	'sm',
@@ -30,8 +30,8 @@ const predefinedSizes = [
 
 export default {
 	components: {
-		CdsIcon,
-		CdsTooltip,
+		RdsIcon,
+		RdsTooltip,
 	},
 
 	props: {
@@ -101,12 +101,12 @@ export default {
 
 	computed: {
 		predefinedSize() {
-			return `cds-icon-button--${this.size}`;
+			return `rds-icon-button--${this.size}`;
 		},
 
 		computedModifiers() {
-			const status = this.disabled ? 'cds-icon-button--disabled' : '';
-			const variantClass = `cds-icon-button__container--${this.variant}`;
+			const status = this.disabled ? 'rds-icon-button--disabled' : '';
+			const variantClass = `rds-icon-button__container--${this.variant}`;
 
 			return `${status} ${this.predefinedSize} ${variantClass}`;
 		},
@@ -148,10 +148,10 @@ export default {
 
 			/**
 			* Event that indicates that the button was clicked
-			* @event cds-click
+			* @event rds-click
 			* @type {Event}
 			*/
-			this.$emit('cds-click', e);
+			this.$emit('rds-click', e);
 		},
 	},
 };
@@ -160,7 +160,7 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/sass/tokens.scss';
 
-.cds-icon-button {
+.rds-icon-button {
 	&__container {
 		border: none !important;
 		border-radius: $border-radius-extra-small;
@@ -172,7 +172,7 @@ export default {
 		}
 
 		@include variantResolver using ($color-name, $shade-50, $shade-100, $shade-200, $shade-300, $base-color, $shade-500, $shade-600) {
-			@extend .cds-icon-button__container;
+			@extend .rds-icon-button__container;
 			background-color: $base-color;
 			color: $n-0;
 
@@ -213,12 +213,12 @@ export default {
 	}
 }
 
-.cds-icon-button {
+.rds-icon-button {
 	&--sm {
 		padding: pYX(2, 2);
 		border-radius: $border-radius-lil;
 
-		.cds-icon-button__icon {
+		.rds-icon-button__icon {
 			transition: $hover;
 			width: 16px;
 			height: 16px;
@@ -229,7 +229,7 @@ export default {
 		padding: pYX(2, 2);
 		border-radius: $border-radius-extra-small;
 
-		.cds-icon-button__icon {
+		.rds-icon-button__icon {
 			transition: $hover;
 			width: 20px;
 			height: 20px;
@@ -240,7 +240,7 @@ export default {
 		padding: pYX(2, 2);
 		border-radius: $border-radius-extra-small;
 
-		.cds-icon-button__icon {
+		.rds-icon-button__icon {
 			transition: $hover;
 			width: 24px;
 			height: 24px;

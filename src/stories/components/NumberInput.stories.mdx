@@ -25,14 +25,14 @@ import NumberInput from '../../components/NumberInput.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ `
-<cds-number-input />`
+<rds-number-input />`
 			},
 		}
 	}}
 />
 
 export const Template = (args) => ({
-	components: { CdsNumberInput: NumberInput },
+	components: { RdsNumberInput: NumberInput },
 	setup() {
 		return { args };
 	},
@@ -43,7 +43,7 @@ export const Template = (args) => ({
 		};
 	},
 	template: /*html*/ `
-		<cds-number-input
+		<rds-number-input
 			v-bind="args" 
 			v-model="value"
 			v-model:unmaskedValue="unmaskedValue"

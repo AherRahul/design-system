@@ -13,10 +13,10 @@ import TimelineItem from '../../components/TimelineItem.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<cds-timeline
+`<rds-timeline
 	:reverse="false"
 >
-	<cds-timeline-item variant="blue" loading>
+	<rds-timeline-item variant="blue" loading>
 		<template #title>
 			Item 1
 		</template>
@@ -24,8 +24,8 @@ import TimelineItem from '../../components/TimelineItem.vue';
 			In this way, clear determination of objectives encourages
 			the standardization of new propositions.
 		</template>
-	</cds-timeline-item> 
-	<cds-timeline-item variant="blue">
+	</rds-timeline-item> 
+	<rds-timeline-item variant="blue">
 		<template #title>
 			Item 2
 		</template>
@@ -34,8 +34,8 @@ import TimelineItem from '../../components/TimelineItem.vue';
 			the need for qualification assumes important positions
 			in establishing normative rules of conduct.
 		</template>
-	</cds-timeline-item>
-	<cds-timeline-item variant="blue">
+	</rds-timeline-item>
+	<rds-timeline-item variant="blue">
 		<template #title>
 			Item 3
 		</template>
@@ -43,23 +43,23 @@ import TimelineItem from '../../components/TimelineItem.vue';
 			Daily practice proves that the complexity of studies
 			carried out encourages the standardization of corporate paradigms.
 		</template>
-	</cds-timeline-item>
-</cds-timeline>`
+	</rds-timeline-item>
+</rds-timeline>`
 			},
 		}
 	}}
 />
 
 export const Template = (args) => ({
-	components: { CdsTimeline: Timeline, CdsTimelineItem: TimelineItem },
+	components: { RdsTimeline: Timeline, RdsTimelineItem: TimelineItem },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
-		<cds-timeline
+		<rds-timeline
 			v-bind="args" 
 		>
-			<cds-timeline-item variant="blue" loading>
+			<rds-timeline-item variant="blue" loading>
 				<template #title>
 					Item 1
 				</template>
@@ -67,8 +67,8 @@ export const Template = (args) => ({
 					In this way, clear determination of objectives encourages
 					the standardization of new propositions.
 				</template>
-			</cds-timeline-item> 
-			<cds-timeline-item variant="blue">
+			</rds-timeline-item> 
+			<rds-timeline-item variant="blue">
 				<template #title>
 					Item 2
 				</template>
@@ -77,8 +77,8 @@ export const Template = (args) => ({
 					the need for qualification assumes important positions
 					in establishing normative rules of conduct.
 				</template>
-			</cds-timeline-item>
-			<cds-timeline-item variant="blue">
+			</rds-timeline-item>
+			<rds-timeline-item variant="blue">
 				<template #title>
 					Item 3
 				</template>
@@ -86,8 +86,8 @@ export const Template = (args) => ({
 					Daily practice proves that the complexity of studies
 					carried out encourages the standardization of corporate paradigms.
 				</template>
-			</cds-timeline-item>
-		</cds-timeline>
+			</rds-timeline-item>
+		</rds-timeline>
 	`,
 });
 

@@ -18,7 +18,7 @@
 			>
 				<div
 					class="label__content"
-					for="cds-text-area"
+					for="rds-text-area"
 				>
 					<span>
 						{{ label }}
@@ -43,7 +43,7 @@
 				:disabled="disabled"
 			/>
 			<div class="textarea__icon-container">
-				<cds-icon
+				<rds-icon
 					v-if="validState && !disabled"
 					name="check-outline"
 					height="20"
@@ -51,7 +51,7 @@
 					color="#239F78"
 					class="textarea__icon--check-icon"
 				/>
-				<cds-icon
+				<rds-icon
 					v-if="errorState && !disabled"
 					name="alert-outline"
 					height="20"
@@ -59,7 +59,7 @@
 					color="#D22D41"
 					class="textarea__icon--alert-circle-icon"
 				/>
-				<cds-spinner
+				<rds-spinner
 					v-if="loadingState && !disabled"
 					size="sm"
 					variant="blue"
@@ -77,14 +77,14 @@
 </template>
 
 <script>
-import CdsIcon from './Icon.vue';
-import CdsSpinner from './Spinner.vue';
+import RdsIcon from './Icon.vue';
+import RdsSpinner from './Spinner.vue';
 
 export default {
 
 	components: {
-		CdsIcon,
-		CdsSpinner,
+		RdsIcon,
+		RdsSpinner,
 	},
 	props: {
 		/**

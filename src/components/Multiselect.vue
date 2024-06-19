@@ -1,8 +1,8 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
 	<span
-		class="cds-multiselect"
-		:data-cds-multiselect-identifier="uniqueKey"
+		class="rds-multiselect"
+		:data-rds-multiselect-identifier="uniqueKey"
 	>
 		<span>
 			<span
@@ -35,7 +35,7 @@
 
 		<multiselect
 			:id="`clustered-multiselect-${uniqueKey}`"
-			ref="cds-multiselect"
+			ref="rds-multiselect"
 			v-bind="attrs"
 			v-model="selectedValue"
 			:options="internalOptions"
@@ -65,25 +65,25 @@
 				>
 					<div
 						v-if="!hideSelectAll"
-						class="cds-multiselect__option multiselect__option"
+						class="rds-multiselect__option multiselect__option"
 						@click="toggleSelectAll"
 					>
-						<cds-spacer margin-left="2">
-							<cds-checkbox
+						<rds-spacer margin-left="2">
+							<rds-checkbox
 								:id="`select-all-input-id-${uniqueKey}`"
 								v-model="selectAllValue"
 								:label="selectAllFancyMessage"
 								:indeterminate="indeterminate"
 								:variant="variant"
 							/>
-						</cds-spacer>
+						</rds-spacer>
 					</div>
 
 					<div
 						v-if="!isGroupMode"
-						class="cds-multiselect__grouped-divider"
+						class="rds-multiselect__grouped-divider"
 					>
-						<cds-divider dimmed />
+						<rds-divider dimmed />
 					</div>
 				</div>
 			</template>
@@ -93,9 +93,9 @@
 			>
 				<div
 					v-if="option.$isLabel"
-					class="cds-multiselect__group-label"
+					class="rds-multiselect__group-label"
 				>
-					<cds-divider
+					<rds-divider
 						:text="option.$groupLabel"
 						inline
 						dimmed
@@ -104,7 +104,7 @@
 
 				<div
 					v-else
-					class="cds-multiselect__option"
+					class="rds-multiselect__option"
 				>
 					<div class="option__checkbox">
 						<input
@@ -162,9 +162,9 @@
 <script>
 import Multiselect from 'vue-multiselect';
 import { generateKey } from '../utils';
-import CdsDivider from './Divider.vue';
-import CdsCheckbox from './Checkbox.vue';
-import CdsSpacer from './Spacer.vue';
+import RdsDivider from './Divider.vue';
+import RdsCheckbox from './Checkbox.vue';
+import RdsSpacer from './Spacer.vue';
 import sassColorVariables from '../assets/sass/colors.module.scss';
 
 const SELECTED = 0;
@@ -176,9 +176,9 @@ const clone = (el) => {
 export default {
 	components: {
 		Multiselect,
-		CdsDivider,
-		CdsCheckbox,
-		CdsSpacer,
+		RdsDivider,
+		RdsCheckbox,
+		RdsSpacer,
 	},
 
 	props: {
@@ -524,7 +524,7 @@ export default {
 		},
 
 		setContentWrapperScrollToTop() {
-			document.querySelector(`span[data-cds-multiselect-identifier='${this.uniqueKey}']`)
+			document.querySelector(`span[data-rds-multiselect-identifier='${this.uniqueKey}']`)
 				.getElementsByClassName('multiselect__content-wrapper')[0]
 				.scrollTo(0, 0);
 		},
@@ -545,7 +545,7 @@ export default {
 	}
 }
 
-.cds-multiselect {
+.rds-multiselect {
 	&__grouped-divider {
 		margin: mYX(2, 3);
 	}
@@ -582,12 +582,12 @@ export default {
 		visibility: hidden;
 	}
 
-	.cds-multiselect__option {
+	.rds-multiselect__option {
 		display: flex;
 		gap: 8px;
 	}
 
-	.cds-multiselect__group-label {
+	.rds-multiselect__group-label {
 		@include caption;
 		color: $n-400;
 		text-transform: capitalize;

@@ -41,27 +41,27 @@ import Box from '../../components/Box.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<cds-box
+`<rds-box
 	:elevated="false"
 >
 	2
-</cds-box>`
+</rds-box>`
 			},
 		}
 	}}
 />
 
 export const Template = (args) => ({
-	components: { CdsBox: Box },
+	components: { RdsBox: Box },
 	setup() {
 		return { args };
 	},
 	template: /*html*/ `
-		<cds-box
+		<rds-box
 			v-bind="args"
 		>
 			2
-		</cds-box>
+		</rds-box>
 	`,
 	methods: {
 		logClickableClick(event) {
