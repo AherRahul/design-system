@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
 	<div
-		v-cdstip="text"
+		v-rdstip="text"
 		class="tooltip"
 		:data-tippy-placement="position"
 		:data-tippy-content="content"

@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
 	<button
-		v-cdstip="tooltipDisabled"
+		v-rdstip="tooltipDisabled"
 		class="button__container"
 		:class="computedStyle"
 		@click.stop="clickHandler"
@@ -22,12 +22,12 @@
 
 <script>
 import RdsSpinner from '../components/Spinner.vue';
-import Rdstip from '../utils/directives/cdstip';
+import Rdstip from '../utils/directives/rdstip';
 
 export default {
 
 	directives: {
-		cdstip: Rdstip,
+		rdstip: Rdstip,
 	},
 
 	components: {

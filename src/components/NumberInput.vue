@@ -28,7 +28,7 @@
 
 					<rds-icon
 						v-if="tooltip"
-						v-cdstip="tooltip"
+						v-rdstip="tooltip"
 						:name="tooltipIcon"
 						height="20"
 						width="20"
@@ -113,13 +113,13 @@ import { facade } from 'vue-input-facade';
 import RdsLink from './Link.vue';
 import RdsIcon from './Icon.vue';
 import RdsSpinner from './Spinner.vue';
-import Rdstip from '../utils/directives/cdstip';
+import Rdstip from '../utils/directives/rdstip';
 
 export default {
 
 	directives: {
 		money: Money3Directive,
-		cdstip: Rdstip,
+		rdstip: Rdstip,
 		facade,
 	},
 

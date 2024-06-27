@@ -42,9 +42,9 @@ export const parameters = {
 };
 
 import { app } from "@storybook/vue3";
-import Rdstip from "../src/utils/directives/cdstip";
-import RdsFloatify from "../src/utils/directives/cdsFloatify";
+import Rdstip from "../src/utils/directives/rdstip";
+import RdsFloatify from "../src/utils/directives/rdsFloatify";
 
-app.directive("cdstip", Rdstip);
+app.directive("rdstip", Rdstip);
 app.directive("rds-floatify", RdsFloatify);
 app.mount("#app");

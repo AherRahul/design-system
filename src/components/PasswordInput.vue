@@ -22,7 +22,7 @@
 					</span>
 					<rds-icon
 						v-if="tooltip"
-						v-cdstip="tooltip"
+						v-rdstip="tooltip"
 						:name="tooltipIcon"
 						height="20"
 						width="20"
@@ -66,11 +66,11 @@
 
 <script>
 import RdsIcon from './Icon.vue';
-import Rdstip from '../utils/directives/cdstip';
+import Rdstip from '../utils/directives/rdstip';
 
 export default {
 	directives: {
-		cdstip: Rdstip,
+		rdstip: Rdstip,
 	},
 
 	components: {

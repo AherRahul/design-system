@@ -5,7 +5,7 @@
 		v-bind="$attrs"
 		:src="innerSrc"
 		:alt="alt"
-		class="cds__image"
+		class="rds__image"
 		@error="imageSrcResolver"
 	>
 </template>
@@ -128,7 +128,7 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/sass/tokens.scss';
 
-.cds__image {
+.rds__image {
 	border-radius: v-bind(radiusResolver);
 	filter: v-bind(grayScaleResolver);
 	height: v-bind(heightResolver);

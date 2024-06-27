@@ -84,12 +84,12 @@ import Truncate from './Truncate.vue';
 import PasswordInput from './PasswordInput.vue';
 import Wizard from './Wizard.vue';
 
-import Rdstip from '../utils/directives/cdstip';
-import RdsFloatify from "../utils/directives/cdsFloatify";
+import Rdstip from '../utils/directives/rdstip';
+import RdsFloatify from "../utils/directives/rdsFloatify";
 
 export default {
 	install: (app: any, options: any) => {
-		app.directive('cdstip', Rdstip);
+		app.directive('rdstip', Rdstip);
 		app.directive("rds-floatify", RdsFloatify);
 
 		app.component('RdsActionBar', ActionBar); //NOTE: Tested in SB

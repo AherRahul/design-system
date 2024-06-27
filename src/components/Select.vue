@@ -24,7 +24,7 @@
 
 				<rds-icon
 					v-if="tooltip"
-					v-cdstip="tooltip"
+					v-rdstip="tooltip"
 					:name="tooltipIcon"
 					height="20"
 					width="20"
