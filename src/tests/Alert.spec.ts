@@ -8,7 +8,7 @@ describe('Alert snapshot test', () => {
 		const wrapper = mount(Alert, {
 			props: {
 				variant: 'info',
-				text: 'Texto do alerta',
+				text: 'Alert text',
 			}
 		});
 

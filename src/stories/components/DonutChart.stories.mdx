@@ -24,6 +24,15 @@ import DonutChart from '../../components/DonutChart.vue';
 				]
 			}
 		},
+		theme: {
+			control: {
+				type: 'select',
+				options: [
+				'blue',
+				'indigo',
+				]
+			}
+		},
 	}}
 	parameters={{
 		viewMode: 'docs',
@@ -94,20 +103,32 @@ export const Template = (args) => ({
 
 ## Preview
 
+<br />
+
+#### ⚠️ DonutChart supports 3 types of color configuration: By colors, by variant and by theme.
+
+<br />
+
+## By colors
+
+By sending an array of colors to the colors prop, the Donut's colors will be defined
+from this array, with each segment of the graph corresponding to the defined color
+in the corresponding position of the array.
+
+
 <Canvas>
 	<Story
-		name="DonutChart"
+		name="DonutChart1"
 		args={{
 			labels: ['January', 'February', 'March', 'April', 'May'],
 			colors: ['teal', 'violet', 'amber', 'blue', 'red'],
-			variant: 'green',
 			data: [
 				{
 					name: 'Echocardiogram',
 					datasets: [
 						{
 							label: 'Exams carried out',
-							data: [120, 220, 180, 320, 150],
+							data: [120, 220, 180, 20, 150],
 						},
 					]
 				},
@@ -118,5 +139,68 @@ export const Template = (args) => ({
   </Story>
 </Canvas>
 
-<ArgsTable story="DonutChart" />
+<ArgsTable story="DonutChart2" />
 
+<br />
+
+## By theme
+
+When using the theme configuration, DonutChart will apply pre-defined colors,
+previously tested to ensure legibility and visual harmony.
+For now there are **2 defined themes**, `blue` and `indigo`.
+Each color has 10 colors each, so they will work without repetition for graphs with up to 10 datasets
+E.g.: `:theme="blue"`
+
+<Canvas>
+	<Story
+		name="DonutChart2"
+		args={{
+			labels: ['January','February','March', 'April', 'May'],
+			theme:"blue",
+			data: [
+				{
+					name: 'Echocardiogram',
+					datasets: [
+						{
+							label: 'Exams performed',
+							data: [120, 220, 180, 20, 150],
+						},
+					]
+				},
+			],
+	}}
+>
+	{ Template.bind({}) }
+  </Story>
+</Canvas>
+
+<br />
+
+## By variant
+
+If you want to use the chart in monochrome mode, DonutChart has a `variant` prop.
+This prop accepts colors from the Cuida palette and uses different shades of that color to build the graph.
+Eg: `:variant="green"`
+
+<Canvas>
+	<Story
+		name="DonutChart3"
+		args={{
+			labels: ['January','February','March', 'April', 'May'],
+			variant: 'green',
+			data: [
+				{
+					name: 'Echocardiogram',
+					datasets: [
+						{
+							label: 'Exams performed',
+							data: [120, 220, 180, 20, 150],
+						},
+					]
+				},
+			],
+	}}
+>
+	{ Template.bind({}) }
+  </Story>
+</Canvas>

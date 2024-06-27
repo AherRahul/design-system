@@ -19,7 +19,6 @@ import { Doughnut } from 'vue-chartjs'
 import sassColorVariables from '../assets/sass/colors.module.scss';
 import paleteBuilder from '../utils/methods/paleteBuilder.js';
 
-
 export default {
 	components: {
 		Doughnut,
@@ -57,6 +56,17 @@ export default {
 			},
 		},
 		/**
+		 * Sets the theme of the chart.
+		 */
+		theme: {
+			type: String,
+			required: false,
+			default: '',
+			validator: (value) => {
+				return ['green', 'teal', 'turquoise', 'blue', 'indigo', 'violet', 'pink', 'red', 'orange', 'amber', 'gray', 'dark'].includes(value);
+			},
+		},
+		/**
 		 * Define the chart labels
 		 */
 		labels: {
@@ -84,6 +94,7 @@ export default {
 			localChartData: {},
 			localLabels: [],
 			palletColors: [],
+			themeColors: [],
 			deleteFirstTwoColors: false, //NOTE: Responsible for ensuring that the gray and dark colors of the palette do not remove the first two elements
 			chartOptions: {
 				responsive: true,
@@ -155,12 +166,20 @@ export default {
 		},
 	},
 
+	mounted() {
+		this.mergeChartDataNoSelect(this.data);
+	},
+
 	methods: {
 		paleteBuilder,
 
 		palete() {
 			this.palletColors = this.paleteBuilder(this.sassColorVariables.palete);
 			this.removeFirstTwoElements();
+		},
+
+		themeResolver() {
+			this.themeColors = this.paleteBuilder(this.sassColorVariables.chartThemes);
 		},
 
 		// NOTE: Function responsible for removing the first two elements from the palette when it is not gray or Dark Neutrals
@@ -196,14 +215,22 @@ export default {
 						label: state.label,
 						data: state.data,
 						name: state.name,
-						borderRadius: 6,
+						borderRadius: 5,
 					};
 					mergedData.datasets.push(dataset);
 				});
 			});
-			this.palete();
-			const backgroundColor = this.isColorsSet ? this.computedBackgroundColors : this.generateBackgroundColor();
-			this.setColors(mergedData.datasets, backgroundColor);
+
+			if (this.theme.length && this.colors.length === 0) {
+				this.themeResolver();
+				const backgroundColor = this.isColorsSet ? this.computedBackgroundColors : this.generateBackgroundColorWithTheme();
+				this.setColors(mergedData.datasets, backgroundColor);
+			} else {
+				this.palete();
+				const backgroundColor = this.isColorsSet ? this.computedBackgroundColors : this.generateBackgroundColor();
+				this.setColors(mergedData.datasets, backgroundColor);
+			}
+	
 			this.localChartData = mergedData;
 		},
 
@@ -211,6 +238,15 @@ export default {
 		generateBackgroundColor() {
 			const variantLowercase = this.variant.toLowerCase();
 			const palletColor = this.palletColors.find(color => color.variantName.toLowerCase().includes(variantLowercase));
+			if (palletColor) {
+				return palletColor.colorShades;
+			}
+			return [];
+		},
+
+		generateBackgroundColorWithTheme() {
+			const variantLowercase = this.theme.toLowerCase();
+			const palletColor = this.themeColors.find(color => color.variantName.toLowerCase().includes(variantLowercase));
 			if (palletColor) {
 				return palletColor.colorShades;
 			}
@@ -230,7 +266,7 @@ export default {
 				}
 
 				dataset.backgroundColor = colors[objectName].splice(0, dataset.data.length);
-				dataset.borderRadius = 6;
+				dataset.borderRadius = 5;
 			});
 		},
 
