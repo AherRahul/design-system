@@ -7,8 +7,8 @@ describe('AlertCard snapshot test', () => {
 	test('renders correctly', () => {
 		const wrapper = mount(AlertCard, {
 			props: {
-				title: 'Título do AlertCard',
-				subTitle: 'Subtítulo do AlertCard',
+				title: 'AlertCard title',
+				subTitle: 'AlertCard subtitle',
 				variant: 'info',
 				value: false,
 			}

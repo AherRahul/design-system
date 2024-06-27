@@ -1,14 +1,14 @@
 <template>
 	<div class="app-bar__container">
 		<img
-			v-if="csBrand"
+			v-if="raBrand"
 			class="app-bar__logo--cs"
 			src="https://rahulaher.netlify.app/img/logo/word-white-colored.svg"
 			alt="Rahul Aher logo"
 		>
 
 		<img
-			v-else-if="sysvaleBrand"
+			v-else-if="rdsBrand"
 			class="app-bar__logo--sv"
 			src="https://rahulaher.netlify.app/img/logo/glyph-white-colored.svg"
 			alt="rahul aher logo"
@@ -190,16 +190,16 @@ export default {
 			default: false,
 		},
 		/**
-		 * Indicates whether the logo to be displayed is from Sysvale.
+		 * Indicates whether the logo to be displayed is from RDS.
 		 */
-		sysvaleBrand: {
+		rdsBrand: {
 			type: Boolean,
 			default: false,
 		},
 		/**
 		 * Indicates whether the logo to be displayed is from Cidade Saudável.
 		 */
-		csBrand: {
+		raBrand: {
 			type: Boolean,
 			default: false,
 		},
