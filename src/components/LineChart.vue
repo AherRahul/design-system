@@ -78,7 +78,7 @@ export default {
 			}
 		},
 		/**
-		* Define o tema do gráfico.
+		* Sets the theme of the chart.
 		*/
 		theme: {
 			type: String,
@@ -137,21 +137,21 @@ export default {
 			default: 0.3,
 		},
 		/**
-		* Objeto de configuação de animation. O objeto sobrescreve a configuração padrão.
+		* Animation configuration object. The object overrides the default configuration.
 		*/
 		scales: {
 			type: Object,
 			default: () => ({}),
 		},
 		/**
-		* Objeto de configuação de animation. O objeto sobrescreve a configuração padrão.
+		* Animation configuration object. The object overrides the default configuration.
 		*/
 		animation: {
 			type: Object,
 			default: () => ({}),
 		},
 		/**
-		* Objeto de configuação de plugins. O objeto sobrescreve a configuração padrão.
+		* Plugin configuration object. The object overrides the default configuration.
 		*/
 		plugins : {
 			type: Object,
