@@ -1,17 +1,7 @@
 <template>
-	<div
-		class="mobile-navigation"
-		:class="`mobile-navigation--${resolveMode}`"
-	>
+	<div :class="resolveMainClasses">
 		<div :class="`variant-resolver--${variant}`">
 			<div class="mobile-navigation__header">
-				<div class="mobile-navigation__logo">
-					<!-- @slot Slot for rendering the main logo.-->
-					<slot name="main-logo">
-						<img :src="mainLogo">
-					</slot>
-				</div>
-
 				<div class="mobile-navigation__title">
 					{{ internalActiveItem.label ?? '' }}
 				</div>
@@ -45,7 +35,7 @@
 						@click="handleCloseSidebar"
 					>
 						<rds-icon
-							name="menu-outline"
+							name="x-outline"
 						/>
 					</div>
 				</div>
@@ -108,7 +98,7 @@
 </template>
 
 <script setup>
-import { ref, defineProps, defineEmits, computed } from 'vue';
+import { ref, defineProps, defineEmits, computed, watch } from 'vue';
 import { isEqual, isEmpty } from 'lodash';
 import RdsIcon from './Icon.vue';
 import RdsAvatar from './Avatar.vue';
@@ -167,7 +157,14 @@ const props = defineProps({
 	user: {
 		type: Object,
 		default: () => {},
-	}
+	},
+	/**
+	 * Ddefines whether the component will be in sticky mode
+	*/
+	sticky: {
+		type: Boolean,
+		default: false,
+	},
 });
 
 const emit = defineEmits([
@@ -198,6 +195,26 @@ const resolveMode = computed(() => {
 	return (props.light) ? 'light' : 'dark';
 });
 
+const resolveMainClasses = computed(() => {
+	let classes = `mobile-navigation mobile-navigation--${resolveMode.value}`;
+
+	if (props.sticky) {
+		classes += ' mobile-navigation--sticky';
+	}
+
+	return classes;
+});
+
+watch(openSidebar, async (newValue, oldValue) => {
+	if (newValue !== oldValue) {
+		mustDisableExternalScrolls(newValue);
+	}
+});
+
+watch(() => props.activeItem, (newValue) => {
+	internalActiveItem.value = newValue;
+});
+
 const handleOpenSidebar = () => {
 	openSidebar.value = true;
 };
@@ -209,7 +226,10 @@ const handleCloseSidebar = () => {
 const isActive = (item) => isEqual(item, internalActiveItem.value);
 
 const handleItemClick = (item) => {
-	internalActiveItem.value = item;
+	if (isEmpty(props.activeItem)) {
+		internalActiveItem.value = item;
+	}
+
 	openSidebar.value = false;
 
 	emit('item-click', item);
@@ -223,6 +243,10 @@ const resolveRoute = ({ route, path }) => {
 const routerPushTo = (item) => {
 	return resolveRoute(item) ? resolveRoute(item).path : null;
 };
+
+const mustDisableExternalScrolls = (value) => {
+	document.body.style.overflow = value ? 'hidden' : 'auto';
+};
 </script>
 
 <style lang="scss" scoped>
@@ -235,23 +259,19 @@ const routerPushTo = (item) => {
 	z-index: 1000;
 	box-shadow: $shadow-sm;
 
-	&__header {
-		padding: pTRBL(2, 4, 5, 4);
+	&--sticky {
+		position: sticky;
 	}
 
-	&__logo {
-		display: flex;
-		justify-content: center;
-		padding: pb(4);
-
-		& img {
-			width: 130px;
-		}
+	&__header {
+		padding: pTRBL(5, 4, 5, 4);
+		background-color: rgba(#FFF, .87);
+		backdrop-filter: blur(5px);
 	}
 
 	&__title {
 		@include subheading-1;
-		margin: mt(3);
+		margin: mTRBL(0, 0, 0, 10);
 	}
 
 	&__menu-btn {
@@ -268,7 +288,7 @@ const routerPushTo = (item) => {
 		left: 0;
 		position: absolute;
 		padding: pYX(4, 5);
-		height: 100%;
+		height: 100svh;
 		width: 100%;
 		margin-left: calc(0px - 100%);
 		transition: margin-left 0.3s ease;
@@ -287,6 +307,7 @@ const routerPushTo = (item) => {
 
 	&__sidebar-logo img {
 		max-width: 147px;
+		width: 100%;
 	}
 
 	&__sidebar-btn {

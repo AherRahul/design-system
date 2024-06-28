@@ -180,6 +180,12 @@ export default {
 
 			@extend .avatar__container;
 		}
+
+		&--xl {
+			height: 76px;
+			width: 76px;
+			@extend .avatar__container;
+		}
 	}
 
 	&__image {
@@ -205,6 +211,12 @@ export default {
 			width: 45px;
 
 			@extend .avatar__image;
+		}		
+		
+		&--xl {
+			height: 76px;
+			width: 76px;
+			@extend .avatar__image;
 		}
 	}
 
@@ -220,6 +232,10 @@ export default {
 
 		&--lg {
 			@include subheading-2;
+		}
+
+		&--xl {
+			@include heading-3;
 		}
 	}
 }

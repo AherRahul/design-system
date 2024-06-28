@@ -49,16 +49,7 @@
 					}"
 				>
 					<div v-if="!isOnDragEnterState">
-						Drag the file here or
-						<a
-							href="javascript:void(0)"
-							class="file-input__search-link"
-							:class="{
-								'file-input__search-link--disabled': disabled === true,
-							}"
-						>
-							search on your device
-						</a>
+						{{ textMessage }}
 					</div>
 
 					<div v-else>
@@ -182,6 +173,13 @@ export default {
 			type: Boolean,
 			default: false,
 		},
+		/**
+		 * Specifies the text displayed as a placeholder in the component
+		 */
+		textMessage: {
+			type: String,
+			default: 'Drag the file here or search your device',
+		},
 	},
 
 	data() {
@@ -225,7 +223,7 @@ export default {
 			if (this.allowedExtensions) {
 				const splited = this.allowedExtensions.split(',');
 				const s = splited.length === 1 ? '' : 's';
-				const initial = `São aceitos apenas arquivo${s} do${s} seguinte${s} tipo${s}:`;
+				const initial = `Only file${s} of the following${s} type${s} are accepted:`;
 				return `${initial} ${this.acceptString}.`;
 			} else if (this.state === 'invalid') {
 				return this.errorMessage;
@@ -242,7 +240,7 @@ export default {
 			if (this.file instanceof File && this.file.name.length > 16) {
 				const splitedName = this.file.name.split('.');
 				if (splitedName.length > 2) {
-					return `arquivo.${last(splitedName)}`;
+					return `file.${last(splitedName)}`;
 				}
 				return `${splitedName[0].substring(0, 16)}....${splitedName[1]}`;
 			}
@@ -350,6 +348,7 @@ export default {
 	border: 2px dashed $n-40;
 	box-sizing: border-box;
 	justify-content: v-bind(textAlignmentResolver);
+	cursor: pointer;
 
 	&__container {
 		display: flex;
@@ -430,24 +429,6 @@ export default {
 			justify-content: space-between;
 			width: 100%;
 			@include caption;
-		}
-	}
-
-	&__search-link {
-		color: $bn-400;
-		font-weight: 700;
-		cursor: pointer;
-
-		&:hover {
-			text-decoration: underline;
-		}
-
-		&--disabled {
-			cursor: default !important;
-			color: $bn-200 !important;
-		}
-		&--disabled:hover {
-			text-decoration: none;
 		}
 	}
 

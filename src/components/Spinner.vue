@@ -1,6 +1,9 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-	<div :class="computedSpinnerClass" />
+	<div
+		v-if="showSpinner"
+		:class="computedSpinnerClass"
+	/>
 </template>
 
 <script>
@@ -23,6 +26,20 @@ export default {
 			type: String,
 			default: 'green',
 		},
+		/**
+		* Delay for spinner display, in ms
+		*
+		*/
+		delay: {
+			type:Number,
+			default: 0,
+		},
+	},
+
+	data() {
+		return {
+			showSpinner: false,
+		};
 	},
 
 	computed: {
@@ -37,6 +54,20 @@ export default {
 		computedSpinnerClass() {
 			return `${this.computedSizeClass} ${this.computedColorClass}`;
 		},
+	},
+
+	mounted() {
+		if (this.delay > 0) {
+			setTimeout(() => {
+				this.showSpinner = true;
+			}, this.delay);
+			return;
+		}
+		this.showSpinner = true;
+	},
+	
+	unmounted() {
+		this.showSpinner = false;
 	},
 };
 </script>
