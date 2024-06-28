@@ -73,7 +73,10 @@
 				@blur="handleBlur"
 			>
 
-			<div class="text-input__icon-container">
+			<div
+				v-if="state !== 'default'"
+				class="text-input__icon-container"
+			>
 				<rds-icon
 					v-if="validState && !disabled"
 					height="20"
@@ -236,7 +239,7 @@ export default {
 			default: false,
 		},
 		/**
-		 * Defines the input type, if true it will be an input adapter for the mobile
+		 * Defines the input type, if true it will be an input adapted for the mobile
 		 */
 		mobile: {
 			type: Boolean,
@@ -420,6 +423,11 @@ export default {
 		border: none;
 		text-align: start;
 		color: $n-600;
+		width: 100%;
+
+		&::placeholder {
+			color: $n-300;
+		}
 
 		&:focus {
 			outline: 0;

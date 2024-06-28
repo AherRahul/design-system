@@ -1,9 +1,9 @@
 import { Meta, Story, Props, ArgsTable, Canvas, Preview } from '@storybook/addon-docs';
-import DateInput from '../../components/DateInput.vue';
+import InlineDateInput from '../../components/InlineDateInput.vue';
 
 <Meta
-	title="Components/Forms/DateInput"
-	component={ DateInput }
+	title="Components/Forms/InlineDateInput"
+	component={ InlineDateInput }
 	argTypes={{
 		variant: {
 			control:{
@@ -47,8 +47,8 @@ import DateInput from '../../components/DateInput.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ `
-<rds-date-input
-	label="Time"
+<rds-inline-date-input
+	label="Horário"
 />`
 			},
 		}
@@ -56,7 +56,7 @@ import DateInput from '../../components/DateInput.vue';
 />
 
 export const Template = (args) => ({
-	components: { RdsDateInput: DateInput },
+	components: { RdsInlineDateInput: InlineDateInput },
 	setup() {
 		return { args };
 	},
@@ -66,7 +66,7 @@ export const Template = (args) => ({
 		};
 	},
 	template: /*html*/ `
-		<rds-date-input
+		<rds-inline-date-input
 			v-bind="args"
 			v-model="value"
 		/>`,
@@ -82,23 +82,21 @@ export const Template = (args) => ({
     </a>
 </div>
 
-<br />
-<br />
+# InlineDateInput
 
-# DateInput
-
-### DateInputs are components for choosing dates and times within forms.
+### InlineDateInput are components for choosing dates and times within forms.
 ---
 <br />
 
-## We recommend using DateInputs when:
+## We recommend using InlineDateInput when:
 - There is a need to offer date options within a group of inputs on a form.
 
 <br />
 
-## We do not recommend using DateInputs when:
+## We do not recommend using InlineDateInput when:
 - It is necessary to display additional conditional information in the calendar (e.g. dates that are already occupied).
 - The calendar must be displayed constantly.
+
 
 <br />
 
@@ -106,14 +104,15 @@ export const Template = (args) => ({
 
 <Canvas>
 	<Story
-		name="DateInput"
+		name="InlineDateInput"
 		args={{
-			required: true,
-			variant: 'green',
+			variant: "blue",
+			range: true,
+			label: 'Period',
 		}}
 	>
 		{ Template.bind({}) }
 	</Story>
 </Canvas>
 
-<ArgsTable story="DateInput" />
+<ArgsTable story="InlineDateInput" />

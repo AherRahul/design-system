@@ -1,0 +1,128 @@
+import { Meta, Story, Props, ArgsTable, Canvas, Preview } from '@storybook/addon-docs';
+import RichTooltip from '../../components/RichTooltip.vue';
+import Button from '../../components/Button.vue';
+
+<Meta
+	title="Components/Overlays/RichTooltip"
+	component={ RichTooltip }
+	argTypes={{
+		width: {
+			control: {
+				type: 'range',
+				min: 50,
+				max: 400,
+				step: 10,
+			},
+		},
+	}}
+	parameters={{
+		viewMode: 'docs',
+		previewTabs: { canvas: { hidden: true }},
+		docs: {
+			source: {
+				language: 'html',
+				format:true,
+				code: /*html*/ 
+		`<div class="d-flex justify-content-center">
+			<span
+				id="trigger-rds-popover"
+				@mouseover="showPopover = true"
+				@mouseleave="showPopover = false"
+			>
+				Tooltip trigger
+			</span>
+			<rds-rich-tooltip
+				v-bind="args"
+				v-model="showPopover"
+			>
+				<div>
+					<p><strong>In attendance:</strong> 280</p>
+					<p><strong>Pending:</strong> 60</p>
+					<p><strong>In monitoring:</strong> 600</p>
+				</div>
+			</rds-rich-tooltip>
+		</div>`
+			},
+		}
+	}}
+/>
+
+export const Template = (args) => ({
+	setup() {
+		return { args };
+	},
+	data() {
+		return {
+			showPopover: false,
+		};
+	},
+	components: { rdsRichTooltip: RichTooltip, rdsButton: Button },
+	template: /*html*/ `
+		<div class="d-flex justify-content-center">
+			<span
+				id="trigger-rds-popover"
+				@mouseover="showPopover = true"
+				@mouseleave="showPopover = false"
+			>
+				Tooltip trigger
+			</span>
+			<rds-rich-tooltip
+				v-bind="args"
+				v-model="showPopover"
+			>
+				<div>
+					<p><strong>In attendance:</strong> 280</p>
+					<p><strong>Pending:</strong> 60</p>
+					<p><strong>In monitoring:</strong> 600</p>
+				</div>
+			</rds-rich-tooltip>
+		</div>
+	`,
+	updated() {
+		console.info('%cv-model: ', 'color: #2C70CD;', this.showPopover);
+	},
+});
+
+<div align="center" style={{display: 'flex'}}>
+    <a href="https://rahulaher.netlify.app">
+        <img src="https://rahulaher.netlify.app/img/logo/glyph-black-colored.svg" alt="Take care soon" width="50" />
+        <img src="https://rahulaher.netlify.app/img/logo/word-black-colored.svg" alt="Take care soon" width="150" />
+    </a>
+</div>
+
+
+# RichTooltip
+
+### RichTooltip, like Tooltips, are floating labels used to explain one of the interface, however they provide greater freedom for describing structured and/or longer texts.
+---
+<br />
+
+## When to use:
+- The text to be displayed as a label must occupy several lines or follow a certain structure, such as "label: descriptor".
+- To display supplementary information about a feature or interface element.
+
+
+<br />
+
+## When not to use:
+- With simple content, consisting of few words.
+- To communicate errors and system status.
+- To show critical information for understanding a feature or interface element.
+
+<br />
+
+## Preview
+
+<Canvas>
+	<Story
+		name="RichTooltip"
+		args={{
+			targetId: 'trigger-rds-popover',
+			width: 250,
+		}}
+	>
+		{ Template.bind({}) }
+	</Story>
+</Canvas>
+
+<ArgsTable story="RichTooltip" />

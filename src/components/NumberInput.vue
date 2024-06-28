@@ -459,6 +459,10 @@ export default {
 		height: 50%;
 	}
 
+	&::placeholder {
+		color: $n-300;
+	}
+
 	&__icon--alert-circle-icon {
 		color: $rc-600;
 		height: 50%;

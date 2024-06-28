@@ -13,6 +13,7 @@ import PolarAreaChart from './PolarAreaChart.vue';
 import StackedBarChart from './StackedBarChart.vue';
 import Box from './Box.vue';
 import Breadcrumb from './Breadcrumb.vue';
+import RichTooltip from './RichTooltip.vue';
 import Button from './Button.vue';
 import Card from './Card.vue';
 import CalloutCard from './CalloutCard.vue';
@@ -36,6 +37,7 @@ import GaugeChart from './GaugeChart.vue';
 import Highlight from './Highlight.vue';
 import Icon from './Icon.vue';
 import IconButton from './IconButton.vue';
+import InlineDateInput from './InlineDateInput.vue';
 import InnerTabs from './InnerTabs.vue';
 import Image from './Image.vue';
 import Link from './Link.vue';
@@ -103,6 +105,8 @@ export default {
 		app.component('RdsBarChart', BarChart);
 		app.component('RdsBox', Box);
 		app.component('RdsBreadcrumb', Breadcrumb);
+		app.component('RdsRichTooltip', RichTooltip);
+		app.component('RdsInlineDateInput', InlineDateInput);
 		app.component('RdsButton', Button); //NOTE: Tested in SB
 		app.component('RdsCard', Card);
 		app.component('RdsCalloutCard', CalloutCard); //NOTE: Tested in SB

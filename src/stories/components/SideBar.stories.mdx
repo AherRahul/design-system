@@ -58,17 +58,7 @@ export const Template = (args) => ({
 				>
 				<img
 					v-else
-					src="https://rahulaher.netlify.app/img/logo/word-black-colored.svg"
-				>
-			</template>
-			<template #collapsed-logo>
-				<img
-					v-if="!args.light"
 					src="https://rahulaher.netlify.app/img/logo/glyph-white-colored.svg"
-				>
-				<img
-					v-else
-					src="https://rahulaher.netlify.app/img/logo/glyph-black-colored.svg"
 				>
 			</template>
 		</rds-side-bar>`,
@@ -81,16 +71,6 @@ export const Template = (args) => ({
 		},
 	},
 });
-
-<div align="center" style={{display: 'flex'}}>
-    <a href="https://rahulaher.netlify.app">
-        <img src="https://rahulaher.netlify.app/img/logo/glyph-black-colored.svg" alt="Take care soon" width="50" />
-        <img src="https://rahulaher.netlify.app/img/logo/word-black-colored.svg" alt="Take care soon" width="150" />
-    </a>
-</div>
-
-<br />
-<br />
 
 # SideBar
 
@@ -226,8 +206,7 @@ export const items = [
 			userRole: 'Administrator',
 			userPicture: 'https://this-person-does-not-exist.com/img/avatar-gen83fa18cdcd216e7220794a23e76fe0dc.jpg',
 			collapsible: true,
-			logoImage: 'https://rahulaher.netlify.app/img/logo/word-black-colored.svg',
-			collapsedLogoImage: 'https://rahulaher.netlify.app/img/logo/glyph-black-colored.svg',
+			logoImage: 'https://rahulaher.netlify.app/img/logo/glyph-white-colored.svg',
 			light: false,
 		}}
 	>

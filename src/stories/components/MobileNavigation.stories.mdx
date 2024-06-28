@@ -46,16 +46,14 @@ export const Template = (args) => ({
 		return { args };
 	},
 	template: /*html*/ `
-		<div style="position: relative; overflow: hidden; height: 930px; width: 430px; border: 1px solid #CCC; margin: auto; border-radius: 20px; cursor: pointer">
+		<div style="position: relative; overflow: auto; height: 930px;
+					width: 430px; border: 1px solid #CCC; margin: auto;
+					border-radius: 20px; cursor: pointer">
 			<rds-mobile-navigation
 				v-bind="args"
-				:main-logo="args.light
-					? 'https://rahulaher.netlify.app/img/logo/word-black-colored.svg'
-					: 'https://rahulaher.netlify.app/img/logo/glyph-black-colored.svg'
-				"
 				:sidebar-logo="args.light
 					? 'https://rahulaher.netlify.app/img/logo/word-black-colored.svg'
-					: 'https://rahulaher.netlify.app/img/logo/glyph-black-colored.svg'
+					: 'https://rahulaher.netlify.app/img/logo/word-white-colored.svg'
 				"
 				@item-click="logClick"
 				@logout="logLogout"
@@ -77,9 +75,6 @@ export const Template = (args) => ({
         <img src="https://rahulaher.netlify.app/img/logo/word-black-colored.svg" alt="Take care soon" width="150" />
     </a>
 </div>
-
-<br />
-<br />
 
 # MobileNavigation
 
@@ -113,7 +108,7 @@ export const sideBarItems = [
 		},
 	},
 	{
-		label: 'Health surveillance',
+		label: "Rahul's Design System",
 		icon: 'shield-outline',
 		type: 'route',
 		route: {
@@ -147,7 +142,6 @@ export const sideBarItems = [
 		args={{
 			variant: 'indigo',
 			light: true,
-			mainLogo: 'https://rahulaher.netlify.app/img/logo/glyph-black-colored.svg',
 			sidebarLogo: 'https://rahulaher.netlify.app/img/logo/word-black-colored.svg',
 			items: sideBarItems,
 			activeItem: sideBarItems[1],
@@ -155,6 +149,7 @@ export const sideBarItems = [
 				name: 'Joana Mendes',
 				role: 'Administrator',
 			},
+			sticky: false,
 		}}
 	>
 		{ Template.bind({}) }
