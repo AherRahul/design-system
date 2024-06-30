@@ -435,6 +435,7 @@ export default {
 	transition: width 0.5s;
 
 	.side-bar {
+		
 		&__subitem {
 			color: $n-100;
 			cursor: pointer;
