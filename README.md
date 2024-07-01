@@ -180,7 +180,7 @@ For reduced flakiness all animations are automatically disabled from Playwright.
 
 ## Changelog
 
-- `1.1.3` is the latest release.
+- `1.1.4` is the latest release.
 - See [Releases page](https://github.com/aherrahul/design-system/releases) for the full changelog.
 
 ## Need more help?

@@ -113,7 +113,7 @@
 	</div>
 
 	<div
-		v-if="internalState === 'invalid'"
+		v-if="internalState === 'invalid' && hasFile"
 		class="file-input__alert-container"
 	>
 		{{ computedAllowedMessage }}
@@ -245,6 +245,10 @@ export default {
 				return `${splitedName[0].substring(0, 16)}....${splitedName[1]}`;
 			}
 			return this.file.name;
+		},
+
+		hasFile() {
+			return !isEmpty(this.file);
 		},
 	},
 
