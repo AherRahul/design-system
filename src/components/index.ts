@@ -85,6 +85,9 @@ import Tooltip from './Tooltip.vue';
 import Truncate from './Truncate.vue';
 import PasswordInput from './PasswordInput.vue';
 import Wizard from './Wizard.vue';
+import RdsGrid from './Grid.vue';
+import RdsCol from './Col.vue';
+import RdsRow from './Row.vue';
 
 import Rdstip from '../utils/directives/rdstip';
 import RdsFloatify from "../utils/directives/rdsFloatify";
@@ -181,5 +184,8 @@ export default {
 		app.component('RdsPieChart', PieChart);
 		app.component('RdsPolarAreaChart', PolarAreaChart);
 		app.component('RdsWizard', Wizard);
+		app.component('RdsGrid', RdsGrid);
+		app.component('RdsRow', RdsRow);
+		app.component('RdsCol', RdsCol);
 	},
 }

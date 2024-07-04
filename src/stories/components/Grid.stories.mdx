@@ -1,0 +1,189 @@
+import { Meta, Story, ArgsTable, Canvas } from '@storybook/addon-docs';
+import Grid from '../../components/Grid.vue';
+import Row from '../../components/Row.vue';
+import Col from '../../components/Col.vue';
+
+<Meta
+  title="Foundation/Layout-Grid"
+  components={{ RdsGrid: Grid, RdsRow: Row, RdsCol: Col }}
+  argTypes={{
+    cols: {
+      control:{
+        type: 'select',
+        options: [1, 2, 3, 4, 6, 12],
+      }
+    },
+    offset: {
+      control: { 
+        type: 'range', 
+        defaultValue: 0,
+        min: 0,
+        max: 11, // Set a reasonable initial maximum value
+        step: 1
+      },
+    }
+  }}
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: { canvas: { hidden: true }},
+    docs: {
+      source: {
+        language: 'html',
+        format: true,
+        code: `
+<rds-grid>
+  <rds-row>
+    <rds-col v-for="n in [...Array(args.cols).keys()]" :key="n" :cols="12/args.cols" :offset="args.offset" >
+      <div :style="{ backgroundColor: backgroundColors[n], padding: '10px', border: '1px solid grey' }">Col {{ n + 1 }}</div>
+    </rds-col>
+  </rds-row>
+</rds-grid>
+`,
+      },
+    },
+  }}
+/>
+
+export const Template = (args) => ({
+  components: { RdsGrid: Grid, RdsRow: Row, RdsCol: Col },
+  setup() {
+    const backgroundColors = ['#aaa', '#bbb', '#ccc', '#ddd', '#eee', '#fff']; // Example colors for columns
+    return { args, backgroundColors };
+  },
+  template: `
+<rds-grid>
+  <rds-row>
+    <rds-col v-for="n in [...Array(args.cols).keys()]" :key="n" :cols="12/args.cols" :offset="args.offset" >
+      <div :style="{ backgroundColor: backgroundColors[n], padding: '10px', border: '1px solid grey' }">Col {{ n + 1 }}</div>
+    </rds-col>
+  </rds-row>
+</rds-grid>
+  `,
+});
+
+
+<div align="center" style={{display: 'flex'}}>
+    <a href="https://rahulaher.netlify.app">
+        <img src="https://rahulaher.netlify.app/img/logo/glyph-black-colored.svg" alt="Take care soon" width="50" />
+        <img src="https://rahulaher.netlify.app/img/logo/word-black-colored.svg" alt="Take care soon" width="150" />
+    </a>
+</div>
+
+<br />
+<br />
+
+
+# Layout Grid
+
+### A flexible grid system for structuring and organizing content within web applications.
+
+---
+
+<br />
+
+## When to use:
+
+- **Structured Layouts:** Arrange content in a responsive grid layout.
+- **Grid-based Designs:** Create consistent and visually appealing designs.
+- **Responsive Design:** Adapt layouts across various screen sizes.
+- **Component-Based Layouts:** Integrate seamlessly with other components.
+
+<br />
+
+## When not to use:
+
+- **Non-structured Content:** When content doesn't need a predefined layout.
+- **Complex Grid Needs:** For grids requiring highly customized layouts beyond basic column and row configurations.
+- **Performance Considerations:** Overuse in scenarios where simpler CSS layouts suffice.
+
+## Preview
+
+<br />
+
+#### ⚠️ Layout Grid offers intuitive configuration for grid columns and offsets.
+
+<br />
+
+## Usage Example
+
+### 1. col="2" offset="0"
+
+<br />
+
+ <Story
+    name="Grid1"
+    args={{
+      cols: 2,
+      offset: 0,
+    }}
+  >
+    { Template.bind({}) }
+  </Story>
+
+
+<br />
+<br />
+
+```vue
+<rds-grid>
+  <rds-row>
+    <rds-col cols="6" offset="0">
+      <div>Column 1</div>
+    </rds-col>
+    <rds-col cols="6" offset="0">
+      <div>Column 2</div>
+    </rds-col>
+  </rds-row>
+</rds-grid>
+```
+
+---
+
+### 2. col="2" offset="3"
+
+ <Story
+    name="Grid2"
+    args={{
+      cols: 2,
+      offset: 3,
+    }}
+  >
+    { Template.bind({}) }
+  </Story>
+
+
+<br />
+<br />
+
+```vue
+<rds-grid>
+  <rds-row>
+    <rds-col cols="6" offset="3">
+      <div>Column 1</div>
+    </rds-col>
+    <rds-col cols="6" offset="3">
+      <div>Column 2</div>
+    </rds-col>
+  </rds-row>
+</rds-grid>
+```
+
+---
+<br />
+
+## Live Example
+
+<br />
+<br />
+
+<Story
+  name="Grid"
+  args={{
+    cols: 3,
+    offset: 0,
+  }}
+>
+  { Template.bind({}) }
+</Story>
+
+<ArgsTable story="Grid" />

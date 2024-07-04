@@ -5,3 +5,28 @@
 	display: block;
 	margin: mb(1);
 }
+
+div .test-column-background {
+    background-color: rgb(239 118 33 / 20%);
+    -webkit-box-shadow: inset 16px 0 0 rgb(239 118 33 / 20%), inset -16px 0 rgb(239 118 33 / 20%);
+    box-shadow: inset 16px 0 0 rgb(239 118 33 / 20%), inset -16px 0 rgb(239 118 33 / 20%);
+    outline: 1px solid rgb(239 118 33 / 40%);
+    padding-bottom: 16px;
+    padding-top: 16px;
+}
+
+div .test-column-background-no-gutters {
+    background-color: rgb(239 118 33 / 20%);
+    outline: 1px solid rgb(239 118 33 / 40%);
+    padding-bottom: 16px;
+    padding-top: 16px;
+}
+
+div .test-alignment-row {
+    background-color: rgb(255 0 0 / 10%);
+    min-height: 120px;
+}
+
+.test-parent {
+    overflow: hidden;
+}
