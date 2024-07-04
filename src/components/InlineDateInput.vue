@@ -29,7 +29,7 @@
 		<v-date-picker
 			id="rds--inline-date-input"
 			v-model="internalDate"
-			locale="pt-BR"
+			locale="en-us"
 			:min-date="minDate ? new Date(minDate) : null"
 			:max-date="maxDate ? new Date(maxDate) : null"
 			:attributes="showTodayDot ? attributes: {}"
