@@ -1,0 +1,159 @@
+import { Meta, Story, Props, ArgsTable, Canvas, Preview } from '@storybook/addon-docs';
+import RadialBarChart from '../../components/RadialBarChart.vue';
+
+<Meta
+	title="Components/Charts/RadialBarChart"
+	component={ RadialBarChart }
+	argTypes={{
+		variant: {
+			control: {
+				type: 'select',
+				options: [
+				'green',
+				'teal',
+				'turquoise',
+				'blue',
+				'indigo',
+				'violet',
+				'pink',
+				'red',
+				'orange',
+				'amber',
+				'gray',
+				'dark'
+				]
+			}
+		},
+		theme: {
+			control: {
+				type: 'select',
+				options: [
+				'blue',
+				'indigo',
+				]
+			}
+		},
+	}}
+	parameters={{
+		viewMode: 'docs',
+		previewTabs: { canvas: { hidden: true }},
+		docs: {
+			source: {
+				language: 'html',
+				format: true,
+				code: /*html*/
+`<rds-donut-chart
+	:data="chartData"
+	:variant="variant"
+	:labels="chartLabels"
+/>`
+			},
+		}
+	}}
+/>
+
+export const Template = (args) => ({
+	components: { RdsRadialBarChart: RadialBarChart },
+	setup() {
+		return { args };
+	},
+	template: /*html*/ `
+		<div style="background-color: #F8F9FA; padding: 16px; border-radius: 4px; height: 340px">
+			<div style="height: 280px">
+				<rds-radial-bar-chart
+					v-bind="args"
+					@chart-click="logChartClick"
+				/>
+			</div>
+		</div>
+	`,
+	methods: {
+		logChartClick(e) {
+			console.info('logDonutChartClick: ', e);
+		},
+	},
+});
+
+
+<div align="center" style={{display: 'flex'}}>
+    <a href="https://rahulaher.netlify.app">
+        <img src="https://rahulaher.netlify.app/img/logo/glyph-black-colored.svg" alt="Take care soon" width="50" />
+        <img src="https://rahulaher.netlify.app/img/logo/word-black-colored.svg" alt="Take care soon" width="150" />
+    </a>
+</div>
+
+<br />
+<br />
+
+# RadialBarChart
+
+### A RadialBarChart is a variation of the BarChart plotted in a polar rather than Cartesian coordinate system.
+---
+<br />
+
+
+## When to use:
+- Display data with graphic appeal;
+- Compare data;
+
+
+<br />
+
+## When not to use:
+- When high fidelity is required in the display of information, with the aim of making accurate comparisons between data;
+- When the data presents categories or subcategories;
+
+---
+
+<br />
+
+
+## Preview
+
+By sending an array of colors to the colors prop, the RadialBarChart colors will be defined
+from this array, with each segment of the graph corresponding to the defined color
+in the corresponding position of the array.
+
+<Canvas>
+	<Story
+		name="RadialBarChart"
+		args={{
+			theme: 'blue',
+			data: [
+				{
+					datasets: [
+						{
+							
+							label: 'January',
+							data: [3000],
+						},
+					]
+				},
+				{
+					datasets: [
+						{
+							
+							label: 'February',
+							data: [2000],
+						},
+					],
+				},
+				{
+					datasets: [
+						{
+							
+							label: 'March',
+							data: [1500],
+						},
+					],
+				},
+			],
+	}}
+>
+	{ Template.bind({}) }
+  </Story>
+</Canvas>
+
+<ArgsTable story="RadialBarChart" />
+
+<br />

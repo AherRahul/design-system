@@ -1,0 +1,108 @@
+import { Meta, Story, Props, ArgsTable, Canvas, Preview } from '@storybook/addon-docs';
+import FileViewer from '../../components/FileViewer.vue';
+import { colors } from '../../utils/constants/colors.js';
+
+<Meta
+	title="Components/Display/FileViewer"
+	component={ FileViewer }
+	argTypes={{
+		variant: {
+			control:{
+				type: 'select',
+				options: colors.filter(item => item.name != 'gray').map(({ name }) => name),
+			}
+		},
+	}}
+	parameters={{
+		viewMode: 'docs',
+		previewTabs: { canvas: { hidden: true }},
+		docs: {
+			source: {
+				language: 'html',
+				format:true,
+				code: /*html*/
+`<rds-alert
+	variant="green",
+	@download-click="logDownload"
+/>`
+			},
+		}
+	}}
+/>
+
+export const Template = (args) => ({
+	components: { RdsFileViewer: FileViewer },
+	setup() {
+		return { args };
+	},
+	template: /*html*/ `
+		<rds-file-viewer
+			v-bind="args"
+			@download-click="logDownload"
+			@close="logClose"
+		>
+		</rds-file-viewer>
+	`,
+	methods: {
+		logDownload(event) {
+			console.log('LogDownload: ', event);
+		},
+		logClose(event) {
+			console.log('logClose: ', event);
+		}
+	}
+});
+
+
+<div align="center" style={{display: 'flex'}}>
+    <a href="https://rahulaher.netlify.app">
+        <img src="https://rahulaher.netlify.app/img/logo/glyph-black-colored.svg" alt="Take care soon" width="50" />
+        <img src="https://rahulaher.netlify.app/img/logo/word-black-colored.svg" alt="Take care soon" width="150" />
+    </a>
+</div>
+
+<br />
+<br />
+
+# FileViewer
+
+###  FileViewer is a component that allows you to preview or download a file.
+---
+<br />
+
+## When to use:
+- When it is necessary to present an image to the user, allowing them to view it without having to download it.
+- When it is necessary to present a file to the user and allow them to download it.
+- To present previews of image files before downloading.
+- When the user needs to quickly review a file without opening a separate application.
+
+<br />
+
+## When not to use:
+- When it is more convenient for the user to see the image directly without having to click on the component. In this case, use the Image component.
+- When the content does not require interactivity, such as a simple icon or a thumbnail without additional functionality.
+- For very large files that may take time to load in preview. In this case, only provide the download option.
+- When previewing may compromise the security or privacy of the data contained in the file.
+
+<br />
+
+## Comments:
+The URL provided to the component must contain the file extension at the end. Only files with extensions _png_, _jpg_, _jpeg_ and _webp_ will have the preview generated.
+<br />
+
+## Preview
+
+<Canvas>
+	<Story
+		name="FileViewer"
+		args={{
+			label: 'Proof of address',
+			fileUrl: "https://images.pexels.com/photos/1254140/pexels-photo-1254140.jpeg",
+			variant: 'green',
+		}}
+	>
+		{ Template.bind({}) }
+	</Story>
+</Canvas>
+
+<ArgsTable story="FileViewer" />

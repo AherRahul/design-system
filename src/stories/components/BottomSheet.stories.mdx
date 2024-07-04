@@ -1,0 +1,99 @@
+import { Meta, Story, Props, ArgsTable, Canvas, Preview } from '@storybook/addon-docs';
+import BottomSheet from '../../components/BottomSheet.vue';
+import Button from '../../components/Button.vue';
+
+<Meta
+	title="Components/Overlays/BottomSheet"
+	component={ BottomSheet }
+	parameters={{
+		viewMode: 'docs',
+		previewTabs: { canvas: { hidden: true }},
+		docs: {
+			source: {
+				language: 'html',
+				format: true,
+				code: /*html*/
+`<rds-bottom-sheet
+	v-model="showBottomSheet"
+	title="Where to find my CNS"
+>
+	Content
+</rds-bottom-sheet>`
+			},
+		}
+	}}
+/>
+
+export const Template = (args) => ({
+	components: { RdsBottomSheet: BottomSheet, RdsButton: Button },
+	setup() {
+		return { args };
+	},
+	data() {
+		return {
+			showBottomSheet: false,
+		};
+	},
+	template: /*html*/ `
+		<div style="display: flex; justify-content: center">
+			<rds-button
+				style="margin: 12px;"
+				@click="showBottomSheet = true"
+			>
+				Click
+			</rds-button>
+			<rds-bottom-sheet
+				v-bind="args"
+				v-model="showBottomSheet"
+			>
+				Content
+			</rds-bottom-sheet>
+		</div>
+	`,
+});
+
+<div align="center" style={{display: 'flex'}}>
+    <a href="https://rahulaher.netlify.app">
+        <img src="https://rahulaher.netlify.app/img/logo/glyph-black-colored.svg" alt="Take care soon" width="50" />
+        <img src="https://rahulaher.netlify.app/img/logo/word-black-colored.svg" alt="Take care soon" width="150" />
+    </a>
+</div>
+
+<br />
+<br />
+
+# Bottom Sheet
+
+### BottomSheets are components that display additional content in an overlay layer at the bottom of the current page, providing quick access to additional information or actions without interrupting the main flow of the interface.
+---
+<br />
+
+## When to use:
+- To provide quick access to additional options or controls without obscuring the main content of the page;
+- When there is a need to present relevant contextual information without requiring a change of context for the user;
+- To provide a fluid browsing experience, allowing the user to remain on the same screen while interacting with additional content.
+
+
+<br />
+
+## When not to use:
+- If additional content or actions require more space than the available area at the bottom of the screen.
+- When the presence of a BottomSheet would interfere with the user experience or cause confusion by overlapping other essential elements of the interface.
+- If there is a need to display a significant amount of information or complex flows that cannot be adequately contained at the bottom of the screen.'
+
+<br />
+
+## Preview
+
+<Canvas>
+	<Story
+		name="BottomSheet"
+		args={{
+			title: "Where to find my CNS",
+		}}
+	>
+		{ Template.bind({}) }
+	</Story>
+</Canvas>
+
+<ArgsTable story="BottomSheet" />

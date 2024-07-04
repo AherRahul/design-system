@@ -88,6 +88,9 @@ import Wizard from './Wizard.vue';
 import RdsGrid from './Grid.vue';
 import RdsCol from './Col.vue';
 import RdsRow from './Row.vue';
+import BottomSheet from './BottomSheet.vue';
+import FileViewer from './FileViewer.vue';
+import RadialBarChart from './RadialBarChart.vue';
 
 import Rdstip from '../utils/directives/rdstip';
 import RdsFloatify from "../utils/directives/rdsFloatify";
@@ -187,5 +190,8 @@ export default {
 		app.component('RdsGrid', RdsGrid);
 		app.component('RdsRow', RdsRow);
 		app.component('RdsCol', RdsCol);
+		app.component('RdsBottomSheet', BottomSheet);
+		app.component('RdsFileViewert', FileViewer);
+		app.component('RdsRadialBarChart', RadialBarChart);
 	},
 }
