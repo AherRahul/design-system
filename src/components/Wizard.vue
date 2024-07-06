@@ -34,7 +34,7 @@
 						v-if="step.image"
 						class="rds-wizard__empty-state-image"
 						:src="step.image"
-						:alt="`Imagem de ${step.title}`"
+						:alt="`Image of ${step.title}`"
 					>
 					<div
 						class="rds-wizard__empty-state-title"

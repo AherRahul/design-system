@@ -17,13 +17,13 @@
 					v-if="!simple"
 					class="carousel-controller__text"
 				>
-					{{ currentNumberOfItemsMin }}-{{ currentNumberOfItemsMax }} de {{ total }}
+					{{ currentNumberOfItemsMin }}-{{ currentNumberOfItemsMax }} of {{ total }}
 				</span>
 				<span
 					v-else
 					class="carousel-controller__text"
 				>
-					{{ currentNumberOfItemsMin }} de {{ numberOfPages }}
+					{{ currentNumberOfItemsMin }} of {{ numberOfPages }}
 				</span>
 	
 				<span class="carousel-controller__property"> {{ propertyName }} </span>
@@ -45,7 +45,7 @@ export default {
 	props: {
 		propertyName: {
 			type: String,
-			default: 'Dados',
+			default: 'Data',
 			required: false,
 		},
 

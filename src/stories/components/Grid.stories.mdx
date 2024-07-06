@@ -8,7 +8,7 @@ import Col from '../../components/Col.vue';
   components={{ RdsGrid: Grid, RdsRow: Row, RdsCol: Col }}
   argTypes={{
     cols: {
-      control:{
+      control: {
         type: 'select',
         options: [1, 2, 3, 4, 6, 12],
       }
@@ -18,10 +18,34 @@ import Col from '../../components/Col.vue';
         type: 'range', 
         defaultValue: 0,
         min: 0,
-        max: 11, // Set a reasonable initial maximum value
+        max: 11,
         step: 1
       },
-    }
+    },
+    colsAtS: {
+      control: {
+        type: 'select',
+        options: [1, 2, 3, 4, 6, 12],
+      }
+    },
+    colsAtM: {
+      control: {
+        type: 'select',
+        options: [1, 2, 3, 4, 6, 12],
+      }
+    },
+    colsAtL: {
+      control: {
+        type: 'select',
+        options: [1, 2, 3, 4, 6, 12],
+      }
+    },
+    colsAtXl: {
+      control: {
+        type: 'select',
+        options: [1, 2, 3, 4, 6, 12],
+      }
+    },
   }}
   parameters={{
     viewMode: 'docs',
@@ -47,20 +71,19 @@ import Col from '../../components/Col.vue';
 export const Template = (args) => ({
   components: { RdsGrid: Grid, RdsRow: Row, RdsCol: Col },
   setup() {
-    const backgroundColors = ['#aaa', '#bbb', '#ccc', '#ddd', '#eee', '#fff']; // Example colors for columns
+    const backgroundColors = ['#aaa', '#bbb', '#ccc', '#ddd', '#eee', '#fff'];
     return { args, backgroundColors };
   },
   template: `
 <rds-grid>
   <rds-row>
-    <rds-col v-for="n in [...Array(args.cols).keys()]" :key="n" :cols="12/args.cols" :offset="args.offset" >
+    <rds-col v-for="n in [...Array(args.cols).keys()]" :key="n" :cols="12/args.cols" :offset="args.offset" :colsAtS="args.colsAtS" :colsAtM="args.colsAtM" :colsAtL="args.colsAtL" :colsAtXl="args.colsAtXl">
       <div :style="{ backgroundColor: backgroundColors[n], padding: '10px', border: '1px solid grey' }">Col {{ n + 1 }}</div>
     </rds-col>
   </rds-row>
 </rds-grid>
   `,
 });
-
 
 <div align="center" style={{display: 'flex'}}>
     <a href="https://rahulaher.netlify.app">
@@ -71,7 +94,6 @@ export const Template = (args) => ({
 
 <br />
 <br />
-
 
 # Layout Grid
 
@@ -104,33 +126,81 @@ export const Template = (args) => ({
 
 <br />
 
+
+## Configuration
+
+### Grid Structure
+
+Initialize a layout grid with the `rds-grid` custom element, and then add rows, defined as `rds-row`, and columns within each row, defined as `rds-col`.
+
+
+#### GRID STRUCTURE
+
 ## Usage Example
 
-### 1. col="2" offset="0"
+### 1. col="3" offset="0"
 
 <br />
 
- <Story
+<Story
     name="Grid1"
     args={{
-      cols: 2,
+      cols: 3,
       offset: 0,
+      colsAtS: 12,
+      colsAtM: 12,
+      colsAtL: 4,
+      colsAtXl: 4,
     }}
   >
     { Template.bind({}) }
   </Story>
 
+```html
+<rds-grid>
+    <rds-row>
+        <rds-col cols="4" offset="0" colsAtS="12" colsAtM="6" colsAtL="4" colsAtXl="4">1 of 3 Columns 30%</rds-col>
+        <rds-col cols="4" offset="0" colsAtS="12" colsAtM="6" colsAtL="4" colsAtXl="4">2 of 3 Columns 30%</rds-col>
+        <rds-col cols="4" offset="0" colsAtS="12" colsAtM="6" colsAtL="4" colsAtXl="4">3 of 3 Columns 30%</rds-col>
+    </rds-row>
+</rds-grid>
+```
+
+- `rds-row` elements contain columns.
+- `rds-col` elements contain content (or other rows, see nesting) and must be immediate children of rows.
+- By default, column widths are set in percentages, sized fluidly relative to their parent.
+- Gutters (the space between columns) are included by adding padding to each column, resulting in space between columns.
+
+##
+
+### 2. col="2" offset="0"
+
+<br />
+
+  <Story
+    name="Grid2"
+    args={{
+      cols: 2,
+      offset: 0,
+      colsAtS: 12,
+      colsAtM: 12,
+      colsAtL: 6,
+      colsAtXl: 6,
+    }}
+  >
+    { Template.bind({}) }
+  </Story>
 
 <br />
 <br />
 
-```vue
+```html
 <rds-grid>
   <rds-row>
-    <rds-col cols="6" offset="0">
+    <rds-col cols="6" offset="0" colsAtS="12" colsAtM="6" colsAtL="4" colsAtXl="6">
       <div>Column 1</div>
     </rds-col>
-    <rds-col cols="6" offset="0">
+    <rds-col cols="6" offset="0" colsAtS="12" colsAtM="6" colsAtL="4" colsAtXl="6">
       <div>Column 2</div>
     </rds-col>
   </rds-row>
@@ -141,11 +211,17 @@ export const Template = (args) => ({
 
 ### 2. col="2" offset="3"
 
- <Story
-    name="Grid2"
+<br />
+
+  <Story
+    name="Grid3"
     args={{
       cols: 2,
       offset: 3,
+      colsAtS: 11,
+      colsAtM: 12,
+      colsAtL: 6,
+      colsAtXl: 6,
     }}
   >
     { Template.bind({}) }
@@ -158,10 +234,10 @@ export const Template = (args) => ({
 ```vue
 <rds-grid>
   <rds-row>
-    <rds-col cols="6" offset="3">
+    <rds-col cols="6" offset="3" colsAtS="12" colsAtM="6" colsAtL="4" colsAtXl="3">
       <div>Column 1</div>
     </rds-col>
-    <rds-col cols="6" offset="3">
+    <rds-col cols="6" offset="3" colsAtS="12" colsAtM="6" colsAtL="4" colsAtXl="3">
       <div>Column 2</div>
     </rds-col>
   </rds-row>
@@ -176,14 +252,22 @@ export const Template = (args) => ({
 <br />
 <br />
 
-<Story
-  name="Grid"
-  args={{
-    cols: 3,
-    offset: 0,
-  }}
->
-  { Template.bind({}) }
-</Story>
+<Canvas>
+  <Story
+      name="Grid"
+      args={{
+      cols: 3,
+      offset: 0,
+      colsAtS: 12,
+      colsAtM: 12,
+      colsAtL: 4,
+      colsAtXl: 4,
+      }}
+    >
+      { Template.bind({}) }
+    </Story>
+</Canvas>
 
 <ArgsTable story="Grid" />
+
+

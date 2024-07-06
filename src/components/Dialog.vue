@@ -5,15 +5,15 @@
 	>
 		<div
 			v-if="internalShow"
+			v-on-click-outside="noCloseOnBackdrop ? () => {} : closeHandle"
 			class="rds-modal"
 			:class="`rds-modal--${size}`"
 			:style="dynamicStyle"
-			v-on-click-outside="noCloseOnBackdrop ? () => {} : closeHandle"
 		>
 			<header 
 				v-if="!noHeader"
 			>
-				<!-- @slot Slot usado para utilização de header customizado. -->
+				<!-- @slot Slot used to use custom headers. -->
 				<slot name="header">
 					<div class="rds-modal__header">
 						<h3>{{ title }}</h3>
@@ -33,7 +33,7 @@
 				</slot>
 			</header>
 
-			<!-- @slot Slot usado para inserção de conteúdo dentro do Modal. -->
+			<!-- @slot Slot used to insert content into the Modal. -->
 			<section>
 				<rds-scrollable
 					:max-height="maxBodyHeight"
@@ -47,7 +47,7 @@
 				v-if="!noFooter"
 				class="rds-modal__footer"
 			>
-				<!-- @slot Slot usado para inserção de footer customizado. -->
+				<!-- @slot Slot used to insert custom footers. -->
 				<slot name="footer">
 					<rds-button
 						v-if="!noCancelButton"
@@ -86,15 +86,9 @@ export default {
 		RdsButton,
 		RdsScrollable,
 	},
-
-	data() {
-		return {
-			internalShow: false,
-		}
-	},
 	props: {
 		/**
-		 *  Controla a exibição do modal.
+		 *  Controls the display of the modal.
 		 */
 		show: {
 			type: Boolean,
@@ -102,79 +96,88 @@ export default {
 			required: true,
 		},
 		/**
-		 * Define o título do modal exibido no header
+		 * Defines the title of the modal displayed in the header
 		 */
 		title: {
 			type: String,
-			default: 'Título',
+			default: 'Title',
 		},
 		/**
-		 * Especifica o tamanho do modal. São 3 tamanhos implementados: 'sm', 'md', 'lg'.
+		 * Specifies the size of the modal. There are 3 sizes implemented: 'sm', 'md', 'lg'.
 		 */
 		size: {
 			type: String,
 			default: 'md',
 		},
 		/**
-		 * Define o estado das ações do modal.
+		 * Defines the state of the modal's actions.
 		 */
 		disabled: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 *  Controla a ação de fechar o modal ao clicar fora.
+		 * Controls the action of closing the modal when clicking outside.
 		 */
 		noCloseOnBackdrop: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 *  Controla a exibição do botão de fechar do modal.
+		 * Controls the display of the modal's close button.
 		 */
 		noCloseButton: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 *  Controla a exibição do botão de cancelar do modal.
+		 * Controls the display of the modal's cancel button.
 		 */
 		noCancelButton: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 *  Controla a exibição do rodapé (footer) do modal.
+		 * Controls the display of the modal footer.
 		 */
 		noFooter: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 *  Controla a exibição do cabeçalho (header) do modal.
+		 * Controls the display of the modal header.
 		 */
 		noHeader: {
 			type: Boolean,
 			default: false,
 		},
 		/**
-		 *  Define texto do botão de ação do modal
+		 * Defines modal action button text
 		 */
 		okButtonText: {
 			type: String,
-			default: 'Confirmar',
+			default: 'Confirm',
 		},
 		/**
-		 *  Define texto do botão de cancelar do modal
+		 * Defines text for the modal cancel button
 		 */
 		cancelButtonText: {
 			type: String,
-			default: 'Cancelar',
+			default: 'Cancel',
 		},
 	},
 
-	mounted() {
-		this.internalShow = this.show;
+	data() {
+		return {
+			internalShow: false,
+		}
+	},
+
+	computed: {
+		maxBodyHeight() {
+			// 90% of the width minus the vertical padding (32 * 2) and minus the footer and header
+			return `${ window.innerHeight * 0.9 - 32 * 2 - 110 }px`;
+		},
 	},
 
 	watch: {
@@ -183,17 +186,14 @@ export default {
 		},
 	},
 
-	computed: {
-		maxBodyHeight() {
-			// 90% da largura subtraído o padding vertical (32 * 2) e subtraído o footer e o header
-			return `${ window.innerHeight * 0.9 - 32 * 2 - 110 }px`;
-		},
+	mounted() {
+		this.internalShow = this.show;
 	},
 
 	methods: {
 		closeHandle() {
 			/**
-			 * Evento que indica se o modal foi escondido.
+			 * Event that indicates whether the modal was hidden.
 			* @event close
 			* @type {Event}
 			*/
@@ -203,7 +203,7 @@ export default {
 
 		okHandle() {
 			/**
-			 * Evento que indica se o botão de ação do modal foi clicado.
+			 * Event that indicates whether the modal action button was clicked.
 			* @event ok
 			* @type {Event}
 			*/
