@@ -28,6 +28,7 @@ import DateInput from './DateInput.vue';
 import DialogModal from './DialogModal.vue';
 import Divider from './Divider.vue';
 import Dropdown from './Dropdown.vue';
+import DropdownButton from './DropdownButton.vue';
 import DonutChart from './DonutChart.vue';
 import EmptyState from './EmptyState.vue';
 import FileInput from './FileInput.vue';
@@ -124,6 +125,7 @@ export default {
 		app.component('RdsColorPicker', ColorPicker); //NOTE: Tested in SB.
 		app.component('RdsDashboardCard', DashboardCard);
 		app.component('RdsDateInput', DateInput); //NOTE: Tested in SB
+		app.component('RdsDropdownButton', DropdownButton);
 		app.component('RdsDialogModal', DialogModal); //NOTE: Tested in SB
 		app.component('RdsDivider', Divider); //NOTE: Tested in SB
 		app.component('RdsDropdown', Dropdown); //NOTE: Tested in SB

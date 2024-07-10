@@ -1,0 +1,130 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import DropdownButton from '../../components/DropdownButton.vue';
+
+<Meta
+	title="Components/Display/DropdownButton"
+	component={ DropdownButton }
+	argTypes={{
+		variant: {
+			control:{
+				type: 'select',
+				options: [
+					'green',
+					'teal',
+					'turquoise',
+					'blue',
+					'indigo',
+					'violet',
+					'pink',
+					'red',
+					'orange',
+					'amber',
+					'dark'
+				],
+			}
+		},
+	}}
+	parameters={{
+		viewMode: 'docs',
+		previewTabs: { canvas: { hidden: true }},
+		docs: {
+			source: {
+				language: 'html',
+				format:true,
+				code: /*html*/ 
+`<rds-dropdown-button
+	:items="items"
+	:secondary="true"
+	text="Finalize request"
+	variant="green"
+	@action-click="logActionClick"
+	@button-click="logClick"
+/>`
+			},
+		}
+	}}
+/>
+
+export const Template = (args) => ({
+	components: { RdsDropdownButton: DropdownButton },
+	setup() {
+		return { args };
+	},
+	template: /*html*/ `
+		<rds-dropdown-button
+			v-bind="args"
+			@action-click="logActionClick"
+			@button-click="logClick"
+		/>`,
+	methods: {
+		logActionClick(element) {
+			console.info('%clogAction: ', 'color: #2C70CD;', element);
+		},
+		logClick(element) {
+			console.info('%clogAction: ', 'color: #2C70CD;', element);
+		},
+	},
+});
+
+
+<div align="center" style={{display: 'flex'}}>
+    <a href="https://rahulaher.netlify.app">
+        <img src="https://rahulaher.netlify.app/img/logo/glyph-black-colored.svg" alt="Take care soon" width="50" />
+        <img src="https://rahulaher.netlify.app/img/logo/word-black-colored.svg" alt="Take care soon" width="150" />
+    </a>
+</div>
+
+<br />
+<br />
+
+
+# DropdownButtons
+
+### DropdownButtons are components used to activate popovers containing lists of actions.
+---
+<br />
+
+## When to use:
+- When you need to group actions under the same context.
+
+<br />
+
+## When not to use:
+- Replacing a Multiselect or Select.
+- To display filters
+- With more than 5 actions
+
+<br />
+
+## Preview
+
+export const items = [
+	{
+		name: 'Cancel request',
+		icon: 'block-outline',
+	},
+	{
+		name: 'Deny request',
+		icon: 'alert-outline',
+	},
+	{
+		name: 'Grant request',
+		icon: 'check-outline',
+	},
+];
+
+<Canvas>
+	<Story
+		name="DropdownButton"
+		args={{
+			text: 'Finalize request',
+			items: items,
+			variant: 'green',
+			secondary: true,
+		}}
+	>
+		{ Template.bind({}) }
+	</Story>
+</Canvas>
+
+<ArgsTable story="DropdownButton" />

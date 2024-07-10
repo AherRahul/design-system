@@ -318,6 +318,10 @@ export default {
 		text-align: start;
 		color: $n-600;
 
+		&::placeholder {
+			color: $n-300;
+		}
+		
 		&:focus {
 			outline: 0;
 		}

@@ -51,7 +51,6 @@
 					<div v-if="!isOnDragEnterState">
 						{{ textMessage }}
 					</div>
-
 					<div v-else>
 						Drop your file here
 					</div>
@@ -113,7 +112,7 @@
 	</div>
 
 	<div
-		v-if="internalState === 'invalid' && hasFile"
+		v-if="internalState === 'invalid'"
 		class="file-input__alert-container"
 	>
 		{{ computedAllowedMessage }}
@@ -160,6 +159,13 @@ export default {
 			default: 'default',
 		},
 		/**
+		 * Specifies the text displayed as a placeholder in the component
+		 */
+		textMessage: {
+			type: String,
+			default: 'Drag the file here or search on your device',
+		},
+		/**
 		 * Specifies the error message, which will be displayed if the status is invalid
 		 */
 		errorMessage: {
@@ -173,13 +179,6 @@ export default {
 			type: Boolean,
 			default: false,
 		},
-		/**
-		 * Specifies the text displayed as a placeholder in the component
-		 */
-		textMessage: {
-			type: String,
-			default: 'Drag the file here or search your device',
-		},
 	},
 
 	data() {
@@ -188,6 +187,7 @@ export default {
 			isOnDragEnterState: false,
 			isValid: true,
 			internalState: this.state,
+			invalidExtensionError: null,
 		};
 	},
 
@@ -221,10 +221,15 @@ export default {
 
 		computedAllowedMessage() {
 			if (this.allowedExtensions) {
-				const splited = this.allowedExtensions.split(',');
-				const s = splited.length === 1 ? '' : 's';
-				const initial = `Only file${s} of the following${s} type${s} are accepted:`;
-				return `${initial} ${this.acceptString}.`;
+				if (this.invalidExtensionError) {
+					const splited = this.allowedExtensions.split(',');
+					const s = splited.length === 1 ? '' : 's';
+					const initial = `Only file${s} of the following${s} type${s} are accepted:`;
+					return `${initial} ${this.acceptString}.`;
+				}
+
+				return this.errorMessage;
+
 			} else if (this.state === 'invalid') {
 				return this.errorMessage;
 			}
@@ -235,20 +240,19 @@ export default {
 		textAlignmentResolver() {
 			return this.size === 'sm' ? 'flex-start' : 'center';
 		},
-		
+
 		formatFilename() {
 			if (this.file instanceof File && this.file.name.length > 16) {
 				const splitedName = this.file.name.split('.');
+
 				if (splitedName.length > 2) {
-					return `file.${last(splitedName)}`;
+					return `arquivo.${last(splitedName)}`;
 				}
+
 				return `${splitedName[0].substring(0, 16)}....${splitedName[1]}`;
 			}
-			return this.file.name;
-		},
 
-		hasFile() {
-			return !isEmpty(this.file);
+			return this.file.name;
 		},
 	},
 
@@ -318,7 +322,11 @@ export default {
 			let uploaded = fileName.split('.');
 			uploaded = uploaded[uploaded.length - 1].trim();
 
-			return alloweds.filter((item) => item === uploaded).length > 0;
+			const valid = alloweds.filter((item) => item === uploaded).length > 0;
+
+			this.invalidExtensionError = !valid;
+
+			return valid;
 		},
 
 		handleFormFileChange(ev) {
@@ -332,6 +340,7 @@ export default {
 			}
 
 			this.isValid = false;
+
 			this.$nextTick().then(() => {
 				this.file = null;
 			});
