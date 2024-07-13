@@ -193,7 +193,7 @@ export default {
 		app.component('RdsRow', RdsRow);
 		app.component('RdsCol', RdsCol);
 		app.component('RdsBottomSheet', BottomSheet);
-		app.component('RdsFileViewert', FileViewer);
+		app.component('RdsFileViewer', FileViewer);
 		app.component('RdsRadialBarChart', RadialBarChart);
 	},
 }

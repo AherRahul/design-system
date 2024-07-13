@@ -197,7 +197,7 @@ export default {
 		outline: 1px solid $n-30;
 		z-index: 999999999;
 		color: $n-700;
-		position: absolute;
+		position: relative;
 		margin: mt(2);
 		display: flex;
 		flex-direction: column;
