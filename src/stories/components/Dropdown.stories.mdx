@@ -13,10 +13,12 @@ import Dropdown from '../../components/Dropdown.vue';
 				format:true,
 				code: /*html*/ 
 `<rds-dropdown
-	label="Idade"
-	content="0 a 120 anos"
+	label="Age"
+    content="0 to 120 years"
 	@click="isActive = !isActive"
-/>`
+>
+	<p>Dropdown Slot</p>
+</rds-dropdown>`
 			},
 		}
 	}}
