@@ -121,7 +121,7 @@ export default {
 				return this.name.replace(/(\S+)(\s*)/gi, (p1) => p1[0].toUpperCase()).slice(0, 2);
 			}
 
-			return 'UND';
+			return 'RA';
 		},
 	},
 

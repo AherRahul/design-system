@@ -1,6 +1,6 @@
 <p align="center">
  <a href="https://rahulaher.netlify.app">
-  <img src="https://rahulaher.netlify.app/img/logo/glyph-black-colored.svg" alt="Take care soon" width="250" />
+  <img src="https://rahulaher.netlify.app/img/logo/glyph-black-colored.svg" alt="Rahul Aher" width="250" />
  </a>
 </p>
 
@@ -180,7 +180,7 @@ For reduced flakiness all animations are automatically disabled from Playwright.
 
 ## Changelog
 
-- `1.1.8` is the latest release.
+- <a href="https://www.npmjs.com/package/@aherrahul/design-system"><img src="https://img.shields.io/npm/v/@aherrahul/design-system" alt="Version"></a> is the latest release.
 - See [Releases page](https://github.com/aherrahul/design-system/releases) for the full changelog.
 
 ## Need more help?

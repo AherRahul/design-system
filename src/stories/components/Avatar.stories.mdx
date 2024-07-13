@@ -44,7 +44,7 @@ import Avatar from '../../components/Avatar.vue';
 				format:true,
 				code: /*html*/ `
 <rds-avatar
-	src="https://this-person-does-not-exist.com/img/avatar-gen83fa18cdcd216e7220794a23e76fe0dc.jpg"
+	src="../../../public/img/avatar/marcel-golob.jpg"
 />`
 			},
 		}
@@ -61,7 +61,7 @@ export const Template = (args) => ({
 			v-bind="args" 
 		>
 			<template #dropdown-content>
-				Conteúdo do dropdown
+				Dropdown content
 			</template>
 		</rds-avatar>
 	`,
@@ -69,8 +69,8 @@ export const Template = (args) => ({
 
 <div align="center" style={{display: 'flex'}}>
     <a href="https://rahulaher.netlify.app">
-        <img src="https://rahulaher.netlify.app/img/logo/glyph-black-colored.svg" alt="Take care soon" width="50" />
-        <img src="https://rahulaher.netlify.app/img/logo/word-black-colored.svg" alt="Take care soon" width="150" />
+        <img src="../../../public/img/logo/glyph-black-colored.svg" alt="Take care soon" width="50" />
+        <img src="../../../public/img/logo/word-black-colored.svg" alt="Take care soon" width="150" />
     </a>
 </div>
 
@@ -97,7 +97,7 @@ export const Template = (args) => ({
 	<Story
 		name="Avatar"
 		args={{
-			src: 'https://this-person-does-not-exist.com/img/avatar-gen83fa18cdcd216e7220794a23e76fe0dc.jpg',
+			src: '../../../public/img/avatar/marcel-golob.jpg',
 		}}
 	>
 		{ Template.bind({}) }
