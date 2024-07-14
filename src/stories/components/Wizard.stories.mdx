@@ -43,12 +43,62 @@ import TextInput from '../../components/TextInput.vue';
 				code: /*html*/ 
 `<rds-wizard
 	:steps="steps"
+	:active-step="activeStep"
+	@step-change="handleStepChange"
+	@next-action="handleNextAction"
+	@cancel-action="handleCancelAction"
 >
-	<template #step-1>
-		Step 1
+<template #step-1>
+		<div style="height: 400px; gap: 16px; display: flex; flex-direction: column;">
+			<rds-text-input
+				fluid
+				label="Name"
+			/>
+			<rds-text-input
+				fluid
+				label="Surname"
+			/>
+			<rds-text-input
+				fluid
+				label="Mother's name"
+			/>
+		</div>
 	</template>
 	<template #step-2>
-		Step 2
+		<div style="height: 400px; gap: 16px; display: flex; flex-direction: column;">
+			<rds-text-input
+				fluid
+				label="Zip code"
+			/>
+			<rds-text-input
+				fluid
+				label="Road"
+			/>
+			<rds-text-input
+				fluid
+				label="Neighborhood"
+			/>
+			<rds-text-input
+				fluid
+				label="City"
+			/>
+		</div>
+	</template>
+	<template #step-3>
+		<div style="height: 400px; gap: 16px; display: flex; flex-direction: column;">
+			<rds-text-input
+				fluid
+				label="Modality"
+			/>
+			<rds-text-input
+				fluid
+				label="URL of site"
+			/>
+			<rds-text-input
+				fluid
+				label="Additional Information"
+			/>
+		</div>
 	</template>
 </rds-wizard>
 `

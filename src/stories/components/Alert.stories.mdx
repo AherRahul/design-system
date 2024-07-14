@@ -26,8 +26,10 @@ import Alert from '../../components/Alert.vue';
 				format:true,
 				code: /*html*/ 
 `<rds-alert
-	variant="info",
-	text="Alert text",
+	:variant="variant"
+	:text="text"
+	:dismissible="dismissible"
+	@close="closeAlert"
 />`
 			},
 		}

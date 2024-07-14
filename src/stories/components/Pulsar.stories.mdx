@@ -50,11 +50,13 @@ import Pulsar from '../../components/Pulsar.vue';
 				language: 'html',
 				format:true,
 				code: /*html*/ 
-`<rds-tooltip
-	text="Texto of tooltip"
+`<div id="pulsar-target" style="width: fit-content;">Pulsar target</div>
+<rds-pulsar
+	variant='green'
+	position='top-end'
+	targetId="pulsar-target"
 >
-	Tooltip trigger
-</rds-tooltip>`
+</rds-pulsar>`
 },
 		}
 	}}

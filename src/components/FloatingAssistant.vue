@@ -56,7 +56,7 @@
 								:href="url"
 								target="_blank"
 							>
-							clicking here
+								clicking here
 							</a>.
 						</span>
 					</div>
@@ -277,7 +277,7 @@ export default {
 
 	&__dropdown {
 		@include caption;
-		display: none;
+		display: flex;
 		color: $n-600;
 		background-color: $n-0;
 		border-radius: $border-radius-small;
@@ -293,7 +293,7 @@ export default {
 
 		&--expanded {
 			padding: pYX(3, 5);
-			width: 100%;
+			width: 30%;
 			max-height: none;
 
 			.floating-assistant__title {
