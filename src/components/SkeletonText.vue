@@ -8,14 +8,21 @@
 <script>
 export default {
 	props: {
+		/**
+         * skeleton width
+         */
 		width: {
 			type: String,
 			required: false,
+			default: '100'
 		},
+		/**
+         * Skeleton height
+         */
 		height: {
 			type: String,
 			required: false,
-			default: '16',
+			default: '25',
 		}
 	},
 

@@ -40,7 +40,8 @@ import Spinner from '../../components/Spinner.vue';
 				code: /*html*/ 
 `<rds-spinner
 	variant="green"
-	size="md"
+	size="sm"
+	delay="0"
 />`
 			},
 		}
@@ -91,7 +92,7 @@ export const Template = (args) => ({
 	<Story
 		name="Spinner"
 		args={{
-			delay: 0,
+			delay: 15,
 		}}
 	>
 		{ Template.bind({}) }

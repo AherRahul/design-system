@@ -14,6 +14,7 @@ import SkeletonText from '../../components/SkeletonText.vue';
 				code: /*html*/ 
 `<rds-skeleton-text
 	:width="250"
+	:height="16"
 />`
 			},
 		}
@@ -70,7 +71,8 @@ export const Template = (args) => ({
 		name="SkeletonText"
 		
 		args={{
-			width: "250"
+			width: "250",
+			height: "25"
 		}}
 	>
 		{ Template.bind({}) }
