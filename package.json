@@ -1,6 +1,6 @@
 {
 	"name": "@aherrahul/design-system",
-	"version": "1.1.13",
+	"version": "1.1.14",
 	"description": "A design system built by rahul aher, using storybook and Vue components",
 	"repository": {
 		"type": "git",

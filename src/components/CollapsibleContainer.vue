@@ -46,7 +46,7 @@ export default {
 		 */
 		title: {
 			type: String,
-			default: 'Visualizar mais',
+			default: 'View more',
 		},
 	},
 

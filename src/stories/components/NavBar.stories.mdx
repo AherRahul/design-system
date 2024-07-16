@@ -33,7 +33,9 @@ import NavBar from '../../components/NavBar.vue';
 				format:true,
 				code: /*html*/ 
 `<rds-nav-bar
-	v-bind="args"
+	:items="items"
+	:activeItem="items[1]"
+    variant="green"
 	@click="logClick"
 />`
 			},

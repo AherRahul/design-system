@@ -32,9 +32,16 @@ import MobileNavigation from '../../components/MobileNavigation.vue';
 				format:true,
 				code: /*html*/
 `<rds-mobile-navigation
-	v-bind="args"
-	@click="logClick"
-/>`
+	variant='indigo'
+	:light=true
+	sidebarLogo='https://rahulaher.netlify.app/img/logo/word-black-colored.svg'
+	:items="items"
+	:activeItem="activeItem"
+	:user="user"
+	sticky=false
+	@item-click="logClick"
+	@logout="logLogout"
+></rds-mobile-navigation>`
 			},
 		}
 	}}

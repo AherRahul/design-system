@@ -43,28 +43,43 @@
 <script>
 export default {
 	props: {
+		/**
+		 * The name of the property to be used for displaying data.
+		**/
 		propertyName: {
 			type: String,
 			default: 'Data',
 			required: false,
 		},
 
+		/**
+		 * The number of items to display per page in the carousel.
+		**/
 		perPage: {
 			type: Number,
 			required: true,
 		},
 
+		/**
+		 * The total number of items available in the carousel.
+		**/
 		total: {
 			type: Number,
 			required: true,
 		},
 
+		/**
+		 * A boolean flag to enable a simple mode for the carousel.
+		**/
 		simple: {
 			type: Boolean,
 			default: false,
 			required: false,
 		},
 
+		/**
+		 * A boolean flag to enable fluid layout for the carousel.
+		**/
 		fluid: {
 			type: Boolean,
 			default: false,
@@ -94,7 +109,22 @@ export default {
 		}
 	},
 
+	// Event emitted when the user clicks the back button to navigate to the previous set of items.
+	events: {
+		'click-back': {
+			description: 'Emitted when the user clicks the back button to navigate to the previous set of items.',
+		},
+
+		// Event emitted when the user clicks the forward button to navigate to the next set of items.
+		'click-forward': {
+			description: 'Emitted when the user clicks the forward button to navigate to the next set of items.',
+		},
+	},
+
 	methods: {
+		/**
+		 * Emitted when the user clicks the back button to navigate to the previous set of items.
+		 */
 		handleClickBack() {
 			if (this.disabledBack) return;
 
@@ -117,6 +147,9 @@ export default {
 			}
 		},
 
+		/**
+		 * Emitted when the user clicks the forward button to navigate to the next set of items.
+		 */
 		handleClickForward() {
 			if (this.disabledForward) return;
 
