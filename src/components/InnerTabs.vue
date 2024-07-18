@@ -160,10 +160,12 @@ export default {
 			margin: mb(0);
 			list-style: none;
 			transition: $opening;
+			width: 100%;
 
 			&-container {
 				overflow-x: scroll;
 				margin-bottom: -1px;
+				width: 100%;
 
 				/* width */
 				&::-webkit-scrollbar {
@@ -190,8 +192,8 @@ export default {
 		}
 
 		&__tab {
-			width: max-content;
-			min-width: 140px;
+			flex: 1;
+			min-width: 0;
 			@include caption;
 			font-weight: $font-weight-regular;
 			overflow: hidden;
@@ -230,6 +232,7 @@ export default {
 			padding: pa(5);
 			border-bottom-right-radius: 8px;
 			border-bottom-left-radius: 8px;
+			width: 100%;
 		
 			> .content__pane--inactive {
 				display: none;
@@ -249,6 +252,30 @@ export default {
 			border-top-left-radius: 4px;
 			background-color: $base-color;
 			transition: all 0.3s ease-out;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.inner-tabs__header {
+			gap: spacer(2);
+		}
+
+		.inner-tabs__tab {
+			min-width: 100px;
+			font-size: 0.875rem;
+			padding: pYX(2, 3);
+		}
+	}
+
+	@media (max-width: 480px) {
+		.inner-tabs__header {
+			gap: spacer(1);
+		}
+
+		.inner-tabs__tab {
+			min-width: 80px;
+			font-size: 0.75rem;
+			padding: pYX(1, 2);
 		}
 	}
 }
