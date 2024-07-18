@@ -92,17 +92,24 @@ export const Template = (args) => ({
 ---
 <br />
 
-## We recommend using NavBars when:
+## We recommend using SideBars when:
 - It is necessary to separate the content by pages and navigate through them.
 - It is not the case to use solutions such as tabs, sidebars, cards or links as navigation.
 
 <br />
 
-## We do not recommend using NavBars when:
+## We do not recommend using SideBars when:
 - There are too many items to be shown in the menu.
 - It is necessary to show the links vertically.
 
 <br />
+
+### Note:
+- The properties `label`, `icon`, `type`, `route` and `items` are accepted in the configuration object;
+- The `type` can take on 3 values:
+	- **route**, for internal routes (a `router-link` is rendered with them);
+	- **link** for elements that should not redirect to any route;
+	- **external** for links that must be opened in a new tab;
 
 ## Preview
 
@@ -140,7 +147,7 @@ export const items = [
 			{
 				label: 'Totem',
 				route: {
-					path: '/totem-link',
+					path: 'https://www.wikipedia.org/',
 					name: 'totem',
 				},
 				type: 'external',
@@ -218,7 +225,7 @@ export const items = [
 			activeItem: items[4],
 			userName: 'Joana Mendes',
 			userRole: 'Administrator',
-			userPicture: 'https://this-person-does-not-exist.com/img/avatar-gen83fa18cdcd216e7220794a23e76fe0dc.jpg',
+			userPicture: 'https://i1.rgstatic.net/ii/profile.image/834217822924800-1575904436366_Q128/Joana-Mendes-13.jpg',
 			collapsible: true,
 			logoImage: 'https://rahulaher.netlify.app/img/logo/glyph-black-colored.svg',
 			light: false,

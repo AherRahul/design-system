@@ -8,7 +8,7 @@
 
 			<input
 				id="rds-search-input"
-				:value="modelValue"
+				:value="internalValue"
 				:placeholder="placeholder"
 				:disabled="disabled"
 				:class="inputClass"
@@ -26,12 +26,12 @@
 			</rds-link-button> -->
 
 			<rds-icon
-				v-if="modelValue"
+				v-if="internalValue"
 				name="x-outline"
 				width="18"
 				height="18"
 				class="search-input__close-icon"
-				@click="internalValue = ''"
+				@click="handleClearInput"
 			/>
 
 			<!-- <div class="search-input__icon-container">
@@ -152,15 +152,25 @@ export default {
 		},
 	},
 
+	mounted() {
+		this.internalValue = this.modelValue;
+	},
+
 	methods: {
 		handleInput(e) {
+			this.internalValue = e.target.value;
 			/**
 			* Event used to implement the v-model.
 			* @event update:modelValue
 			* @type {Event}
 			*/
 			this.$emit('update:modelValue', e.target.value);
-		}
+		},
+		
+		handleClearInput() {
+			this.internalValue = '';
+			this.$emit('update:modelValue', '');
+		},
 	},
 };
 </script>

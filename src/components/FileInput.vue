@@ -133,6 +133,7 @@ export default {
 		 * The content of the uploaded file.
 		 */
 		modelValue: {
+			type: Boolean,
 			default: null,
 			required: true,
 		},
@@ -246,7 +247,7 @@ export default {
 				const splitedName = this.file.name.split('.');
 
 				if (splitedName.length > 2) {
-					return `arquivo.${last(splitedName)}`;
+					return `file.${last(splitedName)}`;
 				}
 
 				return `${splitedName[0].substring(0, 16)}....${splitedName[1]}`;

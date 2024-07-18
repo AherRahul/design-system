@@ -202,7 +202,6 @@ export default {
 		variant: {
 			type: String,
 			default: 'green',
-			required: false,
 		},
 	},
 

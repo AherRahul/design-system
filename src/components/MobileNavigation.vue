@@ -123,10 +123,10 @@ const props = defineProps({
 	/**
 	 * Defines the logo that will appear in the main navigation container
 	*/
-	mainLogo: {
-		type: String,
-		default: '',
-	},
+	// mainLogo: {
+	// 	type: String,
+	// 	default: '',
+	// },
 	/**
 	 * Defines the logo that will appear in the navigation sidebar
 	*/
