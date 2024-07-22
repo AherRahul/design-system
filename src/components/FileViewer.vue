@@ -110,6 +110,7 @@
 
 <script setup>
 import RdsIcon from '../components/Icon.vue';
+import { get, last } from 'lodash';
 import { computed, ref } from 'vue';
 import { colors } from '../utils/constants/colors';
 import RdsImage from '../components/Image.vue';
@@ -170,9 +171,11 @@ const allowedExtensions = ['jpg', 'jpeg', 'png', 'webp'];
 
 const fileExtension = computed(() => {
 	if (props.fileUrl) {
-		let extension = (props.fileUrl.split('.')[props.fileUrl.split('.').length - 1]);
-		if (extension.length <= 4) {
-			return extension;
+		const fileNameParts = last(props.fileUrl.split('/'));
+		const matchedExtension = fileNameParts.match(/\.([A-Za-z]{3,4})/);
+		const extension = get(matchedExtension, '1', null);
+		if (extension) {
+			return extension.toLowerCase();
 		}
 	}
 

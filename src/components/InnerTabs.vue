@@ -160,10 +160,10 @@ export default {
 			margin: mb(0);
 			list-style: none;
 			transition: $opening;
-			width: 100%;
+			overflow-x: auto;
+			white-space: nowrap;
 
 			&-container {
-				overflow-x: scroll;
 				margin-bottom: -1px;
 				width: 100%;
 
@@ -192,13 +192,13 @@ export default {
 		}
 
 		&__tab {
-			flex: 1;
-			min-width: 0;
+			display: inline-block;
+			width: max-content;
+			min-width: 140px;
 			@include caption;
 			font-weight: $font-weight-regular;
 			overflow: hidden;
 			text-overflow: ellipsis;
-			display: -webkit-box;
 			-webkit-line-clamp: 1;
 			-webkit-box-orient: vertical;
 			text-align: center;
