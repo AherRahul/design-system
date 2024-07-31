@@ -273,7 +273,14 @@ export default {
 		light: {
 			type: Boolean,
 			default: false,
-		}
+		},
+		/**
+		* Controls the state of the sidebar, whether open or collapsed.
+		*/
+		collapsibleState: {
+			type: Boolean,
+			default: false,
+		},
 	},
 
 	data() {
@@ -313,6 +320,13 @@ export default {
 			immediate: true,
 		},
 
+		collapsibleState: {
+			handler(newValue) {
+				this.collapsed = newValue;
+			},
+			immediate: true,
+		},
+
 		activeItem: {
 			handler(newValue) {
 				this.internalActiveItem = newValue;
@@ -334,6 +348,7 @@ export default {
 
 	mounted() {
 		this.internalActiveItem = this.activeItem;
+		this.collapsed = this.collapsibleState;
 	},
 
 	methods: {

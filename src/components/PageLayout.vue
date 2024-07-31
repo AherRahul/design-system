@@ -8,6 +8,7 @@
 			:user-role="user.role ?? ''"
 			:user-picture="user.picture ?? null"
 			:collapsible="collapsibleSideBar"
+			:collapsible-state="collapsibleStateSideBar"
 			:items="sideBarItems"
 			:logo-image="logos.default"
 			:collapsed-logo-image="logos.collapsed"
@@ -99,6 +100,13 @@ defineProps({
 	navigationActiveItem: {
 		type: Object,
 		default: () => {},
+	},
+	/**
+	* Controls the state of the sidebar, whether open or collapsed.
+	*/
+	collapsibleStateSideBar: {
+		type: Boolean,
+		default: false,
 	},
 });
 

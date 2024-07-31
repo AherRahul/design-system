@@ -1,6 +1,6 @@
 {
 	"name": "@aherrahul/design-system",
-	"version": "1.2.4",
+	"version": "1.2.5",
 	"description": "A design system built by rahul aher, using storybook and Vue components",
 	"repository": {
 		"type": "git",
@@ -28,7 +28,19 @@
 		"test": "vitest"
 	},
 	"keywords": [
-	  "vueJS", "vue3", "vue2", "design", "design-system", "library", "scss", "css", "component", "component-library", "storybook", "UI-components", "vite"
+	  "vueJS",
+	  "vue3",
+	  "vue2",
+	  "design",
+	  "design-system",
+	  "library",
+	  "scss",
+	  "css",
+	  "component",
+	  "component-library",
+	  "storybook",
+	  "UI-components",
+	  "vite"
 	],
 	"dependencies": {
 		"@popperjs/core": "^2.11.6",

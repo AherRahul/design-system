@@ -48,15 +48,7 @@
 						/>
 
 						<path
-							fill="none"
-							class="indicator-target"
-							:class="`indicator-target--${variant}`"
-							d="M30,90 A40,40 0 1,1 80,90"
-						/>
-					</g>
-
-					<g transform="scale(1.20) translate(-9.5 -12)">
-						<path
+							v-if="showTarget"
 							fill="none"
 							class="indicator-target"
 							:class="`indicator-target--${variant}`"
@@ -146,6 +138,13 @@ export default {
 			type: Number,
 			default: 0,
 			validator: (value) => value >= 0 && value <= 100,
+		},
+		/**
+		* Controls the display of the target in the GaugeChart.
+		*/
+		showTarget: {
+			type: Boolean,
+			default: false,
 		},
 	},
 
