@@ -134,13 +134,13 @@ export default {
 			this.popover.classList.remove('popover-hide');
 			this.popover.classList.add('popover-show');
 
-			this.popperInstance.setOptions((options) => ({
-				...options,
-				modifiers: [
-					...options.modifiers,
-					{ name: 'eventListeners', enabled: true },
-				],
-			}));
+			// this.popperInstance.setOptions((options) => ({
+			// 	...options,
+			// 	modifiers: [
+			// 		...options.modifiers,
+			// 		{ name: 'eventListeners', enabled: true },
+			// 	],
+			// }));
 
 			/**
 			* Event used to implement the v-model.
@@ -209,7 +209,8 @@ export default {
 }
 
 .richTooltip {
-	background-color: rgba($n-900, 0.90);
+	// background-color: rgba($n-900, 0.90);
+	background-color: $n-900;
 	border-radius: $border-radius-medium;
 	box-shadow: 0px 0px 8px rgba($n-900, .08);
 	color: $n-0;

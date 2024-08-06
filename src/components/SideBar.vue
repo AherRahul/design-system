@@ -15,6 +15,7 @@
 
 				<div
 					v-if="collapsible"
+					v-rdstip="collapsedTooltipClass"
 					class="side-bar__collapsible"
 					@click="handleCollapse"
 				>
@@ -37,11 +38,15 @@
 					v-for="(item, index) in items"
 					:key="`${index}-${item.name}-item`"
 					role="presentation"
+					@mouseleave="itemsWithVisibilityController[index].show = false"
 				>
 					<div
+						:id="item.label"
+						v-rdstip="(collapsed && item.type === 'link') ? item.label : null"
 						class="side-bar__item-container"
 						:class="isActive(item) ? 'side-bar__item-container--active' : 'side-bar__item-container--inactive'"
 						@click="(event) => handleClick(event, item)"
+						@mouseover="itemsWithVisibilityController[index].show = true"
 					>
 						<div
 							v-if="!!item.items || item.type === 'link'"
@@ -69,6 +74,7 @@
 
 						<router-link
 							v-else
+							v-rdstip="collapsed ? item.label : null"
 							:to="routerPushTo(item)"
 							class="side-bar__item"
 							:class="isActive(item) ? 'side-bar__item--active' : 'side-bar__item--inactive'"
@@ -128,6 +134,50 @@
 							</div>
 						</div>
 					</Transition>
+					<div v-if="item.items && collapsed">
+						<rds-rich-tooltip
+							v-model="itemsWithVisibilityController[index].show"
+							:target-id="item.label"
+							default-placement="bottom-start"
+							width="160"
+						>
+							<div
+								class="side-bar__subitems--collapsed"
+							>
+								<p class="side-bar__tooltip-title">
+									{{ item.label }}
+								</p>
+								<a
+									v-for="(subitem, idx) in item.items"
+									:key="`${idx}-${subitem.name}-item`"
+									class="side-bar__subitem"
+									:href="subitem?.type === 'external' ? subitem.route.path : 'javascript:void(0)'"
+									target="_blank"
+									rel="noopener noreferrer"
+									@click="(event) => handleClick(event, subitem)"
+								>
+									<div
+										v-if="subitem?.type === 'external'"
+										class="side-bar__subitem-link"
+									>
+										{{ subitem.label }}
+										<rds-icon
+											height="16"
+											width="16"
+											name="open-in-new-tab-outline"
+										/>
+									</div>
+									<router-link
+										v-else
+										class="side-bar__subitem-link"
+										:to="routerPushTo(subitem)"
+									>
+										{{ subitem.label }}
+									</router-link>
+								</a>
+							</div>
+						</rds-rich-tooltip>
+					</div>
 				</li>
 			</ul>
 		</div>
@@ -160,6 +210,7 @@
 			<ul>
 				<li
 					v-if="showLogout"
+					v-rdstip="logoutTooltipText"
 					class="side-bar__logout-button"
 					@click="$emit('logout', true)"
 				>
@@ -179,13 +230,19 @@ import isEqual from 'lodash.isequal';
 import isEmpty from 'lodash.isempty';
 import RdsIcon from './Icon.vue';
 import RdsAvatar from './Avatar.vue';
+import RdsRichTooltip from './RichTooltip.vue';
+import Rdstip from '../utils/directives/rdstip';
 
 import { colorOptions, colorHexCode } from '../utils/constants/colors';
 
 export default {
+	directives: {
+		rdstip: Rdstip,
+	},
 	components: {
 		RdsIcon,
 		RdsAvatar,
+		RdsRichTooltip,
 	},
 
 	props: {
@@ -290,6 +347,8 @@ export default {
 			showUncollapsedItems: true,
 			colorOptions,
 			expandItemControl: 0,
+			itemsWithVisibilityController: [],
+			logoutTooltipText: 'Logout',
 		};
 	},
 
@@ -308,7 +367,10 @@ export default {
 			}
 
 			return 'side-bar--dark';
-		}
+		},
+		collapsedTooltipClass() {
+			return this.collapsed ? 'Maximize' : 'Minimize';
+		},
 	},
 
 	watch: {
@@ -346,9 +408,17 @@ export default {
 		},
 	},
 
-	mounted() {
+	created() {
 		this.internalActiveItem = this.activeItem;
 		this.collapsed = this.collapsibleState;
+		
+		this.items.forEach((item, idx) => {
+			this.itemsWithVisibilityController.push({
+				name: item.label,
+				index: idx,
+				show: false,
+			})
+		});
 	},
 
 	methods: {
@@ -458,7 +528,12 @@ export default {
 	transition: width 0.5s;
 
 	.side-bar {
-		
+		&__tooltip-title {
+			font-size: 16px;
+			font-weight: 600;
+			margin: my(2);
+		}
+
 		&__subitem {
 			color: $n-100;
 			cursor: pointer;
@@ -486,6 +561,13 @@ export default {
 				display: flex;
 				align-items: center;
 				gap: spacer(2);
+			}
+
+			&--collapsed {
+				display: flex;
+				flex-direction: column;
+				gap: spacer(2);
+				margin: ml(2);
 			}
 		}
 
@@ -788,6 +870,13 @@ export default {
 .side-bar--light--collapsed {
 	@extend .side-bar--dark--collapsed;
 	@extend .side-bar--light;
+
+	.side-bar__subitem {
+		color: $n-100;
+		&:hover {
+			color: $n-0;
+		}
+	}
 
 	width: 69px;
 }

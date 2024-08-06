@@ -234,4 +234,23 @@ export default {
 		}
 	}
 }
+
+// .button--dark--active, .button--secondary--active {
+// 	background-image: linear-gradient(to right, rgba(239,68,68,1) 0%, rgba(190,24,93,1) 100%);
+// 	transition: all .3s ease;
+// 	&:hover{
+// 		animation: bg-shift 2s linear infinite;
+// 		transform: scale(1.1);
+// 	}
+// }
+
+// @keyframes bgshift {
+// 	0%, 100% {
+// 		background-position: 0 50%;
+// 	}
+// 	50% {
+// 		background-position: 100% 50%;
+// 	}
+// }
+
 </style>

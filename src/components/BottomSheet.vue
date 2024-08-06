@@ -4,7 +4,7 @@
 			:class="toggleAnimationClass ? 'backdrop__show' : 'backdrop__hide'"
 		>
 			<div
-				v-on-click-outside="closeHandle"
+				v-on-click-outside="!noCloseOnBackdrop ? closeHandle : () => {}"
 				:class="toggleAnimationClass ? 'bottom-sheet__show' : 'bottom-sheet__hide'"
 			>
 				<div class="bottom-sheet__header-border">
@@ -64,6 +64,13 @@ export default {
 		title: {
 			type: String,
 			default: 'Where to find my CNS',
+		},
+		/**
+		* Defines whether the BottomSheet will be closed when clicking on the backdrop.
+		*/
+		noCloseOnBackdrop: {
+			type: Boolean,
+			default: false,
 		},
 	},
 
